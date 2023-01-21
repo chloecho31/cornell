@@ -1,0 +1,438 @@
+---
+title: "CDL Processing"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(janitor)
+```
+
+Data upload--the QGIS output at 4 different scales and the 2019 New York CDL Metadata (Barbarea vulgaris)
+
+```{r}
+CDL_Metadata <- read.delim("data/CDL_Metadata_2019.csv", sep = ",")
+CDL_250 <- read.delim("data/250mTabArea.csv", sep = ",")
+CDL_500 <- read.delim("data/500m_Tab_Area.csv", sep = ",")
+CDL_1000 <- read.delim("data/1000m_Tab_Area.csv", sep = ",")
+CDL_1500 <- read.delim("data/1500m_Tab_Area.csv", sep = ",")
+
+##Missed remembrance farm UGH
+
+Rem_250 <- read.delim("data/Remembrance_250m.csv", sep = ",")
+Rem_500 <- read.delim("data/Remembrance_500m.csv", sep = ",")
+Rem_1000 <- read.delim("data/Remembrance_1000m.csv", sep = ",")
+Rem_1500 <- read.delim("data/Remembrance_1500m.csv", sep = ",")
+
+CDL_250 <- bind_rows(CDL_250, Rem_250) %>% 
+    replace(is.na(.), 0)
+CDL_500 <- bind_rows(CDL_500, Rem_500) %>% 
+ replace(is.na(.), 0)
+CDL_1000 <- bind_rows(CDL_1000, Rem_1000) %>% 
+  replace(is.na(.), 0)
+CDL_1500 <- bind_rows(CDL_1500, Rem_1500) %>% 
+  replace(is.na(.), 0)
+
+
+```
+
+Formatting the Metadata so that it can be merged with the QGIS output files--the cdl number needs to have "Value" written in front of it so that it can match
+
+```{r}
+
+CDL_Metadata <- CDL_Metadata %>% 
+  mutate(CDL_Code = paste("Value", CDL_NUMBER, sep = "_"))
+
+```
+
+Merging QGIS outputs with the metadata so that the crops are displayed by name not value 
+
+```{r}
+
+CDL_250_w_crops <- CDL_250 %>% 
+  select(Name, Value_1:Value_229) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+CDL_500_w_crops <- CDL_500 %>% 
+  select(Name, Value_1:Value_229) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+CDL_1000_w_crops <- CDL_1000 %>% 
+  select(Name, Value_1:Value_243) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+CDL_1500_w_crops <- CDL_1500 %>% 
+  select(Name, Value_1:Value_243) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+
+```
+
+
+Grouping crops to create broad landscape categories: 250m
+
+```{r}
+
+CDL_250_Summary <- CDL_250_w_crops %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+        AG_250 = ((corn+soybeans+sweet_corn+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+buckwheat+other_crops+fallow_idle_cropland+squash+pumpkins+apples+grapes+christmas_trees+clover_wildflowers)/Total),
+         PAST_250 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_250 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_250 = ((deciduous_forest+evergreen_forest + mixed_forest + woody_wetlands)/Total), 
+         DEV_250 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_250 =NAT_OPEN_250 + NAT_FOR_250,
+         NAT_PAST_250 = NAT_OPEN_250 + PAST_250,
+         AG_PAST_250 = AG_250 + PAST_250) %>% 
+    select(na, AG_250:AG_PAST_250)
+
+
+```
+
+```{r}
+
+CDL_500_Summary <- CDL_500_w_crops %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+          AG_500 = ((corn+soybeans+sweet_corn+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+buckwheat+dry_beans+other_crops+fallow_idle_cropland+triticale+squash+pumpkins+apples+grapes+christmas_trees+clover_wildflowers)/Total),
+         PAST_500 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_500 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_500 = ((deciduous_forest+evergreen_forest + mixed_forest + woody_wetlands)/Total), 
+         DEV_500 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_500 = NAT_OPEN_500 + NAT_FOR_500,
+         NAT_PAST_500 = NAT_OPEN_500 + PAST_500,
+         AG_PAST_500 = AG_500 + PAST_500) %>% 
+    select(na, AG_500:AG_PAST_500)
+
+
+```
+
+```{r}
+
+CDL_1000_Summary <- CDL_1000_w_crops %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+          AG_1000 = ((corn+sorghum+soybeans+sweet_corn+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+buckwheat+dry_beans+other_crops+misc_vegs_fruits+fallow_idle_cropland+triticale+squash+pumpkins+cabbage+dbl_crop_oats_corn+apples+grapes+christmas_trees+clover_wildflowers)/Total),
+         PAST_1000 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_1000 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_1000 = ((deciduous_forest+evergreen_forest + mixed_forest + woody_wetlands)/Total), 
+         DEV_1000 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_1000 = NAT_OPEN_1000 + NAT_FOR_1000,
+         NAT_PAST_1000 = NAT_OPEN_1000 + PAST_1000,
+         AG_PAST_1000 = AG_1000 + PAST_1000) %>% 
+    select(na, AG_1000:AG_PAST_1000)
+
+
+```
+
+```{r}
+
+CDL_1500_Summary <- CDL_1500_w_crops %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+          AG_1500 = ((corn+sorghum+soybeans+sweet_corn+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+buckwheat+dry_beans+other_crops+misc_vegs_fruits+onions+peas+pears+fallow_idle_cropland+triticale+squash+pumpkins+cabbage+dbl_crop_oats_corn+peaches+apples+grapes+christmas_trees+clover_wildflowers)/Total),
+         PAST_1500 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_1500 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_1500 = ((deciduous_forest+evergreen_forest + mixed_forest + woody_wetlands)/Total), 
+         DEV_1500 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_1500 = NAT_OPEN_1500 + NAT_FOR_1500,
+         NAT_PAST_1500 = NAT_OPEN_1500 + PAST_1500,
+         AG_PAST_1500 = AG_1500 + PAST_1500) %>% 
+  select(na, AG_1500:AG_PAST_1500)
+
+```
+
+joining  the four different scales, removing the duplicate values for three sites and recoding the sites so they can be joined with the raw data
+
+```{r}
+
+CDL_2019_Barbarea_Final <- CDL_250_Summary %>% 
+  left_join(CDL_500_Summary) %>% 
+  left_join(CDL_1000_Summary) %>% 
+  left_join(CDL_1500_Summary) %>% 
+  rename(Site = na) %>% 
+  filter(Site %in% c("Indian_Creek_B1", "CU_Orchards_B", "Stick_and_Stone_B", "West_Haven_B", "Grisamore_B", "Silver_Queen_B", "Shared_Roots_B2", "Cassim_B","Buried_Treasures_B", "Research_North_B2","Fellenz_B","Full_Circle_B","Sampson_B", "Remembrance_B")) %>% 
+  mutate(Site = recode(Site, "Indian_Creek_B1" = "IC", "CU_Orchards_B" = "CO", "Stick_and_Stone_B" = "SS", "West_Haven_B" = "WH", "Grisamore_B" = "GR", "Silver_Queen_B" = "SQ", "Shared_Roots_B2" = "SR", "Cassim_B" = "CA", "Buried_Treasures_B" = "BT", "Research_North_B2" = "RN", "Fellenz_B" = "FE", "Full_Circle_B" = "FC", "Sampson_B" = "SA", "Remembrance_B" = "RE"))
+  
+```
+Writing the csv file for the 2019 CDL data
+
+```{r}
+
+#write.csv(CDL_2019_Barbarea_Final, file = "data/CDL_2019_Barbarea_Final.csv")
+
+```
+Data upload--the QGIS output at 4 different scales and the 2019 New York CDL Metadata (Thlaspi arvense)
+
+```{r}
+CDL_Metadata <- read.delim("data/CDL_Metadata_2019.csv", sep = ",")
+PC_CDL_250 <- read.delim("data/PC_2019_250m.csv", sep = ",")
+PC_CDL_500 <- read.delim("data/PC_2019_500m.csv", sep = ",")
+PC_CDL_1000 <- read.delim("data/PC_2019_1000m.csv", sep = ",")
+PC_CDL_1500 <- read.delim("data/PC_2019_1500m.csv", sep = ",")
+
+Gates_250 <- read.delim("data/Gates_250m.csv", sep = ",")
+Gates_500 <- read.delim("data/Gates_500m.csv", sep = ",")
+Gates_1000 <- read.delim("data/Gates_1000m.csv", sep = ",")
+Gates_1500 <- read.delim("data/Gates_1500m.csv", sep = ",")
+
+PC_CDL_250 <- bind_rows(PC_CDL_250, Gates_250) %>% 
+  replace(is.na(.), 0)
+PC_CDL_500 <- bind_rows(PC_CDL_500, Gates_500) %>% 
+  replace(is.na(.), 0)
+PC_CDL_1000 <- bind_rows(PC_CDL_1000, Gates_1000) %>% 
+  replace(is.na(.), 0)
+PC_CDL_1500 <- bind_rows(PC_CDL_1500, Gates_1500) %>% 
+  replace(is.na(.), 0)
+
+```
+
+Merging QGIS outputs with the metadata so that the crops are displayed by name not value 
+
+```{r}
+
+CDL_250_w_crops_PC <- PC_CDL_250 %>% 
+  select(Name, Value_1:Value_229) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+CDL_500_w_crops_PC <- PC_CDL_500 %>% 
+  select(Name, Value_1:Value_229) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+CDL_1000_w_crops_PC <- PC_CDL_1000 %>% 
+  select(Name, Value_1:Value_243) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+CDL_1500_w_crops_PC <- PC_CDL_1500 %>% 
+  select(Name, Value_1:Value_243) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+
+```
+
+Grouping crops to create broad landscape categories: 250m
+
+```{r}
+
+CDL_250_Summary_PC <- CDL_250_w_crops_PC %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+        AG_250 = ((corn+soybeans+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+buckwheat+other_crops+fallow_idle_cropland+squash+pumpkins+apples+grapes+christmas_trees+clover_wildflowers)/Total),
+         PAST_250 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_250 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_250 = ((deciduous_forest+evergreen_forest + mixed_forest + woody_wetlands)/Total), 
+         DEV_250 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_250 =NAT_OPEN_250 + NAT_FOR_250,
+         NAT_PAST_250 = NAT_OPEN_250 + PAST_250,
+         AG_PAST_250 = AG_250 + PAST_250) %>% 
+    select(na, AG_250:AG_PAST_250)
+
+
+```
+
+```{r}
+
+CDL_500_Summary_PC <- CDL_500_w_crops_PC %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+          AG_500 = ((corn+soybeans+sweet_corn+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+buckwheat+dry_beans+other_crops+fallow_idle_cropland+triticale+squash+pumpkins+apples+grapes+christmas_trees+clover_wildflowers)/Total),
+         PAST_500 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_500 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_500 = ((deciduous_forest+evergreen_forest + mixed_forest + woody_wetlands)/Total), 
+         DEV_500 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_500 = NAT_OPEN_500 + NAT_FOR_500,
+         NAT_PAST_500 = NAT_OPEN_500 + PAST_500,
+         AG_PAST_500 = AG_500 + PAST_500) %>% 
+    select(na, AG_500:AG_PAST_500)
+
+
+```
+
+
+```{r}
+
+CDL_1000_Summary_PC <- CDL_1000_w_crops_PC %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+          AG_1000 = ((corn+sorghum+soybeans+sweet_corn+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+buckwheat+dry_beans+other_crops+misc_vegs_fruits+fallow_idle_cropland+triticale+squash+pumpkins+cabbage+dbl_crop_oats_corn+apples+grapes+christmas_trees+clover_wildflowers)/Total),
+         PAST_1000 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_1000 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_1000 = ((deciduous_forest+evergreen_forest + mixed_forest + woody_wetlands)/Total), 
+         DEV_1000 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_1000 = NAT_OPEN_1000 + NAT_FOR_1000,
+         NAT_PAST_1000 = NAT_OPEN_1000 + PAST_1000,
+         AG_PAST_1000 = AG_1000 + PAST_1000) %>% 
+    select(na, AG_1000:AG_PAST_1000)
+
+
+```
+
+```{r}
+
+CDL_1500_Summary_PC <- CDL_1500_w_crops_PC %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+          AG_1500 = ((corn+sorghum+soybeans+sweet_corn+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+buckwheat+dry_beans+other_crops+misc_vegs_fruits+onions+peas+pears+fallow_idle_cropland+triticale+squash+pumpkins+cabbage+dbl_crop_oats_corn+apples+grapes+christmas_trees+clover_wildflowers)/Total),
+         PAST_1500 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_1500 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_1500 = ((deciduous_forest+evergreen_forest + mixed_forest + woody_wetlands)/Total), 
+         DEV_1500 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_1500 = NAT_OPEN_1500 + NAT_FOR_1500,
+         NAT_PAST_1500 = NAT_OPEN_1500 + PAST_1500,
+         AG_PAST_1500 = AG_1500 + PAST_1500) %>% 
+  select(na, AG_1500:AG_PAST_1500)
+
+```
+
+
+joining  the four different scales, removing the duplicate values for three sites and recoding the sites so they can be joined with the raw data
+
+```{r}
+
+CDL_2019_PC_Final <- CDL_250_Summary_PC %>% 
+  left_join(CDL_500_Summary_PC) %>% 
+  left_join(CDL_1000_Summary_PC) %>% 
+  left_join(CDL_1500_Summary_PC) %>% 
+  rename(Site = na) 
+  
+```
+
+Writing the csv file for the 2019 CDL data
+
+```{r}
+
+#write.csv(CDL_2019_PC_Final, file = "data/CDL_2019_PC_Final.csv")
+
+```
+
+Data upload--the QGIS output at 4 different scales and the 2019 New York CDL Metadata (Thlaspi arvense)
+
+```{r}
+CDL_Metadata <- read.delim("data/CDL_Metadata_2019.csv", sep = ",")
+SP_CDL_250 <- read.delim("data/SP_2019_250m.csv", sep = ",")
+SP_CDL_500 <- read.delim("data/SP_2019_500m.csv", sep = ",")
+SP_CDL_1000 <- read.delim("data/SP_2019_1000m.csv", sep = ",")
+SP_CDL_1500 <- read.delim("data/SP_2019_1500m.csv", sep = ",")
+
+```
+
+Merging QGIS outputs with the metadata so that the crops are displayed by name not value 
+
+```{r}
+
+CDL_250_w_crops_SP <- SP_CDL_250 %>% 
+  select(Name, Value_1:Value_229) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+CDL_500_w_crops_SP <- SP_CDL_500 %>% 
+  select(Name, Value_1:Value_229) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+CDL_1000_w_crops_SP <- SP_CDL_1000 %>% 
+  select(Name, Value_1:Value_243) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+CDL_1500_w_crops_SP <- SP_CDL_1500 %>% 
+  select(Name, Value_1:Value_243) %>% 
+  setNames(CDL_Metadata$CDL_CROP[match(names(.), CDL_Metadata$CDL_Code)])
+
+
+```
+
+Grouping crops to create broad landscape categories: 250m
+
+```{r}
+
+CDL_250_Summary_SP <- CDL_250_w_crops_SP %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+        AG_250 = ((corn+soybeans+sweet_corn+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+buckwheat+dbl_crop_oats_corn+fallow_idle_cropland+squash+pumpkins+apples+grapes+clover_wildflowers)/Total),
+         PAST_250 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_250 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_250 = ((deciduous_forest +  + mixed_forest + woody_wetlands)/Total), 
+         DEV_250 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_250 =NAT_OPEN_250 + NAT_FOR_250,
+         NAT_PAST_250 = NAT_OPEN_250 + PAST_250,
+         AG_PAST_250 = AG_250 + PAST_250) %>% 
+    select(na, AG_250:AG_PAST_250)
+
+
+```
+
+```{r}
+
+CDL_500_Summary_SP <- CDL_500_w_crops_SP %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+          AG_500 = ((corn+sorghum+soybeans+sweet_corn+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+buckwheat+dry_beans+other_crops+fallow_idle_cropland+triticale+squash+pumpkins+apples+grapes+christmas_trees+clover_wildflowers+dbl_crop_oats_corn)/Total),
+         PAST_500 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_500 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_500 = ((deciduous_forest+evergreen_forest + mixed_forest + woody_wetlands)/Total), 
+         DEV_500 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_500 = NAT_OPEN_500 + NAT_FOR_500,
+         NAT_PAST_500 = NAT_OPEN_500 + PAST_500,
+         AG_PAST_500 = AG_500 + PAST_500) %>% 
+    select(na, AG_500:AG_PAST_500)
+
+
+```
+
+
+```{r}
+
+CDL_1000_Summary_SP <- CDL_1000_w_crops_SP %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+          AG_1000 = ((corn+sorghum+soybeans+sweet_corn+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+buckwheat+dry_beans+other_crops+misc_vegs_fruits+fallow_idle_cropland+triticale+squash+pumpkins+cabbage+dbl_crop_oats_corn+apples+grapes+christmas_trees+clover_wildflowers)/Total),
+         PAST_1000 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_1000 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_1000 = ((deciduous_forest+evergreen_forest + mixed_forest + woody_wetlands)/Total), 
+         DEV_1000 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_1000 = NAT_OPEN_1000 + NAT_FOR_1000,
+         NAT_PAST_1000 = NAT_OPEN_1000 + PAST_1000,
+         AG_PAST_1000 = AG_1000 + PAST_1000) %>% 
+    select(na, AG_1000:AG_PAST_1000)
+
+
+```
+
+```{r}
+
+CDL_1500_Summary_SP <- CDL_1500_w_crops_SP %>% 
+  clean_names() %>% 
+   mutate(Total = rowSums(across(where(is.numeric))),
+          AG_1500 = ((corn+sorghum+soybeans+sweet_corn+barley+spring_wheat+winter_wheat+rye+oats+alfalfa+millet+speltz+buckwheat+dry_beans+other_crops+misc_vegs_fruits+onions+peas+pears+fallow_idle_cropland+triticale+squash+pumpkins+cabbage+blueberries+dbl_crop_oats_corn+apples+peaches+grapes+christmas_trees+clover_wildflowers)/Total),
+         PAST_1500 = ((other_hay_non_alfalfa+grassland_pasture)/Total),
+         NAT_OPEN_1500 = ((clover_wildflowers+shrubland+herbaceous_wetlands+developed_open_space)/Total),
+         NAT_FOR_1500 = ((deciduous_forest+evergreen_forest + mixed_forest + woody_wetlands)/Total), 
+         DEV_1500 = ((developed_low_intensity + developed_med_intensity + developed_high_intensity + barren)/Total),
+         NAT_1500 = NAT_OPEN_1500 + NAT_FOR_1500,
+         NAT_PAST_1500 = NAT_OPEN_1500 + PAST_1500,
+         AG_PAST_1500 = AG_1500 + PAST_1500) %>% 
+  select(na, AG_1500:AG_PAST_1500)
+
+```
+
+
+joining  the four different scales, removing the duplicate values for three sites and recoding the sites so they can be joined with the raw data
+
+```{r}
+
+CDL_2019_SP_Final <- CDL_250_Summary_SP %>% 
+  left_join(CDL_500_Summary_SP) %>% 
+  left_join(CDL_1000_Summary_SP) %>% 
+  left_join(CDL_1500_Summary_SP) %>% 
+  rename(Site = na) 
+  
+```
+
+Writing the csv file for the 2019 CDL data
+
+```{r}
+
+#write.csv(CDL_2019_SP_Final, file = "data/CDL_2019_SP_Final.csv")
+
+```
