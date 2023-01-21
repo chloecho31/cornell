@@ -1,0 +1,52 @@
+---
+title: "Organic_Farming_Survey_EDA"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+```
+
+
+Data upload - Eli's Organic Farming Survey results.
+
+```{r}
+
+organic_farming <- read.delim("Bloom_SurveyDataExtension.csv", sep = ",", na.strings = c("", "NA"))
+organic_farming
+
+```
+
+Select columns describing the types of crops grown by respondents, plot bar graph to see frequency of each crop.
+
+```{r}
+
+organic_farming %>%
+  select(Participant.ID, B6_Brassica:B6_Ericaceae) %>%
+  stack(B6_Brassica:B6_Ericaceae) %>%
+  na.omit() %>%
+  ggplot(aes(x = fct_infreq(values))) +
+  geom_bar() +
+  scale_x_discrete(guide = guide_axis(angle = 45))
+
+```
+
+Of the options, the most frequently grown crop categories are Brassica, Allium, Curcubit, and Solanaceous. Determine what potential pest and natural enemy systems exist in each one + other pros and cons of working in each system.
+
+BRASSICA
+Go to farmers and see if I can do experiment. 
+
+ALLIUM
+
+
+CUCURBIT
+
+
+SOLANACEOUS
+
