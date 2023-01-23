@@ -1,0 +1,735 @@
+---
+title: "Dung_Beetle_Landscape_EDA"
+author: "Chloe Cho"
+date: "2022-12-09"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(Hmisc)
+library(reshape)
+library(fitdistrplus)
+library(lme4)
+library(janitor)
+library(ggthemes)
+library(ggsignif)
+library(broom)
+library(rstatix)
+
+```
+
+**Read data** - Landscape data for the ten dung beetle sites.
+
+```{r}
+
+dung_beetle_landscape <- read.delim("../QGIS/Final_CDL_Dung_Beetle_2021.csv", sep = ",")
+dung_beetle_landscape
+
+```
+Adding a column that combines natural and semi-natural land-use types. 100% would equal agriculture + developed + semi-natural/natural. 
+
+```{r}
+
+dung_beetle_250m <- dung_beetle_landscape %>%
+  dplyr::rename(Site = na) %>%
+  dplyr::select(Site, AG_250:AG_PAST_250) %>%
+  mutate(NAT_SEMINAT_250 = PAST_250 + NAT_FOR_250 + NAT_OPEN_250)
+
+```
+
+```{r}
+
+dung_beetle_500m <- dung_beetle_landscape %>%
+  dplyr::rename(Site = na) %>%
+  dplyr::select(Site, AG_500:AG_PAST_500) %>%
+  mutate(NAT_SEMINAT_500 = PAST_500 + NAT_FOR_500 + NAT_OPEN_500)
+
+```
+
+```{r}
+
+dung_beetle_750m <- dung_beetle_landscape %>%
+  dplyr:: rename(Site = na) %>%
+  dplyr::select(Site, AG_750:AG_PAST_750) %>%
+  mutate(NAT_SEMINAT_750 = PAST_750 + NAT_FOR_750 + NAT_OPEN_750)
+
+```
+
+```{r}
+
+dung_beetle_1000m <- dung_beetle_landscape %>%
+  dplyr::rename(Site = na) %>%
+  dplyr::select(Site, AG_1000:AG_PAST_1000) %>%
+  mutate(NAT_SEMINAT_1000 = PAST_1000 + NAT_FOR_1000 + NAT_OPEN_1000)
+
+```
+
+**Read data** - Dung beetle species count data + other beetle families (Histeridae, Hydrophilidae, Staphylinidae, Scarabaeidae) + face flies + horn flies. Source: Ken Wise.
+
+```{r}
+
+beetle_counts <- read.delim("../Data/Dung_Beetle_Data.csv", sep = ",")
+beetle_counts
+
+```
+
+Renaming Farm names to match landscape data variable names so tables can be joined. 
+
+```{r}
+
+beetle_counts$Farm[beetle_counts$Farm == 'Chaseholm'] <- 'Chaseholm_Farm_NI'
+beetle_counts$Farm[beetle_counts$Farm == 'Wallbridge'] <- 'Wallbridge_Farm_I'
+beetle_counts$Farm[beetle_counts$Farm == 'Johnk Farm'] <- 'Johnk_Farm_NI'
+beetle_counts$Farm[beetle_counts$Farm == 'Boone Farm'] <- 'Boone_Farm_I'
+beetle_counts$Farm[beetle_counts$Farm == 'Honeyhill'] <- 'Honeyhill_Farm_NI'
+beetle_counts$Farm[beetle_counts$Farm == 'Rugenstein Family Farm'] <- 'Rugenstein_Family_Farm_I'
+beetle_counts$Farm[beetle_counts$Farm == 'Turner'] <- 'Turner_Farm_NI'
+beetle_counts$Farm[beetle_counts$Farm == 'Kuipers'] <- 'Kuipers_Farm_I'
+beetle_counts$Farm[beetle_counts$Farm == 'Eisele farm'] <- 'Eisele_Farm_NI'
+beetle_counts$Farm[beetle_counts$Farm == 'Shephard farm'] <- 'Shephard_Farm_I'
+
+beetle_counts
+
+```
+
+Reformat Date column into date data type. 
+
+```{r}
+
+date_format <- as.Date(beetle_counts$Date, '%m/%d/%y')
+
+beetle_counts <- beetle_counts %>%
+  dplyr::mutate(Date = date_format) %>%
+  clean_names() %>%
+  dplyr::mutate(non_or_insecticide = tolower(non_or_insecticide)) %>%
+  dplyr::mutate(weather = tolower(weather)) %>%
+  dplyr::mutate(farm = tolower(farm)) %>%
+  dplyr::mutate(active_ingredients = tolower(active_ingredients)) %>%
+  dplyr::mutate(region = tolower(region)) %>%
+  mutate(non_or_insecticide = case_when(non_or_insecticide == 'non   ' ~ 'non',
+                                        non_or_insecticide == 'insecticide' ~ 'insecticide',
+                                        non_or_insecticide == 'non' ~ 'non'))
+
+beetle_counts
+
+```
+
+**Dung Beetle EDA**
+
+Plot species over time. Calamosternus granarius and Colobopterus erraticus seem to appear most frequently. This is more apparent in the earlier season.  
+
+Melt table into vertical format so there is one count data point per row. 
+
+```{r}
+
+dung_beetles <- beetle_counts %>%
+  dplyr::select(date:onthophagus_hecate)
+  
+dung_beetles <- melt(dung_beetles, id = c("farm", "region", "date", "temp", "weather", "non_or_insecticide", "active_ingredients")) 
+
+```
+
+Graph beetle counts by species, color coded by farm. *See if there is a way to group together the fifteen species based on their ecological behavior to help simplify visualization.*
+
+```{r}
+
+dung_beetles %>%
+  group_by(farm, variable) %>%
+  replace(is.na(dung_beetles), 0) %>%
+  summarise(total = sum(value)) %>%
+  ggplot(aes(variable, total, col = farm)) + 
+  geom_point() + 
+  scale_x_discrete(guide = guide_axis(angle = 45))
+
+```
+
+```{r}
+
+dung_beetles %>%
+  group_by(farm, variable) %>%
+  replace(is.na(dung_beetles), 0) %>%
+  #summarise(total = sum(value)) %>%
+  filter(farm == 'boone_farm_i') %>%
+  ggplot(aes(x = variable, y = log(value))) +
+  geom_boxplot() +
+  scale_x_discrete(guide = guide_axis(angle = 45))
+
+```
+
+Summed dung beetles per farm. *Potential visualization idea is to get a few ecological categories and have multiple bars per farm. Then, these bars could be split into stacks that represent the individual species counts.*
+
+```{r}
+
+dung_beetles %>%
+  group_by(farm) %>%
+  replace(is.na(dung_beetles), 0) %>%
+  summarise(total = sum(value)) %>%
+  ggplot(aes(x = farm, y = total)) +
+  geom_bar(stat = 'identity') +
+  scale_x_discrete(guide = guide_axis(angle = 45))
+
+```
+
+Checking for distribution. Negative binomial fits slightly better - will continue to use a negative binomial distribution for the following models. 
+
+```{r}
+
+cleaned_dung_beetles <- dung_beetles %>%
+  replace(is.na(dung_beetles), 0) %>%
+  mutate(non_or_insecticide = case_when(non_or_insecticide == 'non   ' ~ 'non',
+                                        non_or_insecticide == 'insecticide' ~ 'insecticide',
+                                        non_or_insecticide == 'non' ~ 'non')) %>%
+  mutate(across(c(weather, non_or_insecticide, active_ingredients, farm, region),
+                factor)) 
+
+plot(fitdist(cleaned_dung_beetles$value,"nbinom"))
+plot(fitdist(cleaned_dung_beetles$value,"pois"))
+
+```
+
+Graphing insecticide vs. non-insecticide. 
+
+```{r}
+
+non_or_insecticide_counts <- cleaned_dung_beetles %>%
+  group_by(non_or_insecticide) %>%
+  summarise(freq = sum(value))
+
+group_means <- cleaned_dung_beetles %>%
+  group_by(non_or_insecticide) %>%
+  summarise(mean = mean(value),
+            n = n())
+
+cleaned_dung_beetles %>% ggplot(aes(x = non_or_insecticide, y = value, fill = non_or_insecticide)) +
+  geom_boxplot() 
+
+cleaned_dung_beetles %>% t_test(value ~ non_or_insecticide,
+                var.equal = TRUE,
+                detailed = TRUE) %>%
+  glimpse()
+
+cleaned_dung_beetles %>%
+  group_by(non_or_insecticide) %>%
+  ggplot(aes(x = non_or_insecticide, y = value)) +
+  geom_boxplot() +
+  geom_signif(comparisons = list(c("insecticide", "non")),
+              test = "t.test", 
+              map_signif_level = TRUE)
+```
+
+Running an initial model with just the random effects.
+
+```{r}
+
+initial_model <- glmer.nb(value ~ (1 | region/farm), data = cleaned_dung_beetles)
+summary(initial_model)
+
+```
+
+Adding a fixed effect to the model - insecticide/non-insecticide. Region and farm are random effects. 
+
+No significance found. 
+
+```{r}
+
+model_1 <- glmer.nb(value ~ non_or_insecticide + (1 | region/farm), data = cleaned_dung_beetles)
+summary(model_1)
+
+```
+
+Merge local and landscape data. 
+
+```{r}
+
+dung_beetle_landscape <- dung_beetle_landscape %>% 
+  clean_names() %>%
+  dplyr::rename(farm = na) %>%
+  mutate(farm = tolower(farm)) %>%
+  mutate(farm = factor(farm))
+
+```
+
+```{r}
+
+cleaned_dung_beetles
+
+```
+
+Join the local and landscape data frames. 
+
+```{r}
+
+local_landscape_joined <- cleaned_dung_beetles %>%
+  left_join(dung_beetle_landscape, by = c("farm" = "farm"))
+
+```
+
+**Dung Beetles - Looking at 250m buffer**
+
+```{r}
+
+dung_beetle_250m <- dung_beetle_250m %>% 
+  clean_names() %>%
+  dplyr::rename(farm = site) %>%
+  dplyr::mutate(farm = tolower(farm))
+  
+local_landscape_250m <- cleaned_dung_beetles %>%
+  left_join(dung_beetle_250m, by = c("farm" = "farm"))
+
+```
+
+```{r}
+
+ggplot(local_landscape_250m, aes(x = nat_seminat_250, y = log(value), color = non_or_insecticide)) + 
+  geom_point() + 
+  theme_few() + 
+  ylab('Dung Beetle (log)') +
+  xlab('Proportion Natural/Semi-Natural 250m') + 
+  geom_smooth(method = lm)
+
+```
+
+For all dung beetle species combined at 250m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 250m radius. Random effects are region and farm. 
+
+Significance for temperature, local (insecticide use), and local*landscape interaction. 
+
+```{r}
+
+model_250 <- glmer.nb(value ~ scale(temp) + non_or_insecticide * scale(nat_seminat_250) + (1 | region/farm), data = local_landscape_250m)
+summary(model_250)
+
+```
+
+**Dung Beetles - Looking at 500m buffer**
+
+```{r}
+
+dung_beetle_500m <- dung_beetle_500m %>% 
+  clean_names() %>%
+  dplyr::rename(farm = site) %>%
+  dplyr::mutate(farm = tolower(farm))
+  
+local_landscape_500m <- cleaned_dung_beetles %>%
+  left_join(dung_beetle_500m, by = c("farm" = "farm"))
+
+```
+
+```{r}
+
+ggplot(local_landscape_500m, aes(x = nat_seminat_500, y = log(value), color = non_or_insecticide)) + 
+  geom_point() + 
+  theme_few() + 
+  ylab('Dung Beetle (log)') +
+  xlab('Proportion Natural/Semi-Natural 500m') + 
+  geom_smooth(method = lm)
+
+```
+
+For all dung beetle species combined at 500m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 500m radius. Random effects are region and farm. 
+
+Significance for temperature. Marginal significance for insecticide/non-insecticide and local*landscape interaction. 
+
+```{r}
+
+model_500 <- glmer.nb(value ~ scale(temp) + non_or_insecticide * scale(nat_seminat_500) + (1 | region/farm), data = local_landscape_500m)
+summary(model_500)
+
+```
+
+**Dung Beetles - Looking at 750m buffer**
+
+```{r}
+
+dung_beetle_750m <- dung_beetle_750m %>% 
+  clean_names() %>%
+  dplyr::rename(farm = site) %>%
+  dplyr::mutate(farm = tolower(farm))
+  
+local_landscape_750m <- cleaned_dung_beetles %>%
+  left_join(dung_beetle_750m, by = c("farm" = "farm"))
+
+```
+
+```{r}
+
+ggplot(local_landscape_750m, aes(x = nat_seminat_750, y = log(value), color = non_or_insecticide)) + 
+  geom_point() + 
+  theme_few() + 
+  ylab('Dung Beetle (log)') +
+  xlab('Proportion Natural/Semi-Natural 750m') +  
+  geom_smooth(method = lm)
+
+```
+
+For all dung beetle species combined at 750m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 750m radius. Random effects are region and farm. 
+
+Significance for temperature and landscape. Marginal significance for insecticide/non-insecticide. 
+
+```{r}
+
+model_750 <- glmer.nb(value ~ scale(temp) + non_or_insecticide * scale(nat_seminat_750) + (1 | region/farm), data = local_landscape_750m)
+
+summary(model_750)
+
+```
+
+**Dung Beetles - Looking at 1000m buffer**
+
+```{r}
+
+dung_beetle_1000m <- dung_beetle_1000m %>% 
+  clean_names() %>%
+  dplyr::rename(farm = site) %>%
+  dplyr::mutate(farm = tolower(farm))
+  
+local_landscape_1000m <- cleaned_dung_beetles %>%
+  left_join(dung_beetle_1000m, by = c("farm" = "farm"))
+
+```
+
+```{r}
+
+ggplot(local_landscape_1000m, aes(x = nat_seminat_1000, y = log(value), color = non_or_insecticide)) + 
+  geom_point() + 
+  theme_few() + 
+  ylab('Dung Beetle (log)') +
+  xlab('Proportion Natural/Semi-Natural 1000m') +
+  geom_smooth(method = lm)
+
+```
+
+For all dung beetle species combined at 1000m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 1000m radius. Random effects are region and farm. 
+
+Significance for temperature, non-insecticide/insecticide, and landscape. 
+
+```{r}
+
+model_1000 <- glmer.nb(value ~ scale(temp) + non_or_insecticide * scale(nat_seminat_1000) + (1 | region/farm), data = local_landscape_1000m)
+
+summary(model_1000)
+
+```
+
+**Other Beetle Families - 250m**
+
+Modeling the other three beetle families collected and identified in relationship to local and landscape factors. 
+
+```{r}
+beetle_counts <- beetle_counts %>%
+  mutate(across(c(weather, non_or_insecticide, active_ingredients, farm, region),
+                factor)) 
+
+
+families_250 <- beetle_counts %>%
+  dplyr::select(date:active_ingredients, histeridae:scarabaeidae) %>%
+  replace(is.na(.), 0) %>%
+  left_join(dung_beetle_250m, by = c("farm" = "farm"))
+
+```
+
+For family Histeridae at 250m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 250m radius. Random effects are region and farm. 
+
+Significance for temperature, insecticide/non-insecticide, and the local*landscape interaction. Marginal significance for the landscape factor. 
+
+```{r}
+
+plot(fitdist(families_250$histeridae,"nbinom"))
+plot(fitdist(families_250$histeridae,"pois"))
+
+histeridae_250 <- glmer.nb(histeridae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_250) + (1 | region/farm), data = families_250)
+summary(histeridae_250)
+
+```
+
+For family Hydrophilidae at 250m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 250m radius. Random effects are region and farm. 
+
+Significance for temperature. 
+
+```{r}
+
+plot(fitdist(families_250$hydrophilidae,"nbinom"))
+plot(fitdist(families_250$hydrophilidae,"pois"))
+
+hydrophilidae_250 <- glmer.nb(hydrophilidae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_250) + (1 | region/farm), data = families_250)
+summary(hydrophilidae_250)
+
+```
+
+For family Staphylinidae at 250m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 250m radius. Random effects are region and farm. 
+
+Significance for insecticide/non-insecticide, and the local*landscape interaction. Marginal significance for the landscape factor. 
+
+```{r}
+
+plot(fitdist(families_250$staphylinidae,"nbinom"))
+plot(fitdist(families_250$staphylinidae,"pois"))
+
+staphylinidae_250 <- glmer.nb(staphylinidae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_250) + (1 | region/farm), data = families_250)
+summary(staphylinidae_250)
+
+```
+
+**Other Beetle Families - 500m**
+
+```{r}
+
+families_500 <- beetle_counts %>%
+  dplyr::select(date:active_ingredients, histeridae:scarabaeidae) %>%
+  replace(is.na(.), 0) %>%
+  left_join(dung_beetle_500m, by = c("farm" = "farm"))
+
+```
+
+For family Histeridae at 500m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 500m radius. Random effects are region and farm. 
+
+Model failed to converge. Need to try other optimizers. 
+
+```{r}
+
+histeridae_500 <- glmer.nb(histeridae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_500) + (1 | region/farm), data = families_500)
+summary(histeridae_500)
+
+```
+
+For family Hydrophilidae at 500m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 500m radius. Random effects are region and farm. 
+
+Model did not converge.
+
+```{r}
+
+hydrophilidae_500 <- glmer.nb(hydrophilidae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_500) + (1 | region/farm), data = families_500)
+summary(hydrophilidae_500)
+
+```
+
+For family Staphylinidae at 500m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 500m radius. Random effects are region and farm. 
+
+Significance for landscape. 
+
+```{r}
+
+staphylinidae_500 <- glmer.nb(staphylinidae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_500) + (1 | region/farm), data = families_500)
+summary(staphylinidae_500)
+
+```
+
+**Other Beetle Families - 750m**
+
+```{r}
+
+families_750 <- beetle_counts %>%
+  dplyr::select(date:active_ingredients, histeridae:scarabaeidae) %>%
+  replace(is.na(.), 0) %>%
+  left_join(dung_beetle_750m, by = c("farm" = "farm"))
+
+```
+
+For family Histeridae at 750m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 750m radius. Random effects are region and farm. 
+
+Model failed to converge. Need to try other optimizers. 
+
+```{r}
+
+histeridae_750 <- glmer.nb(histeridae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_750) + (1 | region/farm), data = families_750)
+summary(histeridae_750)
+
+```
+
+For family Hydrophilidae at 750m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 750m radius. Random effects are region and farm. 
+
+Significance for insecticide/non-insecticide and local*landscape. Marginal significance for temperature. 
+
+```{r}
+
+hydrophilidae_750 <- glmer.nb(hydrophilidae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_750) + (1 | region/farm), data = families_750)
+summary(hydrophilidae_750)
+
+```
+
+For family Staphylinidae at 750m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 750m radius. Random effects are region and farm. 
+
+Model failed to converge. Need to try other optimizers. 
+
+```{r}
+
+staphylinidae_750 <- glmer.nb(staphylinidae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_750) + (1 | region/farm), data = families_750)
+summary(staphylinidae_750)
+
+```
+
+**Other Beetle Families - 1000m**
+
+```{r}
+
+families_1000 <- beetle_counts %>%
+  dplyr::select(date:active_ingredients, histeridae:scarabaeidae) %>%
+  replace(is.na(.), 0) %>%
+  left_join(dung_beetle_1000m, by = c("farm" = "farm"))
+
+```
+
+For family Histeridae at 1000m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 1000m radius. Random effects are region and farm. 
+
+Significance found for temperature. Marginal significance for landscape. 
+
+```{r}
+
+histeridae_1000 <- glmer.nb(histeridae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_1000) + (1 | region/farm), data = families_1000)
+summary(histeridae_1000)
+
+```
+
+For family Hydrophilidae at 1000m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 1000m radius. Random effects are region and farm. 
+
+Marginal significance for temperature, insecticide/non-insecticide, landscape, and local*landscape interaction. 
+
+```{r}
+
+hydrophilidae_1000 <- glmer.nb(hydrophilidae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_1000) + (1 | region/farm), data = families_1000)
+summary(hydrophilidae_1000)
+
+```
+
+For family Staphylinidae at 1000m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 1000m radius. Random effects are region and farm. 
+
+Significance found for landscape. 
+
+```{r}
+
+staphylinidae_1000 <- glmer.nb(staphylinidae ~ scale(temp) + non_or_insecticide * scale(nat_seminat_1000) + (1 | region/farm), data = families_1000)
+summary(staphylinidae_1000)
+
+```
+
+**Fly Abundance**
+
+```{r}
+
+flies <- beetle_counts %>%
+  dplyr::select(date:active_ingredients, horn_flies:face_flies) %>%
+  mutate(horn_flies = as.integer(horn_flies)) 
+
+flies[is.na(flies)] <- 0
+
+```
+
+**Flies - 250m Buffer**
+
+For horn flies at 250m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 250m radius. Random effects are region and farm. 
+
+Significance found for temperature. Marginal significance for insecticide/non-insecticide, local*landscape interaction. 
+
+```{r}
+
+plot(fitdist(flies$horn_flies,"nbinom"))
+plot(fitdist(flies$horn_flies,"pois"))
+
+flies_landscape_250 <- flies %>%
+  left_join(dung_beetle_250m, by = c("farm" = "farm"))
+  
+horn_flies_250m <- glmer.nb(horn_flies ~ scale(temp) + non_or_insecticide * scale(nat_seminat_250) + (1 | region/farm), data = flies_landscape_250)
+summary(horn_flies_250m)
+
+```
+
+For face flies at 250m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 250m radius. Random effects are region and farm. 
+
+Significance found for temperature.  
+
+```{r}
+
+face_flies_250m <- glmer.nb(face_flies ~ scale(temp) + non_or_insecticide * scale(nat_seminat_250) + (1 | region/farm), data = flies_landscape_250)
+summary(face_flies_250m)
+
+```
+
+**Flies - 500m Buffer**
+
+For horn flies at 500m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 500m radius. Random effects are region and farm. 
+
+Significance found for temperature.
+
+```{r}
+
+flies_landscape_500 <- flies %>%
+  left_join(dung_beetle_500m, by = c("farm" = "farm"))
+  
+horn_flies_500m <- glmer.nb(horn_flies ~ scale(temp) + non_or_insecticide * scale(nat_seminat_500) + (1 | region/farm), data = flies_landscape_500)
+summary(horn_flies_500m)
+
+```
+
+For face flies at 500m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 500m radius. Random effects are region and farm. 
+
+Model did not converge. 
+
+```{r}
+
+face_flies_500m <- glmer.nb(face_flies ~ scale(temp) + non_or_insecticide * scale(nat_seminat_500) + (1 | region/farm), data = flies_landscape_500)
+summary(face_flies_500m)
+
+```
+
+**Flies - 750m Buffer**
+
+For horn flies at 750m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 750m radius. Random effects are region and farm. 
+
+Significance found for temperature.
+
+```{r}
+
+flies_landscape_750 <- flies %>%
+  left_join(dung_beetle_750m, by = c("farm" = "farm"))
+  
+horn_flies_750m <- glmer.nb(horn_flies ~ scale(temp) + non_or_insecticide * scale(nat_seminat_750) + (1 | region/farm), data = flies_landscape_750)
+summary(horn_flies_750m)
+
+```
+
+For face flies at 750m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 750m radius. Random effects are region and farm. 
+
+Model did not converge. 
+
+```{r}
+
+face_flies_750m <- glmer.nb(face_flies ~ scale(temp) + non_or_insecticide * scale(nat_seminat_750) + (1 | region/farm), data = flies_landscape_750)
+summary(face_flies_750m)
+
+```
+
+**Flies - 1000m Buffer**
+
+For horn flies at 1000m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 1000m radius. Random effects are region and farm. 
+
+Significance found for temperature. Marginal significance for landscape. 
+
+```{r}
+
+flies_landscape_1000 <- flies %>%
+  left_join(dung_beetle_1000m, by = c("farm" = "farm"))
+  
+horn_flies_1000m <- glmer.nb(horn_flies ~ scale(temp) + non_or_insecticide * scale(nat_seminat_1000) + (1 | region/farm), data = flies_landscape_1000)
+summary(horn_flies_1000m)
+
+```
+
+For face flies at 1000m - explanatory variables are temperature, insecticide use, and combined proportion of semi-natural and natural habitat at 1000m radius. Random effects are region and farm. 
+
+Model did not converge. 
+
+```{r}
+
+face_flies_1000m <- glmer.nb(face_flies ~ scale(temp) + non_or_insecticide * scale(nat_seminat_1000) + (1 | region/farm), data = flies_landscape_1000)
+summary(face_flies_1000m)
+
+```
+
+
+
+
+
