@@ -1,11 +1,9 @@
 ---
-title: "NYSIPM_Sweet_Corn_Long_Term_Data"
+title: "NYS IPM Sweet Corn Long-Term Pest Data"
 author: "Chloe Cho"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-
-# New York State Integrated Pest Management Sweet Corn Pest Long-Term Monitoring
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -20,7 +18,21 @@ library(mapview)
 
 ```
 
+## Introduction
+
 NYS IPM sweet corn pheromone trapping dataset 1993-2022. Data was initially used as a monitoring tool to inform growers about corn pest populations. 
+
+**LINKS/RESOURCES**
+
+- [EDA Slide Deck](https://cornell.app.box.com/integrations/googledss/openGoogleEditor?fileId=1112400398858&trackingId=3#slide=id.p)
+- [Pest population dynamics are related to a continental overwintering gradient](https://doi.org/10.1073/pnas.2203230119)
+- [Pest Data Sheets](https://sweetcorn.nysipm.cornell.edu/)
+
+**LIMITATIONS & NOTES**
+
+- GPS coordinates are not precise because traps moved around from year to year depending on where sweet corn was planted. Some farms are much larger than the typical 1000m radius that we use. 
+- The timing of trap placement varied from year to year, shifted earlier for certain pests when they began to emerge earlier. 
+- Blanks are NAs (no data collected since traps were not set up yet), zeros are actual observations of no pest at that sampling event. 
 
 **PESTS**
 
@@ -72,6 +84,8 @@ head(sites)
 
 ## Plot Sites
 
+Explore the north-south distribution of the monitoring sites. 
+
 ```{r}
 
 sites_with_coord <- sites %>% drop_na()
@@ -80,7 +94,13 @@ mapview(sites_with_coord, xcol = "Long.Decimal", ycol = "Lat.Decimal", crs = 426
 
 ```
 
-Plot ECB_E counts over time. 
+## Exploratory Data Analysis
+
+Create initial visualizations of the pest count data. Exploring differences in years, species, and sites. 
+
+**Pest Counts 1993-2022, Faceted by Species**
+
+Each species shows different patterns in abundance over time. ECB has decreased over time, while CEW, FAW, and WBC have increased.  
 
 ```{r}
 
@@ -91,6 +111,8 @@ sweet_corn_pest_long %>%
   facet_wrap(~ Pest)
 
 ```
+
+**ECB_E Count, Faceted by Year**
 
 ```{r fig.height=8, fig.width=12}
 
@@ -104,6 +126,8 @@ sweet_corn_pest_long %>%
 
 ```
 
+**ECB_Z Count, Faceted by Year**
+
 ```{r fig.height=8, fig.width=12}
 
 sweet_corn_pest_long %>%
@@ -115,6 +139,8 @@ sweet_corn_pest_long %>%
   facet_wrap(~ Year)
 
 ```
+
+**CEW Count, Faceted by Year**
 
 ```{r fig.height=8, fig.width=12}
 
@@ -128,6 +154,7 @@ sweet_corn_pest_long %>%
 
 ```
 
+**FAW Count, Faceted by Year**
 
 ```{r fig.height=8, fig.width=12}
 
@@ -141,6 +168,8 @@ sweet_corn_pest_long %>%
 
 ```
 
+**WBC Count, Faceted by Year**
+
 ```{r fig.height=8, fig.width=12}
 
 sweet_corn_pest_long %>%
@@ -153,6 +182,8 @@ sweet_corn_pest_long %>%
 
 ```
 
+**All Pest Counts, Faceted by Yearr**
+
 ```{r fig.height=8, fig.width=12}
 
 sweet_corn_pest_long %>%
@@ -164,6 +195,8 @@ sweet_corn_pest_long %>%
 
 ```
 
+**Sweet Corn Pest Count, 1993-1995**
+
 ```{r}
 
 sweet_corn_pest_long %>%
@@ -174,6 +207,8 @@ sweet_corn_pest_long %>%
   ggtitle('Sweet Corn Pest Counts 1993-1995')
 
 ```
+
+**Sweet Corn Pest Count, 2020-2022**
 
 ```{r}
 
