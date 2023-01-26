@@ -114,6 +114,8 @@ sweet_corn_pest_long %>%
 
 **ECB_E Count, Faceted by Year**
 
+Earlier years are showing higher counts than more recent years. Most years are showing a bimodal pattern. 
+
 ```{r fig.height=8, fig.width=12}
 
 sweet_corn_pest_long %>%
@@ -127,6 +129,8 @@ sweet_corn_pest_long %>%
 ```
 
 **ECB_Z Count, Faceted by Year**
+
+Earlier years are showing higher counts than more recent years. Some years are showing a bimodal pattern, others are trimodal. 
 
 ```{r fig.height=8, fig.width=12}
 
@@ -142,6 +146,8 @@ sweet_corn_pest_long %>%
 
 **CEW Count, Faceted by Year**
 
+CEW count seems to peak later in the season. Mostly unimodal. 
+
 ```{r fig.height=8, fig.width=12}
 
 sweet_corn_pest_long %>%
@@ -155,6 +161,8 @@ sweet_corn_pest_long %>%
 ```
 
 **FAW Count, Faceted by Year**
+
+FAW count seems to peak later in the season. Mostly unimodal. 
 
 ```{r fig.height=8, fig.width=12}
 
@@ -170,6 +178,8 @@ sweet_corn_pest_long %>%
 
 **WBC Count, Faceted by Year**
 
+WBC count seems to peak earlier in the season than CEW and FAW. Mostly unimodal. 
+
 ```{r fig.height=8, fig.width=12}
 
 sweet_corn_pest_long %>%
@@ -182,7 +192,9 @@ sweet_corn_pest_long %>%
 
 ```
 
-**All Pest Counts, Faceted by Yearr**
+**All Pest Counts, Faceted by Year**
+
+Overlaid pest counts for each year to see differences in emergence and peaks. 
 
 ```{r fig.height=8, fig.width=12}
 
@@ -197,6 +209,8 @@ sweet_corn_pest_long %>%
 
 **Sweet Corn Pest Count, 1993-1995**
 
+ECB-E, ECB-Z,and FAW are the most prevalent pests during this period of time. 
+
 ```{r}
 
 sweet_corn_pest_long %>%
@@ -210,6 +224,8 @@ sweet_corn_pest_long %>%
 
 **Sweet Corn Pest Count, 2020-2022**
 
+CEW, FAW, and WBC are the most prevalent. WBC monitoring did not start until 2010. 
+
 ```{r}
 
 sweet_corn_pest_long %>%
@@ -220,6 +236,28 @@ sweet_corn_pest_long %>%
   ggtitle('Sweet Corn Pest Counts 2020-2022')
 
 ```
+
+**ECB_E Count, Faceted by Site**
+
+Sites with larger (or more consistent throughout the season) observations of ECB_E are -
+
+- Baldwinsville 
+- Batavia 
+- Bellona 
+- Byron 
+- Eden 
+- Farmington*
+- Hall 
+- Hamlin 
+- King Ferry 
+- Kirkville
+- LeRoy
+- Lockport 
+- Medina 
+- Owego 
+- Penn Yan 
+- Spencerport 
+- Williamson 
 
 ```{r fig.height=12, fig.width=14}
 
@@ -233,6 +271,29 @@ sweet_corn_pest_long %>%
 
 ```
 
+**ECB_Z Count, Faceted by Site**
+
+Sites with larger (or more consistent) observations of ECB_Z are -
+
+- Baldwinsville 
+- Batavia 
+- Bellona
+- Eden
+- Farmington 
+- Hall
+- Hamlin
+- Kennedy
+- King Ferry 
+- Kirkville
+- LeRoy
+- Lockport 
+- Medina 
+- Owego 
+- Penn Yan
+- Rush 
+- Spencerport 
+- Williamson 
+
 ```{r fig.height=12, fig.width=14}
 
 sweet_corn_pest_long %>%
@@ -244,6 +305,37 @@ sweet_corn_pest_long %>%
   facet_wrap(~ Site)
 
 ```
+
+**CEW Count, Faceted by Site**
+
+Sites with larger (or more consistent) observations of CEW are -
+
+- Avon 
+- Baldwinsville 
+- Batavia 
+- Bellona 
+- Eden 
+- Farmington 
+- Feura Bush 
+- Florida 
+- Geneva
+- Geneva 1 
+- Hall 
+- Hamlin 
+- Kennedy 
+- Kinderhook 
+- King Ferry 
+- Kirkville 
+- LeRoy 
+- Lockport 
+- Medina 
+- Oswego 
+- Owego 
+- Penn Yan 
+- Ransomville 
+- Sherwood 
+- Spencerport 
+- Williamson 
 
 ```{r fig.height=12, fig.width=14}
 
@@ -257,6 +349,31 @@ sweet_corn_pest_long %>%
 
 ```
 
+**FAW Count, Faceted by Site**
+
+Sites with larger (or more consistent) observations of FAW are -
+
+- Baldwinsville 
+- Batavia  
+- Bellona 
+- Eden 
+- Farmington 
+- Hall 
+- Hamlin 
+- Kennedy 
+- Kinderhook 
+- King Ferry 
+- Kirkville 
+- LeRoy 
+- Lockport 
+- Owego 
+- Pavillion 
+- Penn Yan 
+- Peru 
+- Sherwood 
+- Spencerport
+- Williamson
+
 ```{r fig.height=12, fig.width=14}
 
 sweet_corn_pest_long %>%
@@ -269,6 +386,23 @@ sweet_corn_pest_long %>%
 
 ```
 
+**WBC Count, Faceted by Site**
+
+Sites with larger (or more consistent) observations of WBC are -
+
+- Baldwinsville 
+- Batavia 
+- Bellona 
+- Eden 
+- Oswego 
+- Pavillion 
+- Penn Yan 
+- Peru 
+- Plattsburg 
+- Plessis
+- Preble 
+- Williamson 
+
 ```{r fig.height=12, fig.width=14}
 
 sweet_corn_pest_long %>%
@@ -280,6 +414,10 @@ sweet_corn_pest_long %>%
   facet_wrap(~ Site)
 
 ```
+
+**ECB_E Count per Year, 1993-2022**
+
+Shows a decrease over time in total observations per year. 
 
 ```{r}
 
@@ -294,6 +432,10 @@ sweet_corn_pest_long %>%
 
 ```
 
+**ECB_Z Count per Year, 1993-2022**
+
+Shows a decrease over time in total observations per year. 
+
 ```{r}
 
 sweet_corn_pest_long %>%
@@ -306,6 +448,10 @@ sweet_corn_pest_long %>%
   ggtitle('ECB.Z Counts 1993-2022')
 
 ```
+
+**CEW Count per Year, 1993-2022**
+
+Shows an increase over time in total observations per year. 
 
 ```{r}
 
@@ -320,6 +466,10 @@ sweet_corn_pest_long %>%
 
 ```
 
+**FAW Count per Year, 1993-2022**
+
+Shows an increase over time in total observations per year. 
+
 ```{r}
 
 sweet_corn_pest_long %>%
@@ -332,6 +482,10 @@ sweet_corn_pest_long %>%
   ggtitle('FAW Counts 1993-2022')
 
 ```
+
+**WBC Count per Year, 1993-2022**
+
+Shows an increase over time in total observations per year. 
 
 ```{r}
 
