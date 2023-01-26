@@ -5,6 +5,8 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
+# New York State Integrated Pest Management Sweet Corn Pest Long-Term Monitoring
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -18,13 +20,20 @@ library(mapview)
 
 ```
 
-**Read data** - NYSIPM sweet corn pheromone trapping dataset 1993-2022. 
+NYS IPM sweet corn pheromone trapping dataset 1993-2022. Data was initially used as a monitoring tool to inform growers about corn pest populations. 
 
-PESTS
--European Corn Borer (ECB) (E and Z strains for sex pheromones)
--Corn Earworm (CEW)
--Western Bean Cutworm (WBC)
--Fall Armyworm (FAW)
+**PESTS**
+
+- European Corn Borer (ECB) (E and Z strains for sex pheromones)
+- Corn Earworm (CEW)
+- Western Bean Cutworm (WBC)
+- Fall Armyworm (FAW)
+
+## Read Data
+
+Read in csv file. Columns Site, USDA Hardiness Zone, Latitude, Longitude, Year, Week, Date, Day, ECB.E, ECB.Z, CEW, FAW, and WBC. Each row is a sampling event at a farm. 
+
+Melt data frame to create a row for each observation, creating a column for the pest name and a column for the pest count. 
 
 ```{r}
 
@@ -37,14 +46,15 @@ sweet_corn_pest <- sweet_corn_pest %>%
   mutate(new_col = format(Date, "%j"), .after = Date) %>%
   rename(Day = new_col)
 
-sweet_corn_pest_long <- melt(sweet_corn_pest, id.vars = c("Site", "USDA.hardiness.Zone", "Lat", "Long", "Year", "Week", "Date", "Day"),
-                             measure.vars = c("ECB.E", "ECB.Z", "CEW", "FAW", "WBC"), variable.name = 'Pest', value.name = 'Count')
+sweet_corn_pest_long <- melt(sweet_corn_pest, id.vars = c("Site", "USDA.hardiness.Zone", "Lat", "Long", "Year", "Week", "Date", "Day"), measure.vars = c("ECB.E", "ECB.Z", "CEW", "FAW", "WBC"), variable.name = 'Pest', value.name = 'Count')
 
-sweet_corn_pest_long
-
-levels(sweet_corn_pest_long$Site)
+head(sweet_corn_pest_long)
 
 ```
+
+## Site Data
+
+Upload csv with latitude and longitude for all sites. There are 89 unique values for sites. 
 
 ```{r}
 
@@ -54,9 +64,13 @@ sites <- sites %>%
   mutate(Site = as.factor(Site)) %>%
   select(-c('X', 'X.1', 'X.2', 'X.3', 'X.4', 'X.5', 'X.6', 'X.7'))
 
-sites
+length(levels(sites$Site))
+
+head(sites)
 
 ```
+
+## Plot Sites
 
 ```{r}
 
