@@ -2,13 +2,40 @@
 title: "NYSIPM_Sweet_Corn_Modeling"
 author: "Chloe Cho"
 date: "`r Sys.Date()`"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+library(scales)
 
 ```
+
+## Read Data 
+
+
+## Feature Selection - Random Forest
+
+
+## GLMM
+
+
+## Random Forest Classifier 
+
+
+## xgboost 
+
+
+
+
+
+
+
+
+
 

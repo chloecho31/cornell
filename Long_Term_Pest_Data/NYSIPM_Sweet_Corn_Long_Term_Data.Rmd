@@ -94,6 +94,18 @@ mapview(sites_with_coord, xcol = "Long.Decimal", ycol = "Lat.Decimal", crs = 426
 
 ```
 
+## Clean Ken's Data
+
+
+## Combine Data 
+
+
+## Add Weather Data 
+
+
+## Add Soil Temperature Data 
+
+
 ## Exploratory Data Analysis
 
 Create initial visualizations of the pest count data. Exploring differences in years, species, and sites. 
