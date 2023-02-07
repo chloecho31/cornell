@@ -13,22 +13,118 @@ library(dplyr)
 library(ggplot2)
 library(reshape2)
 library(scales)
+library(fitdistrplus)
+library(lme4)
 
 ```
 
-## Read Data 
+# Data
 
+## NYS IPM Data
+
+### Read & Clean Data 
+
+Data from NYS IPM (Marion Zuefle) for ECB_E, ECB_Z, CEW, FAW, and WBC. 
+
+```{r}
+
+sweet_corn_pest <- read.delim("NYSIPM_Sweet_Corn_1993_2022.csv", sep = ",")
+
+sweet_corn_pest <- sweet_corn_pest %>% 
+  mutate(Date = as.Date(Date, format = '%m/%d/%y')) %>%
+  mutate(Site = as.factor(Site)) %>%
+  mutate(USDA.hardiness.Zone = as.factor(USDA.hardiness.Zone)) %>%
+  mutate(new_col = format(Date, "%j"), .after = Date) %>%
+  rename(Day = new_col)
+
+sweet_corn_pest_long <- melt(sweet_corn_pest, id.vars = c("Site", "USDA.hardiness.Zone", "Lat", "Long", "Year", "Week", "Date", "Day"), measure.vars = c("ECB.E", "ECB.Z", "CEW", "FAW", "WBC"), variable.name = 'Pest', value.name = 'Count')
+
+head(sweet_corn_pest_long)
+
+```
+
+### NYS Sites
+
+```{r}
+
+sites <- read.delim("NYSIPM_Sweet_Corn_1993_2022_Sites.csv", sep = ",")
+
+length(levels(sites$Site))
+
+sites <- sites %>% 
+  mutate(Site = as.factor(Site)) 
+
+sites <- sites %>%
+  dplyr::select(-c('X', 'X.1', 'X.2', 'X.3', 'X.4', 'X.5', 'X.6', 'X.7'))
+
+head(sites)
+
+```
+
+Add decimal GPS coordinates to table. 
+
+```{r}
+
+sites_decimal_gps <- sites %>%
+  dplyr::select(c('Site', 'Lat.Decimal', 'Long.Decimal'))
+
+sweet_corn_pest_full <- sweet_corn_pest_long %>%
+  left_join(sites_decimal_gps, by = c("Site" = "Site"))
+
+```
 
 ## Feature Selection - Random Forest
 
 
+
 ## GLMM
 
+### Selecting a Distribution
+
+Negative binomial. 
+
+```{r}
+
+plot(fitdist(c(na.exclude(sweet_corn_pest_long$Count)),"nbinom"))
+
+```
+
+Poisson. 
+
+```{r}
+
+plot(fitdist(c(na.exclude(sweet_corn_pest_long$Count)),"pois"))
+
+```
+
+By comparing these two graphs, the negative binomial distribution fits the count data better than a Poisson distribution. This will be the distribution used in future models. 
+
+### Running an Initial Model
+
+Running an initial model with just the random effects.
+
+```{r}
+
+initial_model <- glmer.nb(Count ~ (1 | Site), data = sweet_corn_pest_long)
+summary(initial_model)
+
+```
+
+# Adding Variables to Model
+
+Running a model with individual predictors, no interactions. 
+
+```{r}
+
+model1 <- glmer.nb(Count ~ + Date + (1 | Site), data = sweet_corn_pest_long)
+summary(model1)
+
+```
 
 ## Random Forest Classifier 
 
 
-## xgboost 
+## Xgboost 
 
 
 
