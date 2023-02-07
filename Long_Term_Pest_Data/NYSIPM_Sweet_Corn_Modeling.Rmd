@@ -16,7 +16,16 @@ library(scales)
 library(fitdistrplus)
 library(lme4)
 
+library(Boruta)
+library(mlbench)
+library(caret)
+library(randomForest)
+
 ```
+
+# Questions
+
+- Splitting the pest models? Can use the economic threshold to create a binary outcome. 
 
 # Data
 
@@ -35,7 +44,8 @@ sweet_corn_pest <- sweet_corn_pest %>%
   mutate(Site = as.factor(Site)) %>%
   mutate(USDA.hardiness.Zone = as.factor(USDA.hardiness.Zone)) %>%
   mutate(new_col = format(Date, "%j"), .after = Date) %>%
-  rename(Day = new_col)
+  rename(Day = new_col) %>%
+  mutate(Day = as.numeric(Day)) 
 
 sweet_corn_pest_long <- melt(sweet_corn_pest, id.vars = c("Site", "USDA.hardiness.Zone", "Lat", "Long", "Year", "Week", "Date", "Day"), measure.vars = c("ECB.E", "ECB.Z", "CEW", "FAW", "WBC"), variable.name = 'Pest', value.name = 'Count')
 
@@ -71,10 +81,37 @@ sites_decimal_gps <- sites %>%
 sweet_corn_pest_full <- sweet_corn_pest_long %>%
   left_join(sites_decimal_gps, by = c("Site" = "Site"))
 
+head(sweet_corn_pest_full)
+
 ```
 
-## Feature Selection - Random Forest
+## Feature Selection 
 
+Testing a few different kinds of feature selection with current variables. Will add more as we get climate and soil data. 
+
+Boruta feature selection. Read about Boruta [here](https://towardsdatascience.com/boruta-explained-the-way-i-wish-someone-explained-it-to-me-4489d70e154a).
+
+```{r}
+
+sweet_corn_pest_features <- sweet_corn_pest_full %>%
+  na.omit(subset(sweet_corn_pest_full, select = c('Site', 'Lat.Decimal', 'Long.Decimal', 'Year', 'Week', 'Date', 'Day', 'Pest', 'Count')))
+
+set.seed(42)
+boruta <- Boruta(Count ~ ., data = na.exclude(sweet_corn_pest_features), doTrace = 2, maxRuns = 500)
+print(boruta)
+
+plot(boruta, las = 2, cex.axis = 0.7)
+
+```
+
+Run a random forest to select which features are most important. 
+
+```{r}
+
+rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day + Pest, data = sweet_corn_pest_features, ntree = 500)
+importance(rf)
+
+```
 
 
 ## GLMM
@@ -85,7 +122,7 @@ Negative binomial.
 
 ```{r}
 
-plot(fitdist(c(na.exclude(sweet_corn_pest_long$Count)),"nbinom"))
+plot(fitdist(c(na.exclude(sweet_corn_pest_full$Count)),"nbinom"))
 
 ```
 
@@ -93,7 +130,7 @@ Poisson.
 
 ```{r}
 
-plot(fitdist(c(na.exclude(sweet_corn_pest_long$Count)),"pois"))
+plot(fitdist(c(na.exclude(sweet_corn_pest_full$Count)),"pois"))
 
 ```
 
@@ -105,7 +142,7 @@ Running an initial model with just the random effects.
 
 ```{r}
 
-initial_model <- glmer.nb(Count ~ (1 | Site), data = sweet_corn_pest_long)
+initial_model <- glmer.nb(Count ~ (1 | Site), data = sweet_corn_pest_full)
 summary(initial_model)
 
 ```
@@ -116,12 +153,18 @@ Running a model with individual predictors, no interactions.
 
 ```{r}
 
-model1 <- glmer.nb(Count ~ + Date + (1 | Site), data = sweet_corn_pest_long)
+model1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Year) + scale(Day) + (1 | Site), data = sweet_corn_pest_full)
 summary(model1)
 
 ```
 
 ## Random Forest Classifier 
+
+```{r}
+
+
+
+```
 
 
 ## Xgboost 
