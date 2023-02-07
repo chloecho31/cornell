@@ -18,7 +18,7 @@ library(mapview)
 
 ```
 
-## Introduction
+# Introduction
 
 NYS IPM sweet corn pheromone trapping dataset 1993-2022. Data was initially used as a monitoring tool to inform growers about corn pest populations. 
 
@@ -40,6 +40,8 @@ NYS IPM sweet corn pheromone trapping dataset 1993-2022. Data was initially used
 - Corn Earworm (CEW)
 - Western Bean Cutworm (WBC)
 - Fall Armyworm (FAW)
+
+# Data Processing
 
 ## Read Data
 
@@ -94,10 +96,10 @@ mapview(sites_with_coord, xcol = "Long.Decimal", ycol = "Lat.Decimal", crs = 426
 
 ```
 
-## Clean Ken's Data
+## Clean Ken's Data (WBC)
 
 
-## Combine Data 
+## Combine WBC Data 
 
 
 ## Add Weather Data 
@@ -106,7 +108,7 @@ mapview(sites_with_coord, xcol = "Long.Decimal", ycol = "Lat.Decimal", crs = 426
 ## Add Soil Temperature Data 
 
 
-## Exploratory Data Analysis
+# Exploratory Data Analysis
 
 Create initial visualizations of the pest count data. Exploring differences in years, species, and sites. 
 
