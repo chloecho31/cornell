@@ -1,0 +1,21 @@
+---
+title: "Literature_Review_Analysis"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+
+```
+
+```{r}
+
+paper_data <- read.delim("Literature_Review_Paper_Data", sep = ",")
+
+```
