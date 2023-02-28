@@ -16,6 +16,21 @@ library(ggplot2)
 
 ```{r}
 
-paper_data <- read.delim("Literature_Review_Paper_Data", sep = ",")
+paper_data <- read.delim("Literature_Review_Paper_Data.csv", sep = ",")
+paper_data
+
+```
+
+```{r}
+
+ggplot(paper_data, aes(x=Local.Effect)) +
+  geom_bar()
+
+```
+
+```{r}
+
+ggplot(paper_data, aes(x=Landscape.Effect)) +
+  geom_bar()
 
 ```
