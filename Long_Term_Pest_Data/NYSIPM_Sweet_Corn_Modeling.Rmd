@@ -202,7 +202,7 @@ Running a model with individual predictors, no interactions.
 
 ```{r}
 
-ecb_e_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Year) + scale(Date) + (1 | Site), data = ecb_e_features)
+ecb_e_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Date) + (1 | Site), data = ecb_e_features)
 summary(ecb_e_1)
 
 ```
