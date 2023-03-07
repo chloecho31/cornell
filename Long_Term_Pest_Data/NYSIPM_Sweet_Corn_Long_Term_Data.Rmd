@@ -76,7 +76,7 @@ sites <- read.delim("NYSIPM_Sweet_Corn_1993_2022_Sites.csv", sep = ",")
 
 sites <- sites %>% 
   mutate(Site = as.factor(Site)) %>%
-  select(-c('X', 'X.1', 'X.2', 'X.3', 'X.4', 'X.5', 'X.6', 'X.7'))
+  dplyr::select(-c('X', 'X.1', 'X.2', 'X.3', 'X.4', 'X.5', 'X.6', 'X.7'))
 
 length(levels(sites$Site))
 
@@ -436,7 +436,7 @@ Shows a decrease over time in total observations per year.
 ```{r}
 
 sweet_corn_pest_long %>%
-  replace(is.na(sweet_corn_pest_long), 0) %>%
+  na.omit() %>%
   dplyr::filter(Pest == 'ECB.E') %>%
   group_by(Year) %>%
   summarise(Total = sum(Count)) %>%
@@ -453,7 +453,7 @@ Shows a decrease over time in total observations per year.
 ```{r}
 
 sweet_corn_pest_long %>%
-  replace(is.na(sweet_corn_pest_long), 0) %>%
+  na.omit() %>%
   dplyr::filter(Pest == 'ECB.Z') %>%
   group_by(Year) %>%
   summarise(Total = sum(Count)) %>%
@@ -470,7 +470,7 @@ Shows an increase over time in total observations per year.
 ```{r}
 
 sweet_corn_pest_long %>%
-  replace(is.na(sweet_corn_pest_long), 0) %>%
+  na.omit() %>%
   dplyr::filter(Pest == 'CEW') %>%
   group_by(Year) %>%
   summarise(Total = sum(Count)) %>%
@@ -487,7 +487,7 @@ Shows an increase over time in total observations per year.
 ```{r}
 
 sweet_corn_pest_long %>%
-  replace(is.na(sweet_corn_pest_long), 0) %>%
+  na.omit() %>%
   dplyr::filter(Pest == 'FAW') %>%
   group_by(Year) %>%
   summarise(Total = sum(Count)) %>%
@@ -504,7 +504,7 @@ Shows an increase over time in total observations per year.
 ```{r}
 
 sweet_corn_pest_long %>%
-  replace(is.na(sweet_corn_pest_long), 0) %>%
+  na.omit() %>%
   dplyr::filter(Pest == 'WBC') %>%
   group_by(Year) %>%
   summarise(Total = sum(Count)) %>%
@@ -514,8 +514,81 @@ sweet_corn_pest_long %>%
 
 ```
 
+**ECB_E Count per Year, 1993-2022**
 
+```{r fig.height=12, fig.width=14}
 
+sweet_corn_pest_long %>%
+  na.omit() %>%
+  dplyr::filter(Pest == 'ECB.E') %>%
+  ggplot(aes(x = Date, y = Count)) + 
+  geom_point() +
+  stat_smooth() +
+  ggtitle('ECB_E Counts 1993-2022') + 
+  facet_wrap(~Year, scales = 'free_x')
+
+```
+
+**ECB_Z Count per Year, 1993-2022**
+
+```{r fig.height=12, fig.width=14}
+
+sweet_corn_pest_long %>%
+  na.omit() %>%
+  dplyr::filter(Pest == 'ECB.Z') %>%
+  ggplot(aes(x = Date, y = Count)) + 
+  geom_point() +
+  stat_smooth() +
+  ggtitle('ECB_Z Counts 1993-2022') + 
+  facet_wrap(~Year, scales = 'free_x')
+
+```
+
+**CEW Count per Year, 1993-2022**
+
+```{r fig.height=12, fig.width=14}
+
+sweet_corn_pest_long %>%
+  na.omit() %>%
+  dplyr::filter(Pest == 'CEW') %>%
+  ggplot(aes(x = Date, y = Count)) + 
+  geom_point() +
+  stat_smooth() +
+  ggtitle('CEW Counts 1993-2022') + 
+  facet_wrap(~Year, scales = 'free_x')
+
+```
+
+**FAW Count per Year, 1993-2022**
+
+```{r fig.height=12, fig.width=14}
+
+sweet_corn_pest_long %>%
+  na.omit() %>%
+  dplyr::filter(Pest == 'FAW') %>%
+  ggplot(aes(x = Date, y = Count)) + 
+  geom_point() +
+  stat_smooth() +
+  ggtitle('FAW Counts 1993-2022') + 
+  facet_wrap(~Year, scales = 'free_x')
+
+```
+
+**WBC Count per Year, 1993-2022**
+
+```{r fig.height=12, fig.width=14}
+
+sweet_corn_pest_long %>%
+  na.omit() %>%
+  dplyr::filter(Pest == 'WBC') %>%
+  dplyr::filter(Date >= '2010-01-01') %>%
+  ggplot(aes(x = Date, y = Count)) + 
+  geom_point() +
+  geom_smooth() +
+  ggtitle('WBC Counts 1993-2022') + 
+  facet_wrap(~Year, scales = 'free_x')
+
+```
 
 
 

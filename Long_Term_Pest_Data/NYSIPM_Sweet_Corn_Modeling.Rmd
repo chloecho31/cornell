@@ -96,11 +96,11 @@ Boruta feature selection. Read about Boruta [here](https://towardsdatascience.co
 set.seed(42)
 
 sweet_corn_pest_features <- sweet_corn_pest_full %>%
+  dplyr::select(c('Site', 'Lat.Decimal', 'Long.Decimal', 'Year', 'Week', 'Date', 'Day', 'Pest', 'Count')) %>%
   na.omit(subset(sweet_corn_pest_full, select = c('Site', 'Lat.Decimal', 'Long.Decimal', 'Year', 'Week', 'Date', 'Day', 'Pest', 'Count')))
 
 ecb_e_features <- sweet_corn_pest_features %>%
-  dplyr::filter(Pest == 'ECB.E') %>%
-  dplyr::select(-c(Pest, Lat, Long))
+  dplyr::filter(Pest == 'ECB.E')
 
 boruta_ecb_e <- Boruta(Count ~ ., data = na.exclude(ecb_e_features), doTrace = 2, maxRuns = 500)
 print(boruta_ecb_e)
@@ -108,8 +108,7 @@ print(boruta_ecb_e)
 plot(boruta_ecb_e, las = 2, cex.axis = 0.7)
 
 ecb_z_features <- sweet_corn_pest_features %>%
-  dplyr::filter(Pest == 'ECB.Z') %>%
-  dplyr::select(-c(Pest, Lat, Long))
+  dplyr::filter(Pest == 'ECB.Z')
 
 boruta_ecb_z <- Boruta(Count ~ ., data = na.exclude(ecb_z_features), doTrace = 2, maxRuns = 500)
 print(boruta_ecb_e)
@@ -117,8 +116,7 @@ print(boruta_ecb_e)
 plot(boruta_ecb_z, las = 2, cex.axis = 0.7)
 
 cew_features <- sweet_corn_pest_features %>%
-  dplyr::filter(Pest == 'CEW') %>%
-  dplyr::select(-c(Pest, Lat, Long))
+  dplyr::filter(Pest == 'CEW') 
 
 boruta_cew <- Boruta(Count ~ ., data = na.exclude(cew_features), doTrace = 2, maxRuns = 500)
 print(boruta_cew)
@@ -126,8 +124,7 @@ print(boruta_cew)
 plot(boruta_cew, las = 2, cex.axis = 0.7)
 
 faw_features <- sweet_corn_pest_features %>%
-  dplyr::filter(Pest == 'FAW') %>%
-  dplyr::select(-c(Pest, Lat, Long))
+  dplyr::filter(Pest == 'FAW') 
 
 boruta_faw <- Boruta(Count ~ ., data = na.exclude(faw_features), doTrace = 2, maxRuns = 500)
 print(boruta_faw)
@@ -135,8 +132,7 @@ print(boruta_faw)
 plot(boruta_faw, las = 2, cex.axis = 0.7)
 
 wbc_features <- sweet_corn_pest_features %>%
-  dplyr::filter(Pest == 'WBC') %>%
-  dplyr::select(-c(Pest, Lat, Long))
+  dplyr::filter(Pest == 'WBC') 
 
 boruta_wbc <- Boruta(Count ~ ., data = na.exclude(wbc_features), doTrace = 2, maxRuns = 500)
 print(boruta_wbc)
@@ -150,11 +146,22 @@ Run a random forest to select which features are most important.
 
 ```{r}
 
-rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day + Pest, data = sweet_corn_pest_features, ntree = 500)
-importance(rf)
+ecb_e_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day, data = ecb_e_features, ntree = 500)
+importance(ecb_e_rf)
+
+ecb_z_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day, data = ecb_z_features, ntree = 500)
+importance(ecb_z_rf)
+
+cew_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day, data = cew_features, ntree = 500)
+importance(cew_rf)
+
+faw_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day, data = faw_features, ntree = 500)
+importance(faw_rf)
+
+wbc_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day, data = wbc_features, ntree = 500)
+importance(wbc_rf)
 
 ```
-
 
 ## GLMM
 
@@ -164,7 +171,7 @@ Negative binomial.
 
 ```{r}
 
-plot(fitdist(c(na.exclude(sweet_corn_pest_full$Count)),"nbinom"))
+plot(fitdist(c(na.exclude(ecb_e_features$Count)),"nbinom"))
 
 ```
 
@@ -172,7 +179,7 @@ Poisson.
 
 ```{r}
 
-plot(fitdist(c(na.exclude(sweet_corn_pest_full$Count)),"pois"))
+plot(fitdist(c(na.exclude(ecb_e_features$Count)),"pois"))
 
 ```
 
@@ -195,8 +202,8 @@ Running a model with individual predictors, no interactions.
 
 ```{r}
 
-model1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Year) + scale(Day) + (1 | Site), data = sweet_corn_pest_full)
-summary(model1)
+ecb_e_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Year) + scale(Date) + (1 | Site), data = ecb_e_features)
+summary(ecb_e_1)
 
 ```
 
