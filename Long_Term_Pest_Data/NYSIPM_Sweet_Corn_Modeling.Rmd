@@ -21,6 +21,11 @@ library(mlbench)
 library(caret)
 library(randomForest)
 
+library(xgboost)
+library(cvms)
+library(caret)
+library(caTools)
+
 ```
 
 # Questions
@@ -85,7 +90,7 @@ head(sweet_corn_pest_full)
 
 ```
 
-## Feature Selection 
+# Feature Selection 
 
 Testing a few different kinds of feature selection with current variables. Will add more as we get climate and soil data. 
 
@@ -163,9 +168,9 @@ importance(wbc_rf)
 
 ```
 
-## GLMM
+# GLMM
 
-### Selecting a Distribution
+## Selecting a Distribution
 
 Negative binomial. 
 
@@ -185,7 +190,7 @@ plot(fitdist(c(na.exclude(ecb_e_features$Count)),"pois"))
 
 By comparing these two graphs, the negative binomial distribution fits the count data better than a Poisson distribution. This will be the distribution used in future models. 
 
-### Running an Initial Model
+## Running an Initial Model
 
 Running an initial model with just the random effects.
 
@@ -196,39 +201,194 @@ summary(initial_model)
 
 ```
 
-# Adding Variables to Model
+## Adding Variables to Model
+
+### ECB_E Model
 
 Running a model with individual predictors, no interactions. 
 
 ```{r}
 
-ecb_e_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Date) + (1 | Site), data = ecb_e_features)
+ecb_e_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + (1 | Site) + (1 | Year), data = ecb_e_features)
 summary(ecb_e_1)
 
 ```
 
-# Adding Variables to Model
+### ECB_Z Model
 
 Running a model with individual predictors, no interactions. 
 
 ```{r}
 
-ecb_e_model <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Date) + (1 | Site), data = ecb_e_features)
-summary(ecb_e_model)
+ecb_z_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + (1 | Site) + (1 | Year), data = ecb_z_features)
+summary(ecb_z_1)
 
 ```
 
-## Random Forest Classifier 
+### CEW Model
+
+Running a model with individual predictors, no interactions. 
 
 ```{r}
 
-
+cew_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + (1 | Site) + (1 | Year), data = cew_features)
+summary(cew_1)
 
 ```
 
+### FAW Model
 
-## Xgboost 
+Running a model with individual predictors, no interactions. 
 
+```{r}
+
+faw_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + (1 | Site) + (1 | Year), data = faw_features)
+summary(faw_1)
+
+```
+
+### WBC Model
+
+Running a model with individual predictors, no interactions. 
+
+```{r}
+
+wbc_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + (1 | Site) + (1 | Year), data = wbc_features)
+summary(wbc_1)
+
+```
+
+# Random Forest Models 
+
+- [Random Forest in R](https://www.statology.org/random-forest-in-r/)
+
+## ECB_E 
+
+```{r}
+
+ecb_e_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date,
+                           data = ecb_e_features)
+
+ecb_e_rf_1
+
+# Find the number of trees that produce lowest test MSE.
+which.min(ecb_e_rf_1$mse)
+
+# Find the RMSE of the best model.
+sqrt(ecb_e_rf_1$mse[which.min(ecb_e_rf_1$mse)]) 
+
+# Plot the test MSE by number of trees.
+plot(ecb_e_rf_1)
+
+# Produce variable importance plot -  displays the importance of each predictor variable in the final model.
+varImpPlot(ecb_e_rf_1)
+
+```
+
+## ECB_Z 
+
+```{r}
+
+ecb_z_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date,
+                           data = ecb_z_features)
+
+# Display the fitted model. 
+ecb_z_rf_1
+
+# Find the number of trees that produce lowest test MSE.
+which.min(ecb_z_rf_1$mse)
+
+# Find the RMSE of the best model.
+sqrt(ecb_z_rf_1$mse[which.min(ecb_z_rf_1$mse)]) 
+
+# Produce variable importance plot -  displays the importance of each predictor variable in the final model.
+varImpPlot(ecb_z_rf_1)
+
+```
+
+## CEW
+
+```{r}
+
+cew_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date,
+                           data = cew_features)
+
+# Display the fitted model. 
+cew_rf_1
+
+# Find the number of trees that produce lowest test MSE.
+which.min(cew_rf_1$mse)
+
+# Find the RMSE of the best model.
+sqrt(cew_rf_1$mse[which.min(cew_rf_1$mse)])
+
+# Produce variable importance plot -  displays the importance of each predictor variable in the final model.
+varImpPlot(cew_rf_1)
+
+```
+
+## FAW
+
+```{r}
+
+faw_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date,
+                           data = faw_features)
+
+# Display the fitted model. 
+faw_rf_1
+
+# Find the number of trees that produce lowest test MSE.
+which.min(faw_rf_1$mse)
+
+# Find the RMSE of the best model.
+sqrt(faw_rf_1$mse[which.min(faw_rf_1$mse)]) 
+
+# Produce variable importance plot -  displays the importance of each predictor variable in the final model.
+varImpPlot(faw_rf_1)
+
+```
+
+## WBC
+
+```{r}
+
+wbc_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date,
+                           data = wbc_features)
+
+# Display the fitted model. 
+wbc_rf_1
+
+# Find the number of trees that produce lowest test MSE.
+which.min(wbc_rf_1$mse)
+
+# Find the RMSE of the best model.
+sqrt(wbc_rf_1$mse[which.min(wbc_rf_1$mse)]) 
+
+# Produce variable importance plot -  displays the importance of each predictor variable in the final model.
+varImpPlot(wbc_rf_1)
+
+```
+
+# XGBoost 
+
+```{r}
+
+set.seed(42)
+
+sample_split <- sample.split(Y = ecb_e_features$Count, SplitRatio = 0.7)
+
+train_set <- subset(x = ecb_e_features, sample_split == TRUE)
+test_set <- subset(x = ecb_e_features, sample_split == FALSE)
+
+y_train <- as.integer(train_set$Count) - 1
+y_test <- as.integer(test_set$Count) - 1
+
+X_train <- train_set %>% select(-Count)
+X_test <- test_set %>% select(-Count)
+
+```
+
+# Time Series
 
 
 
