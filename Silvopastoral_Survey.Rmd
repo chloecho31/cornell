@@ -10,6 +10,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```
 
+Replace "si" or "no" answers with corresponding score value.
+
+- Regeneration = 1 h1_1_3  
+- Planting trees = 2 h1_1_4 
+- Live fences = 2 
+- Silvopastoral = 3
+- Forage banks = 3
+- No = 0 for all of the questions
+
 
 ```{r}
 
@@ -17,3 +26,8 @@ df <- mutate(df, id = case_when(id == 30 ~ 40, TRUE ~ id))
 
 ```
 
+Create column for proportion of land cover by the practice. 
+
+Multiply score by proportion. 
+
+Sum together individual question scores into a cummulative score for the farm's silvopastoral intensity.
