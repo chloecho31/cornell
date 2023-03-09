@@ -1,0 +1,19 @@
+---
+title: "Silvopastoral_Survey"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+
+```{r}
+
+df <- mutate(df, id = case_when(id == 30 ~ 40, TRUE ~ id))
+
+```
+

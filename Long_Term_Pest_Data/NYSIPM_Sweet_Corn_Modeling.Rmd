@@ -44,6 +44,7 @@ Data from NYS IPM (Marion Zuefle) for ECB_E, ECB_Z, CEW, FAW, and WBC.
 
 sweet_corn_pest <- read.delim("NYSIPM_Sweet_Corn_1993_2022.csv", sep = ",")
 
+# Format data types.
 sweet_corn_pest <- sweet_corn_pest %>% 
   mutate(Date = as.Date(Date, format = '%m/%d/%y')) %>%
   mutate(Site = as.factor(Site)) %>%
@@ -52,6 +53,7 @@ sweet_corn_pest <- sweet_corn_pest %>%
   rename(Day = new_col) %>%
   mutate(Day = as.numeric(Day)) 
 
+# Create a row for each pest observation. 
 sweet_corn_pest_long <- melt(sweet_corn_pest, id.vars = c("Site", "USDA.hardiness.Zone", "Lat", "Long", "Year", "Week", "Date", "Day"), measure.vars = c("ECB.E", "ECB.Z", "CEW", "FAW", "WBC"), variable.name = 'Pest', value.name = 'Count')
 
 head(sweet_corn_pest_long)
@@ -375,20 +377,52 @@ varImpPlot(wbc_rf_1)
 
 set.seed(42)
 
-sample_split <- sample.split(Y = ecb_e_features$Count, SplitRatio = 0.7)
+ecb_e_features_numeric <- ecb_e_features %>% 
+  dplyr::mutate(Date = as.numeric(as.Date(ecb_e_features$Date)-as.Date(0, origin="1899-12-30")))
 
-train_set <- subset(x = ecb_e_features, sample_split == TRUE)
-test_set <- subset(x = ecb_e_features, sample_split == FALSE)
+sample_split <- sample.split(Y = ecb_e_features_numeric$Count, SplitRatio = 0.7)
+
+train_set <- subset(x = ecb_e_features_numeric, sample_split == TRUE)
+test_set <- subset(x = ecb_e_features_numeric, sample_split == FALSE)
 
 y_train <- as.integer(train_set$Count) - 1
 y_test <- as.integer(test_set$Count) - 1
 
-X_train <- train_set %>% select(-Count)
-X_test <- test_set %>% select(-Count)
+X_train <- train_set %>% dplyr::select(c(Lat.Decimal, Long.Decimal, Date))
+X_test <- test_set %>% dplyr::select(c(Lat.Decimal, Long.Decimal, Date))
+
+```
+
+```{r}
+
+xgb_train <- xgb.DMatrix(data = as.matrix(X_train), label = y_train)
+xgb_test <- xgb.DMatrix(data = as.matrix(X_test), label = y_test)
+
+xgb_params <- list(
+  booster = "gbtree",
+  eta = 0.01,
+  max_depth = 8,
+  gamma = 4,
+  subsample = 0.75,
+  colsample_bytree = 1,
+  objective = "multi:softprob",
+  eval_metric = "mlogloss",
+  num_class = length(levels(ecb_e_features$Count)))
+
+xgb_model <- xgb.train(
+  params = xgb_params,
+  data = xgb_train,
+  nrounds = 5000,
+  verbose = 1)
+
+xgb_model
 
 ```
 
 # Time Series
+
+- [Time Series Forecasting in R](https://towardsdatascience.com/a-guide-to-forecasting-in-r-6b0c9638c261)
+- [Getting Started with Time Series in R](https://medium.com/@siglimumuni/getting-started-with-time-series-forecasting-in-r-66af90510848)
 
 
 
