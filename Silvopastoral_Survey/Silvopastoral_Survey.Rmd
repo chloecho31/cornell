@@ -8,26 +8,61 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(janitor)
+
 ```
 
 Replace "si" or "no" answers with corresponding score value.
 
 - Regeneration = 1 h1_1_3  
 - Planting trees = 2 h1_1_4 
-- Live fences = 2 
-- Silvopastoral = 3
-- Forage banks = 3
+- Live fences = 2 h1_1_5
+- Silvopastoral = 3 h1_1_6
+- Forage banks = 3 h1_1_7
+
 - No = 0 for all of the questions
 
+# Read Data
+
+This is an initial subset of the survey data and only includes the answers to Module H, which asks about specific silvopastoral practices being implemented on the farm. 
 
 ```{r}
 
-df <- mutate(df, id = case_when(id == 30 ~ 40, TRUE ~ id))
+module_h <- read.delim("Data/module_h_responses.csv", sep = ",")
+
+module_h <- module_h %>% 
+  clean_names()
+
+head(module_h)
 
 ```
 
-Create column for proportion of land cover by the practice. 
+# Generate Score
+
+Create column for proportion of land cover by the practice for each of the relevant questions. 
+
+```{r}
+
+module_h <- module_h %>% 
+  mutate(h1_1_3_prop = h1_3_3 / area_of_the_farm, .after = h1_3_3) %>% 
+  mutate(h1_1_4_prop = h1_3_4 / area_of_the_farm, .after = h1_3_4) %>%
+  mutate(h1_1_5_prop = h1_3_5 / area_of_the_farm, .after = h1_3_5) %>%
+  mutate(h1_1_6_prop = h1_3_6 / area_of_the_farm, .after = h1_3_6) %>%
+  mutate(h1_1_7_prop = h1_3_7 / area_of_the_farm, .after = h1_3_7)
+  
+```
+
+
+  
+  
 
 Multiply score by proportion. 
 
 Sum together individual question scores into a cummulative score for the farm's silvopastoral intensity.
+
+
+
+

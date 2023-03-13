@@ -6,11 +6,13 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
+
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
 library(dplyr)
 library(janitor)
+
 ```
 
 Data upload--the QGIS output at 4 different scales and the 2021 New York CDL Metadata.
