@@ -33,6 +33,84 @@ paper_data
 
 ```
 
+Subset main table by local diversification strategy category.
+
+```{r}
+
+floral <- paper_data %>% filter(local == 'Floral')
+diversity <- paper_data %>% filter(local == 'Diversity')
+intensity <- paper_data %>% filter(local == 'Intensity')
+structure <- paper_data %>% filter(local == 'Structure')
+
+```
+
+Floral counts. 
+
+```{r}
+
+floral_local_positive <- sum(na.omit(floral$local_effect == 'Positive'))
+floral_local_negative <- sum(na.omit(floral$local_effect == 'Negative'))
+floral_local_ns <- sum(na.omit(floral$local_effect == 'NS'))
+
+floral_landscape_positive <- sum(na.omit(floral$landscape_effect == 'Positive'))
+floral_landscape_negative <- sum(na.omit(floral$landscape_effect == 'Negative'))
+floral_landscape_ns <- sum(na.omit(floral$landscape_effect == 'NS'))
+
+floral_interaction_sig <- sum(na.omit(floral$interaction != 'NS'))
+floral_interaction_ns <- sum(na.omit(floral$interaction == 'NS'))
+
+```
+
+Diversity counts. 
+
+```{r}
+
+diversity_local_positive <- sum(na.omit(diversity$local_effect == 'Positive'))
+diversity_local_negative <- sum(na.omit(diversity$local_effect == 'Negative'))
+diversity_local_ns <- sum(na.omit(diversity$local_effect == 'NS'))
+
+diversity_landscape_positive <- sum(na.omit(diversity$landscape_effect == 'Positive'))
+diversity_landscape_negative <- sum(na.omit(diversity$landscape_effect == 'Negative'))
+diversity_landscape_ns <- sum(na.omit(diversity$landscape_effect == 'NS'))
+
+diversity_interaction_sig <- sum(na.omit(diversity$interaction != 'NS'))
+diversity_interaction_ns <- sum(na.omit(diversity$interaction == 'NS'))
+
+```
+
+Intensity counts. 
+
+```{r}
+
+intensity_local_positive <- sum(na.omit(intensity$local_effect == 'Positive'))
+intensity_local_negative <- sum(na.omit(intensity$local_effect == 'Negative'))
+intensity_local_ns <- sum(na.omit(intensity$local_effect == 'NS'))
+
+intensity_landscape_positive <- sum(na.omit(intensity$landscape_effect == 'Positive'))
+intensity_landscape_negative <- sum(na.omit(intensity$landscape_effect == 'Negative'))
+intensity_landscape_ns <- sum(na.omit(intensity$landscape_effect == 'NS'))
+
+intensity_interaction_sig <- sum(na.omit(intensity$interaction != 'NS'))
+intensity_interaction_ns <- sum(na.omit(intensity$interaction == 'NS'))
+
+```
+
+Structure counts. 
+
+```{r}
+
+structure_local_positive <- sum(na.omit(structure$local_effect == 'Positive'))
+structure_local_negative <- sum(na.omit(structure$local_effect == 'Negative'))
+structure_local_ns <- sum(na.omit(structure$local_effect == 'NS'))
+
+structure_landscape_positive <- sum(na.omit(structure$landscape_effect == 'Positive'))
+structure_landscape_negative <- sum(na.omit(structure$landscape_effect == 'Negative'))
+structure_landscape_ns <- sum(na.omit(structure$landscape_effect == 'NS'))
+
+structure_interaction_sig <- sum(na.omit(structure$interaction != 'NS'))
+structure_interaction_ns <- sum(na.omit(structure$interaction == 'NS'))
+
+```
 
 ```{r}
 
