@@ -100,6 +100,8 @@ module_h <- module_h %>%
            h1_1_7_score * h1_1_7_prop) %>%
   mutate(score = replace(score, score < 0, NA))
 
+head(module_h)
+
 ```
 
 # Basic Descriptive Statistics
