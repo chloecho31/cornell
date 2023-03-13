@@ -102,31 +102,62 @@ module_h <- module_h %>%
 
 ```
 
-Check distribution of scores. Average score = 0.7675455
+# Basic Descriptive Statistics
+
+Check distribution of scores. 
+
+```{r}
+
+module_h %>% ggplot(aes(x = score)) +
+  geom_histogram(bins = 50) + 
+  ggtitle('Distribution of Scores')
+
+```
+
+Range = [0.000000, 3.428571]
+
+```{r}
+
+range_score = range(na.omit(module_h$score))
+range_score
+
+```
+
+Average score = 0.7675455
 
 ```{r}
 
 mean_score = mean(na.omit(module_h$score))
 mean_score
 
-module_h %>% ggplot(aes(x = score)) +
-  geom_histogram(bins = 50) + 
-  geom_vline(aes(xintercept = mean_score), color = "red", linewidth = 1) + 
-  ggtitle('Distribution of Scores')
+```
+
+Median score = 0.5930233
+
+```{r}
+
+median_score = median(na.omit(module_h$score))
+median_score
 
 ```
 
+Max score = 3.428571
 
+```{r}
 
+max_score = max(na.omit(module_h$score))
+max_score
 
+```
 
+Min score = 0
 
+```{r}
 
+min_score = min(na.omit(module_h$score))
+min_score
 
-
-
-
-
+```
 
 
 
