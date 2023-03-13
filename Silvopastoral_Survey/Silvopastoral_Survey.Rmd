@@ -34,7 +34,8 @@ This is an initial subset of the survey data and only includes the answers to Mo
 module_h <- read.delim("Data/module_h_responses.csv", sep = ",")
 
 module_h <- module_h %>% 
-  clean_names()
+  clean_names() %>%
+  replace(is.na(.), 0)
 
 head(module_h)
 
@@ -55,13 +56,77 @@ module_h <- module_h %>%
   
 ```
 
+Modify "si" and "no" answers into equivalent numerical scores. 
 
+```{r}
+
+# Practices worth 1 point. 
+
+module_h <- module_h %>% 
+  mutate(h1_1_3_score = case_when(h1_1_3 == 'Si' ~ 1,
+  h1_1_3 == 'No' ~ 0), .after = h1_1_3)
   
-  
+# Practices worth 2 points. 
 
-Multiply score by proportion. 
+module_h <- module_h %>% 
+  mutate(h1_1_4_score = case_when(h1_1_4 == 'Si' ~ 2,
+  h1_1_4 == 'No' ~ 0), .after = h1_1_4)
 
-Sum together individual question scores into a cummulative score for the farm's silvopastoral intensity.
+module_h <- module_h %>% 
+  mutate(h1_1_5_score = case_when(h1_1_5 == 'Si' ~ 2,
+  h1_1_5 == 'No' ~ 0), .after = h1_1_5)
+
+# Practices worth 3 points. 
+
+module_h <- module_h %>% 
+  mutate(h1_1_6_score = case_when(h1_1_6 == 'Si' ~ 3,
+  h1_1_6 == 'No' ~ 0), .after = h1_1_6)
+
+module_h <- module_h %>% 
+  mutate(h1_1_7_score = case_when(h1_1_7 == 'Si' ~ 3,
+  h1_1_7 == 'No' ~ 0), .after = h1_1_7)
+
+```
+
+Generate cumulative score by summing value of each question weighted by proportion of land cover under that practice. 
+
+```{r}
+
+module_h <- module_h %>% 
+  mutate(score = h1_1_3_score * h1_1_3_prop +
+           h1_1_4_score * h1_1_4_prop +
+           h1_1_5_score * h1_1_5_prop +
+           h1_1_6_score * h1_1_6_prop +
+           h1_1_7_score * h1_1_7_prop) %>%
+  mutate(score = replace(score, score < 0, NA))
+
+```
+
+Check distribution of scores. Average score = 0.7675455
+
+```{r}
+
+mean_score = mean(na.omit(module_h$score))
+mean_score
+
+module_h %>% ggplot(aes(x = score)) +
+  geom_histogram(bins = 50) + 
+  geom_vline(aes(xintercept = mean_score), color = "red", linewidth = 1) + 
+  ggtitle('Distribution of Scores')
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
