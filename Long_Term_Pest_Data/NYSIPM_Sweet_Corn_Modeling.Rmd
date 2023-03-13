@@ -373,6 +373,8 @@ varImpPlot(wbc_rf_1)
 
 # XGBoost 
 
+- [XGBoost](https://appsilon.com/r-xgboost/)
+
 ```{r}
 
 set.seed(42)
