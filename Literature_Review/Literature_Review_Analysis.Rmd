@@ -14,12 +14,25 @@ library(ggplot2)
 
 ```
 
+# Read Data
+
 ```{r}
 
-paper_data <- read.delim("Literature_Review_Paper_Data.csv", sep = ",")
+papers <- read.delim("lit_review_data.csv", sep = ",") %>%
+  clean_names()
+papers
+
+```
+
+Extract columns needed for visual summary of the results. 
+
+```{r}
+
+paper_data <- papers %>% select(c(local, local_effect, landscape_effect, interaction))
 paper_data
 
 ```
+
 
 ```{r}
 
