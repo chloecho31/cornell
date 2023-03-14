@@ -112,6 +112,8 @@ structure_interaction_ns <- sum(na.omit(structure$interaction == 'NS'))
 
 ```
 
+# EDA
+
 ```{r}
 
 ggplot(paper_data, aes(x=Local.Effect)) +
@@ -125,3 +127,24 @@ ggplot(paper_data, aes(x=Landscape.Effect)) +
   geom_bar()
 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
