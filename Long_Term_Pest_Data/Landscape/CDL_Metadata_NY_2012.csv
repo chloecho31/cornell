@@ -1,0 +1,61 @@
+cdl_number,cdl_classification
+1,Corn
+4,Sorghum
+5,Soybeans
+6,Sunflower
+12,Sweet Corn
+21,Barley
+23,Spring Wheat
+24,Winter Wheat
+25,Other Small Grains
+26,Dbl Crop WinWht/Soybeans
+27,Rye
+28,Oats
+29,Millet
+30,Speltz
+36,Alfalfa
+37,Other Hay/Non Alfalfa
+39,Buckwheat
+41,Sugarbeets
+42,Dry Beans
+43,Potatoes
+44,Other Crops
+47,Misc Vegs & Fruits
+49,Onions
+50,Cucumbers
+53,Peas
+54,Tomatoes
+55,Caneberries
+57,Herbs
+58,Clover/Wildflowers
+59,Sod/Grass Seed
+60,Switchgrass
+61,Fallow/Idle Cropland
+62,Pasture/Grass
+66,Cherries
+67,Peaches
+68,Apples
+69,Grapes
+70,Christmas Trees
+76,Walnuts
+77,Pears
+205,Triticale
+206,Carrots
+207,Asparagus
+214,Broccoli
+216,Peppers
+218,Nectarines
+220,Plums
+221,Strawberries
+222,Squash
+224,Vetch
+225,Dbl Crop WinWht/Corn
+226,Dbl Crop Oats/Corn
+229,Pumpkins
+236,Dbl Crop WinWht/Sorghum
+237,Dbl Crop Barley/Corn
+240,Dbl Crop Soybeans/Oats
+242,Blueberries
+243,Cabbage
+247,Turnips
+254,Dbl Crop Barley/Soybeans
