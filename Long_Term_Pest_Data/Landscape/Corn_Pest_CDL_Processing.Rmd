@@ -25,14 +25,14 @@ CDL_Metadata_NY_2022 <- read.delim('CDL_Metadata_NY_2022.csv', sep = ",")
 CDL_Metadata_NY_2012 <- read.delim('CDL_Metadata_NY_2012.csv', sep = ",")
 CDL_Metadata_NY_2002 <- read.delim('CDL_Metadata_NY_2002.csv', sep = ",")
 
-Corn_Pest_CDL_2km_2022 <- read.delim('corn_pest_ny_2km_2022.csv', sep = ",")
-Corn_Pest_CDL_5km_2022 <- read.delim('corn_pest_ny_5km_2022.csv', sep = ",")
+Corn_Pest_CDL_NY_2km_2022 <- read.delim('corn_pest_ny_2km_2022.csv', sep = ",")
+Corn_Pest_CDL_NY_5km_2022 <- read.delim('corn_pest_ny_5km_2022.csv', sep = ",")
 
-Corn_Pest_CDL_2km_2012 <- read.delim('corn_pest_ny_2km_2012.csv', sep = ",")
-Corn_Pest_CDL_5km_2012 <- read.delim('corn_pest_ny_5km_2012.csv', sep = ",")
+Corn_Pest_CDL_NY_2km_2012 <- read.delim('corn_pest_ny_2km_2012.csv', sep = ",")
+Corn_Pest_CDL_NY_5km_2012 <- read.delim('corn_pest_ny_5km_2012.csv', sep = ",")
 
-Corn_Pest_CDL_2km_2002 <- read.delim('corn_pest_ny_2km_2002.csv', sep = ",")
-Corn_Pest_CDL_5km_2002 <- read.delim('corn_pest_ny_5km_2002.csv', sep = ",")
+Corn_Pest_CDL_NY_2km_2002 <- read.delim('corn_pest_ny_2km_2002.csv', sep = ",")
+Corn_Pest_CDL_NY_5km_2002 <- read.delim('corn_pest_ny_5km_2002.csv', sep = ",")
 
 ```
 
@@ -51,8 +51,37 @@ CDL_Metadata_NY_2002 <- CDL_Metadata_NY_2002 %>%
 
 ```
 
+Merging QGIS outputs with the metadata so that the crops are displayed by name not value.
 
+```{r}
 
+CDL_Crops_NY_2km_2022 <- Corn_Pest_CDL_NY_2km_2022 %>% 
+  select(Name, VALUE_0:VALUE_244) %>% 
+  setNames(CDL_Metadata_NY_2022$cdl_classification[match(names(.), CDL_Metadata_NY_2022$cdl_code)])
+
+CDL_Crops_NY_5km_2022 <- Corn_Pest_CDL_NY_5km_2022 %>% 
+  select(Name, VALUE_0:VALUE_244) %>% 
+  setNames(CDL_Metadata_NY_2022$cdl_classification[match(names(.), CDL_Metadata_NY_2022$cdl_code)])
+
+CDL_Crops_NY_2km_2012 <- Corn_Pest_CDL_NY_2km_2012 %>% 
+  select(Name, VALUE_0:VALUE_243) %>% 
+  setNames(CDL_Metadata_NY_2012$cdl_classification[match(names(.), CDL_Metadata_NY_2012$cdl_code)])
+
+CDL_Crops_NY_5km_2012 <- Corn_Pest_CDL_NY_5km_2012 %>% 
+  select(Name, VALUE_0:VALUE_243) %>% 
+  setNames(CDL_Metadata_NY_2012$cdl_classification[match(names(.), CDL_Metadata_NY_2012$cdl_code)])
+
+CDL_Crops_NY_2km_2002 <- Corn_Pest_CDL_NY_2km_2002 %>% 
+  select(Name, VALUE_0:VALUE_176) %>% 
+  setNames(CDL_Metadata_NY_2002$cdl_classification[match(names(.), CDL_Metadata_NY_2002$cdl_code)])
+
+CDL_Crops_NY_5km_2002 <- Corn_Pest_CDL_NY_5km_2002 %>% 
+  select(Name, VALUE_0:VALUE_176) %>% 
+  setNames(CDL_Metadata_NY_2002$cdl_classification[match(names(.), CDL_Metadata_NY_2002$cdl_code)])
+
+```
+
+Grouping corn and sweet corn as proportion of all land use types. 
 
 
 
