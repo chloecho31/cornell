@@ -15,10 +15,41 @@ library(janitor)
 
 ```
 
+# Read Data
 
+Data upload for CDL landscape data + CDL metadata for NY - 2002, 2012, 2022. 
 
+```{r}
 
+CDL_Metadata_NY_2022 <- read.delim('CDL_Metadata_NY_2022.csv', sep = ",")
+CDL_Metadata_NY_2012 <- read.delim('CDL_Metadata_NY_2012.csv', sep = ",")
+CDL_Metadata_NY_2002 <- read.delim('CDL_Metadata_NY_2002.csv', sep = ",")
 
+Corn_Pest_CDL_2km_2022 <- read.delim('corn_pest_ny_2km_2022.csv', sep = ",")
+Corn_Pest_CDL_5km_2022 <- read.delim('corn_pest_ny_5km_2022.csv', sep = ",")
+
+Corn_Pest_CDL_2km_2012 <- read.delim('corn_pest_ny_2km_2012.csv', sep = ",")
+Corn_Pest_CDL_5km_2012 <- read.delim('corn_pest_ny_5km_2012.csv', sep = ",")
+
+Corn_Pest_CDL_2km_2002 <- read.delim('corn_pest_ny_2km_2002.csv', sep = ",")
+Corn_Pest_CDL_5km_2002 <- read.delim('corn_pest_ny_5km_2002.csv', sep = ",")
+
+```
+
+Formatting the metadata so that it can be merged with the QGIS output files--the CDL number needs to have "VALUE" written in front of it so that it can match.
+
+```{r}
+
+CDL_Metadata_NY_2022 <- CDL_Metadata_NY_2022 %>% 
+  mutate(cdl_code = paste("VALUE", cdl_number, sep = "_"))
+
+CDL_Metadata_NY_2012 <- CDL_Metadata_NY_2012 %>% 
+  mutate(cdl_code = paste("VALUE", cdl_number, sep = "_"))
+
+CDL_Metadata_NY_2002 <- CDL_Metadata_NY_2002 %>% 
+  mutate(cdl_code = paste("VALUE", cdl_number, sep = "_"))
+
+```
 
 
 
