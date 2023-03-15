@@ -87,31 +87,175 @@ CDL_Crops_NY_5km_2002 <- Corn_Pest_CDL_NY_5km_2002 %>%
 
 ```
 
-Grouping corn and sweet corn as proportion of all land use types. 
+Grouping corn and sweet corn as a total. 
 
 ```{r}
 
 CDL_Crops_NY_2km_2022 <- CDL_Crops_NY_2km_2022 %>% 
-  mutate(total_corn = corn + sweet_corn, .before = na_2)
+  mutate(total_corn = corn + sweet_corn, .before = na_2) %>%
+  rename(site = na)
 
 CDL_Crops_NY_5km_2022 <- CDL_Crops_NY_5km_2022 %>% 
-  mutate(total_corn = corn + sweet_corn, .before = na_2)
+  mutate(total_corn = corn + sweet_corn, .before = na_2) %>%
+  rename(site = na)
 
 CDL_Crops_NY_2km_2012 <- CDL_Crops_NY_2km_2012 %>% 
-  mutate(total_corn = corn + sweet_corn, .before = na_2)
+  mutate(total_corn = corn + sweet_corn, .before = na_2) %>%
+  rename(site = na)
 
 CDL_Crops_NY_5km_2012 <- CDL_Crops_NY_5km_2012 %>% 
-  mutate(total_corn = corn + sweet_corn, .before = na_2)
+  mutate(total_corn = corn + sweet_corn, .before = na_2) %>%
+  rename(site = na)
 
 CDL_Crops_NY_2km_2002 <- CDL_Crops_NY_2km_2002 %>% 
-  mutate(total_corn = corn, .before = na_2)
+  mutate(total_corn = corn, .before = na_2) %>%
+  rename(site = na)
 
 CDL_Crops_NY_5km_2002 <- CDL_Crops_NY_5km_2002 %>% 
-  mutate(total_corn = corn, .before = na_2)
-
+  mutate(total_corn = corn, .before = na_2) %>%
+  rename(site = na)
 
 ```
 
+Calculating total land. 
+
+```{r}
+
+CDL_Crops_NY_2km_2022 <- CDL_Crops_NY_2km_2022 %>% 
+  mutate(total_land = rowSums(select(CDL_Crops_NY_2km_2022, na_2:cauliflower)))
+
+CDL_Crops_NY_5km_2022 <- CDL_Crops_NY_5km_2022 %>% 
+  mutate(total_land = rowSums(select(CDL_Crops_NY_5km_2022, na_2:cauliflower)))
+  
+CDL_Crops_NY_2km_2012 <- CDL_Crops_NY_2km_2012 %>% 
+  mutate(total_land = rowSums(select(CDL_Crops_NY_2km_2012, na_2:cabbage)))
+  
+CDL_Crops_NY_5km_2012 <- CDL_Crops_NY_5km_2012 %>% 
+  mutate(total_land = rowSums(select(CDL_Crops_NY_5km_2022, na_2:cabbage)))
+  
+CDL_Crops_NY_2km_2002 <- CDL_Crops_NY_2km_2002 %>% 
+  mutate(total_land = rowSums(select(CDL_Crops_NY_2km_2002, na_2:na_9)))
+  
+CDL_Crops_NY_5km_2002 <- CDL_Crops_NY_5km_2002 %>% 
+  mutate(total_land = rowSums(select(CDL_Crops_NY_5km_2002, na_2:na_9)))
+  
+```
+
+Calculating proportion of corn within total land. 
+
+```{r}
+
+CDL_Crops_NY_2km_2022 <- CDL_Crops_NY_2km_2022 %>% 
+  mutate(prop_corn = total_corn / total_land)
+
+CDL_Crops_NY_5km_2022 <- CDL_Crops_NY_5km_2022 %>% 
+  mutate(prop_corn = total_corn / total_land)
+  
+CDL_Crops_NY_2km_2012 <- CDL_Crops_NY_2km_2012 %>% 
+  mutate(prop_corn = total_corn / total_land)
+  
+CDL_Crops_NY_5km_2012 <- CDL_Crops_NY_5km_2012 %>% 
+  mutate(prop_corn = total_corn / total_land)
+  
+CDL_Crops_NY_2km_2002 <- CDL_Crops_NY_2km_2002 %>% 
+  mutate(prop_corn = total_corn / total_land)
+  
+CDL_Crops_NY_5km_2002 <- CDL_Crops_NY_5km_2002 %>% 
+  mutate(prop_corn = total_corn / total_land)
+  
+```
+
+# EDA - Descriptive Statistics
+
+```{r}
+
+CDL_Crops_NY_2km_2022 %>% 
+  ggplot(aes(x = prop_corn)) +
+  geom_histogram() +
+  ggtitle('Distribution of Proportion of Corn (2km Radius), New York 2022')
+  
+```
+
+```{r}
+
+summary(CDL_Crops_NY_2km_2022$prop_corn)
+
+```
+
+```{r}
+
+CDL_Crops_NY_5km_2022 %>% 
+  ggplot(aes(x = prop_corn)) +
+  geom_histogram() +
+  ggtitle('Distribution of Proportion of Corn (5km Radius), New York 2022')
+  
+```
+
+```{r}
+
+summary(CDL_Crops_NY_5km_2022$prop_corn)
+
+```
+
+```{r}
+
+CDL_Crops_NY_2km_2012 %>% 
+  ggplot(aes(x = prop_corn)) +
+  geom_histogram() +
+  ggtitle('Distribution of Proportion of Corn (2km Radius), New York 2012')
+  
+```
+
+```{r}
+
+summary(CDL_Crops_NY_2km_2012$prop_corn)
+
+```
+
+```{r}
+
+CDL_Crops_NY_5km_2012 %>% 
+  ggplot(aes(x = prop_corn)) +
+  geom_histogram() +
+  ggtitle('Distribution of Proportion of Corn (5km Radius), New York 2012')
+  
+```
+
+```{r}
+
+summary(CDL_Crops_NY_5km_2012$prop_corn)
+
+```
+
+```{r}
+
+CDL_Crops_NY_2km_2002 %>% 
+  ggplot(aes(x = prop_corn)) +
+  geom_histogram() +
+  ggtitle('Distribution of Proportion of Corn (2km Radius), New York 2002')
+  
+```
+
+```{r}
+
+summary(CDL_Crops_NY_2km_2002$prop_corn)
+
+```
+
+```{r}
+
+CDL_Crops_NY_5km_2002 %>% 
+  ggplot(aes(x = prop_corn)) +
+  geom_histogram() +
+  ggtitle('Distribution of Proportion of Corn (5km Radius), New York 2002')
+  
+```
+
+```{r}
+
+summary(CDL_Crops_NY_5km_2002$prop_corn)
+
+```
 
 
 
