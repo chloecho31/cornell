@@ -151,6 +151,7 @@ Final_CDL_Dung_Beetle_2021 <- CDL_250_Summary_Dung_Beetle %>%
   #mutate(Site = recode(Site, "Indian_Creek_B1" = "IC", "CU_Orchards_B" = "CO", "Stick_and_Stone_B" = "SS", "West_Haven_B" = "WH", "Grisamore_B" = "GR", "Silver_Queen_B" = "SQ", "Shared_Roots_B2" = "SR", "Cassim_B" = "CA", "Buried_Treasures_B" = "BT", "Research_North_B2" = "RN", "Fellenz_B" = "FE", "Full_Circle_B" = "FC", "Sampson_B" = "SA", "Remembrance_B" = "RE"))
   
 ```
+
 Writing the csv file.
 
 ```{r}
