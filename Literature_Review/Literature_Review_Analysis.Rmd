@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
+library(janitor)
 
 ```
 
@@ -24,14 +25,19 @@ papers
 
 ```
 
+# Summary Counts 
+
 Extract columns needed for visual summary of the results. 
 
 ```{r}
 
-paper_data <- papers %>% select(c(local, local_effect, landscape_effect, interaction))
+paper_data <- papers %>% select(c(response_category, local, local_effect, landscape_type, landscape_effect, interaction)) %>%
+  mutate_at(c('response_category', 'local', 'landscape_type', 'local_effect', 'landscape_effect', 'interaction'), as.factor)
 paper_data
 
 ```
+
+## Local Diversification Strategy 
 
 Subset main table by local diversification strategy category.
 
@@ -112,39 +118,301 @@ structure_interaction_ns <- sum(na.omit(structure$interaction == 'NS'))
 
 ```
 
-# EDA
+
+## Response Category
 
 ```{r}
 
-ggplot(paper_data, aes(x=Local.Effect)) +
-  geom_bar()
+levels(paper_data$response_category)
 
 ```
 
 ```{r}
 
-ggplot(paper_data, aes(x=Landscape.Effect)) +
-  geom_bar()
+arthropod <- paper_data %>% filter(response_category == 'Arthropod')
+crop <- paper_data %>% filter(response_category == 'Crop')
+natural_enemy <- paper_data %>% filter(response_category == 'Natural enemy')
+other <- paper_data %>% filter(response_category == 'Other')
+pest <- paper_data %>% filter(response_category == 'Pest')
+pollinator <- paper_data %>% filter(response_category == 'Pollinator')
 
 ```
 
+Arthropod responses. 
 
+```{r}
 
+arthropod_local_positive <- sum(na.omit(arthropod$local_effect == 'Positive'))
+arthropod_local_negative <- sum(na.omit(arthropod$local_effect == 'Negative'))
+arthropod_local_ns <- sum(na.omit(arthropod$local_effect == 'NS'))
 
+arthropod_landscape_positive <- sum(na.omit(arthropod$landscape_effect == 'Positive'))
+arthropod_landscape_negative <- sum(na.omit(arthropod$landscape_effect == 'Negative'))
+arthropod_landscape_ns <- sum(na.omit(arthropod$landscape_effect == 'NS'))
 
+arthropod_interaction_sig <- sum(na.omit(arthropod$interaction != 'NS'))
+arthropod_interaction_ns <- sum(na.omit(arthropod$interaction == 'NS'))
 
+```
 
+Crop responses. 
 
+```{r}
 
+crop_local_positive <- sum(na.omit(crop$local_effect == 'Positive'))
+crop_local_negative <- sum(na.omit(crop$local_effect == 'Negative'))
+crop__local_ns <- sum(na.omit(crop$local_effect == 'NS'))
 
+crop_landscape_positive <- sum(na.omit(crop$landscape_effect == 'Positive'))
+crop_landscape_negative <- sum(na.omit(crop$landscape_effect == 'Negative'))
+crop_landscape_ns <- sum(na.omit(crop$landscape_effect == 'NS'))
 
+crop_interaction_sig <- sum(na.omit(crop$interaction != 'NS'))
+crop_interaction_ns <- sum(na.omit(crop$interaction == 'NS'))
 
+```
 
+Natural enemy responses. 
 
+```{r}
 
+ne_local_positive <- sum(na.omit(natural_enemy$local_effect == 'Positive'))
+ne_local_negative <- sum(na.omit(natural_enemy$local_effect == 'Negative'))
+ne_local_ns <- sum(na.omit(natural_enemy$local_effect == 'NS'))
 
+ne_landscape_positive <- sum(na.omit(natural_enemy$landscape_effect == 'Positive'))
+ne_landscape_negative <- sum(na.omit(natural_enemy$landscape_effect == 'Negative'))
+ne_landscape_ns <- sum(na.omit(natural_enemy$landscape_effect == 'NS'))
 
+ne_interaction_sig <- sum(na.omit(natural_enemy$interaction != 'NS'))
+ne_interaction_ns <- sum(na.omit(natural_enemy$interaction == 'NS'))
 
+```
 
+Pest responses. 
+
+```{r}
+
+pest_local_positive <- sum(na.omit(pest$local_effect == 'Positive'))
+pest_local_negative <- sum(na.omit(pest$local_effect == 'Negative'))
+pest_local_ns <- sum(na.omit(pest$local_effect == 'NS'))
+
+pest_landscape_positive <- sum(na.omit(pest$landscape_effect == 'Positive'))
+pest_landscape_negative <- sum(na.omit(pest$landscape_effect == 'Negative'))
+pest_landscape_ns <- sum(na.omit(pest$landscape_effect == 'NS'))
+
+pest_interaction_sig <- sum(na.omit(pest$interaction != 'NS'))
+pest_interaction_ns <- sum(na.omit(pest$interaction == 'NS'))
+
+```
+
+Pollinator responses. 
+
+```{r}
+
+pollinator_local_positive <- sum(na.omit(pollinator$local_effect == 'Positive'))
+pollinator_local_negative <- sum(na.omit(pollinator$local_effect == 'Negative'))
+pollinator_local_ns <- sum(na.omit(pollinator$local_effect == 'NS'))
+
+pollinator_landscape_positive <- sum(na.omit(pollinator$landscape_effect == 'Positive'))
+pollinator_landscape_negative <- sum(na.omit(pollinator$landscape_effect == 'Negative'))
+pollinator_landscape_ns <- sum(na.omit(pollinator$landscape_effect == 'NS'))
+
+pollinator_interaction_sig <- sum(na.omit(pollinator$interaction != 'NS'))
+pollinator_interaction_ns <- sum(na.omit(pollinator$interaction == 'NS'))
+
+```
+
+Other responses. 
+
+```{r}
+
+other_local_positive <- sum(na.omit(other$local_effect == 'Positive'))
+other_local_negative <- sum(na.omit(other$local_effect == 'Negative'))
+other_local_ns <- sum(na.omit(other$local_effect == 'NS'))
+
+other_landscape_positive <- sum(na.omit(other$landscape_effect == 'Positive'))
+other_landscape_negative <- sum(na.omit(other$landscape_effect == 'Negative'))
+other_landscape_ns <- sum(na.omit(other$landscape_effect == 'NS'))
+
+other_interaction_sig <- sum(na.omit(other$interaction != 'NS'))
+other_interaction_ns <- sum(na.omit(other$interaction == 'NS'))
+
+```
+
+## Landscape Type
+
+```{r}
+
+levels(paper_data$landscape_type)
+
+```
+
+```{r}
+
+non_crop <- paper_data %>% filter(landscape_type == 'Non-crop area')
+prop_organic <- paper_data %>% filter(landscape_type == 'Proportion organic')
+woody <- paper_data %>% filter(landscape_type == 'Woody habitat')
+field_size <- paper_data %>% filter(landscape_type == 'Field size')
+non_maize <- paper_data %>% filter(landscape_type == 'Non-maize area')
+prop_reduced_intensity <- paper_data %>% filter(landscape_type == 'Proportion reduced intensity')
+grassland <- paper_data %>% filter(landscape_type == 'Grassland')
+pollinator_habitat <- paper_data %>% filter(landscape_type == 'Pollinator habitat')
+semi_natural <- paper_data %>% filter(landscape_type == 'Semi/natural habitat')
+
+```
+
+Non-crop landscape.
+
+```{r}
+
+non_crop_local_positive <- sum(na.omit(non_crop$local_effect == 'Positive'))
+non_crop_local_negative <- sum(na.omit(non_crop$local_effect == 'Negative'))
+non_crop_local_ns <- sum(na.omit(non_crop$local_effect == 'NS'))
+
+non_crop_landscape_positive <- sum(na.omit(non_crop$landscape_effect == 'Positive'))
+non_crop_landscape_negative <- sum(na.omit(non_crop$landscape_effect == 'Negative'))
+non_crop_landscape_ns <- sum(na.omit(non_crop$landscape_effect == 'NS'))
+
+non_crop_interaction_sig <- sum(na.omit(non_crop$interaction != 'NS'))
+non_crop_interaction_ns <- sum(na.omit(non_crop$interaction == 'NS'))
+
+```
+
+Natural/semi-natural landscape.
+
+```{r}
+
+semi_natural_local_positive <- sum(na.omit(semi_natural$local_effect == 'Positive'))
+semi_natural_local_negative <- sum(na.omit(semi_natural$local_effect == 'Negative'))
+semi_natural_local_ns <- sum(na.omit(semi_natural$local_effect == 'NS'))
+
+semi_natural_landscape_positive <- sum(na.omit(semi_natural$landscape_effect == 'Positive'))
+semi_natural_landscape_negative <- sum(na.omit(semi_natural$landscape_effect == 'Negative'))
+semi_natural_landscape_ns <- sum(na.omit(semi_natural$landscape_effect == 'NS'))
+
+semi_natural_interaction_sig <- sum(na.omit(semi_natural$interaction != 'NS'))
+semi_natural_interaction_ns <- sum(na.omit(semi_natural$interaction == 'NS'))
+
+```
+
+Proportion organic in landscape.
+
+```{r}
+
+prop_organic_local_positive <- sum(na.omit(prop_organic$local_effect == 'Positive'))
+prop_organic_local_negative <- sum(na.omit(prop_organic$local_effect == 'Negative'))
+prop_organic_local_ns <- sum(na.omit(prop_organic$local_effect == 'NS'))
+
+prop_organic_landscape_positive <- sum(na.omit(prop_organic$landscape_effect == 'Positive'))
+prop_organic_landscape_negative <- sum(na.omit(prop_organic$landscape_effect == 'Negative'))
+prop_organic_landscape_ns <- sum(na.omit(prop_organic$landscape_effect == 'NS'))
+
+prop_organic_interaction_sig <- sum(na.omit(prop_organic$interaction != 'NS'))
+prop_organic_interaction_ns <- sum(na.omit(prop_organic$interaction == 'NS'))
+
+```
+
+Proportion organic in landscape.
+
+```{r}
+
+woody_local_positive <- sum(na.omit(woody$local_effect == 'Positive'))
+woody_local_negative <- sum(na.omit(woody$local_effect == 'Negative'))
+woody_local_ns <- sum(na.omit(woody$local_effect == 'NS'))
+
+woody_landscape_positive <- sum(na.omit(woody$landscape_effect == 'Positive'))
+woody_landscape_negative <- sum(na.omit(woody$landscape_effect == 'Negative'))
+woody_landscape_ns <- sum(na.omit(woody$landscape_effect == 'NS'))
+
+woody_interaction_sig <- sum(na.omit(woody$interaction != 'NS'))
+woody_interaction_ns <- sum(na.omit(woody$interaction == 'NS'))
+
+```
+
+Field size.
+
+```{r}
+
+field_size_local_positive <- sum(na.omit(field_size$local_effect == 'Positive'))
+field_size_local_negative <- sum(na.omit(field_size$local_effect == 'Negative'))
+field_size_local_ns <- sum(na.omit(field_size$local_effect == 'NS'))
+
+field_size_landscape_positive <- sum(na.omit(field_size$landscape_effect == 'Positive'))
+field_size_landscape_negative <- sum(na.omit(field_size$landscape_effect == 'Negative'))
+field_size_landscape_ns <- sum(na.omit(field_size$landscape_effect == 'NS'))
+
+field_size_interaction_sig <- sum(na.omit(field_size$interaction != 'NS'))
+field_size_interaction_ns <- sum(na.omit(field_size$interaction == 'NS'))
+
+```
+
+Non-maize in landscape.
+
+```{r}
+
+non_maize_local_positive <- sum(na.omit(non_maize$local_effect == 'Positive'))
+non_maize_size_local_negative <- sum(na.omit(non_maize$local_effect == 'Negative'))
+non_maize_size_local_ns <- sum(na.omit(non_maize$local_effect == 'NS'))
+
+non_maize_size_landscape_positive <- sum(na.omit(non_maize$landscape_effect == 'Positive'))
+non_maize_size_landscape_negative <- sum(na.omit(non_maize$landscape_effect == 'Negative'))
+non_maize_size_landscape_ns <- sum(na.omit(non_maize$landscape_effect == 'NS'))
+
+non_maize_size_interaction_sig <- sum(na.omit(non_maize$interaction != 'NS'))
+non_maize_size_interaction_ns <- sum(na.omit(non_maize$interaction == 'NS'))
+
+```
+
+Reduced intensity in landscape.
+
+```{r}
+
+reduced_intensity_local_positive <- sum(na.omit(prop_reduced_intensity$local_effect == 'Positive'))
+reduced_intensity_size_local_negative <- sum(na.omit(prop_reduced_intensity$local_effect == 'Negative'))
+reduced_intensity_size_local_ns <- sum(na.omit(prop_reduced_intensity$local_effect == 'NS'))
+
+reduced_intensity_size_landscape_positive <- sum(na.omit(prop_reduced_intensity$landscape_effect == 'Positive'))
+reduced_intensity_size_landscape_negative <- sum(na.omit(prop_reduced_intensity$landscape_effect == 'Negative'))
+reduced_intensity_size_landscape_ns <- sum(na.omit(prop_reduced_intensity$landscape_effect == 'NS'))
+
+reduced_intensity_size_interaction_sig <- sum(na.omit(prop_reduced_intensity$interaction != 'NS'))
+reduced_intensity_size_interaction_ns <- sum(na.omit(prop_reduced_intensity$interaction == 'NS'))
+
+```
+
+Grassland in landscape.
+
+```{r}
+
+grassland_local_positive <- sum(na.omit(grassland$local_effect == 'Positive'))
+grassland__local_negative <- sum(na.omit(grassland$local_effect == 'Negative'))
+grassland_local_ns <- sum(na.omit(grassland$local_effect == 'NS'))
+
+grassland_landscape_positive <- sum(na.omit(grassland$landscape_effect == 'Positive'))
+grassland_landscape_negative <- sum(na.omit(grassland$landscape_effect == 'Negative'))
+grassland_landscape_ns <- sum(na.omit(grassland$landscape_effect == 'NS'))
+
+grassland_interaction_sig <- sum(na.omit(grassland$interaction != 'NS'))
+grassland_interaction_ns <- sum(na.omit(grassland$interaction == 'NS'))
+
+```
+
+Pollinator habitat in landscape.
+
+```{r}
+
+pollinator_habitat_local_positive <- sum(na.omit(pollinator_habitat$local_effect == 'Positive'))
+pollinator_habitat_local_negative <- sum(na.omit(pollinator_habitat$local_effect == 'Negative'))
+pollinator_habitat_local_ns <- sum(na.omit(pollinator_habitat$local_effect == 'NS'))
+
+pollinator_habitat_landscape_positive <- sum(na.omit(pollinator_habitat$landscape_effect == 'Positive'))
+pollinator_habitat_landscape_negative <- sum(na.omit(pollinator_habitat$landscape_effect == 'Negative'))
+pollinator_habitat_landscape_ns <- sum(na.omit(pollinator_habitat$landscape_effect == 'NS'))
+
+pollinator_habitat_interaction_sig <- sum(na.omit(pollinator_habitat$interaction != 'NS'))
+pollinator_habitat_interaction_ns <- sum(na.omit(pollinator_habitat$interaction == 'NS'))
+
+```
 
 
