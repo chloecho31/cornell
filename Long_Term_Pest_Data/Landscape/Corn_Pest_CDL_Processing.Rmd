@@ -186,6 +186,16 @@ Corn_NY_5km_2012 <- CDL_Crops_NY_5km_2012 %>%
   select(c(site, total_corn, corn, sweet_corn, prop_corn, total_land))
 
 # write.csv(Corn_NY_5km_2012, file = "final_cdl_corn_5km_2012.csv")
+
+Corn_NY_2km_2002 <- CDL_Crops_NY_2km_2002 %>% 
+  select(c(site, total_corn, corn, prop_corn, total_land))
+
+# write.csv(Corn_NY_2km_2002, file = "final_cdl_corn_2km_2002.csv")
+
+Corn_NY_5km_2002 <- CDL_Crops_NY_5km_2002 %>% 
+  select(c(site, total_corn, corn, prop_corn, total_land))
+
+# write.csv(Corn_NY_5km_2002, file = "final_cdl_corn_5km_2002.csv")
   
 ```
 
