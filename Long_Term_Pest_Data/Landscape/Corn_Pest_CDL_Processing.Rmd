@@ -25,14 +25,14 @@ CDL_Metadata_NY_2022 <- read.delim('CDL_Metadata_NY_2022.csv', sep = ",")
 CDL_Metadata_NY_2012 <- read.delim('CDL_Metadata_NY_2012.csv', sep = ",")
 CDL_Metadata_NY_2002 <- read.delim('CDL_Metadata_NY_2002.csv', sep = ",")
 
-Corn_Pest_CDL_NY_2km_2022 <- read.delim('corn_pest_ny_2km_2022.csv', sep = ",")
-Corn_Pest_CDL_NY_5km_2022 <- read.delim('corn_pest_ny_5km_2022.csv', sep = ",")
+Corn_Pest_CDL_NY_2km_2022 <- read.delim('Raw_CDL_Data/corn_pest_ny_2km_2022.csv', sep = ",")
+Corn_Pest_CDL_NY_5km_2022 <- read.delim('Raw_CDL_Data/corn_pest_ny_5km_2022.csv', sep = ",")
 
-Corn_Pest_CDL_NY_2km_2012 <- read.delim('corn_pest_ny_2km_2012.csv', sep = ",")
-Corn_Pest_CDL_NY_5km_2012 <- read.delim('corn_pest_ny_5km_2012.csv', sep = ",")
+Corn_Pest_CDL_NY_2km_2012 <- read.delim('Raw_CDL_Data/corn_pest_ny_2km_2012.csv', sep = ",")
+Corn_Pest_CDL_NY_5km_2012 <- read.delim('Raw_CDL_Data/corn_pest_ny_5km_2012.csv', sep = ",")
 
-Corn_Pest_CDL_NY_2km_2002 <- read.delim('corn_pest_ny_2km_2002.csv', sep = ",")
-Corn_Pest_CDL_NY_5km_2002 <- read.delim('corn_pest_ny_5km_2002.csv', sep = ",")
+Corn_Pest_CDL_NY_2km_2002 <- read.delim('Raw_CDL_Data/corn_pest_ny_2km_2002.csv', sep = ",")
+Corn_Pest_CDL_NY_5km_2002 <- read.delim('Raw_CDL_Data/corn_pest_ny_5km_2002.csv', sep = ",")
 
 ```
 
@@ -167,13 +167,25 @@ CDL_Crops_NY_5km_2002 <- CDL_Crops_NY_5km_2002 %>%
 
 ```{r}
 
+Corn_NY_2km_2022 <- CDL_Crops_NY_2km_2022 %>% 
+  select(c(site, total_corn, corn, sweet_corn, prop_corn, total_land))
 
-  
-```
+# write.csv(Corn_NY_2km_2022, file = "final_cdl_corn_2km_2022.csv")
 
-```{r}
+Corn_NY_5km_2022 <- CDL_Crops_NY_5km_2022 %>% 
+  select(c(site, total_corn, corn, sweet_corn, prop_corn, total_land))
 
+# write.csv(Corn_NY_5km_2022, file = "final_cdl_corn_5km_2022.csv")
 
+Corn_NY_2km_2012 <- CDL_Crops_NY_2km_2012 %>% 
+  select(c(site, total_corn, corn, sweet_corn, prop_corn, total_land))
+
+# write.csv(Corn_NY_2km_2012, file = "final_cdl_corn_2km_2012.csv")
+
+Corn_NY_5km_2012 <- CDL_Crops_NY_5km_2012 %>% 
+  select(c(site, total_corn, corn, sweet_corn, prop_corn, total_land))
+
+# write.csv(Corn_NY_5km_2012, file = "final_cdl_corn_5km_2012.csv")
   
 ```
 
