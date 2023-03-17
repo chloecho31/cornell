@@ -165,6 +165,18 @@ CDL_Crops_NY_5km_2002 <- CDL_Crops_NY_5km_2002 %>%
   
 ```
 
+```{r}
+
+
+  
+```
+
+```{r}
+
+
+  
+```
+
 # EDA - Descriptive Statistics
 
 ```{r}
