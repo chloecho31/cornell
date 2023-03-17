@@ -415,4 +415,67 @@ pollinator_habitat_interaction_ns <- sum(na.omit(pollinator_habitat$interaction 
 
 ```
 
+# EDA - Visualizations
+
+Local effects, faceted by local diversification strategy (Floral, Diversity, Intensity, Structure). 
+
+```{r}
+
+paper_data %>%
+  filter(local_effect == 'Positive' | local_effect == 'Negative' | local_effect == 'NS') %>%
+  ggplot(aes(x = local_effect)) + 
+  geom_bar() +
+  ggtitle('Local effects, faceted by local diversification strategy') +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  facet_wrap(~ local)
+
+```
+
+Landscape effects, faceted by local diversification strategy (Floral, Diversity, Intensity, Structure). 
+
+```{r}
+
+paper_data %>%
+  filter(landscape_effect == 'Positive' | landscape_effect == 'Negative' | landscape_effect == 'NS') %>%
+  ggplot(aes(x = landscape_effect)) + 
+  geom_bar() +
+  ggtitle('Landscape effects, faceted by local diversification strategy') +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  facet_wrap(~ local)
+
+```
+
+Local effects, faceted by response category (Crop, Arthropod, Natural Enemy, Pest, Pollinator, Other). 
+
+```{r}
+
+paper_data %>%
+  filter(local_effect == 'Positive' | local_effect == 'Negative' | local_effect == 'NS') %>%
+  ggplot(aes(x = local_effect)) + 
+  geom_bar() +
+  ggtitle('Local effects, faceted by response category') +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  facet_wrap(~ response_category)
+
+```
+
+Landscape effects, faceted by response category (Crop, Arthropod, Natural Enemy, Pest, Pollinator, Other). 
+
+```{r}
+
+paper_data %>%
+  filter(landscape_effect == 'Positive' | landscape_effect == 'Negative' | landscape_effect == 'NS') %>%
+  ggplot(aes(x = landscape_effect)) + 
+  geom_bar() +
+  ggtitle('Landscape effects, faceted by response category') +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  facet_wrap(~ response_category)
+
+```
+
+
+
+
+
+
 
