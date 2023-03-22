@@ -26,6 +26,8 @@ library(cvms)
 library(caret)
 library(caTools)
 
+library(sqldf)
+
 ```
 
 # Questions
@@ -51,7 +53,8 @@ sweet_corn_pest <- sweet_corn_pest %>%
   mutate(USDA.hardiness.Zone = as.factor(USDA.hardiness.Zone)) %>%
   mutate(new_col = format(Date, "%j"), .after = Date) %>%
   rename(Day = new_col) %>%
-  mutate(Day = as.numeric(Day)) 
+  mutate(Day = as.numeric(Day)) %>%
+  mutate(Site = str_replace(Site, "Baldwinsvillie", "Baldwinsville"))
 
 # Create a row for each pest observation. 
 sweet_corn_pest_long <- melt(sweet_corn_pest, id.vars = c("Site", "USDA.hardiness.Zone", "Lat", "Long", "Year", "Week", "Date", "Day"), measure.vars = c("ECB.E", "ECB.Z", "CEW", "FAW", "WBC"), variable.name = 'Pest', value.name = 'Count')
@@ -69,12 +72,17 @@ sites <- read.delim("NYSIPM_Sweet_Corn_1993_2022_Sites.csv", sep = ",")
 length(levels(sites$Site))
 
 sites <- sites %>% 
-  mutate(Site = as.factor(Site)) 
+  mutate(Site = str_replace(Site, "Accord ", "Accord")) %>%
+  mutate(Site = str_replace(Site, "PennYan", "Penn Yan")) %>%
+  mutate(Site = as.factor(Site))
+  
 
 sites <- sites %>%
   dplyr::select(-c('X', 'X.1', 'X.2', 'X.3', 'X.4', 'X.5', 'X.6', 'X.7'))
 
 head(sites)
+
+levels(sites$Site)
 
 ```
 
@@ -92,6 +100,63 @@ head(sweet_corn_pest_full)
 
 ```
 
+Add proportion corn in landscape to sites. 
+
+```{r}
+
+corn_5km_2002 <- read.delim("Landscape/final_cdl_corn_5km_2002.csv", sep = ",") %>%
+  mutate(year = 2002) %>%
+  dplyr::select(c(site, prop_corn, year)) %>%
+  mutate(site = str_replace(site, "_", " "))
+
+corn_5km_2012 <- read.delim("Landscape/final_cdl_corn_5km_2012.csv", sep = ",") %>%
+  mutate(year = 2012) %>%
+  dplyr::select(c(site, prop_corn, year)) %>%
+  mutate(site = str_replace(site, "_", " "))
+
+corn_5km_2022 <- read.delim("Landscape/final_cdl_corn_5km_2022.csv", sep = ",") %>%
+  mutate(year = 2022) %>%
+  dplyr::select(c(site, prop_corn, year)) %>%
+  mutate(site = str_replace(site, "_", " "))
+
+```
+
+```{r}
+
+set.seed(42)
+
+sweet_corn_pest_features <- sweet_corn_pest_full %>%
+  dplyr::select(c('Site', 'Lat.Decimal', 'Long.Decimal', 'Year', 'Week', 'Date', 'Day', 'Pest', 'Count')) %>%
+  na.omit(subset(sweet_corn_pest_full, select = c('Site', 'Lat.Decimal', 'Long.Decimal', 'Year', 'Week', 'Date', 'Day', 'Pest', 'Count'))) 
+
+cdl_2002 <- sqldf('SELECT * 
+  FROM sweet_corn_pest_features
+  LEFT JOIN corn_5km_2002 
+  ON sweet_corn_pest_features.Site = corn_5km_2002.site 
+  WHERE sweet_corn_pest_features.Year >= 1993 
+  AND sweet_corn_pest_features.Year <= 2002') %>%
+  dplyr::select(-c(site, year))
+
+cdl_2012 <- sqldf('SELECT * 
+  FROM sweet_corn_pest_features
+  LEFT JOIN corn_5km_2012 
+  ON sweet_corn_pest_features.Site = corn_5km_2012.site 
+  WHERE sweet_corn_pest_features.Year >= 2003 
+  AND sweet_corn_pest_features.Year <= 2012') %>%
+  dplyr::select(-c(site, year))
+
+cdl_2022 <- sqldf('SELECT * 
+  FROM sweet_corn_pest_features
+  LEFT JOIN corn_5km_2022 
+  ON sweet_corn_pest_features.Site = corn_5km_2022.site 
+  WHERE sweet_corn_pest_features.Year >= 2013 
+  AND sweet_corn_pest_features.Year <= 2022') %>%
+  dplyr::select(-c(site, year))
+
+sweet_corn_pest_features <- bind_rows(cdl_2002, cdl_2012, cdl_2022)
+
+```
+
 # Feature Selection 
 
 Testing a few different kinds of feature selection with current variables. Will add more as we get climate and soil data. 
@@ -100,14 +165,9 @@ Boruta feature selection. Read about Boruta [here](https://towardsdatascience.co
 
 ```{r}
 
-set.seed(42)
-
-sweet_corn_pest_features <- sweet_corn_pest_full %>%
-  dplyr::select(c('Site', 'Lat.Decimal', 'Long.Decimal', 'Year', 'Week', 'Date', 'Day', 'Pest', 'Count')) %>%
-  na.omit(subset(sweet_corn_pest_full, select = c('Site', 'Lat.Decimal', 'Long.Decimal', 'Year', 'Week', 'Date', 'Day', 'Pest', 'Count')))
-
 ecb_e_features <- sweet_corn_pest_features %>%
-  dplyr::filter(Pest == 'ECB.E')
+  dplyr::filter(Pest == 'ECB.E') %>%
+  dplyr::select(-c(Pest))
 
 boruta_ecb_e <- Boruta(Count ~ ., data = na.exclude(ecb_e_features), doTrace = 2, maxRuns = 500)
 print(boruta_ecb_e)
@@ -211,7 +271,7 @@ Running a model with individual predictors, no interactions.
 
 ```{r}
 
-ecb_e_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + (1 | Site) + (1 | Year), data = ecb_e_features)
+ecb_e_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + scale(prop_corn) + (1 | Site) + (1 | Year), data = ecb_e_features)
 summary(ecb_e_1)
 
 ```
@@ -268,8 +328,8 @@ summary(wbc_1)
 
 ```{r}
 
-ecb_e_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date,
-                           data = ecb_e_features)
+ecb_e_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date + prop_corn,
+                           data = ecb_e_features, na.action = na.exclude)
 
 ecb_e_rf_1
 

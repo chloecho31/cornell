@@ -291,6 +291,14 @@ summary(CDL_Crops_NY_5km_2002$prop_corn)
 
 ```
 
+2022 - 5km Proportion Corn (use for 2013-2022)
+Min: 0.1479%
+Max: 37.9485
 
+2012 - 5km Proportion Corn (use for 2003-2012)
+Min: 0.5478%
+Max: 44.5588%
 
-
+2002 - 5km Proportion Corn (use for 1993-2002)
+Min: 0.07216%
+Max: 22.49030%
