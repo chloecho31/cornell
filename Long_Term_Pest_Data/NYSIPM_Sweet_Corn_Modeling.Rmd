@@ -157,6 +157,10 @@ sweet_corn_pest_features <- bind_rows(cdl_2002, cdl_2012, cdl_2022)
 
 ```
 
+Add climate data. 
+
+
+
 # Feature Selection 
 
 Testing a few different kinds of feature selection with current variables. Will add more as we get climate and soil data. 
@@ -185,7 +189,12 @@ plot(boruta_ecb_z, las = 2, cex.axis = 0.7)
 
 cew_features <- sweet_corn_pest_features %>%
   dplyr::filter(Pest == 'CEW') %>%
-  dplyr::select(-c(Pest))
+  dplyr::select(-c(Pest)) %>%
+  mutate(Threshold = case_when(
+    Count <= 1 ~ 0,
+    Count > 1 ~ 1
+    ))
+  
 
 boruta_cew <- Boruta(Count ~ ., data = na.exclude(cew_features), doTrace = 2, maxRuns = 500)
 print(boruta_cew)
@@ -444,24 +453,40 @@ varImpPlot(wbc_rf_1)
 
 set.seed(42)
 
-ecb_e_features_numeric <- ecb_e_features %>% 
-  dplyr::mutate(Date = as.numeric(as.Date(ecb_e_features$Date)-as.Date(0, origin="1899-12-30")))
+cew_features_numeric <- cew_features %>% 
+  dplyr::mutate(Date = as.numeric(as.Date(cew_features$Date)-as.Date(0, origin="1899-12-30")))
 
-sample_split <- sample.split(Y = ecb_e_features_numeric$Count, SplitRatio = 0.7)
+sample_split <- sample.split(Y = cew_features_numeric$Threshold, SplitRatio = 0.7)
 
-train_set <- subset(x = ecb_e_features_numeric, sample_split == TRUE)
-test_set <- subset(x = ecb_e_features_numeric, sample_split == FALSE)
+train_set <- subset(x = cew_features_numeric, sample_split == TRUE)
+test_set <- subset(x = cew_features_numeric, sample_split == FALSE)
 
-y_train <- as.integer(train_set$Count)
-y_test <- as.integer(test_set$Count)
+y_train <- as.integer(train_set$Threshold)
+y_test <- as.integer(test_set$Threshold)
 
-X_train <- train_set %>% dplyr::select(c(Lat.Decimal, Long.Decimal, Date))
-X_test <- test_set %>% dplyr::select(c(Lat.Decimal, Long.Decimal, Date))
+X_train <- train_set %>% 
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Date, Day, Year, prop_corn)) %>%
+  as.matrix()
+
+X_test <- test_set %>% 
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Date, Day, Year, prop_corn)) %>%
+  as.matrix()
+
+dtrain <- xgb.DMatrix(data = X_train, label= y_train)
+dtest <- xgb.DMatrix(data = X_test, label= y_test)
 
 ```
 
 ```{r}
 
+model <- xgboost(data = dtrain,   
+                 nround = 10, 
+                 objective = "binary:logistic")
+
+pred <- predict(model, dtest)
+
+err <- mean(as.numeric(pred > 0.5) != y_test)
+print(paste("test-error=", err))
 
 ```
 
