@@ -345,7 +345,7 @@ summary(wbc_1)
 
 ```{r}
 
-ecb_e_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + Date + prop_corn,
+ecb_e_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + prop_corn,
                            data = ecb_e_features, na.action = na.exclude)
 
 ecb_e_rf_1
@@ -469,11 +469,11 @@ y_train <- as.integer(train_set$Threshold)
 y_test <- as.integer(test_set$Threshold)
 
 X_train <- train_set %>% 
-  dplyr::select(c(Lat.Decimal, Long.Decimal, Date, Day, Year, prop_corn)) %>%
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn)) %>%
   as.matrix()
 
 X_test <- test_set %>% 
-  dplyr::select(c(Lat.Decimal, Long.Decimal, Date, Day, Year, prop_corn)) %>%
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn)) %>%
   as.matrix()
 
 dtrain <- xgb.DMatrix(data = X_train, label= y_train)
@@ -483,7 +483,7 @@ dtest <- xgb.DMatrix(data = X_test, label= y_test)
 
 ```{r}
 
-model <- xgboost(data = dtrain,   
+model <- xgboost(data = dtrain, 
                  nround = 10, 
                  objective = "binary:logistic")
 
@@ -491,6 +491,9 @@ pred <- predict(model, dtest)
 
 err <- mean(as.numeric(pred > 0.5) != y_test)
 print(paste("test-error=", err))
+
+accuracy <- mean(as.numeric(pred > 0.5) == y_test)
+print(paste("test-accuracy=", accuracy))
 
 ```
 
