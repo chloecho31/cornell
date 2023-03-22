@@ -175,7 +175,8 @@ print(boruta_ecb_e)
 plot(boruta_ecb_e, las = 2, cex.axis = 0.7)
 
 ecb_z_features <- sweet_corn_pest_features %>%
-  dplyr::filter(Pest == 'ECB.Z')
+  dplyr::filter(Pest == 'ECB.Z') %>%
+  dplyr::select(-c(Pest))
 
 boruta_ecb_z <- Boruta(Count ~ ., data = na.exclude(ecb_z_features), doTrace = 2, maxRuns = 500)
 print(boruta_ecb_e)
@@ -183,7 +184,8 @@ print(boruta_ecb_e)
 plot(boruta_ecb_z, las = 2, cex.axis = 0.7)
 
 cew_features <- sweet_corn_pest_features %>%
-  dplyr::filter(Pest == 'CEW') 
+  dplyr::filter(Pest == 'CEW') %>%
+  dplyr::select(-c(Pest))
 
 boruta_cew <- Boruta(Count ~ ., data = na.exclude(cew_features), doTrace = 2, maxRuns = 500)
 print(boruta_cew)
@@ -191,7 +193,8 @@ print(boruta_cew)
 plot(boruta_cew, las = 2, cex.axis = 0.7)
 
 faw_features <- sweet_corn_pest_features %>%
-  dplyr::filter(Pest == 'FAW') 
+  dplyr::filter(Pest == 'FAW') %>%
+  dplyr::select(-c(Pest))
 
 boruta_faw <- Boruta(Count ~ ., data = na.exclude(faw_features), doTrace = 2, maxRuns = 500)
 print(boruta_faw)
@@ -199,7 +202,8 @@ print(boruta_faw)
 plot(boruta_faw, las = 2, cex.axis = 0.7)
 
 wbc_features <- sweet_corn_pest_features %>%
-  dplyr::filter(Pest == 'WBC') 
+  dplyr::filter(Pest == 'WBC') %>%
+  dplyr::select(-c(Pest))
 
 boruta_wbc <- Boruta(Count ~ ., data = na.exclude(wbc_features), doTrace = 2, maxRuns = 500)
 print(boruta_wbc)
@@ -213,7 +217,7 @@ Run a random forest to select which features are most important.
 
 ```{r}
 
-ecb_e_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day, data = ecb_e_features, ntree = 500)
+ecb_e_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day + prop_corn, data = ecb_e_features, ntree = 500, na.action = na.exclude)
 importance(ecb_e_rf)
 
 ecb_z_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day, data = ecb_z_features, ntree = 500)
@@ -328,7 +332,7 @@ summary(wbc_1)
 
 ```{r}
 
-ecb_e_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date + prop_corn,
+ecb_e_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + Date + prop_corn,
                            data = ecb_e_features, na.action = na.exclude)
 
 ecb_e_rf_1
@@ -351,8 +355,8 @@ varImpPlot(ecb_e_rf_1)
 
 ```{r}
 
-ecb_z_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date,
-                           data = ecb_z_features)
+ecb_z_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + Date + prop_corn,
+                           data = ecb_z_features, na.action = na.exclude)
 
 # Display the fitted model. 
 ecb_z_rf_1
@@ -372,8 +376,8 @@ varImpPlot(ecb_z_rf_1)
 
 ```{r}
 
-cew_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date,
-                           data = cew_features)
+cew_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + Date + prop_corn,
+                           data = cew_features, na.action = na.exclude)
 
 # Display the fitted model. 
 cew_rf_1
@@ -393,8 +397,8 @@ varImpPlot(cew_rf_1)
 
 ```{r}
 
-faw_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date,
-                           data = faw_features)
+faw_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + Date + prop_corn,
+                           data = faw_features, na.action = na.exclude)
 
 # Display the fitted model. 
 faw_rf_1
@@ -414,8 +418,8 @@ varImpPlot(faw_rf_1)
 
 ```{r}
 
-wbc_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Date,
-                           data = wbc_features)
+wbc_rf_1 <- randomForest(formula = Count ~ Lat.Decimals + Long.Decimal + Day + Year + Date + prop_corn,
+                           data = wbc_features, na.action = na.exclude)
 
 # Display the fitted model. 
 wbc_rf_1
@@ -434,6 +438,7 @@ varImpPlot(wbc_rf_1)
 # XGBoost 
 
 - [XGBoost](https://appsilon.com/r-xgboost/)
+- [XGBoost in R](https://www.kaggle.com/code/rtatman/machine-learning-with-xgboost-in-r/notebook)
 
 ```{r}
 
@@ -447,8 +452,8 @@ sample_split <- sample.split(Y = ecb_e_features_numeric$Count, SplitRatio = 0.7)
 train_set <- subset(x = ecb_e_features_numeric, sample_split == TRUE)
 test_set <- subset(x = ecb_e_features_numeric, sample_split == FALSE)
 
-y_train <- as.integer(train_set$Count) - 1
-y_test <- as.integer(test_set$Count) - 1
+y_train <- as.integer(train_set$Count)
+y_test <- as.integer(test_set$Count)
 
 X_train <- train_set %>% dplyr::select(c(Lat.Decimal, Long.Decimal, Date))
 X_test <- test_set %>% dplyr::select(c(Lat.Decimal, Long.Decimal, Date))
@@ -457,27 +462,6 @@ X_test <- test_set %>% dplyr::select(c(Lat.Decimal, Long.Decimal, Date))
 
 ```{r}
 
-xgb_train <- xgb.DMatrix(data = as.matrix(X_train), label = y_train)
-xgb_test <- xgb.DMatrix(data = as.matrix(X_test), label = y_test)
-
-xgb_params <- list(
-  booster = "gbtree",
-  eta = 0.01,
-  max_depth = 8,
-  gamma = 4,
-  subsample = 0.75,
-  colsample_bytree = 1,
-  objective = "multi:softprob",
-  eval_metric = "mlogloss",
-  num_class = length(levels(ecb_e_features$Count)))
-
-xgb_model <- xgb.train(
-  params = xgb_params,
-  data = xgb_train,
-  nrounds = 5000,
-  verbose = 1)
-
-xgb_model
 
 ```
 
