@@ -159,7 +159,11 @@ sweet_corn_pest_features <- bind_rows(cdl_2002, cdl_2012, cdl_2022)
 
 Add climate data. 
 
+```{r}
 
+climate_data <- read.delim("../../Desktop/Cornell/Long_Term_Pest_Data/Climate_1993_2022.csv", sep = ",")
+
+```
 
 # Feature Selection 
 
