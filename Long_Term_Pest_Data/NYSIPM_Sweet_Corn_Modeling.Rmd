@@ -230,19 +230,19 @@ Run a random forest to select which features are most important.
 
 ```{r}
 
-ecb_e_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day + prop_corn, data = ecb_e_features, ntree = 500, na.action = na.exclude)
+ecb_e_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Day + prop_corn, data = ecb_e_features, ntree = 500, na.action = na.exclude)
 importance(ecb_e_rf)
 
-ecb_z_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day, data = ecb_z_features, ntree = 500)
+ecb_z_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Day + prop_corn, data = ecb_z_features, ntree = 500, na.action = na.exclude)
 importance(ecb_z_rf)
 
-cew_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day, data = cew_features, ntree = 500)
+cew_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Day + prop_corn, data = cew_features, ntree = 500, na.action = na.exclude)
 importance(cew_rf)
 
-faw_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day, data = faw_features, ntree = 500)
+faw_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Day + prop_corn, data = faw_features, ntree = 500, na.action = na.exclude)
 importance(faw_rf)
 
-wbc_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Week + Date + Day, data = wbc_features, ntree = 500)
+wbc_rf <- randomForest(Count ~ Lat.Decimal + Long.Decimal + Year + Day + prop_corn, data = wbc_features, ntree = 500, na.action = na.exclude)
 importance(wbc_rf)
 
 ```
@@ -299,7 +299,7 @@ Running a model with individual predictors, no interactions.
 
 ```{r}
 
-ecb_z_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + (1 | Site) + (1 | Year), data = ecb_z_features)
+ecb_z_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + scale(prop_corn) + (1 | Site) + (1 | Year), data = ecb_z_features)
 summary(ecb_z_1)
 
 ```
@@ -310,7 +310,7 @@ Running a model with individual predictors, no interactions.
 
 ```{r}
 
-cew_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + (1 | Site) + (1 | Year), data = cew_features)
+cew_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + scale(prop_corn) + (1 | Site) + (1 | Year), data = cew_features)
 summary(cew_1)
 
 ```
@@ -321,7 +321,7 @@ Running a model with individual predictors, no interactions.
 
 ```{r}
 
-faw_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + (1 | Site) + (1 | Year), data = faw_features)
+faw_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + scale(prop_corn) + (1 | Site) + (1 | Year), data = faw_features)
 summary(faw_1)
 
 ```
@@ -332,7 +332,7 @@ Running a model with individual predictors, no interactions.
 
 ```{r}
 
-wbc_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + (1 | Site) + (1 | Year), data = wbc_features)
+wbc_1 <- glmer.nb(Count ~ scale(Lat.Decimal) + scale(Long.Decimal) + scale(Day) + scale(prop_corn)  + (1 | Site) + (1 | Year), data = wbc_features)
 summary(wbc_1)
 
 ```
@@ -368,7 +368,7 @@ varImpPlot(ecb_e_rf_1)
 
 ```{r}
 
-ecb_z_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + Date + prop_corn,
+ecb_z_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + prop_corn,
                            data = ecb_z_features, na.action = na.exclude)
 
 # Display the fitted model. 
@@ -389,7 +389,7 @@ varImpPlot(ecb_z_rf_1)
 
 ```{r}
 
-cew_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + Date + prop_corn,
+cew_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + prop_corn,
                            data = cew_features, na.action = na.exclude)
 
 # Display the fitted model. 
@@ -410,7 +410,7 @@ varImpPlot(cew_rf_1)
 
 ```{r}
 
-faw_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + Date + prop_corn,
+faw_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + prop_corn,
                            data = faw_features, na.action = na.exclude)
 
 # Display the fitted model. 
@@ -431,7 +431,7 @@ varImpPlot(faw_rf_1)
 
 ```{r}
 
-wbc_rf_1 <- randomForest(formula = Count ~ Lat.Decimals + Long.Decimal + Day + Year + Date + prop_corn,
+wbc_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + prop_corn,
                            data = wbc_features, na.action = na.exclude)
 
 # Display the fitted model. 
