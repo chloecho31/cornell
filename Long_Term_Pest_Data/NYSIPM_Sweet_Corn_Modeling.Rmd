@@ -26,6 +26,7 @@ library(cvms)
 library(caret)
 library(caTools)
 library(pROC)
+library(ROCR)
 
 library(sqldf)
 
@@ -520,9 +521,11 @@ confusionMatrix(as.factor(as.numeric(pred > 0.5)), as.factor(y_test), mode = "ev
 # ROC AUC 
 
 roc_object <- roc(y_test ~ as.numeric(pred > 0.5), plot = TRUE, print.auc = TRUE)
-auc(roc_object)
+print(paste("roc auc =", auc(roc_object)))
 
 
+preds <- prediction(pred, y_test)
+plot(performance(preds, measure = "tpr", x.measure = "fpr"))
 
 ```
 
