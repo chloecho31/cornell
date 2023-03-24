@@ -25,6 +25,7 @@ library(xgboost)
 library(cvms)
 library(caret)
 library(caTools)
+library(pROC)
 
 library(sqldf)
 
@@ -494,6 +495,34 @@ print(paste("test-error=", err))
 
 accuracy <- mean(as.numeric(pred > 0.5) == y_test)
 print(paste("test-accuracy=", accuracy))
+
+
+# Check training accuracy.
+
+pred_train <- predict(model, dtrain)
+
+err_train <- mean(as.numeric(pred_train > 0.5) != y_train)
+print(paste("train-error=", err_train))
+
+accuracy_train <- mean(as.numeric(pred > 0.5) == y_test)
+print(paste("test-accuracy=", accuracy_train))
+
+# random oversampling
+# Smoat and Addison - add noise 
+
+# F1 score 
+
+confusionMatrix(as.factor(as.numeric(pred > 0.5)), as.factor(y_test), mode = "everything", positive = "1")
+
+# better with false positives - optimize with recall - quantify cost 
+# optimize to which side they would prefer to lean toward
+
+# ROC AUC 
+
+roc_object <- roc(y_test ~ as.numeric(pred > 0.5), plot = TRUE, print.auc = TRUE)
+auc(roc_object)
+
+
 
 ```
 
