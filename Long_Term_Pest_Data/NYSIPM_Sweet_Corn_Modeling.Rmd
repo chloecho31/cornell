@@ -29,6 +29,7 @@ library(pROC)
 library(ROCR)
 
 library(sqldf)
+library(lubridate)
 
 ```
 
@@ -163,7 +164,20 @@ Add climate data.
 
 ```{r}
 
-climate_data <- read.delim("../../Desktop/Cornell/Long_Term_Pest_Data/Climate_1993_2022.csv", sep = ",")
+climate_data <- read.delim("../../Desktop/Cornell/Long_Term_Pest_Data/Climate_1993_2022.csv", sep = ",") 
+
+climate_data <- climate_data %>%
+  mutate(Date = as.Date(climate_data$date, format = '%Y-%m-%d')) %>%
+  mutate(Week = lubridate::isoweek(ymd(Date)))
+
+# Minimum temperature over week (prism). 
+
+# Maximum temperature over week (prism). 
+
+# Average temperature over week. 
+
+# Average precipitation over week.
+
 
 ```
 
