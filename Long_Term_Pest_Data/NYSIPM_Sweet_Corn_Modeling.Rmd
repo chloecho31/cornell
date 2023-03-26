@@ -35,7 +35,6 @@ library(lubridate)
 
 # Questions
 
-- Splitting the pest models? Can use the economic threshold to create a binary outcome. 
 
 # Data
 
@@ -168,16 +167,36 @@ climate_data <- read.delim("../../Desktop/Cornell/Long_Term_Pest_Data/Climate_19
 
 climate_data <- climate_data %>%
   mutate(Date = as.Date(climate_data$date, format = '%Y-%m-%d')) %>%
-  mutate(Week = lubridate::isoweek(ymd(Date)))
+  mutate(Week = lubridate::isoweek(ymd(Date))) %>%
+  mutate(Year = lubridate::isoyear(ymd(Date))) %>%
+  dplyr::select(-c(date))
 
 # Minimum temperature over week (prism). 
 
+min_temp <- climate_data %>%
+  group_by(Site, Year, Week) %>%
+  summarise_at(vars(tmin_prism), .funs = min)
+
 # Maximum temperature over week (prism). 
+
+max_temp <- climate_data %>%
+  group_by(Site, Year, Week) %>%
+  summarise_at(vars(tmax_prism), .funs = max)
 
 # Average temperature over week. 
 
+avg_temp <- climate_data %>%
+  group_by(Site, Year, Week) %>%
+  summarise_at(vars(tmin_prism, tmax_prism), .funs = mean) %>% 
+  rowwise() %>%
+  mutate(Avg_Temp = mean(c(tmin_prism, tmax_prism))) %>%
+  dplyr::select(-c(tmin_prism, tmax_prism))
+
 # Average precipitation over week.
 
+total_precip <- climate_data %>%
+  group_by(Site, Year, Week) %>%
+  summarise_at(vars(pr_prism), .funs = sum)
 
 ```
 
