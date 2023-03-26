@@ -175,13 +175,15 @@ climate_data <- climate_data %>%
 
 min_temp <- climate_data %>%
   group_by(Site, Year, Week) %>%
-  summarise_at(vars(tmin_prism), .funs = min)
+  summarise_at(vars(tmin_prism), .funs = min) %>% 
+  rename(Min_Temp = tmin_prism)
 
 # Maximum temperature over week (prism). 
 
 max_temp <- climate_data %>%
   group_by(Site, Year, Week) %>%
-  summarise_at(vars(tmax_prism), .funs = max)
+  summarise_at(vars(tmax_prism), .funs = max) %>% 
+  rename(Max_Temp = tmax_prism)
 
 # Average temperature over week. 
 
@@ -196,7 +198,13 @@ avg_temp <- climate_data %>%
 
 total_precip <- climate_data %>%
   group_by(Site, Year, Week) %>%
-  summarise_at(vars(pr_prism), .funs = sum)
+  summarise_at(vars(pr_prism), .funs = sum) %>% 
+  rename(Total_Precip = pr_prism)
+
+merged_climate <- min_temp %>%
+  left_join(max_temp) %>%
+  left_join(avg_temp) %>%
+  left_join(total_precip)
 
 ```
 
