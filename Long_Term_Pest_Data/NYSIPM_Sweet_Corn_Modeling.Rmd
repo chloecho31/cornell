@@ -35,7 +35,6 @@ library(lubridate)
 
 # Questions
 
-
 # Data
 
 ## NYS IPM Data
@@ -206,6 +205,9 @@ merged_climate <- min_temp %>%
   left_join(avg_temp) %>%
   left_join(total_precip)
 
+sweet_corn_pest_features <- sweet_corn_pest_features %>%
+  left_join(merged_climate)
+
 ```
 
 # Feature Selection 
@@ -241,7 +243,6 @@ cew_features <- sweet_corn_pest_features %>%
     Count <= 1 ~ 0,
     Count > 1 ~ 1
     ))
-  
 
 boruta_cew <- Boruta(Count ~ ., data = na.exclude(cew_features), doTrace = 2, maxRuns = 500)
 print(boruta_cew)
@@ -432,7 +433,8 @@ varImpPlot(ecb_z_rf_1)
 
 ```{r}
 
-cew_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + prop_corn,
+cew_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + 
+                           prop_corn + Min_Temp + Max_Temp + Avg_Temp + Total_Precip,
                            data = cew_features, na.action = na.exclude)
 
 # Display the fitted model. 
@@ -535,19 +537,12 @@ pred <- predict(model, dtest)
 err <- mean(as.numeric(pred > 0.5) != y_test)
 print(paste("test-error=", err))
 
-accuracy <- mean(as.numeric(pred > 0.5) == y_test)
-print(paste("test-accuracy=", accuracy))
-
-
 # Check training accuracy.
 
 pred_train <- predict(model, dtrain)
 
 err_train <- mean(as.numeric(pred_train > 0.5) != y_train)
 print(paste("train-error=", err_train))
-
-accuracy_train <- mean(as.numeric(pred > 0.5) == y_test)
-print(paste("test-accuracy=", accuracy_train))
 
 # random oversampling
 # Smoat and Addison - add noise 
@@ -561,7 +556,7 @@ confusionMatrix(as.factor(as.numeric(pred > 0.5)), as.factor(y_test), mode = "ev
 
 # ROC AUC 
 
-roc_object <- roc(y_test ~ as.numeric(pred > 0.5), plot = TRUE, print.auc = TRUE)
+roc_object <- roc(y_test ~ as.numeric(pred > 0.5), print.auc = TRUE)
 print(paste("roc auc =", auc(roc_object)))
 
 
