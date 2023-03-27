@@ -83,7 +83,7 @@ sites <- sites %>%
 
 head(sites)
 
-levels(sites$Site)
+length(levels(sites$Site))
 
 ```
 
@@ -497,6 +497,7 @@ varImpPlot(wbc_rf_1)
 
 - [XGBoost](https://appsilon.com/r-xgboost/)
 - [XGBoost in R](https://www.kaggle.com/code/rtatman/machine-learning-with-xgboost-in-r/notebook)
+- [XGBoost Grid Search - R](https://www.kaggle.com/code/silverstone1903/xgboost-grid-search-r)
 
 ```{r}
 
