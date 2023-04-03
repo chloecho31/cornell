@@ -200,13 +200,32 @@ total_precip <- climate_data %>%
   summarise_at(vars(pr_prism), .funs = sum) %>% 
   rename(Total_Precip = pr_prism)
 
+# Minimum humidity over week.
+
+min_hum <- climate_data %>%
+  group_by(Site, Year, Week) %>%
+  summarise_at(vars(rmin), .funs = min) %>% 
+  rename(Min_Hum = rmin)
+
+# Maximum humidity over week.
+
+max_hum <- climate_data %>%
+  group_by(Site, Year, Week) %>%
+  summarise_at(vars(rmax), .funs = max) %>% 
+  rename(Max_Hum = rmax)
+
+# Merge climate together. 
+
 merged_climate <- min_temp %>%
   left_join(max_temp) %>%
   left_join(avg_temp) %>%
-  left_join(total_precip)
+  left_join(total_precip) %>%
+  left_join(min_hum) %>%
+  left_join(max_hum)
 
 sweet_corn_pest_features <- sweet_corn_pest_features %>%
   left_join(merged_climate)
+
 
 ```
 
@@ -515,11 +534,11 @@ y_train <- as.integer(train_set$Threshold)
 y_test <- as.integer(test_set$Threshold)
 
 X_train <- train_set %>% 
-  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn)) %>%
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip)) %>%
   as.matrix()
 
 X_test <- test_set %>% 
-  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn)) %>%
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip)) %>%
   as.matrix()
 
 dtrain <- xgb.DMatrix(data = X_train, label= y_train)
@@ -587,11 +606,67 @@ cew_features_thresholds <- sweet_corn_pest_features %>%
     Count >= 4 & Count <= 6 ~ 'Every 5 Days',
     Count >= 7 & Count <= 91 ~ 'Every 4 Days',
     Count > 91 ~ 'Every 3 Days'
-    ))
+    )) %>%
+  mutate(Threshold = as.factor(Threshold))
 
 ```
 
+```{r}
 
+cew_threshold_features_numeric <- cew_features_thresholds %>% 
+  dplyr::mutate(Date = as.numeric(as.Date(cew_features_thresholds$Date)-as.Date(0, origin="1899-12-30")))
+
+sample_split_thresholds <- sample.split(Y = cew_threshold_features_numeric$Threshold, SplitRatio = 0.7)
+
+train_set_thresholds <- subset(x = cew_threshold_features_numeric, sample_split_thresholds == TRUE)
+test_set_thresholds <- subset(x = cew_threshold_features_numeric, sample_split_thresholds == FALSE)
+
+y_train_thresholds <- as.numeric(train_set_thresholds$Threshold) - 1
+y_test_thresholds <- as.numeric(test_set_thresholds$Threshold) - 1
+
+X_train_thresholds <- train_set_thresholds %>% 
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip, Min_Hum, Max_Hum)) %>%
+  as.matrix()
+
+X_test_thresholds <- test_set_thresholds %>% 
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip, Min_Hum, Max_Hum)) %>%
+  as.matrix()
+
+dtrain_thresholds <- xgb.DMatrix(data = X_train_thresholds, label= y_train_thresholds)
+dtest_thresholds <- xgb.DMatrix(data = X_test_thresholds, label= y_test_thresholds)
+
+```
+
+```{r}
+
+num_class_thresholds = length(levels(cew_threshold_features_numeric$Threshold))
+model_thresholds <- xgboost(data = dtrain_thresholds, 
+                 nround = 10,
+                 objective = 'multi:softprob', 
+                 num_class = num_class_thresholds)
+
+pred_thresholds <- predict(model_thresholds, dtest_thresholds, reshape = T)
+pred_thresholds = as.data.frame(pred_thresholds)
+colnames(pred_thresholds) = levels(cew_threshold_features_numeric$Threshold)
+
+pred_thresholds$prediction = apply(pred_thresholds, 1, function(x) colnames(pred_thresholds)[which.max(x)])
+pred_thresholds$label = levels(cew_threshold_features_numeric$Threshold)[y_test_thresholds + 1]
+
+result = sum(pred_thresholds$prediction == pred_thresholds$label) / nrow(pred_thresholds)
+print(paste("Final Accuracy =",sprintf("%1.2f%%", 100*result)))
+
+# F1 score 
+
+confusionMatrix(as.factor(pred_thresholds$prediction), as.factor(pred_thresholds$label), mode = "everything", positive = "1")
+
+```
+
+```{r}
+
+cew_threshold_features_numeric %>% 
+  count(Threshold)
+
+```
 [Shapley Values](https://christophm.github.io/interpretable-ml-book/shapley.html)
 
 # Time Series
