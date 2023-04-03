@@ -566,6 +566,34 @@ plot(performance(preds, measure = "tpr", x.measure = "fpr"))
 
 ```
 
+## CEW Model Using Multiple Spray Thresholds 
+
+Based on NYS IPM CEW trapping thresholds, test how well a model works to predict multiple categories (instead of a binary response).
+
+0 moths = no spray
+1-3 moths = 6 days
+4-6 moths = 5 days
+7-91 moths = 4 days
+91+ moths = 3 days 
+
+```{r}
+
+cew_features_thresholds <- sweet_corn_pest_features %>%
+  dplyr::filter(Pest == 'CEW') %>%
+  dplyr::select(-c(Pest)) %>%
+  mutate(Threshold = case_when(
+    Count <= 1 ~ 'No Spray',
+    Count > 1 & Count <= 3 ~ 'Every 6 Days', 
+    Count >= 4 & Count <= 6 ~ 'Every 5 Days',
+    Count >= 7 & Count <= 91 ~ 'Every 4 Days',
+    Count > 91 ~ 'Every 3 Days'
+    ))
+
+```
+
+
+[Shapley Values](https://christophm.github.io/interpretable-ml-book/shapley.html)
+
 # Time Series
 
 - [Time Series Forecasting in R](https://towardsdatascience.com/a-guide-to-forecasting-in-r-6b0c9638c261)
