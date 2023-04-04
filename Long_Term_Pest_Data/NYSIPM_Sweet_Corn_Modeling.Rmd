@@ -112,12 +112,12 @@ corn_5km_2002 <- read.delim("Landscape/final_cdl_corn_5km_2002.csv", sep = ",") 
 
 corn_5km_2012 <- read.delim("Landscape/final_cdl_corn_5km_2012.csv", sep = ",") %>%
   mutate(year = 2012) %>%
-  dplyr::select(c(site, prop_corn, year)) %>%
+  dplyr::select(c(site, prop_corn, prop_sweet_corn, prop_field_corn, year)) %>%
   mutate(site = str_replace(site, "_", " "))
 
 corn_5km_2022 <- read.delim("Landscape/final_cdl_corn_5km_2022.csv", sep = ",") %>%
   mutate(year = 2022) %>%
-  dplyr::select(c(site, prop_corn, year)) %>%
+  dplyr::select(c(site, prop_corn, prop_sweet_corn, prop_field_corn, year)) %>%
   mutate(site = str_replace(site, "_", " "))
 
 ```
@@ -154,7 +154,8 @@ cdl_2022 <- sqldf('SELECT *
   AND sweet_corn_pest_features.Year <= 2022') %>%
   dplyr::select(-c(site, year))
 
-sweet_corn_pest_features <- bind_rows(cdl_2002, cdl_2012, cdl_2022)
+# CHANGE BACK TO 2002 - TESTING FOR SPLITTING SWEET CORN AND FIELD CORN
+sweet_corn_pest_features <- bind_rows(cdl_2012, cdl_2012, cdl_2022)
 
 ```
 
@@ -453,7 +454,8 @@ varImpPlot(ecb_z_rf_1)
 ```{r}
 
 cew_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + 
-                           prop_corn + Min_Temp + Max_Temp + Avg_Temp + Total_Precip + Min_Hum + Max_Hum,
+                           prop_corn + prop_sweet_corn + prop_field_corn + Min_Temp + Max_Temp + 
+                           Avg_Temp + Total_Precip + Min_Hum + Max_Hum,
                            data = cew_features, na.action = na.exclude)
 
 # Display the fitted model. 
@@ -534,11 +536,11 @@ y_train <- as.integer(train_set$Threshold)
 y_test <- as.integer(test_set$Threshold)
 
 X_train <- train_set %>% 
-  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip)) %>%
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, prop_sweet_corn, prop_field_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip)) %>%
   as.matrix()
 
 X_test <- test_set %>% 
-  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip)) %>%
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, prop_sweet_corn, prop_field_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip)) %>%
   as.matrix()
 
 dtrain <- xgb.DMatrix(data = X_train, label= y_train)
@@ -625,11 +627,11 @@ y_train_thresholds <- as.numeric(train_set_thresholds$Threshold) - 1
 y_test_thresholds <- as.numeric(test_set_thresholds$Threshold) - 1
 
 X_train_thresholds <- train_set_thresholds %>% 
-  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip, Min_Hum, Max_Hum)) %>%
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, prop_sweet_corn, prop_field_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip, Min_Hum, Max_Hum)) %>%
   as.matrix()
 
 X_test_thresholds <- test_set_thresholds %>% 
-  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip, Min_Hum, Max_Hum)) %>%
+  dplyr::select(c(Lat.Decimal, Long.Decimal, Day, Year, prop_corn, prop_sweet_corn, prop_field_corn, Min_Temp, Max_Temp, Avg_Temp, Total_Precip, Min_Hum, Max_Hum)) %>%
   as.matrix()
 
 dtrain_thresholds <- xgb.DMatrix(data = X_train_thresholds, label= y_train_thresholds)
