@@ -497,7 +497,9 @@ varImpPlot(faw_rf_1)
 
 ```{r}
 
-wbc_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + prop_corn,
+wbc_rf_1 <- randomForest(formula = Count ~ Lat.Decimal + Long.Decimal + Day + Year + prop_corn + 
+                           prop_sweet_corn + prop_field_corn + Min_Temp + Max_Temp + 
+                           Avg_Temp + Total_Precip + Min_Hum + Max_Hum,
                            data = wbc_features, na.action = na.exclude)
 
 # Display the fitted model. 
