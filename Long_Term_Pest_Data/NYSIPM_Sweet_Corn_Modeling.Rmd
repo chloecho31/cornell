@@ -664,6 +664,9 @@ print(paste("Final Accuracy =",sprintf("%1.2f%%", 100*result)))
 
 confusionMatrix(as.factor(pred_thresholds$prediction), as.factor(pred_thresholds$label), mode = "everything", positive = "1")
 
+importance_matrix = xgb.importance(colnames(dtrain_thresholds), model = model_thresholds)
+xgb.plot.importance(importance_matrix[1:13,])
+
 ```
 
 [Shapley Values](https://christophm.github.io/interpretable-ml-book/shapley.html)
