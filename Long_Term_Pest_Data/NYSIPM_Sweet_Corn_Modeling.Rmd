@@ -658,7 +658,18 @@ pred_thresholds$prediction = apply(pred_thresholds, 1, function(x) colnames(pred
 pred_thresholds$label = levels(cew_threshold_features_numeric$Threshold)[y_test_thresholds + 1]
 
 result = sum(pred_thresholds$prediction == pred_thresholds$label) / nrow(pred_thresholds)
-print(paste("Final Accuracy =",sprintf("%1.2f%%", 100*result)))
+print(paste("Test Accuracy =",sprintf("%1.4f%%", 100*result)))
+
+
+pred_train_thresholds <- predict(model_thresholds, dtrain_thresholds, reshape = T)
+pred_train_thresholds = as.data.frame(pred_train_threshold)
+colnames(pred_train_threshold) = levels(cew_threshold_features_numeric$Threshold)
+
+pred_train_thresholds$prediction = apply(pred_train_thresholds, 1, function(x) colnames(pred_train_thresholds)[which.max(x)])
+pred_train_thresholds$label = levels(cew_threshold_features_numeric$Threshold)[y_train_thresholds + 1]
+
+result_train = sum(pred_train_thresholds$prediction == pred_train_thresholds$label) / nrow(pred_train_thresholds)
+print(paste("Train Accuracy =",sprintf("%1.4f%%", 100*result_train)))
 
 # F1 score 
 
