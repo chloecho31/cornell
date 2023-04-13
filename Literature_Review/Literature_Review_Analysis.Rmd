@@ -12,6 +12,8 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 library(janitor)
+library(viridis)
+library(GGally)
 
 ```
 
@@ -423,11 +425,16 @@ Local effects, faceted by local diversification strategy (Floral, Diversity, Int
 
 paper_data %>%
   filter(local_effect == 'Positive' | local_effect == 'Negative' | local_effect == 'NS') %>%
-  ggplot(aes(x = local_effect)) + 
+  ggplot(aes(x = local_effect, fill = local_effect)) + 
   geom_bar() +
-  ggtitle('Local effects, faceted by local diversification strategy') +
+  ggtitle('Local Diversification Strategy Effects') +
+  xlab('Effect of Local Diversification Strategy') + 
+  ylab('Number of Observations') +
+  labs(fill = 'Local Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
-  facet_wrap(~ local)
+  facet_wrap(~ local) +
+  expand_limits(y = c(0, 130)) +
+  scale_fill_viridis(discrete = TRUE)
 
 ```
 
@@ -437,11 +444,16 @@ Landscape effects, faceted by local diversification strategy (Floral, Diversity,
 
 paper_data %>%
   filter(landscape_effect == 'Positive' | landscape_effect == 'Negative' | landscape_effect == 'NS') %>%
-  ggplot(aes(x = landscape_effect)) + 
+  ggplot(aes(x = landscape_effect, fill = landscape_effect)) + 
   geom_bar() +
-  ggtitle('Landscape effects, faceted by local diversification strategy') +
+  ggtitle('Landscape Diversification Effects') +
+  xlab('Effect of Landscape Diversification Gradient') + 
+  ylab('Number of Observations') +
+  labs(fill = 'Landscape Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
-  facet_wrap(~ local)
+  facet_wrap(~ local) + 
+  expand_limits(y = c(0, 130)) +
+  scale_fill_viridis(discrete = TRUE)
 
 ```
 
@@ -451,11 +463,16 @@ Local effects, faceted by response category (Crop, Arthropod, Natural Enemy, Pes
 
 paper_data %>%
   filter(local_effect == 'Positive' | local_effect == 'Negative' | local_effect == 'NS') %>%
-  ggplot(aes(x = local_effect)) + 
+  ggplot(aes(x = local_effect, fill = local_effect)) + 
   geom_bar() +
-  ggtitle('Local effects, faceted by response category') +
+  ggtitle('Local Diversification Strategy Effects on Specific Response Categories') +
+  xlab('Effect of Local Diversification Strategy') +  
+  ylab('Number of Observations') +
+  labs(fill = 'Local Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
-  facet_wrap(~ response_category)
+  facet_wrap(~ response_category) + 
+  expand_limits(y = c(0, 130)) +
+  scale_fill_viridis(discrete = TRUE)
 
 ```
 
@@ -465,15 +482,41 @@ Landscape effects, faceted by response category (Crop, Arthropod, Natural Enemy,
 
 paper_data %>%
   filter(landscape_effect == 'Positive' | landscape_effect == 'Negative' | landscape_effect == 'NS') %>%
-  ggplot(aes(x = landscape_effect)) + 
+  ggplot(aes(x = landscape_effect, fill = landscape_effect)) + 
   geom_bar() +
-  ggtitle('Landscape effects, faceted by response category') +
+  ggtitle('Landscape Diversification Effects') +
+  xlab('Effect of Landscape Diversification Gradient') + 
+  ylab('Number of Observations') +
+  labs(fill = 'Landscape Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
-  facet_wrap(~ response_category)
+  facet_wrap(~ response_category) + 
+  expand_limits(y = c(0, 130)) +
+  scale_fill_viridis(discrete = TRUE)
 
 ```
 
+```{r}
 
+paper_data %>%
+  filter(interaction == 'NS' | interaction != 'NS') %>%
+  mutate(interaction_effect = case_when(
+    interaction == 'NS' ~ 'NS',
+    interaction != 'NS' ~ 'S'
+    )) %>% 
+  mutate(as.factor(interaction_effect)) %>%
+  ggplot(aes(x = interaction_effect, fill = interaction_effect, by = 1)) + 
+  geom_bar() +
+  ggtitle('Local and Landscape Interaction Effects') +
+  xlab('Effect of Local and Landscape Interaction') + 
+  ylab('Number of Observations') +
+  labs(fill = 'Interaction Effect') +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  facet_wrap(~ response_category) + 
+  geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_nudge(y=0.2)) +
+  expand_limits(y = c(0, 225)) +
+  scale_fill_viridis(discrete = TRUE) 
+
+```
 
 
 
