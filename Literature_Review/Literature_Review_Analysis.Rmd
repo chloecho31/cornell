@@ -14,6 +14,7 @@ library(ggplot2)
 library(janitor)
 library(viridis)
 library(GGally)
+library(plyr)
 
 ```
 
@@ -423,16 +424,27 @@ Local effects, faceted by local diversification strategy (Floral, Diversity, Int
 
 ```{r}
 
-paper_data %>%
-  filter(local_effect == 'Positive' | local_effect == 'Negative' | local_effect == 'NS') %>%
-  ggplot(aes(x = local_effect, fill = local_effect)) + 
+local_effects_df <- paper_data %>%
+  filter(local_effect == 'Positive' | local_effect == 'Negative' | local_effect == 'NS') 
+
+local_strategy_counts <- ddply(.data = local_effects_df, 
+                 .(local), 
+                 summarize, 
+                 n = paste("n =", length(local_effect)))
+
+local_effects_df %>%
+  ggplot(aes(x = local_effect, fill = local_effect, by = 1)) + 
   geom_bar() +
   ggtitle('Local Diversification Strategy Effects') +
+  theme(plot.title = element_text(hjust=.5)) +
   xlab('Effect of Local Diversification Strategy') + 
   ylab('Number of Observations') +
   labs(fill = 'Local Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
   facet_wrap(~ local) +
+  geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
+  geom_text(data = local_strategy_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = -1.75,
+                    colour = "black", inherit.aes = FALSE, parse = FALSE) +
   expand_limits(y = c(0, 130)) +
   scale_fill_viridis(discrete = TRUE)
 
@@ -442,17 +454,29 @@ Landscape effects, faceted by local diversification strategy (Floral, Diversity,
 
 ```{r}
 
-paper_data %>%
+landscape_effects_df <- paper_data %>%
   filter(landscape_effect == 'Positive' | landscape_effect == 'Negative' | landscape_effect == 'NS') %>%
-  ggplot(aes(x = landscape_effect, fill = landscape_effect)) + 
+  mutate(as.factor(landscape_effect))
+
+landscape_strategy_counts <- ddply(.data = landscape_effects_df, 
+                 .(local), 
+                 summarize, 
+                 n = paste("n =", length(landscape_effect)))
+
+landscape_effects_df %>%
+  ggplot(aes(x = landscape_effect, fill = landscape_effect, by = 1)) + 
   geom_bar() +
   ggtitle('Landscape Diversification Effects') +
+  theme(plot.title = element_text(hjust=.5)) +
   xlab('Effect of Landscape Diversification Gradient') + 
   ylab('Number of Observations') +
   labs(fill = 'Landscape Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
   facet_wrap(~ local) + 
-  expand_limits(y = c(0, 130)) +
+  geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
+  geom_text(data = landscape_strategy_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = -1.5,
+                    colour = "black", inherit.aes = FALSE, parse = FALSE) +
+  expand_limits(y = c(0, 150)) +
   scale_fill_viridis(discrete = TRUE)
 
 ```
@@ -461,17 +485,25 @@ Local effects, faceted by response category (Crop, Arthropod, Natural Enemy, Pes
 
 ```{r}
 
-paper_data %>%
-  filter(local_effect == 'Positive' | local_effect == 'Negative' | local_effect == 'NS') %>%
-  ggplot(aes(x = local_effect, fill = local_effect)) + 
+local_category_counts <- ddply(.data = local_effects_df, 
+                 .(response_category), 
+                 summarize, 
+                 n = paste("n =", length(local_effect)))
+
+local_effects_df %>%
+  ggplot(aes(x = local_effect, fill = local_effect, by = 1)) + 
   geom_bar() +
   ggtitle('Local Diversification Strategy Effects on Specific Response Categories') +
+  theme(plot.title = element_text(hjust=.5)) +
   xlab('Effect of Local Diversification Strategy') +  
   ylab('Number of Observations') +
   labs(fill = 'Local Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
   facet_wrap(~ response_category) + 
-  expand_limits(y = c(0, 130)) +
+  geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
+  geom_text(data = local_category_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = -0.85,
+                    colour = "black", inherit.aes = FALSE, parse = FALSE) +
+  expand_limits(y = c(0, 160)) +
   scale_fill_viridis(discrete = TRUE)
 
 ```
@@ -480,39 +512,79 @@ Landscape effects, faceted by response category (Crop, Arthropod, Natural Enemy,
 
 ```{r}
 
-paper_data %>%
-  filter(landscape_effect == 'Positive' | landscape_effect == 'Negative' | landscape_effect == 'NS') %>%
-  ggplot(aes(x = landscape_effect, fill = landscape_effect)) + 
+landscape_category_counts <- ddply(.data = landscape_effects_df, 
+                 .(response_category), 
+                 summarize, 
+                 n = paste("n =", length(landscape_effect)))
+
+landscape_effects %>%
+  ggplot(aes(x = landscape_effect, fill = landscape_effect, by = 1)) + 
   geom_bar() +
   ggtitle('Landscape Diversification Effects') +
+  theme(plot.title = element_text(hjust = .5)) +
   xlab('Effect of Landscape Diversification Gradient') + 
   ylab('Number of Observations') +
   labs(fill = 'Landscape Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
   facet_wrap(~ response_category) + 
-  expand_limits(y = c(0, 130)) +
+  geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
+  geom_text(data = landscape_category_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = -0.75,
+                    colour = "black", inherit.aes = FALSE, parse = FALSE) +
+  expand_limits(y = c(0, 150)) +
   scale_fill_viridis(discrete = TRUE)
 
 ```
 
 ```{r}
 
-paper_data %>%
+interaction_df <- paper_data %>%
   filter(interaction == 'NS' | interaction != 'NS') %>%
   mutate(interaction_effect = case_when(
     interaction == 'NS' ~ 'NS',
     interaction != 'NS' ~ 'S'
     )) %>% 
-  mutate(as.factor(interaction_effect)) %>%
+  mutate(as.factor(interaction_effect)) 
+
+interaction_category_counts <- ddply(.data = interaction_df, 
+                 .(response_category), 
+                 summarize, 
+                 n = paste("n =", length(interaction_effect)))
+
+interaction_strategy_counts <- ddply(.data = interaction_df, 
+                 .(local), 
+                 summarize, 
+                 n = paste("n =", length(interaction_effect)))
+
+interaction_df %>%
   ggplot(aes(x = interaction_effect, fill = interaction_effect, by = 1)) + 
   geom_bar() +
-  ggtitle('Local and Landscape Interaction Effects') +
+  ggtitle('Local and Landscape Interaction Effects') + 
+  theme(plot.title = element_text(hjust=.5)) +
   xlab('Effect of Local and Landscape Interaction') + 
   ylab('Number of Observations') +
   labs(fill = 'Interaction Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
   facet_wrap(~ response_category) + 
-  geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_nudge(y=0.2)) +
+  geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
+  geom_text(data = interaction_category_counts, aes(x=1.8, y=5, label = n), vjust = -11, hjust = -0.1,
+                    colour = "black", inherit.aes = FALSE, parse = FALSE) +
+  expand_limits(y = c(0, 225)) +
+  scale_fill_viridis(discrete = TRUE) 
+
+
+interaction_df %>%
+  ggplot(aes(x = interaction_effect, fill = interaction_effect, by = 1)) + 
+  geom_bar() +
+  ggtitle('Local and Landscape Interaction Effects') + 
+  theme(plot.title = element_text(hjust=.5)) +
+  xlab('Effect of Local and Landscape Interaction') + 
+  ylab('Number of Observations') +
+  labs(fill = 'Interaction Effect') +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  facet_wrap(~ local) + 
+  geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
+  geom_text(data = interaction_strategy_counts, aes(x=1.8, y=5, label = n), vjust = -11, hjust = -0.1,
+                    colour = "black", inherit.aes = FALSE, parse = FALSE) +
   expand_limits(y = c(0, 225)) +
   scale_fill_viridis(discrete = TRUE) 
 
