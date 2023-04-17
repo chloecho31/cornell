@@ -379,6 +379,40 @@ summary(cew_1)
 
 ```
 
+
+```{r}
+
+set.seed(42)
+
+cew_features_logistic <- cew_features %>%
+  dplyr::select(c(Threshold, Lat.Decimal, Long.Decimal, Day, Year, prop_corn, prop_sweet_corn, prop_field_corn, Min_Temp, Max_Temp, Avg_Temp,
+                  Total_Precip, Min_Hum, Max_Hum))
+
+cew_logistic_training_samples <- cew_features_logistic$Threshold %>% 
+  createDataPartition(p = 0.8, list = FALSE)
+
+cew_logistic_training <- cew_features_logistic[cew_logistic_training_samples, ]
+cew_logistic_testing <- cew_features_logistic[-cew_logistic_training_samples, ]
+
+# Fit the model
+cew_logistic <- glm(Threshold ~., data = cew_logistic_training, family = binomial)
+
+# Summarize the model
+summary(cew_logistic)
+
+# Make predictions
+probabilities <- cew_logistic %>% 
+  predict(cew_logistic_testing, type = "response")
+
+logistic_error <- mean(as.numeric(as.numeric(probabilities > 0.5) != cew_logistic_testing$Threshold), na.rm=TRUE)
+logistic_accuracy <- mean(as.numeric(as.numeric(probabilities > 0.5) == cew_logistic_testing$Threshold), na.rm=TRUE)
+
+print(paste("test-error =", logistic_error))
+print(paste("test-accuracy =", logistic_accuracy))
+
+
+```
+
 ### FAW Model
 
 Running a model with individual predictors, no interactions. 

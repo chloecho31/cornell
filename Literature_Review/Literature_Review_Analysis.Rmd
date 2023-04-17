@@ -490,7 +490,8 @@ local_category_counts <- ddply(.data = local_effects_df,
                  summarize, 
                  n = paste("n =", length(local_effect)))
 
-local_effects_df %>%
+local_effects_df %>% 
+  mutate(local_effect = factor(local_effect, levels = c('Positive', 'Negative', 'NS'))) %>%
   ggplot(aes(x = local_effect, fill = local_effect, by = 1)) + 
   geom_bar() +
   ggtitle('Local Diversification Strategy Effects on Specific Response Categories') +
@@ -501,7 +502,7 @@ local_effects_df %>%
   scale_x_discrete(guide = guide_axis(angle = 45)) +
   facet_wrap(~ response_category) + 
   geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
-  geom_text(data = local_category_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = -0.85,
+  geom_text(data = local_category_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = 1.2,
                     colour = "black", inherit.aes = FALSE, parse = FALSE) +
   expand_limits(y = c(0, 160)) +
   scale_fill_viridis(discrete = TRUE)
@@ -517,7 +518,8 @@ landscape_category_counts <- ddply(.data = landscape_effects_df,
                  summarize, 
                  n = paste("n =", length(landscape_effect)))
 
-landscape_effects %>%
+landscape_effects_df %>%
+  mutate(landscape_effect = factor(landscape_effect, levels = c('Positive', 'Negative', 'NS'))) %>%
   ggplot(aes(x = landscape_effect, fill = landscape_effect, by = 1)) + 
   geom_bar() +
   ggtitle('Landscape Diversification Effects') +
@@ -528,7 +530,7 @@ landscape_effects %>%
   scale_x_discrete(guide = guide_axis(angle = 45)) +
   facet_wrap(~ response_category) + 
   geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
-  geom_text(data = landscape_category_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = -0.75,
+  geom_text(data = landscape_category_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = 1.25,
                     colour = "black", inherit.aes = FALSE, parse = FALSE) +
   expand_limits(y = c(0, 150)) +
   scale_fill_viridis(discrete = TRUE)
@@ -556,6 +558,7 @@ interaction_strategy_counts <- ddply(.data = interaction_df,
                  n = paste("n =", length(interaction_effect)))
 
 interaction_df %>%
+  mutate(interaction_effect = factor(interaction_effect, levels = c('S', 'NS'))) %>%
   ggplot(aes(x = interaction_effect, fill = interaction_effect, by = 1)) + 
   geom_bar() +
   ggtitle('Local and Landscape Interaction Effects') + 
@@ -566,7 +569,7 @@ interaction_df %>%
   scale_x_discrete(guide = guide_axis(angle = 45)) +
   facet_wrap(~ response_category) + 
   geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
-  geom_text(data = interaction_category_counts, aes(x=1.8, y=5, label = n), vjust = -11, hjust = -0.1,
+  geom_text(data = interaction_category_counts, aes(x=1.8, y=5, label = n), vjust = -11, hjust = 1.75,
                     colour = "black", inherit.aes = FALSE, parse = FALSE) +
   expand_limits(y = c(0, 225)) +
   scale_fill_viridis(discrete = TRUE) 
