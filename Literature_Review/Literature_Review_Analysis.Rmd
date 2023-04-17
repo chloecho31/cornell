@@ -560,6 +560,7 @@ interaction_df %>%
 
 
 interaction_df %>%
+  mutate(interaction_effect = factor(interaction_effect, levels = c('S', 'NS'))) %>%
   ggplot(aes(x = interaction_effect, fill = interaction_effect, by = 1)) + 
   geom_bar() +
   ggtitle('Local and Landscape Interaction Effects') + 
@@ -593,7 +594,7 @@ Segment local and landscape interaction into more granular responses.
 - Less positive in complex landscapes 
 - Less negative in complex landscapes 
 
-```{r, fig.width=10, fig.height=4}
+```{r, fig.width=12, fig.height=4}
 
 paper_data %>%
   filter(interaction_effect != 'NS') %>%
@@ -607,8 +608,7 @@ paper_data %>%
                            "More negative local effect in simple landscapes" = "More Neg - Simple",
                            "More positive local effect in complex landscapes" = "More Pos - Complex",
                            "More positive local effect in intermediate landscapes" = "More Pos - Intermediate",
-                           "More positive local effect in simple landscapes" = "More Pos - Simple",
-                           "No significant local effect in complex landscapes" = "NS - Complex")) %>%
+                           "More positive local effect in simple landscapes" = "More Pos - Simple")) %>%
   ggplot(aes(x = interaction_effect, fill = interaction_effect, by = 1)) + 
   geom_bar() +
   ggtitle('Local and Landscape Interaction Effects') + 
@@ -619,15 +619,44 @@ paper_data %>%
   scale_x_discrete(guide = guide_axis(angle = 45), label = abbreviate) +
   facet_wrap(~ response_category) + 
   geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
-  geom_text(data = interaction_category_counts, aes(x=1.8, y=5, label = n), vjust = -11, hjust = 1.75,
+  geom_text(data = interaction_category_counts, aes(x=1.8, y=5, label = n), vjust = -11, hjust = 1,
                     colour = "black", inherit.aes = FALSE, parse = FALSE) +
-  expand_limits(y = c(0, 25)) +
+  expand_limits(y = c(0, 20)) +
   scale_fill_viridis(discrete = TRUE)
-
-levels(paper_data$interaction_effect)
 
 ```
 
+```{r, fig.width=12, fig.height=4}
 
+paper_data %>%
+  filter(interaction_effect != 'NS') %>%
+  mutate(interaction_effect = recode(interaction_effect, 
+                           "Less negative local effect in complex landscapes" = "Less Neg - Complex",
+                           "Less negative local effect in intermediate landscapes" = "Less Neg - Intermediate",
+                           "Less positive local effect in complex landscapes" = "Less Pos - Complex",
+                           "Less positive local effect in intermediate landscapes" = "Less Pos - Intermediate",
+                           "More negative local effect in complex landscapes" = "More Neg - Complex",
+                           "More negative local effect in intermediate landscapes" = "More Neg - Intermediate",
+                           "More negative local effect in simple landscapes" = "More Neg - Simple",
+                           "More positive local effect in complex landscapes" = "More Pos - Complex",
+                           "More positive local effect in intermediate landscapes" = "More Pos - Intermediate",
+                           "More positive local effect in simple landscapes" = "More Pos - Simple")) %>%
+  ggplot(aes(x = interaction_effect, fill = interaction_effect, by = 1)) + 
+  geom_bar() +
+  ggtitle('Local and Landscape Interaction Effects') + 
+  theme(plot.title = element_text(hjust=.5)) +
+  xlab('Effect of Local and Landscape Interaction') + 
+  ylab('Number of Observations') +
+  labs(fill = 'Interaction Effect') +
+  scale_x_discrete(guide = guide_axis(angle = 45), label = abbreviate) +
+  facet_wrap(~ local_strategy) + 
+  geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
+  geom_text(data = interaction_strategy_counts, aes(x=1.8, y=5, label = n), vjust = -11, hjust = 1.5,
+                    colour = "black", inherit.aes = FALSE, parse = FALSE) +
+  expand_limits(y = c(0, 15)) +
+  scale_fill_viridis(discrete = TRUE)
+
+
+```
 
 
