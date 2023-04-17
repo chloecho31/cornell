@@ -34,8 +34,8 @@ Extract columns needed for visual summary of the results.
 
 ```{r}
 
-paper_data <- papers %>% select(c(response_category, local, local_effect, landscape_type, landscape_effect, interaction)) %>%
-  mutate_at(c('response_category', 'local', 'landscape_type', 'local_effect', 'landscape_effect', 'interaction'), as.factor)
+paper_data <- papers %>% select(c(response_category, local_strategy, local_effect, landscape_effect, interaction_effect)) %>%
+  mutate_at(c('response_category', 'local_strategy', 'local_effect', 'landscape_effect', 'interaction_effect'), as.factor)
 paper_data
 
 ```
@@ -46,10 +46,10 @@ Subset main table by local diversification strategy category.
 
 ```{r}
 
-floral <- paper_data %>% filter(local == 'Floral')
-diversity <- paper_data %>% filter(local == 'Diversity')
-intensity <- paper_data %>% filter(local == 'Intensity')
-structure <- paper_data %>% filter(local == 'Structure')
+floral <- paper_data %>% filter(local_strategy == 'Floral')
+diversity <- paper_data %>% filter(local_strategy == 'Diversity')
+intensity <- paper_data %>% filter(local_strategy == 'Intensity')
+structure <- paper_data %>% filter(local_strategy == 'Structure')
 
 ```
 
@@ -65,8 +65,8 @@ floral_landscape_positive <- sum(na.omit(floral$landscape_effect == 'Positive'))
 floral_landscape_negative <- sum(na.omit(floral$landscape_effect == 'Negative'))
 floral_landscape_ns <- sum(na.omit(floral$landscape_effect == 'NS'))
 
-floral_interaction_sig <- sum(na.omit(floral$interaction != 'NS'))
-floral_interaction_ns <- sum(na.omit(floral$interaction == 'NS'))
+floral_interaction_sig <- sum(na.omit(floral$interaction_effect != 'NS'))
+floral_interaction_ns <- sum(na.omit(floral$interaction_effect == 'NS'))
 
 ```
 
@@ -135,7 +135,6 @@ levels(paper_data$response_category)
 arthropod <- paper_data %>% filter(response_category == 'Arthropod')
 crop <- paper_data %>% filter(response_category == 'Crop')
 natural_enemy <- paper_data %>% filter(response_category == 'Natural enemy')
-other <- paper_data %>% filter(response_category == 'Other')
 pest <- paper_data %>% filter(response_category == 'Pest')
 pollinator <- paper_data %>% filter(response_category == 'Pollinator')
 
@@ -223,23 +222,6 @@ pollinator_landscape_ns <- sum(na.omit(pollinator$landscape_effect == 'NS'))
 
 pollinator_interaction_sig <- sum(na.omit(pollinator$interaction != 'NS'))
 pollinator_interaction_ns <- sum(na.omit(pollinator$interaction == 'NS'))
-
-```
-
-Other responses. 
-
-```{r}
-
-other_local_positive <- sum(na.omit(other$local_effect == 'Positive'))
-other_local_negative <- sum(na.omit(other$local_effect == 'Negative'))
-other_local_ns <- sum(na.omit(other$local_effect == 'NS'))
-
-other_landscape_positive <- sum(na.omit(other$landscape_effect == 'Positive'))
-other_landscape_negative <- sum(na.omit(other$landscape_effect == 'Negative'))
-other_landscape_ns <- sum(na.omit(other$landscape_effect == 'NS'))
-
-other_interaction_sig <- sum(na.omit(other$interaction != 'NS'))
-other_interaction_ns <- sum(na.omit(other$interaction == 'NS'))
 
 ```
 
@@ -428,11 +410,12 @@ local_effects_df <- paper_data %>%
   filter(local_effect == 'Positive' | local_effect == 'Negative' | local_effect == 'NS') 
 
 local_strategy_counts <- ddply(.data = local_effects_df, 
-                 .(local), 
+                 .(local_strategy), 
                  summarize, 
                  n = paste("n =", length(local_effect)))
 
 local_effects_df %>%
+  mutate(local_effect = factor(local_effect, levels = c('Positive', 'Negative', 'NS'))) %>%
   ggplot(aes(x = local_effect, fill = local_effect, by = 1)) + 
   geom_bar() +
   ggtitle('Local Diversification Strategy Effects') +
@@ -441,11 +424,11 @@ local_effects_df %>%
   ylab('Number of Observations') +
   labs(fill = 'Local Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
-  facet_wrap(~ local) +
+  facet_wrap(~ local_strategy) +
   geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
-  geom_text(data = local_strategy_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = -1.75,
+  geom_text(data = local_strategy_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = 2,
                     colour = "black", inherit.aes = FALSE, parse = FALSE) +
-  expand_limits(y = c(0, 130)) +
+  expand_limits(y = c(0, 200)) +
   scale_fill_viridis(discrete = TRUE)
 
 ```
@@ -459,11 +442,12 @@ landscape_effects_df <- paper_data %>%
   mutate(as.factor(landscape_effect))
 
 landscape_strategy_counts <- ddply(.data = landscape_effects_df, 
-                 .(local), 
+                 .(local_strategy), 
                  summarize, 
                  n = paste("n =", length(landscape_effect)))
 
 landscape_effects_df %>%
+  mutate(landscape_effect = factor(landscape_effect, levels = c('Positive', 'Negative', 'NS'))) %>%
   ggplot(aes(x = landscape_effect, fill = landscape_effect, by = 1)) + 
   geom_bar() +
   ggtitle('Landscape Diversification Effects') +
@@ -472,11 +456,11 @@ landscape_effects_df %>%
   ylab('Number of Observations') +
   labs(fill = 'Landscape Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
-  facet_wrap(~ local) + 
+  facet_wrap(~ local_strategy) + 
   geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
-  geom_text(data = landscape_strategy_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = -1.5,
+  geom_text(data = landscape_strategy_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = 1.75,
                     colour = "black", inherit.aes = FALSE, parse = FALSE) +
-  expand_limits(y = c(0, 150)) +
+  expand_limits(y = c(0, 210)) +
   scale_fill_viridis(discrete = TRUE)
 
 ```
@@ -504,7 +488,7 @@ local_effects_df %>%
   geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
   geom_text(data = local_category_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = 1.2,
                     colour = "black", inherit.aes = FALSE, parse = FALSE) +
-  expand_limits(y = c(0, 160)) +
+  expand_limits(y = c(0, 200)) +
   scale_fill_viridis(discrete = TRUE)
 
 ```
@@ -532,7 +516,7 @@ landscape_effects_df %>%
   geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
   geom_text(data = landscape_category_counts, aes(x=1.8, y=5, label = n), vjust = -10, hjust = 1.25,
                     colour = "black", inherit.aes = FALSE, parse = FALSE) +
-  expand_limits(y = c(0, 150)) +
+  expand_limits(y = c(0, 175)) +
   scale_fill_viridis(discrete = TRUE)
 
 ```
@@ -540,10 +524,10 @@ landscape_effects_df %>%
 ```{r}
 
 interaction_df <- paper_data %>%
-  filter(interaction == 'NS' | interaction != 'NS') %>%
+  filter(interaction_effect == 'NS' | interaction_effect != 'NS') %>%
   mutate(interaction_effect = case_when(
-    interaction == 'NS' ~ 'NS',
-    interaction != 'NS' ~ 'S'
+    interaction_effect == 'NS' ~ 'NS',
+    interaction_effect != 'NS' ~ 'S'
     )) %>% 
   mutate(as.factor(interaction_effect)) 
 
@@ -553,7 +537,7 @@ interaction_category_counts <- ddply(.data = interaction_df,
                  n = paste("n =", length(interaction_effect)))
 
 interaction_strategy_counts <- ddply(.data = interaction_df, 
-                 .(local), 
+                 .(local_strategy), 
                  summarize, 
                  n = paste("n =", length(interaction_effect)))
 
@@ -571,7 +555,7 @@ interaction_df %>%
   geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
   geom_text(data = interaction_category_counts, aes(x=1.8, y=5, label = n), vjust = -11, hjust = 1.75,
                     colour = "black", inherit.aes = FALSE, parse = FALSE) +
-  expand_limits(y = c(0, 225)) +
+  expand_limits(y = c(0, 250)) +
   scale_fill_viridis(discrete = TRUE) 
 
 
@@ -584,15 +568,65 @@ interaction_df %>%
   ylab('Number of Observations') +
   labs(fill = 'Interaction Effect') +
   scale_x_discrete(guide = guide_axis(angle = 45)) +
-  facet_wrap(~ local) + 
+  facet_wrap(~ local_strategy) + 
   geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
   geom_text(data = interaction_strategy_counts, aes(x=1.8, y=5, label = n), vjust = -11, hjust = -0.1,
                     colour = "black", inherit.aes = FALSE, parse = FALSE) +
-  expand_limits(y = c(0, 225)) +
+  expand_limits(y = c(0, 275)) +
   scale_fill_viridis(discrete = TRUE) 
 
 ```
 
+Segment local and landscape interaction into more granular responses. 
+
+- More positive in simple landscapes 
+- More negative in simple landscapes
+- More positive in intermediate landscapes 
+- More negative in intermediate landscapes 
+- More positive in complex landscapes 
+- More negative in complex landscapes 
+
+- Less positive in simple landscapes 
+- Less negative in simple landscapes
+- Less positive in intermediate landscapes 
+- Less negative in intermediate landscapes 
+- Less positive in complex landscapes 
+- Less negative in complex landscapes 
+
+```{r, fig.width=10, fig.height=4}
+
+paper_data %>%
+  filter(interaction_effect != 'NS') %>%
+  mutate(interaction_effect = recode(interaction_effect, 
+                           "Less negative local effect in complex landscapes" = "Less Neg - Complex",
+                           "Less negative local effect in intermediate landscapes" = "Less Neg - Intermediate",
+                           "Less positive local effect in complex landscapes" = "Less Pos - Complex",
+                           "Less positive local effect in intermediate landscapes" = "Less Pos - Intermediate",
+                           "More negative local effect in complex landscapes" = "More Neg - Complex",
+                           "More negative local effect in intermediate landscapes" = "More Neg - Intermediate",
+                           "More negative local effect in simple landscapes" = "More Neg - Simple",
+                           "More positive local effect in complex landscapes" = "More Pos - Complex",
+                           "More positive local effect in intermediate landscapes" = "More Pos - Intermediate",
+                           "More positive local effect in simple landscapes" = "More Pos - Simple",
+                           "No significant local effect in complex landscapes" = "NS - Complex")) %>%
+  ggplot(aes(x = interaction_effect, fill = interaction_effect, by = 1)) + 
+  geom_bar() +
+  ggtitle('Local and Landscape Interaction Effects') + 
+  theme(plot.title = element_text(hjust=.5)) +
+  xlab('Effect of Local and Landscape Interaction') + 
+  ylab('Number of Observations') +
+  labs(fill = 'Interaction Effect') +
+  scale_x_discrete(guide = guide_axis(angle = 45), label = abbreviate) +
+  facet_wrap(~ response_category) + 
+  geom_text(aes(label = scales::percent(after_stat(prop), accuracy = 1)), stat = "prop", position = position_dodge(width = 0.9), vjust = -0.5) +
+  geom_text(data = interaction_category_counts, aes(x=1.8, y=5, label = n), vjust = -11, hjust = 1.75,
+                    colour = "black", inherit.aes = FALSE, parse = FALSE) +
+  expand_limits(y = c(0, 25)) +
+  scale_fill_viridis(discrete = TRUE)
+
+levels(paper_data$interaction_effect)
+
+```
 
 
 
