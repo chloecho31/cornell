@@ -580,12 +580,12 @@ interaction_df %>%
 
 Segment local and landscape interaction into more granular responses. 
 
-- More positive in simple landscapes 
-- More negative in simple landscapes
-- More positive in intermediate landscapes 
-- More negative in intermediate landscapes 
-- More positive in complex landscapes 
-- More negative in complex landscapes 
+- More positive in simple landscapes x
+- More negative in simple landscapes x
+- More positive in intermediate landscapes x
+- More negative in intermediate landscapes x
+- More positive in complex landscapes x
+- More negative in complex landscapes x
 
 - Less positive in simple landscapes 
 - Less negative in simple landscapes
