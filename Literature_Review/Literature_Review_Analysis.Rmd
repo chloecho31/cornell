@@ -15,6 +15,7 @@ library(janitor)
 library(viridis)
 library(GGally)
 library(plyr)
+library(reshape2)
 
 ```
 
@@ -34,8 +35,10 @@ Extract columns needed for visual summary of the results.
 
 ```{r}
 
-paper_data <- papers %>% select(c(response_category, local_strategy, local_effect, landscape_effect, interaction_effect)) %>%
-  mutate_at(c('response_category', 'local_strategy', 'local_effect', 'landscape_effect', 'interaction_effect'), as.factor)
+paper_data <- papers %>% select(c(response_category, local_strategy, local_effect, landscape_effect, minimum_complexity, maximum_complexity, 
+                                  interaction_effect)) %>%
+  mutate_at(c('response_category', 'local_strategy', 'local_effect', 'landscape_effect', 'minimum_complexity', 'maximum_complexity',
+              'interaction_effect'), as.factor)
 paper_data
 
 ```
@@ -658,4 +661,34 @@ paper_data %>%
 
 
 ```
+
+## Plotting Landscape Ranges 
+
+```{r}
+
+papers %>% distinct(title, .keep_all = TRUE) %>%
+  mutate(paper_num = c(1:127)) %>%
+  select(paper_num, minimum_complexity, maximum_complexity) %>%
+  melt(id.vars = 'paper_num') %>%
+  mutate_at('value', as.numeric) %>%
+  arrange(desc(value)) %>%
+  ggplot(aes(x = value, y = paper_num)) + 
+  geom_line(aes(group = paper_num)) 
+  
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
