@@ -667,20 +667,29 @@ paper_data %>%
 ```{r}
 
 papers %>% distinct(title, .keep_all = TRUE) %>%
+  arrange(desc(minimum_complexity)) %>%
   mutate(paper_num = c(1:127)) %>%
   select(paper_num, minimum_complexity, maximum_complexity) %>%
   melt(id.vars = 'paper_num') %>%
-  mutate_at('value', as.numeric) %>%
-  arrange(desc(value)) %>%
+  mutate_at('value', as.factor) %>%
   ggplot(aes(x = value, y = paper_num)) + 
   geom_line(aes(group = paper_num)) 
-  
-
-
 
 ```
 
+```{r, fig.width = 6, fig.height = 10}
 
+papers %>%
+  arrange(desc(minimum_complexity)) %>%
+  mutate(paper_num = c(1:583)) %>%
+  select(paper_num, minimum_complexity, maximum_complexity) %>%
+  melt(id.vars = 'paper_num') %>%
+  mutate_at('value', as.factor) %>%
+  ggplot(aes(x = value, y = paper_num)) + 
+  geom_line(aes(group = paper_num)) 
+
+
+```
 
 
 
