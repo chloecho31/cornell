@@ -1,0 +1,70 @@
+---
+title: "Silvopastoral Meta-Analysis"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(janitor)
+library(tidyverse)
+library(dplyr)
+library(metafor)
+
+```
+
+
+```{r}
+
+silvopastoral <- read.csv("silvopastoral_meta_data.csv", sep = ",") %>%
+  clean_names() %>%
+  mutate_at(c('id', 
+              'response_variable', 
+              'ecosystem_services', 
+              'category_response', 
+              'sub_category', 
+              'system', 
+              'system_number', 
+              'system_description', 
+              'measure_ct', 
+              'measure_variation'), as.factor) %>%
+  mutate_at(c('central_tendency', 
+              'variation', 
+              'sample_size'), as.numeric)
+
+silvopastoral %>%
+  filter(id == 'AME19', 
+         response_variable == 'Daily time foraging (min) in dry season') 
+
+```
+
+```{r}
+
+# "SYSTEM" VARIABLE NEEDS TO SELECT BOTH OPTIONS - NEEDS "OR" BOOLEAN (OTHERWISE IT WILL GET RID OF "CONVENTIONAL")
+
+dat.1 <- silvopastoral %>% 
+  select(-notes, -system_description) %>% #had to delete the system description because it did not allow for a unique identifier between all of them
+  filter(measure_ct == "mean", system == 'Silvopastoral' | system == 'Conventional', system_number == ('1')) %>% #filtering by system
+  drop_na(central_tendency, variation, sample_size) %>% #Dropping 
+  group_by(id, response_variable, ecosystem_services, category_response, system_number) %>% 
+  pivot_wider(names_from = system, values_from = c(central_tendency, variation, sample_size), values_fn = list) 
+
+view(dat.1)
+
+# Test a subset to see why there are NULL values 
+
+view(dat.1 %>%
+  filter(response_variable == 'Daily time foraging (min) in dry season'))
+
+
+```
+
+
+
+
+
+
+
+
