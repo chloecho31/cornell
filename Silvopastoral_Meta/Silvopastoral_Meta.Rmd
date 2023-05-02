@@ -58,6 +58,14 @@ view(dat.1)
 view(dat.1 %>%
   filter(response_variable == 'Daily time foraging (min) in dry season'))
 
+dat.1 <- silvopastoral %>% 
+  select(-notes, -system_description) %>% #had to delete the system description because it did not allow for a unique identifier between all of them
+  filter(measure_ct == "mean", system == 'Silvopastoral' | system == 'Conventional', system_number == ('1')) %>% #filtering by system
+  drop_na(central_tendency, variation, sample_size) %>% #Dropping 
+  group_by(id, response_variable, ecosystem_services, category_response, system_number) %>% 
+  pivot_wider(names_from = system, values_from = c(central_tendency, variation, sample_size), values_fn = list) 
+
+view(dat.1)
 
 ```
 
