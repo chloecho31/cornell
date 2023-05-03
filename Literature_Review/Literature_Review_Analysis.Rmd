@@ -26,25 +26,28 @@ library(reshape2)
 papers <- read.delim("lit_review_data.csv", 
                      sep = ",") %>%
   clean_names()
+
 papers
 
 ```
 
-# Summary Counts 
-
-Extract columns needed for visual summary of the results. 
-
 ```{r}
 
 paper_data <- papers %>% 
-  select(c(response_category, 
+  select(c(title, 
+           country, 
+           continent, 
+           response_category, 
            local_strategy, 
            local_effect, 
            landscape_effect, 
            minimum_complexity, 
            maximum_complexity, 
            interaction_effect)) %>%
-  mutate_at(c('response_category', 
+  mutate_at(c('title',
+              'country', 
+              'continent',
+              'response_category', 
               'local_strategy', 
               'local_effect', 
               'landscape_effect', 
@@ -52,6 +55,32 @@ paper_data <- papers %>%
               'maximum_complexity',
               'interaction_effect'), as.factor)
 paper_data
+
+```
+
+# Geographical Distribution 
+
+```{r}
+
+papers %>% 
+  distinct(title, .keep_all = TRUE) %>%
+  select(c(country, 
+           continent)) %>%
+  ggplot(aes(x = continent)) +
+  geom_bar()
+
+```
+
+```{r}
+
+papers %>% 
+  distinct(title, .keep_all = TRUE) %>%
+  select(c(country, 
+           continent)) %>%
+  filter(continent == 'Europe') %>%
+  ggplot(aes(x = country)) +
+  geom_bar() +
+  scale_x_discrete(guide = guide_axis(angle = 45))
 
 ```
 
