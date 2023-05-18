@@ -9,7 +9,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,6/14/11,
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,6/14/11,0
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,6/14/11,0
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,6/14/11,0
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,6/14/11,0
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,6/14/11,0
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,6/14/11,0
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,6/14/11,0
@@ -38,7 +38,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,6/21/11,0
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,6/21/11,0
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,6/21/11,0
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,6/21/11,0
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,6/21/11,0
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,6/21/11,0
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,6/21/11,0
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,6/21/11,0
@@ -67,7 +67,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,6/28/11,0
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,6/28/11,0
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,6/28/11,0
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,6/28/11,0
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,6/28/11,0
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,6/28/11,0
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,6/28/11,0
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,6/28/11,0
@@ -96,7 +96,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,7/5/11,0
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,7/5/11,0
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,7/5/11,0
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,7/5/11,0
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,7/5/11,0
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,7/5/11,0
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,7/5/11,0
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,7/5/11,0
@@ -125,7 +125,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,7/12/11,0
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,7/12/11,
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,7/12/11,0
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,7/12/11,0
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,7/12/11,0
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,7/12/11,0
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,7/12/11,0
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,7/12/11,1
@@ -154,7 +154,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,7/19/11,
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,7/19/11,
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,7/19/11,0
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,7/19/11,1
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,7/19/11,1
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,7/19/11,3
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,7/19/11,4
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,7/19/11,1
@@ -183,7 +183,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,7/26/11,
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,7/26/11,
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,7/26/11,4
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,7/26/11,1
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,7/26/11,1
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,7/26/11,2
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,7/26/11,11
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,7/26/11,7
@@ -212,7 +212,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,8/2/11,
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,8/2/11,
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,8/2/11,3
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,8/2/11,4
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,8/2/11,4
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,8/2/11,2
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,8/2/11,16
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,8/2/11,10
@@ -241,7 +241,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,8/9/11,
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,8/9/11,
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,8/9/11,2
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,8/9/11,3
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,8/9/11,3
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,8/9/11,1
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,8/9/11,4
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,8/9/11,11
@@ -270,7 +270,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,8/16/11,
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,8/16/11,
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,8/16/11,0
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,8/16/11,0
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,8/16/11,0
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,8/16/11,0
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,8/16/11,0
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,8/16/11,0
@@ -299,7 +299,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,8/23/11,
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,8/23/11,
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,8/23/11,0
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,8/23/11,0
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,8/23/11,0
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,8/23/11,0
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,8/23/11,0
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,8/23/11,1
@@ -328,7 +328,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,8/30/11,
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,8/30/11,
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,8/30/11,0
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,8/30/11,0
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,8/30/11,0
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,8/30/11,0
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,8/30/11,0
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,8/30/11,0
@@ -357,7 +357,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,9/7/11,
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,9/7/11,
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,9/7/11,
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,9/7/11,
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,9/7/11,
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,9/7/11,
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,9/7/11,
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,9/7/11,
@@ -386,7 +386,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -78.19153,43.09728,Genesee,NY,Field Corn,WBC,9/13/11,
 -77.3517,42.31406,Wayland_Steuben,NY,Field Corn,WBC,9/13/11,
 -76.03788,42.28838,Marathon_Cortland,NY,Field Corn,WBC,9/13/11,
--75.57242,42.19431,WhitneyPoint)Broome,NY,Field Corn,WBC,9/13/11,
+-75.57242,42.19431,WhitneyPoint_Broome,NY,Field Corn,WBC,9/13/11,
 -76.1136,42.06481,Owego_Tioga,NY,Field Corn,WBC,9/13/11,
 -76.55431,42.07571,Elmira_Chemung,NY,Field Corn,WBC,9/13/11,
 -76.49527,42.25421,Burdett_Schuyler_1,NY,Field Corn,WBC,9/13/11,
