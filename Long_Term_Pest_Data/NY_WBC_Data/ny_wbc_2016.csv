@@ -1,0 +1,24 @@
+﻿latitude,42.4400167,42.1596111,44.884755,44.379167,44.788907,44.7317,44.836712,44.94352,41.855556,43.003067,42.46125,42.521831,,44.013302,44.091845,44.159923,43.898889,43.957549,43.877882,43.758003,43.8546,43.907568,43.856181,43.785945,44.108779,44.147443,44.287208,43.839887,43.973453,43.627956,43.916521,43.76666,40.936041,43.10698308,42.99,44.509509,44.770975,44.8679,44.74379,44.57719,44.56948,44.35553,43.002916,42.732757,42.791013,43.566667,42.85,43.306867,42.150278,42.1644,,41.714417,42.433078,43.84404
+longitude,-74.9391417,-75.1167889,-73.47347,-73.39343,-74.562964,-74.58756,-74.315053,-74.043261,-73.60565,-73.573867,-76.372814,-76.848924,,-75.839949,-76.04331,-76.220106,-75.468333,-75.346695,-75.539581,-76.143042,-75.637714,-76.089773,-75.423012,-75.51802,-75.882582,-75.683304,-75.860135,-75.931232,-75.768318,-75.393755,-75.874169,-75.48333,-72.682607,-75.3846776,75.58,-74.893643,-74.661839,-75.05989,-75.172113,-75.44075,-75.54349,-75.2196,-76.536062,-76.654991,-76.118262,-78.866667,-76.816667,-77.964667,-77.117778,78.959,,-73.57935,-73.679064,-75.542305
+site,Davenport_Delaware,Walton _Delaware,Chazy_Clinton,Willsboro_Essex,Moira_Franklin,DickinsonCenter_Franklin,Malone_Franklin,Chateaugay_Franklin,Amenia_Dutchess,Greenwich_Washington,Varna_Tompkins,Burdett_Schuyler,Wyoming_Wyoming,Calcium_Jefferson,Chaumont_Jefferson,Clayton_Jefferson,Croghan_Lewis_1,Croghan_Lewis_2,Denmark_Lewis,Ellisburg_Jefferson,Harrisburg_Lewis,Hounsfield_Jefferson,NewBremen_Lewis,Lowville_Lewis,Pamelia_Jefferson,Philadelphia_Jefferson,Plessis_Jefferson,Rodman_Jefferson,Rutland_Jefferson,Turin_Lewis,Watertown_Watertown,Martinsburg_Lewis,Riverhead_Suffolk,SkinnerRoad_Oneida,Munnsville_Madison,SouthColton_StLawrence,NorthLawrence_StLawrence,ChaseMills_StLawrence,Madrid_StLawrence,Huevelton_StLawrence,Hammond_StLawrence,Edwards_StLawrence,Auburn_Seneca,Cayuga,Onondaga,Barker_Niagara,Seneca,Monroe,Genesee,Cattaraugus,Chautauqua,Amenia_Dutchess,Valatie_Columbia,Lowville_Lewis
+state_province,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY,NY
+crop,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn,Field Corn
+pest,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC,WBC
+6/5/16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6/12/16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,0,0,0,0,0,0,,,0,0,
+6/19/16,,,0,0,,,,,0,0,0,0,,,,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,0,0,0,0,0,0,0,0,,0,0,
+6/26/16,,,0,0,,,,,0,0,0,0,,,,,,,,,,,,,,,,,,,,,0,0,0,,,,,,,,0,0,0,0,0,0,0,0,,0,0,
+7/3/16,0,0,0,3,,,,,1,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,0,,0,0,0,,,,,,,,0,0,0,0,0,0,0,11,1,1,0,0
+7/10/16,1,0,1,4,,,,,4,1,2,2,0,0,3,0,0,0,0,2,0,0,0,1,2,4,0,2,0,1,2,0,0,0,0,1,0,,0,1,0,0,0,1,0,0,0,1,0,19,34,0,7,0
+7/17/16,0,0,2,3,6,1,1,2,4,17,7,18,49,12,49,21,4,3,0,62,4,46,2,3,20,19,21,4,2,1,20,2,3,1,4,2,6,4,0,4,0,0,0,12,7,12,1,6,0,55,69,0,4,0
+7/24/16,26,16,4,3,101,54,9,0,4,17,17,23,75,141,28,328,74,42,38,115,37,434,53,111,141,156,38,69,19,47,86,32,1,0,7,15,132,9,123,12,9,8,0,14,23,70,17,61,31,67,56,4,2,8
+7/31/16,2,9,12,0,167,261,467,44,6,54,10,57,22,106,48,410,128,133,211,281,115,346,61,78,217,190,44,82,362,94,252,222,0,0,24,50,316,31,261,36,82,62,0,23,33,99,33,123,20,8,37,9,7,118
+8/7/16,3,2,12,3,193,354,911,133,7,34,12,0,31,83,6,29,39,18,43,49,55,56,21,59,86,159,23,18,97,37,113,365,0,0,29,65,121,14,111,24,21,35,0,7,14,224,17,70,6,2,2,1,10,32
+8/14/16,3,0,3,1,39,69,206,89,1,4,7,2,11,29,6,19,8,12,11,6,21,20,5,15,9,21,7,8,54,6,37,20,0,0,0,5,55,0,4,12,21,30,0,3,0,16,6,7,7,,,0,10,8
+8/21/16,1,0,2,1,11,13,43,36,0,0,3,0,7,14,0,5,2,2,7,2,2,25,2,19,9,10,9,14,18,4,42,6,0,0,3,2,13,0,0,0,3,2,0,3,0,0,4,0,0,,,0,0,3
+8/28/16,0,0,0,0,6,4,22,9,0,1,2,0,0,6,0,2,0,0,6,3,1,15,0,12,3,2,4,1,0,0,13,0,0,0,1,1,2,0,0,0,1,0,0,0,0,0,0,0,,,,0,0,0
+9/4/16,0,0,,,2,0,3,0,,0,,,,1,,1,,,2,4,0,4,,,2,2,0,1,1,,10,,,,0,,,,,,,,,0,0,,,,,,,,,0
+9/11/16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+9/18/16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

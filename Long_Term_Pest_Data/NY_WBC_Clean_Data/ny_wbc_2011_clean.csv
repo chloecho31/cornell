@@ -18,7 +18,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,6/14/11,
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,6/14/11,
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,6/14/11,
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,6/14/11,
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,6/14/11,
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,6/14/11,
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,6/14/11,
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,6/14/11,
@@ -47,7 +47,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,6/21/11,
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,6/21/11,0
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,6/21/11,
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,6/21/11,
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,6/21/11,
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,6/21/11,
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,6/21/11,
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,6/21/11,
@@ -76,7 +76,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,6/28/11,0
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,6/28/11,0
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,6/28/11,0
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,6/28/11,0
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,6/28/11,0
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,6/28/11,0
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,6/28/11,0
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,6/28/11,0
@@ -105,7 +105,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,7/5/11,0
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,7/5/11,0
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,7/5/11,0
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,7/5/11,0
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,7/5/11,0
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,7/5/11,0
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,7/5/11,0
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,7/5/11,0
@@ -134,7 +134,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,7/12/11,0
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,7/12/11,0
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,7/12/11,1
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,7/12/11,0
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,7/12/11,0
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,7/12/11,0
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,7/12/11,0
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,7/12/11,0
@@ -163,7 +163,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,7/19/11,0
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,7/19/11,0
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,7/19/11,0
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,7/19/11,0
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,7/19/11,0
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,7/19/11,0
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,7/19/11,0
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,7/19/11,0
@@ -192,7 +192,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,7/26/11,1
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,7/26/11,0
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,7/26/11,0
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,7/26/11,0
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,7/26/11,0
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,7/26/11,0
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,7/26/11,0
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,7/26/11,0
@@ -221,7 +221,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,8/2/11,0
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,8/2/11,0
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,8/2/11,0
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,8/2/11,0
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,8/2/11,0
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,8/2/11,0
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,8/2/11,0
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,8/2/11,0
@@ -250,7 +250,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,8/9/11,
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,8/9/11,
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,8/9/11,0
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,8/9/11,0
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,8/9/11,0
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,8/9/11,0
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,8/9/11,0
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,8/9/11,0
@@ -279,7 +279,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,8/16/11,
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,8/16/11,
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,8/16/11,
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,8/16/11,
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,8/16/11,
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,8/16/11,
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,8/16/11,
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,8/16/11,
@@ -308,7 +308,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,8/23/11,
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,8/23/11,
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,8/23/11,
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,8/23/11,
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,8/23/11,
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,8/23/11,
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,8/23/11,
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,8/23/11,
@@ -337,7 +337,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,8/30/11,
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,8/30/11,
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,8/30/11,
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,8/30/11,
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,8/30/11,
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,8/30/11,
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,8/30/11,
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,8/30/11,
@@ -366,7 +366,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,9/7/11,
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,9/7/11,
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,9/7/11,
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,9/7/11,
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,9/7/11,
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,9/7/11,
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,9/7/11,
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,9/7/11,
@@ -395,7 +395,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -75.430233,43.029183,Oneida,NY,Field Corn,WBC,9/13/11,
 -75.020633,41.781519,Hortonville_Sullivan,NY,Field Corn,WBC,9/13/11,
 -75.53973913,42.71004956,Chenango,NY,Field Corn,WBC,9/13/11,
--74.95641232,42.61112752,Otesgo_1,NY,Field Corn,WBC,9/13/11,
+-74.95641232,42.61112752,Otsego_1,NY,Field Corn,WBC,9/13/11,
 -74.94568348,43.01605412,Herkimer,NY,Field Corn,WBC,9/13/11,
 -75.53873062,42.2072864,Chenango,NY,Field Corn,WBC,9/13/11,
 -74.44026947,42.95265337,Montgomery,NY,Field Corn,WBC,9/13/11,
