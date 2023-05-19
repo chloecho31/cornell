@@ -37,9 +37,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,6/2/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,6/2/13,
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,6/2/13,
-,,,,,,6/2/13,
-,,,,,,6/2/13,
-,,,,,,6/2/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,6/9/13,
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,6/9/13,
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,6/9/13,
@@ -78,9 +75,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,6/9/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,6/9/13,
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,6/9/13,
-,,,,,,6/9/13,
-,,,,,,6/9/13,
-,,,,,,6/9/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,6/16/13,0
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,6/16/13,0
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,6/16/13,
@@ -119,9 +113,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,6/16/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,6/16/13,
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,6/16/13,
-,,,,,,6/16/13,
-,,,,,,6/16/13,
-,,,,,,6/16/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,6/23/13,0
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,6/23/13,0
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,6/23/13,
@@ -160,9 +151,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,6/23/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,6/23/13,
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,6/23/13,
-,,,,,,6/23/13,
-,,,,,,6/23/13,
-,,,,,,6/23/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,6/30/13,0
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,6/30/13,0
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,6/30/13,1
@@ -201,9 +189,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,6/30/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,6/30/13,
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,6/30/13,
-,,,,,,6/30/13,
-,,,,,,6/30/13,
-,,,,,,6/30/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,7/7/13,0
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,7/7/13,1
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,7/7/13,
@@ -242,9 +227,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,7/7/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,7/7/13,2
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,7/7/13,
-,,,,,,7/7/13,
-,,,,,,7/7/13,
-,,,,,,7/7/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,7/14/13,1
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,7/14/13,2
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,7/14/13,4
@@ -283,9 +265,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,7/14/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,7/14/13,1
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,7/14/13,5
-,,,,,,7/14/13,
-,,,,,,7/14/13,
-,,,,,,7/14/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,7/21/13,2
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,7/21/13,12
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,7/21/13,12
@@ -324,9 +303,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,7/21/13,8
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,7/21/13,7
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,7/21/13,35
-,,,,,,7/21/13,
-,,,,,,7/21/13,
-,,,,,,7/21/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,7/28/13,0
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,7/28/13,6
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,7/28/13,
@@ -365,9 +341,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,7/28/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,7/28/13,
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,7/28/13,27
-,,,,,,7/28/13,
-,,,,,,7/28/13,
-,,,,,,7/28/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,8/4/13,0
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,8/4/13,3
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,8/4/13,
@@ -406,9 +379,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,8/4/13,5
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,8/4/13,5
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,8/4/13,
-,,,,,,8/4/13,
-,,,,,,8/4/13,
-,,,,,,8/4/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,8/11/13,0
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,8/11/13,2
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,8/11/13,
@@ -447,9 +417,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,8/11/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,8/11/13,4
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,8/11/13,1
-,,,,,,8/11/13,
-,,,,,,8/11/13,
-,,,,,,8/11/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,8/18/13,0
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,8/18/13,0
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,8/18/13,
@@ -488,9 +455,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,8/18/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,8/18/13,
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,8/18/13,0
-,,,,,,8/18/13,
-,,,,,,8/18/13,
-,,,,,,8/18/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,8/25/13,0
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,8/25/13,0
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,8/25/13,
@@ -529,9 +493,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,8/25/13,0
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,8/25/13,
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,8/25/13,0
-,,,,,,8/25/13,
-,,,,,,8/25/13,
-,,,,,,8/25/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,9/1/13,0
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,9/1/13,0
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,9/1/13,
@@ -570,9 +531,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,9/1/13,0
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,9/1/13,
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,9/1/13,0
-,,,,,,9/1/13,
-,,,,,,9/1/13,
-,,,,,,9/1/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,9/8/13,
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,9/8/13,
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,9/8/13,
@@ -611,9 +569,6 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,9/8/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,9/8/13,
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,9/8/13,
-,,,,,,9/8/13,
-,,,,,,9/8/13,
-,,,,,,9/8/13,
 -76.116724,42.783445,Tully_Onondaga,NY,Field Corn,WBC,9/15/13,
 -76.120133,42.790016,Aurora_Cayuga,NY,Field Corn,WBC,9/15/13,
 -74.5819,42.965,PalatineBridge_Montgomery,NY,Field Corn,WBC,9/15/13,
@@ -652,6 +607,3 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.245,42.6246166,Homer_Cortland,NY,Field Corn,WBC,9/15/13,
 -77.5861666,42.52323333,Wayland_Steuben,NY,Field Corn,WBC,9/15/13,
 -75.1646,44.78007,Madrid_StLawrence,NY,Field Corn,WBC,9/15/13,
-,,,,,,9/15/13,
-,,,,,,9/15/13,
-,,,,,,9/15/13,
