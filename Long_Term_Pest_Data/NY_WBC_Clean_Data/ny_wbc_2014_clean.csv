@@ -1,4 +1,4 @@
-longitude,latitude,site,state_province,crop,pest,variable,count
+longitude,latitude,site,state_province,crop,pest,date,count
 -73.572468,43.002946,Easton_Washington,NY,Field Corn,WBC,6/22/14,0.0
 -78.002053,42.207542,Belmont_Allegany,NY,Field Corn,WBC,6/22/14,0.0
 -78.155319,42.401626,Caneadea_Allegany,NY,Field Corn,WBC,6/22/14,0.0

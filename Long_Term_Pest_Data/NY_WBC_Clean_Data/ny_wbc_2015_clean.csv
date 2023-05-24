@@ -1,4 +1,4 @@
-longitude,latitude,site,state_province,crop,pest,variable,count
+longitude,latitude,site,state_province,crop,pest,date,count
 -78.95909,42.16437,Randolph_Cattaraugus_1,NY,Field Corn,WBC,6/7/15,
 ,,Randolph_Cattaraugus_2,NY,Field Corn,WBC,6/7/15,
 -76.654991,42.732757,Aurora_Cayuga,NY,Field Corn,WBC,6/7/15,

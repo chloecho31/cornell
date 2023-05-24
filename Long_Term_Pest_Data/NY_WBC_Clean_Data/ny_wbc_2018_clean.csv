@@ -1,150 +1,4 @@
 longitude,latitude,site,state_province,crop,pest,date,count
--73.54191408,44.60653056,Peru_Clinton,NY,Field Corn,WBC,address line 2,Peru
--73.46342211,44.76640273,Beekmantown_Clinton,NY,Field Corn,WBC,address line 2,Beekmantown
--73.42161368,44.88205003,Chazy_Clinton,NY,Field Corn,WBC,address line 2,Chazy
--73.428375,44.97509,Champlain_Clinton,NY,Field Corn,WBC,address line 2,Champlain
--73.53743,44.939597,Mooers_Clinton,NY,Field Corn,WBC,address line 2,Mooers
-,,Ellenburgh_Clinton,NY,Field Corn,WBC,address line 2,Ellenburgh
--74.93916,42.440168,Walton _Delaware,NY,Field Corn,WBC,address line 2,Walton 
--73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,address line 2,Chazy
--73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,address line 2,Willsboro
--75.116423,42.158023,Walton_Delaware,NY,Field Corn,WBC,address line 2,Walton
--76.23631,42.70539,Homer_Cortland,NY,Field Corn,WBC,address line 2,Homer
-,,Preble_Cortland,NY,Field Corn,WBC,address line 2,Preble
--76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,address line 2,Memphis
--75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,address line 2,Westmoreland
--77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,address line 2,Hamlin
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,address line 2,Amenia
--73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,address line 2,Easton
--73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,address line 2,Moreau
--74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,address line 2,Glen
--74.336027,42.64344,Middlebury_Montgomery,NY,Field Corn,WBC,address line 2,Middlebury
--74.57148,42.959951,Palatine_Montgomery,NY,Field Corn,WBC,address line 2,Palatine
--74.843357,43.113432,Salisbury_Herkimer,NY,Field Corn,WBC,address line 2,Salisbury
--75.648984,42.975723,Smithville_Madison,NY,Field Corn,WBC,address line 2,Smithville
--74.700244,42.842397,CherryValley_Otsego,NY,Field Corn,WBC,address line 2,CherryValley
--76.089674,44.020808,Calcium_Jefferson,NY,Field Corn,WBC,address line 2,Calcium
--76.31843,44.13099,Clayton_Jefferson,NY,Field Corn,WBC,address line 2,Clayton
--75.460894,43.898809,Croghan_Lewis,NY,Field Corn,WBC,address line 2,Croghan
--75.538753,43.87701,Denmark_Lewis,NY,Field Corn,WBC,address line 2,Denmark
--76.14312,43.758165,Ellisburg_Jefferson,NY,Field Corn,WBC,address line 2,Ellisburg
--75.637596,43.85461,Harrisburg_Lewis,NY,Field Corn,WBC,address line 2,Harrisburg
--76.089674,43.907172,Hounsfield_Jefferson,NY,Field Corn,WBC,address line 2,Hounsfield
--75.423109,43.856265,NewBremen_Lewis,NY,Field Corn,WBC,address line 2,NewBremen
--75.518138,43.785516,Lowville_Lewis,NY,Field Corn,WBC,address line 2,Lowville
--75.847515,44.132027,Pamelia_Jefferson,NY,Field Corn,WBC,address line 2,Pamelia
--75.683304,44.147443,Philadelphia_Jefferson,NY,Field Corn,WBC,address line 2,Philadelphia
--75.85926,44.28818,Plessis_Jefferson,NY,Field Corn,WBC,address line 2,Plessis
--75.393755,43.627956,Turin_Lewis,NY,Field Corn,WBC,address line 2,Turin
--75.760802,43.964184,Rutland_Jefferson,NY,Field Corn,WBC,address line 2,Rutland
--75.87421,43.9426,Watertown_Jefferson,NY,Field Corn,WBC,address line 2,Watertown
--74.292919,42.896962,Martinsburg_Lewis,NY,Field Corn,WBC,address line 2,Martinsburg
--72.682641,40.936063,Riverhead_Suffolk,NY,Field Corn,WBC,address line 2,Riverhead
-,,Cassville_Oneida,NY,Field Corn,WBC,address line 2,Cassville
--75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,address line 2,Munnsville
--75.665033,43.326983,Taberg_Oneida,NY,Field Corn,WBC,address line 2,Taberg
--74.89380486,44.50932708,SouthColton_StLawrence,NY,Field Corn,WBC,address line 2,SouthColton
--75.20071982,44.69718757,Madrid_StLawrence,NY,Field Corn,WBC,address line 2,Madrid
--75.44075388,44.57714086,Huevelton_StLawrence,NY,Field Corn,WBC,address line 2,Huevelton
--75.1081954,44.83335959,Waddington_StLawrence,NY,Field Corn,WBC,address line 2,Waddington
--75.58601,44.529431,Hammond_StLawrence,NY,Field Corn,WBC,address line 2,Hammond
--74.82932,44.961665,Massena_StLawrence,NY,Field Corn,WBC,address line 2,Massena
--75.2440316,44.34223369,Edwards_StLawrence,NY,Field Corn,WBC,address line 2,Edwards
--74.65794379,44.74663646,Lawrence_StLawrence,NY,Field Corn,WBC,address line 2,Lawrence
--74.56286,44.789069,Moira_Franklin,NY,Field Corn,WBC,address line 2,Moira
--74.350267,44.898525,Westville_Franklin,NY,Field Corn,WBC,address line 2,Westville
--74.074872,44.928985,Chateaugay_Franklin,NY,Field Corn,WBC,address line 2,Chateaugay
--74.320377,44.843661,Malone_Franklin,NY,Field Corn,WBC,address line 2,Malone
--74.567352,44.934243,Bombay _Franklin,NY,Field Corn,WBC,address line 2,Bombay 
--74.417078,44.80492,WestBangor_Franklin,NY,Field Corn,WBC,address line 2,WestBangor
--76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,address line 2,Auburn
--76.654991,42.732757,Cayuga,NY,Field Corn,WBC,address line 2,
--78.121817,42.769511,Cortland,NY,Field Corn,WBC,address line 2,
--77.342791,42.887025,Ontario,NY,Field Corn,WBC,address line 2,
--78.275019,43.218138,Orleans,NY,Field Corn,WBC,address line 2,
--77.964667,43.306867,Monroe ,NY,Field Corn,WBC,address line 2,
--78.520186,43.366587,Niagara,NY,Field Corn,WBC,address line 2,
--77.289767,43.171933,Wayne,NY,Field Corn,WBC,address line 2,
-,,Wyoming,NY,Field Corn,WBC,address line 2,
--73.45367,44.255007,Essex_1,NY,Field Corn,WBC,address line 2,
--73.453987,44.323634,Essex_2,NY,Field Corn,WBC,address line 2,
--73.726077,42.376038,Kinderkook_Columbia,NY,Field Corn,WBC,address line 2,Kinderkook
--73.612225,43.15819,Gansevoort_Saratoga,NY,Field Corn,WBC,address line 2,Gansevoort
--73.664191,43.193367,Wilton_Saratoga,NY,Field Corn,WBC,address line 2,Wilton
--76.1714,43.7767,Ellisburg_Jefferson,NY,Field Corn,WBC,address line 2,Ellisburg
--73.54191408,44.60653056,Peru_Clinton,NY,Field Corn,WBC,county,Clinton
--73.46342211,44.76640273,Beekmantown_Clinton,NY,Field Corn,WBC,county,Clinton
--73.42161368,44.88205003,Chazy_Clinton,NY,Field Corn,WBC,county,Clinton
--73.428375,44.97509,Champlain_Clinton,NY,Field Corn,WBC,county,Clinton
--73.53743,44.939597,Mooers_Clinton,NY,Field Corn,WBC,county,Clinton
-,,Ellenburgh_Clinton,NY,Field Corn,WBC,county,Clinton
--74.93916,42.440168,Walton _Delaware,NY,Field Corn,WBC,county,Delaware
--73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,county,Clinton
--73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,county,Essex
--75.116423,42.158023,Walton_Delaware,NY,Field Corn,WBC,county,Delaware
--76.23631,42.70539,Homer_Cortland,NY,Field Corn,WBC,county,Cortland
-,,Preble_Cortland,NY,Field Corn,WBC,county,Cortland
--76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,county,Onondaga
--75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,county,Oneida
--77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,county,Monroe
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,county,Dutchess
--73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,county,Washington
--73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,county,Saratoga
--74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,county,Montgomery
--74.336027,42.64344,Middlebury_Montgomery,NY,Field Corn,WBC,county,Montgomery
--74.57148,42.959951,Palatine_Montgomery,NY,Field Corn,WBC,county,Montgomery
--74.843357,43.113432,Salisbury_Herkimer,NY,Field Corn,WBC,county,Herkimer
--75.648984,42.975723,Smithville_Madison,NY,Field Corn,WBC,county,Madison
--74.700244,42.842397,CherryValley_Otsego,NY,Field Corn,WBC,county,Otsego
--76.089674,44.020808,Calcium_Jefferson,NY,Field Corn,WBC,county,Jefferson
--76.31843,44.13099,Clayton_Jefferson,NY,Field Corn,WBC,county,Jefferson
--75.460894,43.898809,Croghan_Lewis,NY,Field Corn,WBC,county,Lewis
--75.538753,43.87701,Denmark_Lewis,NY,Field Corn,WBC,county,Lewis
--76.14312,43.758165,Ellisburg_Jefferson,NY,Field Corn,WBC,county,Jefferson
--75.637596,43.85461,Harrisburg_Lewis,NY,Field Corn,WBC,county,Lewis
--76.089674,43.907172,Hounsfield_Jefferson,NY,Field Corn,WBC,county,Jefferson
--75.423109,43.856265,NewBremen_Lewis,NY,Field Corn,WBC,county,Lewis
--75.518138,43.785516,Lowville_Lewis,NY,Field Corn,WBC,county,Lewis
--75.847515,44.132027,Pamelia_Jefferson,NY,Field Corn,WBC,county,Jefferson
--75.683304,44.147443,Philadelphia_Jefferson,NY,Field Corn,WBC,county,Jefferson
--75.85926,44.28818,Plessis_Jefferson,NY,Field Corn,WBC,county,Jefferson
--75.393755,43.627956,Turin_Lewis,NY,Field Corn,WBC,county,Lewis
--75.760802,43.964184,Rutland_Jefferson,NY,Field Corn,WBC,county,Jefferson
--75.87421,43.9426,Watertown_Jefferson,NY,Field Corn,WBC,county,Jefferson
--74.292919,42.896962,Martinsburg_Lewis,NY,Field Corn,WBC,county,Lewis
--72.682641,40.936063,Riverhead_Suffolk,NY,Field Corn,WBC,county,Suffolk
-,,Cassville_Oneida,NY,Field Corn,WBC,county,Oneida
--75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,county,Oneida
--75.665033,43.326983,Taberg_Oneida,NY,Field Corn,WBC,county,Oneida
--74.89380486,44.50932708,SouthColton_StLawrence,NY,Field Corn,WBC,county,StLawrence
--75.20071982,44.69718757,Madrid_StLawrence,NY,Field Corn,WBC,county,StLawrence
--75.44075388,44.57714086,Huevelton_StLawrence,NY,Field Corn,WBC,county,StLawrence
--75.1081954,44.83335959,Waddington_StLawrence,NY,Field Corn,WBC,county,StLawrence
--75.58601,44.529431,Hammond_StLawrence,NY,Field Corn,WBC,county,StLawrence
--74.82932,44.961665,Massena_StLawrence,NY,Field Corn,WBC,county,StLawrence
--75.2440316,44.34223369,Edwards_StLawrence,NY,Field Corn,WBC,county,StLawrence
--74.65794379,44.74663646,Lawrence_StLawrence,NY,Field Corn,WBC,county,StLawrence
--74.56286,44.789069,Moira_Franklin,NY,Field Corn,WBC,county,Franklin
--74.350267,44.898525,Westville_Franklin,NY,Field Corn,WBC,county,Franklin
--74.074872,44.928985,Chateaugay_Franklin,NY,Field Corn,WBC,county,Franklin
--74.320377,44.843661,Malone_Franklin,NY,Field Corn,WBC,county,Franklin
--74.567352,44.934243,Bombay _Franklin,NY,Field Corn,WBC,county,Franklin
--74.417078,44.80492,WestBangor_Franklin,NY,Field Corn,WBC,county,Franklin
--76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,county,Seneca
--76.654991,42.732757,Cayuga,NY,Field Corn,WBC,county,Cayuga
--78.121817,42.769511,Cortland,NY,Field Corn,WBC,county,Cortland
--77.342791,42.887025,Ontario,NY,Field Corn,WBC,county,Ontario
--78.275019,43.218138,Orleans,NY,Field Corn,WBC,county,Orleans
--77.964667,43.306867,Monroe ,NY,Field Corn,WBC,county,Monroe 
--78.520186,43.366587,Niagara,NY,Field Corn,WBC,county,Niagara
--77.289767,43.171933,Wayne,NY,Field Corn,WBC,county,Wayne
-,,Wyoming,NY,Field Corn,WBC,county,Wyoming
--73.45367,44.255007,Essex_1,NY,Field Corn,WBC,county,Essex
--73.453987,44.323634,Essex_2,NY,Field Corn,WBC,county,Essex
--73.726077,42.376038,Kinderkook_Columbia,NY,Field Corn,WBC,county,Columbia
--73.612225,43.15819,Gansevoort_Saratoga,NY,Field Corn,WBC,county,Saratoga
--73.664191,43.193367,Wilton_Saratoga,NY,Field Corn,WBC,county,Saratoga
--76.1714,43.7767,Ellisburg_Jefferson,NY,Field Corn,WBC,county,Jefferson
 -73.54191408,44.60653056,Peru_Clinton,NY,Field Corn,WBC,6/3/18,
 -73.46342211,44.76640273,Beekmantown_Clinton,NY,Field Corn,WBC,6/3/18,
 -73.42161368,44.88205003,Chazy_Clinton,NY,Field Corn,WBC,6/3/18,
@@ -160,7 +14,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,6/3/18,
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,6/3/18,
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,6/3/18,
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,6/3/18,
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,6/3/18,
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,6/3/18,
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,6/3/18,
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,6/3/18,
@@ -233,7 +87,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,6/10/18,0
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,6/10/18,0
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,6/10/18,
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,6/10/18,0
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,6/10/18,0
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,6/10/18,
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,6/10/18,
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,6/10/18,
@@ -306,7 +160,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,6/17/18,0
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,6/17/18,0
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,6/17/18,
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,6/17/18,0
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,6/17/18,0
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,6/17/18,
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,6/17/18,
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,6/17/18,0
@@ -379,7 +233,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,6/24/18,0
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,6/24/18,0
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,6/24/18,
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,6/24/18,0
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,6/24/18,0
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,6/24/18,0
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,6/24/18,0
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,6/24/18,1
@@ -452,7 +306,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,7/1/18,0
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,7/1/18,0
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,7/1/18,
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,7/1/18,0
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,7/1/18,0
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,7/1/18,0
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,7/1/18,0
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,7/1/18,0
@@ -525,7 +379,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,7/8/18,0
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,7/8/18,0
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,7/8/18,0
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,7/8/18,0
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,7/8/18,0
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,7/8/18,1
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,7/8/18,1
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,7/8/18,0
@@ -598,7 +452,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,7/15/18,68
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,7/15/18,0
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,7/15/18,5
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,7/15/18,1
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,7/15/18,1
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,7/15/18,37
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,7/15/18,147
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,7/15/18,9
@@ -671,7 +525,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,7/22/18,86
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,7/22/18,86
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,7/22/18,100
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,7/22/18,12
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,7/22/18,12
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,7/22/18,64
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,7/22/18,171
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,7/22/18,2
@@ -744,7 +598,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,7/29/18,46
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,7/29/18,1
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,7/29/18,236
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,7/29/18,41
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,7/29/18,41
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,7/29/18,30
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,7/29/18,178
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,7/29/18,
@@ -817,7 +671,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,8/5/18,
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,8/5/18,1
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,8/5/18,
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,8/5/18,5
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,8/5/18,5
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,8/5/18,6
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,8/5/18,40
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,8/5/18,0
@@ -890,7 +744,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,8/12/18,19
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,8/12/18,0
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,8/12/18,64
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,8/12/18,0
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,8/12/18,0
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,8/12/18,1
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,8/12/18,7
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,8/12/18,
@@ -963,7 +817,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,8/19/18,15
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,8/19/18,
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,8/19/18,
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,8/19/18,0
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,8/19/18,0
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,8/19/18,0
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,8/19/18,0
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,8/19/18,0
@@ -1036,7 +890,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,8/26/18,
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,8/26/18,
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,8/26/18,
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,8/26/18,
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,8/26/18,
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,8/26/18,
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,8/26/18,
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,8/26/18,
@@ -1109,7 +963,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,9/2/18,
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,9/2/18,
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,9/2/18,
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,9/2/18,
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,9/2/18,
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,9/2/18,
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,9/2/18,
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,9/2/18,
@@ -1182,7 +1036,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,9/9/18,
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,9/9/18,
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,9/9/18,
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,9/9/18,
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,9/9/18,
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,9/9/18,
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,9/9/18,
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,9/9/18,
@@ -1255,7 +1109,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -76.3644363,43.0505591,Memphis_Onondaga,NY,Field Corn,WBC,9/16/18,
 -75.4875926,43.1682848,Westmoreland_Oneida,NY,Field Corn,WBC,9/16/18,
 -77.9288565,43.3403417,Hamlin_Monroe,NY,Field Corn,WBC,9/16/18,
-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,9/16/18,
+-73.605681,41.847523,Amenia_Dutchess,NY,Field Corn,WBC,9/16/18,
 -73.57385,43.003133,Easton_Washington,NY,Field Corn,WBC,9/16/18,
 -73.642067,43.27045,Moreau_Saratoga,NY,Field Corn,WBC,9/16/18,
 -74.292919,42.896962,Glen_Montgomery,NY,Field Corn,WBC,9/16/18,

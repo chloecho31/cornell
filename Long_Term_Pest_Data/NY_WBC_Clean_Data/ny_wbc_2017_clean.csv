@@ -31,7 +31,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,6/4/17,
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,6/4/17,
 -75.26,43.16,Oneida,NY,Field Corn,WBC,6/4/17,
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,6/4/17,
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,6/4/17,
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,6/4/17,
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,6/4/17,
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,6/4/17,
@@ -83,7 +83,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,6/11/17,
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,6/11/17,
 -75.26,43.16,Oneida,NY,Field Corn,WBC,6/11/17,
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,6/11/17,
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,6/11/17,
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,6/11/17,
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,6/11/17,
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,6/11/17,
@@ -135,7 +135,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,6/18/17,
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,6/18/17,
 -75.26,43.16,Oneida,NY,Field Corn,WBC,6/18/17,
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,6/18/17,
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,6/18/17,
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,6/18/17,
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,6/18/17,
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,6/18/17,
@@ -187,7 +187,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,6/25/17,
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,6/25/17,
 -75.26,43.16,Oneida,NY,Field Corn,WBC,6/25/17,
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,6/25/17,
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,6/25/17,
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,6/25/17,
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,6/25/17,
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,6/25/17,
@@ -239,7 +239,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,7/2/17,3
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,7/2/17,0
 -75.26,43.16,Oneida,NY,Field Corn,WBC,7/2/17,0
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,7/2/17,0
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,7/2/17,0
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,7/2/17,0
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,7/2/17,0
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,7/2/17,0
@@ -291,7 +291,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,7/9/17,4
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,7/9/17,1
 -75.26,43.16,Oneida,NY,Field Corn,WBC,7/9/17,0
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,7/9/17,1
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,7/9/17,1
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,7/9/17,0
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,7/9/17,0
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,7/9/17,0
@@ -343,7 +343,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,7/16/17,40
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,7/16/17,0
 -75.26,43.16,Oneida,NY,Field Corn,WBC,7/16/17,2
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,7/16/17,2
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,7/16/17,2
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,7/16/17,0
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,7/16/17,0
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,7/16/17,0
@@ -395,7 +395,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,7/23/17,163
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,7/23/17,0
 -75.26,43.16,Oneida,NY,Field Corn,WBC,7/23/17,4
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,7/23/17,34
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,7/23/17,34
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,7/23/17,9
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,7/23/17,1
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,7/23/17,0
@@ -447,7 +447,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,7/30/17,114
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,7/30/17,1
 -75.26,43.16,Oneida,NY,Field Corn,WBC,7/30/17,7
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,7/30/17,36
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,7/30/17,36
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,7/30/17,71
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,7/30/17,45
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,7/30/17,79
@@ -499,7 +499,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,8/6/17,157
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,8/6/17,0
 -75.26,43.16,Oneida,NY,Field Corn,WBC,8/6/17,11
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,8/6/17,194
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,8/6/17,194
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,8/6/17,54
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,8/6/17,40
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,8/6/17,316
@@ -551,7 +551,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,8/13/17,50
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,8/13/17,0
 -75.26,43.16,Oneida,NY,Field Corn,WBC,8/13/17,4
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,8/13/17,24
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,8/13/17,24
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,8/13/17,4
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,8/13/17,12
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,8/13/17,159
@@ -603,7 +603,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,8/20/17,0
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,8/20/17,0
 -75.26,43.16,Oneida,NY,Field Corn,WBC,8/20/17,3
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,8/20/17,23
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,8/20/17,23
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,8/20/17,0
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,8/20/17,26
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,8/20/17,257
@@ -655,7 +655,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,8/27/17,2
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,8/27/17,0
 -75.26,43.16,Oneida,NY,Field Corn,WBC,8/27/17,0
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,8/27/17,2
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,8/27/17,2
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,8/27/17,0
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,8/27/17,0
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,8/27/17,8
@@ -707,7 +707,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,9/3/17,
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,9/3/17,
 -75.26,43.16,Oneida,NY,Field Corn,WBC,9/3/17,0
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,9/3/17,0
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,9/3/17,0
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,9/3/17,0
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,9/3/17,
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,9/3/17,
@@ -759,7 +759,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,9/10/17,
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,9/10/17,
 -75.26,43.16,Oneida,NY,Field Corn,WBC,9/10/17,
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,9/10/17,
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,9/10/17,
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,9/10/17,
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,9/10/17,
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,9/10/17,
@@ -811,7 +811,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -77.683615,42.919092,Avon_Livingston  ,NY,Field Corn,WBC,9/17/17,
 -72.682607,40.936041,Riverhead_Suffolk,NY,Field Corn,WBC,9/17/17,
 -75.26,43.16,Oneida,NY,Field Corn,WBC,9/17/17,
-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,9/17/17,
+-75.531,42.985,Munnsville_Oneida,NY,Field Corn,WBC,9/17/17,
 -75.58305,42.989906,Munnsville_Madison,NY,Field Corn,WBC,9/17/17,
 -74.89380486,44.50932708,Colton_StLawrence,NY,Field Corn,WBC,9/17/17,
 -75.08889793,44.54205732,Canton_StLawrence,NY,Field Corn,WBC,9/17/17,
