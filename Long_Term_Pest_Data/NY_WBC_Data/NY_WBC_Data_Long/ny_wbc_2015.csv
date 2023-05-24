@@ -35,7 +35,7 @@ Avon_Livingston_2,42.9125,-77.7224,NY,Field Corn,WBC,,NA,NA,NA,NA,1,10,4,2,NA,NA
 Munnsville_Madison,42.99,-75.58,NY,Field Corn,WBC,,NA,NA,NA,0,0,0,3,15,14,1,1,0,0,,17,
 PalatineBridge_Montgomery,42.95972222,-74.57722222,NY,Field Corn,WBC,,NA,1,1,0,2,32,80,85,NA,4,NA,NA,NA,,34,
 Barker_Niagara,43.03126667,-77.3407,NY,Field Corn,WBC,,NA,NA,NA,0,5,37,43,114,80,15,3,NA,0,,205,
-Clinton_Oneida,43.03205N,-75.37586667,NY,Field Corn,WBC,0,0,0,0,0,7,13,13,13,13,13,0,0,NA,,297,
+Clinton_Oneida,43.03205,-75.37586667,NY,Field Corn,WBC,0,0,0,0,0,7,13,13,13,13,13,0,0,NA,,297,
 Tully_Onondaga,42.791013,-76.118262,NY,Field Corn,WBC,,0,0,0,0,0,7,23,24,8,0,0,1,0,,72,
 Geneva_Ontario_1,42.824683,-77.03965,NY,Field Corn,WBC,,NA,NA,,0,2,4,30,15,52,21,1,0,0,,63,
 Geneva_Ontario_2,42.87111111,-77.02611111,NY,Field Corn,WBC,,0,0,0,1,0,0,12,16,1,0,0,0,0,0,125,
@@ -53,5 +53,3 @@ Ithaca_Tompkins,42.4609,-76.372741,NY,Field Corn,WBC,,NA,0,0,1,4,29,60,47,36,5,0
 Easton_Washington,43.00228,-73.57269,NY,Field Corn,WBC,,NA,NA,0,3,NA,13,15,7,11,6,1,0,,,182,
 Wyoming_Wyoming,42.860609,-78.043705,NY,Field Corn,WBC,,NA,NA,0,0,9,131,134,155,73,NA,NA,NA,NA,,56,
 ,,,,,,,,,,,,,,,,,,,,,19284,363.8490566
-,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,

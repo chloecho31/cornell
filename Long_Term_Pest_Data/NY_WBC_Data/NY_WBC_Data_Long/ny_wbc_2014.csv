@@ -1,7 +1,7 @@
 ﻿site,latitude,longitude,state_province,crop,pest,6/22/14,6/29/14,7/6/14,7/13/14,7/20/14,7/27/14,8/3/14,8/10/14,8/17/14,8/24/14,8/31/14,9/7/14,9/14/14
 Easton_Washington,43.002946,-73.572468,NY,Field Corn,WBC,0,0,0,0,0,7,17,7,4,6,0,1,0
-Belmont_Allegany,42.207542,78.002053,NY,Field Corn,WBC,0,0,1,2,9,38,8,NA,0,0,0,,
-Caneadea_Allegany,42.401626,78.155319,NY,Field Corn,WBC,0,0,0,1,0,10,0,NA,2,0,0,,
+Belmont_Allegany,42.207542,-78.002053,NY,Field Corn,WBC,0,0,1,2,9,38,8,NA,0,0,0,,
+Caneadea_Allegany,42.401626,-78.155319,NY,Field Corn,WBC,0,0,0,1,0,10,0,NA,2,0,0,,
 Brunswick_Rensselaer,42.76086667,-73.76086667,NY,Field Corn,WBC,NA,0,0,0,NA,0,4,NA,0,0,0,0,
 Randolph_Cattaraugus,42.16437,-78.95909,NY,Field Corn,WBC,NA,NA,0,0,NA,0,104,27,NA,4,,,
 Clymer_Chautauqua,42.066,-79.574,NY,Field Corn,WBC,NA,NA,0,0,NA,NA,27,11,8,2,,,
@@ -9,9 +9,9 @@ Moira_Franklin,44.78905,-74.56295,NY,Field Corn,WBC,0,0,0,0,4,85,222,81,49,1,0,0
 Malone_Franklin,44.82011667,-74.29936667,NY,Field Corn,WBC,0,0,0,0,2,73,27,164,78,6,8,0,
 Bangor_Franklin,44.85965,-74.35521667,NY,Field Corn,WBC,0,0,0,3,7,4,251,165,72,3,5,0,
 Homer_Cortland,42.70523333,-76.23398333,NY,Field Corn,WBC,NA,0,0,1,10,9,2,NA,1,1,NA,,
-Valois_Schuyler,42.31332,76.50931,NY,Field Corn,WBC,0,0,1,1,12,42,64,43,3,3,0,,
-Varna_Tompkins,42.27666,76.22367,NY,Field Corn,WBC,0,0,1,4,7,23,18,17,9,3,2,,
-Clinton_Oneida,43.03205N,-75.37586667,NY,Field Corn,WBC,0,0,0,0,0,4,2,0,0,0,0,,
+Valois_Schuyler,42.31332,-76.50931,NY,Field Corn,WBC,0,0,1,1,12,42,64,43,3,3,0,,
+Varna_Tompkins,42.27666,-76.22367,NY,Field Corn,WBC,0,0,1,4,7,23,18,17,9,3,2,,
+Clinton_Oneida,43.03205,-75.37586667,NY,Field Corn,WBC,0,0,0,0,0,4,2,0,0,0,0,,
 Amenia_Dutchess,41.8681,-73.6056,NY,Field Corn,WBC,0,0,0,0,1,2,6,0,1,NA,NA,,
 Martinsburg_Lewis,43.75568227,-75.47213674,NY,Field Corn,WBC,0,0,1,0,8,134,101,49,43,0,0,0,
 Wyoming_Wyoming,42.85934,-78.04978,NY,Field Corn,WBC,NA,0,0,1,1,39,44,14,4,2,0,0,

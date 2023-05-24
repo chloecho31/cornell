@@ -1,13 +1,13 @@
 longitude,latitude,site,state_province,crop,pest,date,count
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,6/4/17,
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,6/4/17,
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,6/4/17,
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,6/4/17,
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,6/4/17,0
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,6/4/17,0
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,6/4/17,
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,6/4/17,
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,6/4/17,
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,6/4/17,
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,6/4/17,
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,6/4/17,
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,6/4/17,
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,6/4/17,
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,6/4/17,
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,6/4/17,
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,6/4/17,
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,6/4/17,
@@ -44,22 +44,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,6/4/17,
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,6/4/17,
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,6/4/17,
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,6/4/17,
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,6/4/17,
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,6/4/17,
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,6/4/17,
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,6/4/17,
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,6/4/17,
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,6/4/17,
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,6/4/17,
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,6/4/17,
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,6/11/17,
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,6/11/17,
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,6/11/17,
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,6/11/17,
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,6/11/17,0
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,6/11/17,0
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,6/11/17,
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,6/11/17,
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,6/11/17,
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,6/11/17,
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,6/11/17,
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,6/11/17,
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,6/11/17,
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,6/11/17,
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,6/11/17,
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,6/11/17,
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,6/11/17,
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,6/11/17,0
@@ -96,22 +96,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,6/11/17,0
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,6/11/17,0
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,6/11/17,
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,6/11/17,0
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,6/11/17,0
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,6/11/17,0
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,6/11/17,0
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,6/11/17,
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,6/11/17,
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,6/11/17,
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,6/11/17,
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,6/11/17,0
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,6/18/17,
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,6/18/17,
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,6/18/17,
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,6/18/17,
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,6/18/17,0
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,6/18/17,0
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,6/18/17,
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,6/18/17,
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,6/18/17,
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,6/18/17,
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,6/18/17,
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,6/18/17,
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,6/18/17,
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,6/18/17,
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,6/18/17,
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,6/18/17,
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,6/18/17,0
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,6/18/17,0
@@ -148,22 +148,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,6/18/17,0
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,6/18/17,0
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,6/18/17,
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,6/18/17,0
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,6/18/17,0
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,6/18/17,0
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,6/18/17,0
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,6/18/17,
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,6/18/17,
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,6/18/17,
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,6/18/17,
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,6/18/17,0
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,6/25/17,
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,6/25/17,
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,6/25/17,
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,6/25/17,
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,6/25/17,0
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,6/25/17,0
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,6/25/17,
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,6/25/17,
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,6/25/17,
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,6/25/17,
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,6/25/17,
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,6/25/17,
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,6/25/17,
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,6/25/17,
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,6/25/17,
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,6/25/17,0
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,6/25/17,0
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,6/25/17,0
@@ -200,22 +200,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,6/25/17,3
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,6/25/17,2
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,6/25/17,1
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,6/25/17,1
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,6/25/17,1
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,6/25/17,1
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,6/25/17,1
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,6/25/17,
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,6/25/17,
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,6/25/17,
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,6/25/17,0
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,6/25/17,0
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,7/2/17,
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,7/2/17,
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,7/2/17,
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,7/2/17,
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,7/2/17,0
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,7/2/17,0
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,7/2/17,
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,7/2/17,0
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,7/2/17,0
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,7/2/17,0
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,7/2/17,0
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,7/2/17,0
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,7/2/17,0
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,7/2/17,0
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,7/2/17,0
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,7/2/17,1
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,7/2/17,0
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,7/2/17,0
@@ -252,22 +252,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,7/2/17,2
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,7/2/17,0
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,7/2/17,0
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,7/2/17,2
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,7/2/17,0
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,7/2/17,2
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,7/2/17,0
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,7/2/17,0
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,7/2/17,0
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,7/2/17,
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,7/2/17,1
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,7/2/17,0
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,7/9/17,
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,7/9/17,
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,7/9/17,
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,7/9/17,
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,7/9/17,0
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,7/9/17,3
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,7/9/17,0
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,7/9/17,2
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,7/9/17,0
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,7/9/17,0
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,7/9/17,2
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,7/9/17,2
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,7/9/17,0
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,7/9/17,0
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,7/9/17,2
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,7/9/17,5
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,7/9/17,0
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,7/9/17,2
@@ -304,22 +304,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,7/9/17,0
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,7/9/17,0
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,7/9/17,0
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,7/9/17,3
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,7/9/17,2
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,7/9/17,3
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,7/9/17,2
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,7/9/17,6
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,7/9/17,0
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,7/9/17,0
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,7/9/17,4
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,7/9/17,10
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,7/16/17,7
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,7/16/17,9
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,7/16/17,7
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,7/16/17,9
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,7/16/17,1
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,7/16/17,6
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,7/16/17,2
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,7/16/17,0
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,7/16/17,0
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,7/16/17,0
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,7/16/17,1
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,7/16/17,0
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,7/16/17,0
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,7/16/17,0
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,7/16/17,1
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,7/16/17,2
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,7/16/17,0
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,7/16/17,1
@@ -356,22 +356,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,7/16/17,0
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,7/16/17,1
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,7/16/17,10
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,7/16/17,9
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,7/16/17,1
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,7/16/17,9
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,7/16/17,1
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,7/16/17,6
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,7/16/17,0
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,7/16/17,0
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,7/16/17,32
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,7/16/17,20
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,7/23/17,67
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,7/23/17,22
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,7/23/17,67
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,7/23/17,22
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,7/23/17,7
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,7/23/17,9
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,7/23/17,132
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,7/23/17,35
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,7/23/17,53
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,7/23/17,6
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,7/23/17,6
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,7/23/17,35
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,7/23/17,53
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,7/23/17,6
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,7/23/17,6
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,7/23/17,23
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,7/23/17,3
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,7/23/17,
@@ -408,22 +408,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,7/23/17,3
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,7/23/17,2
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,7/23/17,7
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,7/23/17,23
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,7/23/17,20
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,7/23/17,23
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,7/23/17,20
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,7/23/17,192
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,7/23/17,68
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,7/23/17,146
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,7/23/17,114
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,7/23/17,31
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,7/30/17,65
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,7/30/17,42
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,7/30/17,65
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,7/30/17,42
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,7/30/17,24
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,7/30/17,30
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,7/30/17,132
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,7/30/17,113
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,7/30/17,4
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,7/30/17,19
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,7/30/17,53
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,7/30/17,113
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,7/30/17,4
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,7/30/17,19
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,7/30/17,53
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,7/30/17,11
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,7/30/17,3
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,7/30/17,8
@@ -460,22 +460,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,7/30/17,7
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,7/30/17,12
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,7/30/17,6
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,7/30/17,55
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,7/30/17,53
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,7/30/17,55
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,7/30/17,53
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,7/30/17,188
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,7/30/17,180
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,7/30/17,126
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,7/30/17,36
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,7/30/17,70
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,8/6/17,49
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,8/6/17,28
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,8/6/17,49
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,8/6/17,28
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,8/6/17,66
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,8/6/17,44
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,8/6/17,104
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,8/6/17,352
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,8/6/17,437
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,8/6/17,255
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,8/6/17,245
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,8/6/17,352
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,8/6/17,437
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,8/6/17,255
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,8/6/17,245
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,8/6/17,3
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,8/6/17,4
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,8/6/17,0
@@ -512,22 +512,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,8/6/17,14
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,8/6/17,8
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,8/6/17,3
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,8/6/17,51
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,8/6/17,70
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,8/6/17,51
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,8/6/17,70
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,8/6/17,386
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,8/6/17,347
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,8/6/17,68
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,8/6/17,8
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,8/6/17,18
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,8/13/17,12
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,8/13/17,19
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,8/13/17,12
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,8/13/17,19
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,8/13/17,32
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,8/13/17,38
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,8/13/17,34
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,8/13/17,342
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,8/13/17,305
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,8/13/17,921
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,8/13/17,252
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,8/13/17,342
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,8/13/17,305
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,8/13/17,921
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,8/13/17,252
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,8/13/17,0
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,8/13/17,2
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,8/13/17,0
@@ -564,22 +564,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,8/13/17,2
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,8/13/17,2
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,8/13/17,0
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,8/13/17,41
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,8/13/17,11
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,8/13/17,41
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,8/13/17,11
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,8/13/17,77
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,8/13/17,375
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,8/13/17,12
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,8/13/17,8
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,8/13/17,9
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,8/20/17,0
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,8/20/17,0
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,8/20/17,0
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,8/20/17,0
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,8/20/17,33
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,8/20/17,15
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,8/20/17,0
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,8/20/17,77
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,8/20/17,118
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,8/20/17,659
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,8/20/17,65
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,8/20/17,77
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,8/20/17,118
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,8/20/17,659
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,8/20/17,65
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,8/20/17,0
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,8/20/17,0
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,8/20/17,0
@@ -616,22 +616,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,8/20/17,
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,8/20/17,
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,8/20/17,0
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,8/20/17,20
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,8/20/17,1
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,8/20/17,20
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,8/20/17,1
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,8/20/17,53
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,8/20/17,79
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,8/20/17,2
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,8/20/17,0
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,8/20/17,0
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,8/27/17,0
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,8/27/17,0
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,8/27/17,0
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,8/27/17,0
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,8/27/17,5
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,8/27/17,6
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,8/27/17,0
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,8/27/17,5
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,8/27/17,9
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,8/27/17,4
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,8/27/17,4
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,8/27/17,5
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,8/27/17,9
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,8/27/17,4
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,8/27/17,4
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,8/27/17,0
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,8/27/17,0
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,8/27/17,0
@@ -668,22 +668,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,8/27/17,
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,8/27/17,
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,8/27/17,0
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,8/27/17,6
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,8/27/17,0
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,8/27/17,6
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,8/27/17,0
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,8/27/17,4
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,8/27/17,31
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,8/27/17,0
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,8/27/17,0
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,8/27/17,0
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,9/3/17,0
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,9/3/17,0
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,9/3/17,0
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,9/3/17,0
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,9/3/17,1
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,9/3/17,0
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,9/3/17,
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,9/3/17,
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,9/3/17,
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,9/3/17,
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,9/3/17,
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,9/3/17,
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,9/3/17,
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,9/3/17,
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,9/3/17,
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,9/3/17,
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,9/3/17,0
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,9/3/17,
@@ -720,22 +720,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,9/3/17,
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,9/3/17,
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,9/3/17,
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,9/3/17,
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,9/3/17,
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,9/3/17,
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,9/3/17,
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,9/3/17,
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,9/3/17,13
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,9/3/17,
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,9/3/17,
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,9/3/17,0
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,9/10/17,
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,9/10/17,
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,9/10/17,
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,9/10/17,
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,9/10/17,
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,9/10/17,
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,9/10/17,
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,9/10/17,
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,9/10/17,
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,9/10/17,
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,9/10/17,
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,9/10/17,
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,9/10/17,
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,9/10/17,
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,9/10/17,
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,9/10/17,
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,9/10/17,
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,9/10/17,
@@ -772,22 +772,22 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,9/10/17,
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,9/10/17,
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,9/10/17,
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,9/10/17,
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,9/10/17,
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,9/10/17,
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,9/10/17,
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,9/10/17,
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,9/10/17,
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,9/10/17,
 -78.959,42.1644,EastRandolph_Cattaraugus,NY,Field Corn,WBC,9/10/17,
 -73.6056,42.43364,Valatie_Columbia,NY,Field Corn,WBC,9/10/17,
-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,9/17/17,
-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,9/17/17,
+-74.939142,42.440017,Davenport_Delaware,NY,Field Corn,WBC,9/17/17,
+-75.116789,42.159611,Walton _Delaware,NY,Field Corn,WBC,9/17/17,
 -73.471527,44.885946,Chazy_Clinton,NY,Field Corn,WBC,9/17/17,
 -73.393725,44.379596,Willsboro_Essex,NY,Field Corn,WBC,9/17/17,
 -76.23478,42.70564,Scott_Cortland,NY,Field Corn,WBC,9/17/17,
-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,9/17/17,
-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,9/17/17,
-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,9/17/17,
-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,9/17/17,
+-74.661795,44.771088,NorthLawrence_StLawrence,NY,Field Corn,WBC,9/17/17,
+-74.498564,44.776868,DickinsonCenter_Franklin,NY,Field Corn,WBC,9/17/17,
+-74.314929,44.836835,Malone_Franklin,NY,Field Corn,WBC,9/17/17,
+-74.563074,44.789473,Brushton _Franklin,NY,Field Corn,WBC,9/17/17,
 -73.60565,41.855556,Amenia_Dutchess,NY,Field Corn,WBC,9/17/17,
 -73.57385,43.003133,Greenwich_Washington,NY,Field Corn,WBC,9/17/17,
 -76.457793,42.466419,Varna_Tompkins,NY,Field Corn,WBC,9/17/17,
@@ -824,8 +824,8 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -74.56797072,42.9596562,FortPlain_Montgomery,NY,Field Corn,WBC,9/17/17,
 -74.67720037,42.8417219,Canajoharie_Montgomery,NY,Field Corn,WBC,9/17/17,
 -76.536062,43.002916,Auburn_Seneca,NY,Field Corn,WBC,9/17/17,
-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,9/17/17,
-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,9/17/17,
+-76.654991,42.732757,Cayuga,NY,Field Corn,WBC,9/17/17,
+-76.118262,42.791013,Onondaga,NY,Field Corn,WBC,9/17/17,
 -77.964667,43.306867,Barker_Monroe ,NY,Field Corn,WBC,9/17/17,
 -78.520186,43.366587,Niagara,NY,Field Corn,WBC,9/17/17,
 -77.289767,43.171933,Wayne,NY,Field Corn,WBC,9/17/17,

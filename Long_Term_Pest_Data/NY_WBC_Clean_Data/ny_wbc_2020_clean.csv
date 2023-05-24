@@ -61,7 +61,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,6/14/20,1
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,6/14/20,0
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,6/14/20,0
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,6/14/20,0
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,6/14/20,0
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,6/21/20,0
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,6/21/20,
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,6/21/20,
@@ -124,7 +124,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,6/21/20,0
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,6/21/20,0
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,6/21/20,0
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,6/21/20,0
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,6/21/20,0
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,6/28/20,0
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,6/28/20,
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,6/28/20,
@@ -187,7 +187,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,6/28/20,0
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,6/28/20,0
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,6/28/20,1
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,6/28/20,1
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,6/28/20,1
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,7/5/20,0
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,7/5/20,16
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,7/5/20,59
@@ -250,7 +250,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,7/5/20,17
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,7/5/20,118
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,7/5/20,0
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,7/5/20,69
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,7/5/20,69
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,7/12/20,8
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,7/12/20,97
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,7/12/20,235
@@ -313,7 +313,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,7/12/20,80
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,7/12/20,118
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,7/12/20,1
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,7/12/20,573
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,7/12/20,573
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,7/19/20,48
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,7/19/20,207
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,7/19/20,264
@@ -376,7 +376,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,7/19/20,43
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,7/19/20,45
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,7/19/20,0
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,7/19/20,1071
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,7/19/20,1071
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,7/26/20,27
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,7/26/20,105
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,7/26/20,70
@@ -439,7 +439,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,7/26/20,10
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,7/26/20,7
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,7/26/20,0
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,7/26/20,473
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,7/26/20,473
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,8/2/20,4
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,8/2/20,10
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,8/2/20,3
@@ -502,7 +502,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,8/2/20,1
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,8/2/20,0
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,8/2/20,1
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,8/2/20,66
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,8/2/20,66
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,8/9/20,0
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,8/9/20,6
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,8/9/20,3
@@ -565,7 +565,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,8/9/20,
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,8/9/20,
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,8/9/20,1
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,8/9/20,11
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,8/9/20,11
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,8/16/20,0
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,8/16/20,
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,8/16/20,
@@ -628,7 +628,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,8/16/20,
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,8/16/20,
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,8/16/20,0
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,8/16/20,4
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,8/16/20,4
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,8/23/20,0
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,8/23/20,
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,8/23/20,
@@ -691,7 +691,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,8/23/20,
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,8/23/20,
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,8/23/20,0
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,8/23/20,1
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,8/23/20,1
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,8/30/20,0
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,8/30/20,
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,8/30/20,
@@ -754,7 +754,7 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,8/30/20,
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,8/30/20,
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,8/30/20,0
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,8/30/20,0
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,8/30/20,0
 -74.562085,42.262477,DavenportCenter_Delaware,NY,Field Corn,WBC,9/6/20,0
 -73.479556,44.986769,Champlain_Clinton,NY,Field Corn,WBC,9/6/20,
 -73.460476,44.757891,Beekmantown_Clinton,NY,Field Corn,WBC,9/6/20,
@@ -817,4 +817,4 @@ longitude,latitude,site,state_province,crop,pest,date,count
 -73.664501,43.193944,Saratoga_1,NY,Field Corn,WBC,9/6/20,
 -73.664401,43.19391,Saratoga_2,NY,Field Corn,WBC,9/6/20,
 -72.69211,40.954608,Riverhead_Suffolk,NY,Field Corn,WBC,9/6/20,0
-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,9/6/20,1
+-76.1714,43.7767,Jefferson_Jefferson,NY,Field Corn,WBC,9/6/20,1
