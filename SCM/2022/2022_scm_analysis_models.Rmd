@@ -1,0 +1,40 @@
+---
+title: "2022_scm_analysis_models"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(lubridate)
+library(fitdistrplus)
+library(lme4)
+
+```
+
+```{r}
+
+scm_climate_df <- read.delim("Dataframes/scm_climate_model_df.csv", sep = ",")
+scm_climate_df$date <- ymd(scm_climate_df$date)
+scm_climate_df
+
+```
+
+```{r}
+
+plot(fitdist(c(na.exclude(scm_climate_df$count)),"nbinom"))
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+model <- glmer.nb(count ~ scale(date) + scale(max_temp_f) + scale(min_temp_f) + scale(rain_inches) + (1 | record_id), data = scm_climate_df)
+summary(model)
+
+```
