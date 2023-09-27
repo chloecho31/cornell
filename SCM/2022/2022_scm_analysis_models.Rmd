@@ -25,15 +25,32 @@ scm_climate_df
 
 ```{r}
 
-plot(fitdist(c(na.exclude(scm_climate_df$count)),"nbinom"))
+scm_practice_df <- read.delim("Dataframes/scm_model_practices.csv", sep = ",")
+#scm_practice_df$date <- ymd(scm_climate_df$date)
+#scm_practice_df$record_id <- as.factor(scm_climate_df$record_id)
+scm_practice_df
 
 ```
 
 ```{r}
 
-
+scm_max_df <- read.delim("Dataframes/scm_max_counts.csv", sep = ",")
+#scm_practice_df$date <- ymd(scm_climate_df$date)
+#scm_practice_df$record_id <- as.factor(scm_climate_df$record_id)
+scm_max_df
 
 ```
+
+
+```{r}
+
+plot(fitdist(c(na.exclude(scm_climate_df$count)),"nbinom"))
+
+```
+
+Response - Counts.
+Features - Climate. 
+Random Effect - Site.
 
 ```{r}
 
@@ -41,3 +58,66 @@ model <- glmer.nb(count ~ scale(week) + scale(max_temp_f) + scale(min_temp_f) + 
 summary(model)
 
 ```
+
+```{r}
+
+scm_500_df <- read.delim("Dataframes/scm_500.csv", sep = ",")
+scm_500_df$date <- ymd(scm_500_df$date)
+scm_500_df$record_id <- as.factor(scm_500_df$record_id)
+scm_500_df
+
+```
+
+Response - Count.
+Features - Climate and broad landscape categories.
+Random Effect - Site.
+
+```{r}
+
+model <- glmer.nb(count ~ scale(week) + scale(max_temp_f) + scale(min_temp_f) + scale(rain_inches) + scale(ag_prop) + scale(nat_prop) + scale(semi_nat_prop) + (1 | record_id), data = scm_500_df)
+summary(model)
+
+```
+
+Response - Count.
+Features - Relative planting week, climate.
+Random Effect - Site. 
+
+```{r}
+
+model <- glmer.nb(count ~ scale(week) + planting_relative_week + scale(max_temp_f) + scale(min_temp_f) + scale(rain_inches) + (1 | record_id), data = scm_practice_df)
+summary(model)
+
+```
+
+```{r}
+
+hist(log(scm_max_df$count))
+
+```
+
+```{r}
+
+plot(fitdist(c(na.exclude(scm_max_df$count)),"lnorm"))
+
+```
+
+Not enough observations to converge model for maximum counts. 
+
+```{r}
+
+model <- glmer(count ~ scale(week) + planting_relative_week + scale(max_temp_f) + scale(min_temp_f) + scale(rain_inches) + (1 | record_id), family= gaussian(link='log'), data = scm_max_df)
+summary(model)
+
+```
+
+
+
+
+
+
+
+
+
+
+
