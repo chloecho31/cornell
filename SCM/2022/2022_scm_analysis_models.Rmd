@@ -16,8 +16,9 @@ library(lme4)
 
 ```{r}
 
-scm_climate_df <- read.delim("Dataframes/scm_climate_model_df.csv", sep = ",")
+scm_climate_df <- read.delim("Dataframes/scm_model.csv", sep = ",")
 scm_climate_df$date <- ymd(scm_climate_df$date)
+scm_climate_df$record_id <- as.factor(scm_climate_df$record_id)
 scm_climate_df
 
 ```
@@ -30,11 +31,13 @@ plot(fitdist(c(na.exclude(scm_climate_df$count)),"nbinom"))
 
 ```{r}
 
+
+
 ```
 
 ```{r}
 
-model <- glmer.nb(count ~ scale(date) + scale(max_temp_f) + scale(min_temp_f) + scale(rain_inches) + (1 | record_id), data = scm_climate_df)
+model <- glmer.nb(count ~ scale(week) + scale(max_temp_f) + scale(min_temp_f) + scale(rain_inches) + (1 | record_id), data = scm_climate_df)
 summary(model)
 
 ```
