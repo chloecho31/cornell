@@ -25,12 +25,9 @@ scm_climate_df
 
 ```{r}
 
-scm_practice_df <- read.delim("Dataframes/scm_model_practices.csv", sep = ",")
-#scm_practice_df$date <- ymd(scm_climate_df$date)
-scm_practice_df$cover_crop <- as.factor(scm_practice_df$cover_crop)
-scm_practice_df$manure <- as.factor(scm_practice_df$manure)
-
-scm_practice_df
+planting_date <- read.delim("Dataframes/planting_dates.csv", sep = ",")
+planting_date <- na.omit(planting_date)
+planting_date
 
 ```
 
