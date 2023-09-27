@@ -27,7 +27,9 @@ scm_climate_df
 
 scm_practice_df <- read.delim("Dataframes/scm_model_practices.csv", sep = ",")
 #scm_practice_df$date <- ymd(scm_climate_df$date)
-#scm_practice_df$record_id <- as.factor(scm_climate_df$record_id)
+scm_practice_df$cover_crop <- as.factor(scm_practice_df$cover_crop)
+scm_practice_df$manure <- as.factor(scm_practice_df$manure)
+
 scm_practice_df
 
 ```
@@ -41,6 +43,17 @@ scm_max_df
 
 ```
 
+```{r}
+
+scm_500_df <- read.delim("Dataframes/scm_500.csv", sep = ",")
+scm_500_df$date <- ymd(scm_500_df$date)
+scm_500_df$record_id <- as.factor(scm_500_df$record_id)
+scm_500_df$cover_crop <- as.factor(scm_500_df$cover_crop)
+scm_500_df$manure <- as.factor(scm_500_df$manure)
+
+scm_500_df
+
+```
 
 ```{r}
 
@@ -56,15 +69,6 @@ Random Effect - Site.
 
 model <- glmer.nb(count ~ scale(week) + scale(max_temp_f) + scale(min_temp_f) + scale(rain_inches) + (1 | record_id), data = scm_climate_df)
 summary(model)
-
-```
-
-```{r}
-
-scm_500_df <- read.delim("Dataframes/scm_500.csv", sep = ",")
-scm_500_df$date <- ymd(scm_500_df$date)
-scm_500_df$record_id <- as.factor(scm_500_df$record_id)
-scm_500_df
 
 ```
 
@@ -92,6 +96,12 @@ summary(model)
 
 ```{r}
 
+plot(scm_practice_df$count, scm_practice_df$planting_relative_week)
+
+```
+
+```{r}
+
 hist(log(scm_max_df$count))
 
 ```
@@ -111,7 +121,12 @@ summary(model)
 
 ```
 
+```{r}
 
+model <- glmer.nb(count ~ scale(week) + planting_relative_week + scale(max_temp_f) + scale(min_temp_f) + scale(rain_inches) + cover_crop + manure + (1 | record_id), data = scm_practice_df)
+summary(model)
+
+```
 
 
 
