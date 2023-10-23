@@ -1,4 +1,4 @@
-﻿Field_ID,Latitude,Longitude
+﻿record_id,latitude,longitude
 DEG_DIE_100,42.55602,-76.24447
 DEG_DIE_ERSWC,42.63469,-76.12806
 DEG_DIE_SH,42.5713,-76.08288
