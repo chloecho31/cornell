@@ -1,0 +1,45 @@
+General
+ The Hydrologic Soil Groups, designated A, B, C or D, are groups of soils that, when saturated, have the 
+same runoff potential under similar storm and cover conditions. Soil properties that influence runoff 
+potential are those that influence the minimum rate of infiltration for a bare soil after prolonged wetting 
+and when not frozen. These properties are depth to seasonally high water table, intake rate, and permeability 
+after prolonged wetting, and depth to very slowly permeable layer. The influence of ground cover and slope 
+are treated independently, not in hydrologic soil groups.
+
+In the definitions of the classes, infiltration rate is the rate at which water enters the soil at the surface 
+and is controlled by surface conditions.
+
+Transmission rate is the rate at which water moves in the soil and is controlled by properties of the soil layers.
+
+Hydrologic Soil Group A
+Soils having high infiltration rates even when thoroughly wetted 
+and consisting chiefly of deep, well-drained to excessively drained 
+sands or gravels. These soils have a high rate of water 
+transmission. (Low runoff potential)
+
+Hydrologic Soil Group B
+Soils having moderate infiltration rates when thoroughly wetted 
+consisting chiefly of moderately deep or deep, moderately well 
+or well drained soils with moderately fine to moderately coarse 
+textures. These soils have a moderate rate of water transmissions.
+
+Hydrologic Soil Group C
+Soils having slow infiltration rates when thoroughly wetted, consisting 
+chiefly of (1) soils with a layer that impedes the downward movement 
+of water, or (2) soils with moderately fine or fine textures and slow
+infiltration rate. These soils have a slow rate of water transmission.
+
+Hydrologic Soil Group D
+Soils having very slow infiltration rates when thoroughly wetted, 
+consisting chiefly of (1) clayey soils with high swelling capacity 
+or potential, (2) soils with a high permanent water table, (3) soils 
+with a claypan or clay layer at or near the surface, and (4) shallow 
+soils over nearly impervious materials. These soils have a very slow 
+rate of water transmission. (High runoff potential)
+
+Dual Hydrologic Groups
+Dual hydrologic groups, A/D, B/D and C/D, are given for criteria with soils 
+that can be adequately drained. The first letter applies to the drained 
+condition and the second to the undrained condition. Only soils that are 
+rated D in their natural condition are assigned to dual groups.
+
