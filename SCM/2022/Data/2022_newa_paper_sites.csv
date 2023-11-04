@@ -1,0 +1,26 @@
+﻿Farm names,Farm ID,Region,Town
+DEG_DIE_100,F01,Central,Cortlandville 1
+DEG_DIE_ERSWC,F02,Central,Cortlandville 2
+DEG_DIE_SH,F03,Central,McGraw
+DEG_EVA_PGREEN,F04,Central,Virsil
+DEG_FES_OVO4,F05,Central,Spafford
+DEG_FOU_ELM,F06,Central,Groton
+DEG_HAI_ACROSSROAD,F07,Central,McClean
+DEG_MCM_CH,F08,Central,Homer 1
+DEG_MCM_W7,F09,Central,Homer 2
+DEG_STR_1,F10,Central,Truxton
+POV_DUN,F11,Central,Brooktondale
+STA_LOT,F12,Central,Seneca Falls
+GAB_ALL,F13,Eastern,Schaghticoke
+GAB_HER,F14,Eastern,Poestenkill
+GAB_JON,F15,Eastern,Catskill
+GAB_KUK,F16,Eastern,Clermont
+GAB_OOM,F17,Eastern,Niverville
+GAB_STO,F18,Eastern,Livingston
+MIL_CHA,F19,Northern,Vernon Center
+MIL_MCC,F20,Northern,Kirkland
+MIL_YOD,F21,Northern,Augusta
+MUL_LET,F22,Western,Rush
+STA_PAD,F23,Western,Farmington
+ZUE_PED,F24,Western,Stanley
+ZUE_REE,F25,Western,Geneva
