@@ -1,57 +1,57 @@
-﻿Field ID,Cover Crop,Manure
-DEG_DIE_HILL,No,No
-DEG_DIE_SWC,No,No
-DEG_FOU_WOOD,Partial,No
-DEG_PER_STRIP,Partial,No
-DEG_VIL,Yes,
-DEG_YOU_BOCES,No,Yes
-DEG_YOU_JONES,No,Yes
-DEG_YOU_OSHEA,No,
-DIP_CUR,Yes,No
-DIP_FLE,Yes,No
-DIP_PAT,Yes,Yes
-GAB_ALL,No,Yes
-GAB_STE,No,Yes
-KAT_BAR,No,No
-KAT_HAB,No,No
-KAT_HAB_2,Yes,Yes
-KAT_JEF,No,Yes
-KAT_JEF_2,No,Yes
-KAT_SAU,Yes,Yes
-KAT_SAU_2,Yes,Yes
-KAT_TEE,No,Yes
-KAT_TEE_2,No,Yes
-LET_NOB,Yes,Yes
-LET_TAB,Yes,Yes
-MIL_CHA,No,Yes
-MIL_HUM,,
-MIL_MCC,No,Yes
-MIL_YOD,Yes,Yes
-ONE_ADO,No,Yes
-ONE_STA,No,Yes
-ONE_TER,No,Yes
-POV_DUN,No,No
-SEA_HOO,Yes,Yes
-SMI_CAN,No,Yes
-SMI_COB,Yes,No
-SMI_CRO,No,No
-SMI_DOU,No,Yes
-SMI_DUR,Yes,Yes
-SMI_HOF,Yes,No
-SMI_HOL,No,No
-SMI_JOH,No,Yes
-SMI_JOH_2,Yes,No
-SMI_KEL,Yes,Yes
-SMI_LAT,Yes,Yes
-SMI_MCC,No,No
-STA_COL,Yes,Yes
-STA_HEM,Yes,Yes
-STA_HEM_2,Yes,Yes
-STA_SWE_1,Yes,
-STA_WIL,Yes,No
-WIS_COO,No,Yes
-WIS_COO_2,No,No
-WIS_HIG,Yes,No
-WIS_KEN,Yes,No
-WIS_MEG_1,No,No
-ZUE_REE,,
+﻿Field ID,Previous Crop,Cover Crop,Manure
+POV_DUN,Silage Corn,No,No
+DIP_FLE,Silage Corn,Yes,No
+DIP_CUR,Silage Corn,Yes,No
+GAB_STE,Silage Corn,No,Yes
+SMI_CRO,Grain Corn,No,No
+SMI_CAN,Silage Corn,No,Yes
+SMI_KEL,Silage Corn,Yes,Yes
+SMI_COB,Silage Corn,Yes,No
+SMI_DOU,Soybean,No,Yes
+SMI_MCC,Soybean,No,No
+SMI_HOL,Grain Corn,No,No
+DIP_PAT,Silage Corn,Yes,Yes
+MIL_YOD,Soybean,Yes,Yes
+MIL_CHA,Silage Corn,No,Yes
+MIL_MCC,Soybean,No,Yes
+KAT_SAU,Silage Corn,Yes,Yes
+KAT_SAU_2,Silage Corn,Yes,Yes
+KAT_TEE,Silage Corn,No,Yes
+KAT_TEE_2,Silage Corn,No,Yes
+KAT_HAB_2,Silage Corn,Yes,Yes
+KAT_HAB,Soybean,No,No
+KAT_BAR,Soybean,No,No
+SMI_LAT,Silage Corn,Yes,Yes
+SMI_DUR,Silage Corn,Yes,Yes
+SMI_HOF,Silage Corn,Yes,No
+SMI_JOH,Wheat,No,Yes
+SMI_JOH_2,Wheat,Yes,No
+GAB_ALL,Silage Corn,No,Yes
+KAT_JEF,Silage Corn,No,Yes
+KAT_JEF_2,Silage Corn,No,Yes
+STA_WIL,Silage Corn,Yes,No
+STA_HEM_2,Grain Corn,Yes,Yes
+STA_HEM,Silage Corn,Yes,Yes
+STA_SWE,Silage Corn,Yes,
+STA_COL,Silage Corn,Yes,Yes
+WIS_COO_2,Silage Corn,No,No
+WIS_COO,Silage Corn Strip Cropped With Alfalfa,No,Yes
+LET_NOB,Silage Corn,Yes,Yes
+LET_TAB,Silage Corn,Yes,Yes
+WIS_HIG,NA,Yes,No
+WIS_MEG,Sweet Corn,No,No
+WIS_KEN,Grain Corn,Yes,No
+ZUE_REE,,,
+DEG_PER_STRIP,Silage Corn,Partial,No
+DEG_FOU_WOOD,Silage Corn,Partial,No
+DEG_DIE_HILL,,No,No
+DEG_DIE_SWC,Sweet Corn,No,No
+DEG_YOU_BOCES,,No,Yes
+DEG_YOU_OSHEA,Silage Corn,No,
+DEG_YOU_JONES,Silage Corn,No,Yes
+DEG_VIL,Grain Corn,Yes,
+SEA_HOO,Mixed Veg,Yes,Yes
+MIL_HUM,,,
+ONE_TER,Silage Corn,No,Yes
+ONE_ADO,Silage Corn,No,Yes
+ONE_STA,Silage Corn,No,Yes
