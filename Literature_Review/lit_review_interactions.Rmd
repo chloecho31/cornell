@@ -1,0 +1,134 @@
+---
+title: "lit_review_interactions"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(janitor)
+library(ordinal)
+library(emmeans)
+
+```
+
+# Read Data 
+
+```{r}
+
+data <- read.delim("lit_review_interactions.csv", sep = ",")
+data <- clean_names(data)
+data
+
+```
+
+Select relevant columns. 
+
+```{r}
+
+data <- data %>% select(title, sample_size, response_type, response_category, local_strategy, simple, intermediate, complex)
+data
+
+```
+
+Ensure columns are factors. 
+
+```{r}
+
+data <- data %>% 
+  mutate(title = as.factor(title)) %>% 
+  mutate(response_type = as.factor(response_type)) %>% 
+  mutate(response_category = as.factor(response_category)) %>% 
+  mutate(local_strategy = as.factor(local_strategy)) %>% 
+  mutate(simple = as.factor(simple)) %>% 
+  mutate(intermediate = as.factor(intermediate)) %>% 
+  mutate(complex = as.factor(complex))
+data
+
+```
+
+Pivot data frame to create landscape category and response columns.
+
+```{r}
+
+data <- data %>% 
+  pivot_longer(
+    cols = c('simple', 'intermediate', 'complex'), 
+    names_to = "landscape_cat", 
+    values_to = "response"
+  )
+data
+
+```
+
+```{r}
+
+data <- data %>% 
+  mutate(response = as.factor(response)) %>%
+  mutate(landscape_cat = as.factor(landscape_cat))
+data
+
+```
+
+# Models
+
+
+
+```{r}
+
+model <- clmm(response ~ landscape_cat*local_strategy + (1|title) + (1|local_strategy), data = data)	
+summary(model)
+
+```
+
+```{r}
+
+model.posthoc <- emmeans(model, "landscape_cat", data=data)
+pairs(model.posthoc, adjust="tukey")
+
+```
+
+```{r}
+
+plot(model.posthoc, comparisons = TRUE)
+
+```
+
+
+```{r}
+
+model <- clmm(response ~ landscape_cat*response_type + landscape_cat*local_strategy + (1|title), data = data)	
+summary(model)
+
+```
+
+```{r}
+
+model.posthoc <- emmeans(model, "landscape_cat", data=data)
+pairs(model.posthoc, adjust="tukey")
+
+```
+
+```{r}
+
+plot(model.posthoc, comparisons = TRUE)
+
+```
+
+
+```{r}
+
+model <- clmm(response ~ landscape_cat*response_type + landscape_cat*local_strategy + (1|title), data = data, weights = sample_size)	
+summary(model)
+
+```
+
+
+
+
+
