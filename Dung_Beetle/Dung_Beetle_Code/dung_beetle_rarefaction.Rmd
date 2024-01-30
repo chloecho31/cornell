@@ -213,6 +213,77 @@ legend('topright', title = 'Diversity standardised by:', legend = c('sample area
 
 ```
 
+```{r}
+
+D_est
+treatments <- c('N', 'N', 'N', 'N', 'N', 'I', 'I', 'I', 'I', 'I')
+treatments
+
+D_est <- cbind(D_est, treatments)
+D_est <- as.data.frame(D_est)
+D_est <- D_est %>% 
+  mutate(D_area = as.numeric(D_area)) %>%
+  mutate(D_individuals = as.numeric(D_individuals)) %>%
+  mutate(D_coverage = as.numeric(D_coverage)) %>%
+  mutate(treatments = as.factor(treatments))
+D_est
+
+```
+
+Plot observed number of species in insecticide vs. non-insecticide plots. 
+
+```{r}
+
+plot(D_area ~ treatments, data=D_est)
+
+```
+```{r}
+
+t.test(D_area ~ treatments, data=D_est)
+
+```
+
+Plot number of species standardized by number of individuals in insecticide vs. non-insecticide plots. 
+
+```{r}
+
+plot(D_individuals ~ treatments, data=D_est)
+
+```
+
+```{r}
+
+t.test(D_individuals ~ treatments, data=D_est)
+
+```
+
+```{r}
+
+plot(D_coverage ~ treatments, data=D_est)
+
+```
+
+```{r}
+
+t.test(D_coverage ~ treatments, data=D_est)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

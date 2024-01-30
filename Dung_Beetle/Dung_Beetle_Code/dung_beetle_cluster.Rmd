@@ -1,0 +1,147 @@
+---
+title: "dung_beetle_cluster"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(janitor)
+library(vegan)
+
+```
+
+# Read and Clean Data
+
+```{r}
+
+beetle_counts <- read.delim("../Data/Dung_Beetle_Data.csv", sep = ",")
+beetle_counts <- clean_names(beetle_counts)
+head(beetle_counts)
+
+```
+
+```{r}
+
+beetle_counts <- beetle_counts %>%
+  mutate(non_or_insecticide = tolower(non_or_insecticide)) %>%
+  mutate(weather = tolower(weather)) %>%
+  mutate(farm = tolower(farm)) %>%
+  mutate(active_ingredients = tolower(active_ingredients)) %>%
+  mutate(region = tolower(region)) 
+
+head(beetle_counts)
+
+```
+
+```{r}
+
+beetle_counts <- beetle_counts %>%
+  mutate(farm = as.factor(farm)) %>%
+  mutate(region = as.factor(region)) %>%
+  mutate(weather = as.factor(weather)) %>%
+  mutate(non_or_insecticide = as.factor(non_or_insecticide)) %>%
+  mutate(active_ingredients = as.factor(active_ingredients)) %>%
+  mutate(date = as.factor(date)) %>%
+  mutate(date = as.Date(date, format="%m/%d/%y"))
+
+```
+
+```{r}
+
+beetle_counts <- beetle_counts %>%
+  mutate(non_or_insecticide = case_when(non_or_insecticide == 'non   ' ~ 'non',
+                                        non_or_insecticide == 'insecticide' ~ 'insecticide',
+                                        non_or_insecticide == 'non' ~ 'non'))
+
+beetle_counts <- beetle_counts %>%
+  select(-c(date, region, temp, weather, non_or_insecticide, active_ingredients, gps, histeridae, hydrophilidae, staphylinidae, scarabaeidae, horn_flies, face_flies)) %>%
+  rename(site = farm) %>%
+  replace(is.na(.), 0)
+
+beetle_counts <- beetle_counts %>% 
+  group_by(site) %>% 
+  summarise(across(everything(), sum))
+
+#farms <- c('chaseholm', 'eisele farm', 'honeyhill', 'johnk farm', 'turner', 'kuipers', 'rugenstein family farm', 'shephard farm', 'wallbridge', 'boone farm')
+#beetle_counts <- as.data.frame(t(beetle_counts[,-1]))
+#colnames(beetle_counts) <- farms
+
+#beetle_counts <- beetle_counts %>%
+#  rename(C_N = chaseholm)%>%
+#  rename(EF_N = `eisele farm`)%>%
+#  rename(H_N = honeyhill)%>%
+#  rename(JF_N = `johnk farm`)%>%
+#  rename(T_N = turner)%>%
+#  rename(K_I = kuipers)%>%
+#  rename(RF_I = `rugenstein family farm`)%>%
+#  rename(SF_I = `shephard farm`)%>%
+#  rename(W_I = wallbridge) %>%
+#  rename(BF_I = `boone farm`) 
+
+beetle_counts <- beetle_counts %>% column_to_rownames(., var = "site")
+rownames(beetle_counts) <- c('boone_i', 'chaseholm_n', 'eisele_n', 'honeyhill_n', 'johnk_n', 'kuipers_i', 'rugenstein_i', 'shephard_i', 'turner_n', 'wallbridge_i') 
+
+beetle_counts
+
+```
+
+```{r}
+
+matrix <- round(vegdist(beetle_counts, method="jaccard"), 1)
+matrix
+  
+```
+
+```{r}
+
+cluster <- hclust(matrix, method="ward.D2")  
+
+```
+
+```{r}
+
+plot(cluster, las = 1, 
+     main="Cluster diagram", 
+     xlab="Sample", 
+     ylab="Jaccard distance")
+
+```
+
+```{r}
+
+rda.out <- vegan::rda(beetle_counts, scale = TRUE)
+rda.out
+
+biplot(rda.out, display = "sites")
+
+```
+
+```{r}
+
+biplot(rda.out, display = "sites")
+
+vegan::ordihull(rda.out,
+         group = iris$Species,
+         col = 1:3)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+

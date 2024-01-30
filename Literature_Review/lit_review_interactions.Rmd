@@ -14,6 +14,8 @@ library(dplyr)
 library(janitor)
 library(ordinal)
 library(emmeans)
+library(blme)
+library(lme4)
 
 ```
 
@@ -23,7 +25,7 @@ library(emmeans)
 
 data <- read.delim("lit_review_interactions.csv", sep = ",")
 data <- clean_names(data)
-data
+head(data)
 
 ```
 
@@ -31,8 +33,8 @@ Select relevant columns.
 
 ```{r}
 
-data <- data %>% select(title, sample_size, response_type, response_category, local_strategy, simple, intermediate, complex)
-data
+data_original <- data %>% select(obs_id, title, sample_size, response_type, response_category, local_strategy, simple, intermediate, complex)
+head(data_original)
 
 ```
 
@@ -40,7 +42,8 @@ Ensure columns are factors.
 
 ```{r}
 
-data <- data %>% 
+data_original <- data_original %>% 
+  mutate(obs_id = as.factor(obs_id)) %>%
   mutate(title = as.factor(title)) %>% 
   mutate(response_type = as.factor(response_type)) %>% 
   mutate(response_category = as.factor(response_category)) %>% 
@@ -48,7 +51,7 @@ data <- data %>%
   mutate(simple = as.factor(simple)) %>% 
   mutate(intermediate = as.factor(intermediate)) %>% 
   mutate(complex = as.factor(complex))
-data
+head(data_original)
 
 ```
 
@@ -56,39 +59,75 @@ Pivot data frame to create landscape category and response columns.
 
 ```{r}
 
-data <- data %>% 
+data_original <- data_original %>% 
   pivot_longer(
     cols = c('simple', 'intermediate', 'complex'), 
     names_to = "landscape_cat", 
     values_to = "response"
   )
-data
+head(data_original)
 
 ```
 
 ```{r}
 
-data <- data %>% 
+data_original <- data_original %>% 
   mutate(response = as.factor(response)) %>%
   mutate(landscape_cat = as.factor(landscape_cat))
-data
+head(data_original)
+
+```
+
+```{r}
+
+data_collapsed <- data %>% select(obs_id, title, sample_size, response_type, response_category, local_strategy, simple_collapsed, intermediate_collapsed, complex_collapsed)
+head(data_collapsed)
+
+```
+
+```{r}
+
+data_collapsed <- data_collapsed %>% 
+  mutate(obs_id = as.factor(obs_id)) %>%
+  mutate(title = as.factor(title)) %>% 
+  mutate(response_type = as.factor(response_type)) %>% 
+  mutate(response_category = as.factor(response_category)) %>% 
+  mutate(local_strategy = as.factor(local_strategy)) %>% 
+  mutate(simple_collapsed = as.factor(simple_collapsed)) %>% 
+  mutate(intermediate_collapsed = as.factor(intermediate_collapsed)) %>% 
+  mutate(complex_collapsed = as.factor(complex_collapsed)) %>%
+  rename(simple = simple_collapsed, intermediate = intermediate_collapsed, complex = complex_collapsed)
+
+head(data_collapsed)
+
+```
+
+```{r}
+
+data_collapsed <- data_collapsed %>% 
+  pivot_longer(
+    cols = c('simple', 'intermediate', 'complex'), 
+    names_to = "landscape_cat", 
+    values_to = "response"
+  )
+head(data_collapsed)
 
 ```
 
 # Models
 
-
+Models for original data. 
 
 ```{r}
 
-model <- clmm(response ~ landscape_cat*local_strategy + (1|title) + (1|local_strategy), data = data)	
+model <- clmm(response ~ landscape_cat*local_strategy + (1|title) + (1|local_strategy), data = data_original)	
 summary(model)
 
 ```
 
 ```{r}
 
-model.posthoc <- emmeans(model, "landscape_cat", data=data)
+model.posthoc <- emmeans(model, "landscape_cat", data=data_original)
 pairs(model.posthoc, adjust="tukey")
 
 ```
@@ -102,14 +141,14 @@ plot(model.posthoc, comparisons = TRUE)
 
 ```{r}
 
-model <- clmm(response ~ landscape_cat*response_type + landscape_cat*local_strategy + (1|title), data = data)	
+model <- clmm(response ~ landscape_cat*response_type + landscape_cat*local_strategy + (1|title), data = data_original)	
 summary(model)
 
 ```
 
 ```{r}
 
-model.posthoc <- emmeans(model, "landscape_cat", data=data)
+model.posthoc <- emmeans(model, "landscape_cat", data=data_original)
 pairs(model.posthoc, adjust="tukey")
 
 ```
@@ -123,12 +162,27 @@ plot(model.posthoc, comparisons = TRUE)
 
 ```{r}
 
-model <- clmm(response ~ landscape_cat*response_type + landscape_cat*local_strategy + (1|title), data = data, weights = sample_size)	
+model <- clmm(response ~ landscape_cat*response_type + landscape_cat*local_strategy + (1|title), data = data_original, weights = sample_size)	
 summary(model)
 
 ```
 
+Models for collapsed data - blme.
 
+bglmer(response ~ landscape_cat*local_strategy + (1|title) + (1|obs_id),
+
+                data = data_collapsed, family='binomial',
+
+                control=glmerControl(optimizer="bobyqa"),
+
+                fixef.prior = normal(cov = diag(100, 12)))
+
+```{r}
+
+model <- bglmer(response ~ landscape_cat*local_strategy + (1|title) + (1|obs_id), data = data_collapsed, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 12)))	
+summary(model)
+
+```
 
 
 
