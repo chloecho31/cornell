@@ -49,7 +49,7 @@ cdl_number,cdl_classification
 58,Clover/Wildflowers
 59,Sod/Grass Seed
 60,Switchgrass
-Fallow/Idle,Cropland
+61,Fallow/Idle Cropland
 63,Forest
 64,Shrubland
 65,Barren
@@ -64,13 +64,13 @@ Fallow/Idle,Cropland
 75,Almonds
 76,Walnuts
 77,Pears
-Clouds/No,Data
+81,Clouds/No Data
 82,Developed
 83,Water
 87,Wetlands
 88,Nonag/Undefined
 92,Aquaculture
-Open,Water
+111,OpenWater
 112,Perennial Ice/Snow
 121,Developed/Open Space
 122,Developed/Low Intensity
