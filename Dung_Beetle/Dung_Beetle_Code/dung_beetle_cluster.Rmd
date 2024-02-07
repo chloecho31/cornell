@@ -100,6 +100,13 @@ matrix
 
 ```{r}
 
+matrix <- round(vegdist(beetle_counts, method="bray"), 1)
+matrix
+
+```
+
+```{r}
+
 cluster <- hclust(matrix, method="ward.D2")  
 
 ```
@@ -110,6 +117,15 @@ plot(cluster, las = 1,
      main="Cluster diagram", 
      xlab="Sample", 
      ylab="Jaccard distance")
+
+```
+
+```{r}
+
+plot(cluster, las = 1, 
+     main="Cluster diagram", 
+     xlab="Sample", 
+     ylab="Bray-Curtis distance")
 
 ```
 
