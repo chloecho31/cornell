@@ -1,0 +1,116 @@
+---
+title: "2023_scm_wire_mesh_models"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+library(fitdistrplus)
+library(lme4)
+
+```
+
+```{r}
+
+adult_features <- read.delim("Data/2023_adult_features.csv", sep = ",")
+adult_features
+
+```
+
+```{r}
+
+management <- read.delim("Data/2023_management.csv", sep = ",")
+management
+
+```
+
+```{r}
+
+adult_features <- adult_features %>%
+  mutate(collection_date = as.Date(collection_date, '%m/%d/%y')) %>%
+  mutate_at(c('card_id', 'record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) %>%
+  dplyr::select(-c(n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm))
+
+```
+
+```{r}
+
+plot(fitdist(adult_features$total_scm,"nbinom"))
+
+```
+
+```{r}
+
+boruta <- Boruta(total_scm ~ ., data = na.exclude(adult_features), doTrace = 2, maxRuns = 500)
+print(boruta)
+
+plot(boruta, las = 2, cex.axis = 0.7)
+
+```
+
+```{r}
+
+getSelectedAttributes(boruta, withTentative = F)
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~  ave_temp_f_1_week + vpd_min_1_week + ag_prop_2018_500 + (1 | record_id), data = adult_features)
+summary(model)
+
+```
+
+```{r}
+
+peak_adults <- read.delim("Data/2023_adult_peak_features.csv", sep = ",")
+peak_adults
+
+```
+
+```{r}
+
+peak_adults <- peak_adults %>%
+  mutate(collection_date = as.Date(collection_date, '%m/%d/%y')) %>%
+  mutate_at(c('card_id', 'record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) %>%
+  dplyr::select(-c(n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm))
+
+```
+
+```{r}
+
+plot(fitdist(peak_adults$total_scm,"norm"))
+
+```
+
+```{r}
+
+boruta <- Boruta(total_scm ~ ., data = na.exclude(peak_adults), doTrace = 2, maxRuns = 500)
+print(boruta)
+
+plot(boruta, las = 2, cex.axis = 0.7)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,11 +13,45 @@ library(dplyr)
 library(ggplot2)
 library(reshape2)
 library(fitdistrplus)
+library(Boruta)
 
 ```
+
 ```{r}
 
 wire_mesh_features <- read.delim("Data/2023_wire_mesh_features.csv", sep = ",")
 wire_mesh_features
+
+```
+
+```{r}
+
+wire_mesh_features <- wire_mesh_features %>%
+  mutate(collection_date = as.Date(collection_date, '%m/%d/%y')) %>%
+  mutate(seed_type = as.factor(seed_type)) %>%
+  dplyr::select(-c(total_scm_maggots, total_scm_pupae, scm_seeds))
+
+```
+
+```{r}
+
+colnames(wire_mesh_features)
+
+```
+
+
+```{r}
+
+plot(fitdist(wire_mesh_features$total_scm,"nbinom"))
+
+```
+
+
+```{r}
+
+boruta <- Boruta(total_scm ~ ., data = na.exclude(wire_mesh_features), doTrace = 2, maxRuns = 500)
+print(boruta)
+
+plot(boruta, las = 2, cex.axis = 0.7)
 
 ```
