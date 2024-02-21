@@ -15,7 +15,9 @@ library(reshape2)
 library(fitdistrplus)
 library(lme4)
 library(Boruta)
+library(sjPlot)
 
+set.seed(42)
 ```
 
 ```{r}
@@ -83,11 +85,28 @@ summary(model)
 
 ```{r}
 
-model <- glmer.nb(total_scm ~ scale(collection_date) + longitude + latitude + cover_crop + manure + ave_temp_f_1_week + rain_inches_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + forest_prop_5.year_500 + (1 | record_id), data = adult_features)
+model <- glmer.nb(total_scm ~ scale(collection_date) + longitude + latitude + cover_crop + manure + ave_temp_f_1_week + rain_inches_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + forest_prop_5.year_500 + organic_matter_percent + (1 | record_id), data = adult_features)
 
 summary(model)
 
 ```
+```{r}
+
+model <- glmer.nb(total_scm ~ scale(collection_date) + longitude + latitude + cover_crop + manure + ave_temp_f_1_week + rain_inches_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + wheat_prop_5.year_1000 + organic_matter_percent + (1 | record_id), data = adult_features)
+
+summary(model)
+
+```
+
+
+```{r, fig.width=6, fig.height=6}
+
+sjPlot::plot_model(model, 
+                   show.values=TRUE, show.p=TRUE,
+                   title="Effect on SCM Adults")
+
+```
+
 
 ```{r}
 
@@ -99,9 +118,9 @@ peak_adults
 ```{r}
 
 peak_adults <- peak_adults %>%
-  mutate(collection_date = as.Date(collection_date, '%m/%d/%y')) %>%
-  mutate_at(c('card_id', 'record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) %>%
-  dplyr::select(-c(n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm))
+  mutate(collection_date = as.Date(collection_date, '%Y-%m-%d')) %>%
+  mutate_at(c('record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) %>%
+  dplyr::select(-c(X, n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm))
 
 ```
 
@@ -122,7 +141,14 @@ plot(boruta, las = 2, cex.axis = 0.7)
 
 ```{r}
 
-model <- glmer.nb(total_scm ~  ave_temp_f_1_week + total_nat_prop_5.year_500 + ag_prop_5.year_500 + wheat_prop_5.year_1000  + hsg + (1 | record_id), data = adult_features)
+features <- getSelectedAttributes(boruta, withTentative = F)
+features
+
+```
+
+```{r}
+
+model <- glm(total_scm ~ scale(collection_date) + longitude + latitude + cover_crop + manure + ave_temp_f_1_week + rain_inches_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + wheat_prop_5.year_1000 + organic_matter_percent, data = peak_adults, family = gaussian)
 summary(model)
 
 ```

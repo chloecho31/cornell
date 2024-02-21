@@ -28,8 +28,8 @@ wire_mesh_features
 
 wire_mesh_features <- wire_mesh_features %>%
   mutate(collection_date = as.Date(collection_date, '%m/%d/%y')) %>%
-  mutate(seed_type = as.factor(seed_type)) %>%
-  dplyr::select(-c(total_scm_maggots, total_scm_pupae, scm_seeds))
+  mutate_at(c('seed_type', 'record_id'), as.factor) %>%
+  dplyr::select(-c(total_scm_maggots, total_scm_pupae, scm_seeds, id, container_number, project))
 
 ```
 
@@ -55,3 +55,34 @@ print(boruta)
 plot(boruta, las = 2, cex.axis = 0.7)
 
 ```
+
+
+```{r}
+
+features <- getSelectedAttributes(boruta, withTentative = F)
+features
+
+```
+
+
+```{r}
+
+df <- wire_mesh_features %>% 
+  dplyr::select(c(total_scm, record_id, features)) 
+
+model <- glmer.nb(total_scm ~ . + (1 | record_id), data = df)
+
+summary(model)
+
+```
+
+
+
+
+
+
+
+
+
+
+
