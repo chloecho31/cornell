@@ -73,6 +73,32 @@ features
 
 ```{r}
 
+adult_features <- adult_features %>%
+  mutate(collection_date = as.Date(collection_date, '%Y-%m-%d')) %>%
+  mutate_at(c('card_id', 'record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) %>%
+  dplyr::select(-c(X, card_id, n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm)) %>%
+  dplyr::select(c(total_scm, min_temp_f_1_week, ave_temp_f_1_week, max_temp_f_1_week, vpd_min_1_week, vpd_max_1_week, rain_inches_1_week, ave_temp_f_2_week, max_temp_f_2_week, vpd_max_2_week))
+```
+
+
+```{r}
+
+boruta <- Boruta(total_scm ~ ., data = na.exclude(adult_features), doTrace = 2, maxRuns = 500)
+print(boruta)
+
+plot(boruta, las = 2, cex.axis = 0.7)
+
+```
+
+```{r}
+
+features <- getSelectedAttributes(boruta, withTentative = F)
+features
+
+```
+
+```{r}
+
 df <- adult_features %>% 
   dplyr::select(c(total_scm, record_id, features)) %>%
   dplyr::select(-collection_date)
@@ -91,6 +117,7 @@ summary(model)
 
 ```
 ```{r}
+#take out NS variables and do 2-way interaction for everything 
 
 model <- glmer.nb(total_scm ~ scale(collection_date) + longitude + latitude + cover_crop + manure + ave_temp_f_1_week + rain_inches_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + wheat_prop_5.year_1000 + organic_matter_percent + (1 | record_id), data = adult_features)
 
