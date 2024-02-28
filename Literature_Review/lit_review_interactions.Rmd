@@ -33,7 +33,7 @@ Select relevant columns.
 
 ```{r}
 
-data_original <- data %>% select(obs_id, title, sample_size, response_type, response_category, local_strategy, simple, intermediate, complex)
+data_original <- data %>% dplyr::select(obs_id, title, sample_size, response_type, response_category, local_strategy, simple, intermediate, complex)
 head(data_original)
 
 ```
