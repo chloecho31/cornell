@@ -9,7 +9,7 @@ SMI_KEL,Silage Corn,Yes,Yes,Till
 SMI_COB,Silage Corn,Yes,No,No Till
 SMI_DOU,Soybean,No,Yes,Till
 SMI_MCC,Soybean,No,No,No Till
-SMI_HOL,Grain Corn,No,No,
+SMI_HOL,Grain Corn,No,No,Till
 DIP_PAT,Silage Corn,Yes,Yes,
 MIL_YOD,Soybean,Yes,Yes,No Till
 MIL_CHA,Silage Corn,No,Yes,Till
@@ -38,20 +38,20 @@ WIS_COO_2,Silage Corn,No,No,No Till
 WIS_COO,Silage Corn Strip Cropped With Alfalfa,No,Yes,No Till
 LET_NOB,Silage Corn,Yes,Yes,Till
 LET_TAB,Silage Corn,Yes,Yes,No Till
-WIS_HIG,NA,Yes,No,
+WIS_HIG,NA,Yes,No,Till
 WIS_MEG,Sweet Corn,No,No,Till
 WIS_KEN,Grain Corn,Yes,No,Till
 ZUE_REE,Pumpkins,No,No,Till
 DEG_PER_STRIP,Silage Corn,Partial,No,No Till
-DEG_FOU_WOOD,Silage Corn,Partial,No,
+DEG_FOU_WOOD,Silage Corn,Partial,No,Till
 DEG_DIE_HILL,,No,No,Till
-DEG_DIE_SWC,Sweet Corn,No,No,
+DEG_DIE_SWC,Sweet Corn,No,No,Till
 DEG_YOU_BOCES,,No,Yes,Till
 DEG_YOU_OSHEA,Silage Corn,No,,
 DEG_YOU_JONES,Silage Corn,No,Yes,Till
-DEG_VIL,Grain Corn,Yes,,
+DEG_VIL,Grain Corn,Yes,,Till
 SEA_HOO,Mixed Veg,Yes,Yes,Till
 MIL_HUM,,,,
 ONE_TER,Silage Corn,No,Yes,Till
-ONE_ADO,Silage Corn,No,Yes,
-ONE_STA,Silage Corn,No,Yes,
+ONE_ADO,Silage Corn,No,Yes,No till
+ONE_STA,Silage Corn,No,Yes,Till

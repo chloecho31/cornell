@@ -16,6 +16,8 @@ library(fitdistrplus)
 library(lme4)
 library(Boruta)
 library(sjPlot)
+library(jtools)
+library(interactions)
 
 set.seed(42)
 ```
@@ -29,8 +31,16 @@ adult_features
 
 ```{r}
 
-management <- read.delim("Data/2023_management.csv", sep = ",")
-management
+landscape <- read.delim("Data/count_and_landscape.csv", sep = ",")
+landscape
+  
+```
+
+```{r}
+
+landscape <- landscape %>%
+  mutate_at(c('record_id'), as.factor) 
+landscape
 
 ```
 
@@ -50,6 +60,7 @@ plot(fitdist(adult_features$total_scm,"nbinom"))
 ```
 
 ```{r}
+# Boruta with all features 
 
 boruta <- Boruta(total_scm ~ ., data = na.exclude(adult_features), doTrace = 2, maxRuns = 500)
 print(boruta)
@@ -64,12 +75,6 @@ features <- getSelectedAttributes(boruta, withTentative = F)
 features
 
 ```
-
-'nat_prop_2018_500', 'ag_prop_2019_500', 'nat_prop_2019_500',
-       'semi_nat_prop_2 year_2000', 'wheat_prop_2018_3000',
-       'total_nat_prop_2018_3000', 'nat_prop_2019_3000',
-       'wheat_prop_2019_3000', 'ag_prop_3 year_3000',
-       'total_nat_prop_4 year_3000'
 
 ```{r}
 
@@ -78,12 +83,14 @@ adult_features <- adult_features %>%
   mutate_at(c('card_id', 'record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) %>%
   dplyr::select(-c(X, card_id, n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm)) %>%
   dplyr::select(c(total_scm, min_temp_f_1_week, ave_temp_f_1_week, max_temp_f_1_week, vpd_min_1_week, vpd_max_1_week, rain_inches_1_week, ave_temp_f_2_week, max_temp_f_2_week, vpd_max_2_week))
-```
 
+```
 
 ```{r}
 
-boruta <- Boruta(total_scm ~ ., data = na.exclude(adult_features), doTrace = 2, maxRuns = 500)
+# Run Boruta with just landscape features 
+
+boruta <- Boruta(total_scm ~ ., data = na.exclude(landscape), doTrace = 2, maxRuns = 500)
 print(boruta)
 
 plot(boruta, las = 2, cex.axis = 0.7)
@@ -99,11 +106,7 @@ features
 
 ```{r}
 
-df <- adult_features %>% 
-  dplyr::select(c(total_scm, record_id, features)) %>%
-  dplyr::select(-collection_date)
-
-model <- glmer.nb(total_scm ~ . + (1 | record_id), data = df)
+model <- glmer.nb(total_scm ~ scale(collection_date) + cover_crop + manure + tillage + ave_temp_f_1_week + rain_inches_1_week + vpd_min_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + total_nat_prop_5.year_500 + organic_matter_percent + (1 | record_id), data = adult_features) 
 
 summary(model)
 
@@ -111,20 +114,49 @@ summary(model)
 
 ```{r}
 
-model <- glmer.nb(total_scm ~ scale(collection_date) + longitude + latitude + cover_crop + manure + ave_temp_f_1_week + rain_inches_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + forest_prop_5.year_500 + organic_matter_percent + (1 | record_id), data = adult_features)
+#Take out NS variables and do 2-way interaction for everything 
+
+model <- glmer.nb(total_scm ~ (cover_crop + ave_temp_f_1_week + rain_inches_1_week + organic_matter_percent + corn_prop_5.year_500)^2 + (1 | record_id), data = adult_features)
 
 summary(model)
 
 ```
+
 ```{r}
-#take out NS variables and do 2-way interaction for everything 
 
-model <- glmer.nb(total_scm ~ scale(collection_date) + longitude + latitude + cover_crop + manure + ave_temp_f_1_week + rain_inches_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + wheat_prop_5.year_1000 + organic_matter_percent + (1 | record_id), data = adult_features)
-
-summary(model)
+interact_plot(model, pred = ave_temp_f_1_week, modx = cover_crop)
 
 ```
 
+```{r}
+
+interact_plot(model, pred = ave_temp_f_1_week, modx = rain_inches_1_week)
+
+```
+
+```{r}
+
+interact_plot(model, pred = corn_prop_5.year_500, modx = organic_matter_percent)
+
+```
+
+```{r, fig.width=6, fig.height=6}
+
+sjPlot::plot_model(model, 
+                   show.values=TRUE, show.p=TRUE,
+                   title="Effect on SCM Adults")
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ scale(collection_date) + cover_crop + manure + tillage + ave_temp_f_1_week + rain_inches_1_week + vpd_min_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + total_nat_prop_5.year_500 + organic_matter_percent + corn_prop_2022_500 + ag_prop_2.year_500 + semi_nat_prop_2022_500 + (1 | record_id), data = adult_features) 
+
+summary(model)
+
+
+
+```
 
 ```{r, fig.width=6, fig.height=6}
 
