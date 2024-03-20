@@ -80,8 +80,8 @@ features
 
 adult_features <- adult_features %>%
   mutate(collection_date = as.Date(collection_date, '%Y-%m-%d')) %>%
-  mutate_at(c('card_id', 'record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) %>%
-  dplyr::select(-c(X, card_id, n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm)) %>%
+  mutate_at(c('record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) %>%
+  dplyr::select(-c(n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm)) %>%
   dplyr::select(c(total_scm, min_temp_f_1_week, ave_temp_f_1_week, max_temp_f_1_week, vpd_min_1_week, vpd_max_1_week, rain_inches_1_week, ave_temp_f_2_week, max_temp_f_2_week, vpd_max_2_week))
 
 ```
@@ -106,7 +106,7 @@ features
 
 ```{r}
 
-model <- glmer.nb(total_scm ~ scale(collection_date) + cover_crop + manure + tillage + ave_temp_f_1_week + rain_inches_1_week + vpd_min_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + total_nat_prop_5.year_500 + organic_matter_percent + (1 | record_id), data = adult_features) 
+model <- glmer.nb(total_scm ~ scale(collection_date) + cover_crop + manure + tillage + scale(ave_temp_f_1_week) + scale(rain_inches_1_week) + scale(vpd_min_1_week) + scale(corn_prop_5.year_500) + scale(soybean_prop_5.year_500) + scale(total_nat_prop_5.year_500) + scale(organic_matter_percent) + (1 | record_id), data = adult_features)
 
 summary(model)
 
@@ -140,32 +140,6 @@ interact_plot(model, pred = corn_prop_5.year_500, modx = organic_matter_percent)
 
 ```
 
-```{r, fig.width=6, fig.height=6}
-
-sjPlot::plot_model(model, 
-                   show.values=TRUE, show.p=TRUE,
-                   title="Effect on SCM Adults")
-
-```
-
-```{r}
-
-model <- glmer.nb(total_scm ~ scale(collection_date) + cover_crop + manure + tillage + ave_temp_f_1_week + rain_inches_1_week + vpd_min_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + total_nat_prop_5.year_500 + organic_matter_percent + corn_prop_2022_500 + ag_prop_2.year_500 + semi_nat_prop_2022_500 + (1 | record_id), data = adult_features) 
-
-summary(model)
-
-
-
-```
-
-```{r, fig.width=6, fig.height=6}
-
-sjPlot::plot_model(model, 
-                   show.values=TRUE, show.p=TRUE,
-                   title="Effect on SCM Adults")
-
-```
-
 
 ```{r}
 
@@ -173,6 +147,7 @@ peak_adults <- read.delim("Data/2023_adult_peak_features.csv", sep = ",")
 peak_adults
 
 ```
+
 
 ```{r}
 
@@ -207,22 +182,39 @@ features
 
 ```{r}
 
-model <- glm(total_scm ~ scale(collection_date) + longitude + latitude + cover_crop + manure + ave_temp_f_1_week + rain_inches_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + wheat_prop_5.year_1000 + organic_matter_percent, data = peak_adults, family = gaussian)
+model <- lm(total_scm ~ scale(collection_date) + cover_crop + manure + tillage + ave_temp_f_1_week + rain_inches_1_week + vpd_min_1_week + corn_prop_5.year_500 + soybean_prop_5.year_500 + total_nat_prop_5.year_500 + organic_matter_percent, data = peak_adults, family = gaussian)
 summary(model)
 
 ```
 
 
+```{r}
 
+#Take out NS variables and do 2-way interaction for everything 
 
+model <- lm(total_scm ~ (cover_crop + corn_prop_5.year_500)^2, data = peak_adults)
 
+summary(model)
 
+```
 
+```{r}
 
+#Take out NS variables and do 2-way interaction for everything, including marginally significant terms
 
+model <- lm(total_scm ~ (cover_crop + corn_prop_5.year_500 + vpd_min_1_week + total_nat_prop_5.year_500)^2, data = peak_adults)
 
+summary(model)
 
+```
 
+```{r}
+plot_model(model)
 
+```
 
+```{r}
+plot(peak_adults$corn_prop_5.year_500, peak_adults$total_scm)
+abline(lm(peak_adults$total_scm ~ peak_adults$corn_prop_5.year_500))
 
+```
