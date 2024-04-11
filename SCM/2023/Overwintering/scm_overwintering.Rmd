@@ -1,0 +1,86 @@
+---
+title: "scm_overwintering"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(fitdistrplus)
+library(lme4)
+library(sjPlot)
+library(jtools)
+library(interactions)
+library(janitor)
+library(Boruta)
+
+```
+
+```{r}
+
+overwintering <- read.delim("overwintering_data.csv", sep = ",")
+overwintering
+
+```
+
+
+```{r}
+
+overwintering <- overwintering %>% 
+  mutate_at(c('site', 'landscape_type', 'farm', 'placement'), as.factor) %>%
+  mutate(collection_date = as.Date(collection_date, '%m/%d/%y')) %>%
+  drop_na(total_scm)
+overwintering
+
+```
+
+
+```{r}
+
+landscape <- read.delim("Landscape/Data/scm_overwintering_cdl_500m.csv", sep = ",")
+landscape <- clean_names(landscape)
+landscape <- landscape %>% 
+  mutate_at(c('name'), as.factor)
+landscape <- left_join(x = overwintering[ , c('site', 'total_scm', 'landscape_type', 'farm', 'placement')], y = landscape, by=c('landscape_type', 'farm'))
+landscape <- landscape %>% dplyr::select(c('site', 'total_scm', 'landscape_type', 'farm', 'placement','ag_prop', 'nat_prop', 'semi_nat_prop', 'corn_prop'))
+landscape
+
+```
+
+```{r}
+
+plot(fitdist(overwintering$total_scm,"nbinom"))
+
+```
+
+```{r}
+# Boruta with all features 
+
+boruta <- Boruta(total_scm ~ ., data = na.exclude(landscape), doTrace = 2, maxRuns = 500)
+print(boruta)
+
+plot(boruta, las = 2, cex.axis = 0.7)
+
+```
+
+```{r}
+
+features <- getSelectedAttributes(boruta, withTentative = F)
+features
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ landscape_type * placement * ag_prop + (1 | site), data = landscape)
+summary(model)
+
+```
+
+
+
+
