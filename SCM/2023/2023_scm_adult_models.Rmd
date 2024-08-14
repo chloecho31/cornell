@@ -18,6 +18,9 @@ library(Boruta)
 library(sjPlot)
 library(jtools)
 library(interactions)
+library(DHARMa)
+library(rsq)
+library(effects)
 
 set.seed(42)
 ```
@@ -81,7 +84,7 @@ features
 adult_features <- adult_features %>%
   mutate(collection_date = as.Date(collection_date, '%Y-%m-%d')) %>%
   mutate_at(c('record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) %>%
-  dplyr::select(-c(n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm)) %>%
+  #dplyr::select(-c(n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm)) %>%
   dplyr::select(c(total_scm, min_temp_f_1_week, ave_temp_f_1_week, max_temp_f_1_week, vpd_min_1_week, vpd_max_1_week, rain_inches_1_week, ave_temp_f_2_week, max_temp_f_2_week, vpd_max_2_week))
 
 ```
@@ -106,11 +109,195 @@ features
 
 ```{r}
 
+adult_features <- adult_features %>%
+  mutate(collection_date = as.numeric(collection_date)) %>%
+  mutate(cover_crop = case_when(cover_crop == 'Partial' ~ 'Yes',
+                                cover_crop == 'Yes' ~ 'Yes', 
+                                cover_crop == 'No' ~ 'No'))
+
 model <- glmer.nb(total_scm ~ scale(collection_date) + cover_crop + manure + tillage + scale(ave_temp_f_1_week) + scale(rain_inches_1_week) + scale(vpd_min_1_week) + scale(corn_prop_5.year_500) + scale(soybean_prop_5.year_500) + scale(total_nat_prop_5.year_500) + scale(organic_matter_percent) + (1 | record_id), data = adult_features)
 
 summary(model)
 
 ```
+
+```{r}
+
+rsq.glmm(model,adj=FALSE)
+
+
+simulationOutput <- simulateResiduals(fittedModel = model, plot = F)
+plot(simulationOutput)
+
+```
+
+```{r, fig.width=8,fig.height=4}
+
+model_effects <- effect("ave_temp_f_1_week", model)
+plot(model_effects, main='Average Weekly Temperature (°F) Effect Plot', xlab='Average Weekly Temperature (°F)', ylab=expression(paste("Number of Adult ", italic("D. platura"))), cex=5) 
+
+```
+
+```{r, fig.width=8,fig.height=4}
+
+model_effects <- effect("rain_inches_1_week", model)
+plot(model_effects, main='Total Weekly Rainfall Effect Plot', xlab='Total Weekly Rainfall (Inches)', ylab=expression(paste("Number of Adult ", italic("D. platura"))), cex=5)
+
+```
+
+```{r, fig.width=8,fig.height=4}
+
+model_effects <- effect("corn_prop_5.year_500", model)
+plot(model_effects, main='Proportion of Corn in Landscape Effect Plot', xlab='Proportion Corn in the Landscape (%)', ylab=expression(paste("Number of Adult ", italic("D. platura"))), cex=5)
+
+```
+
+```{r, fig.width=8,fig.height=4}
+
+model_effects <- effect("organic_matter_percent", model)
+plot(model_effects, main='Soil Organic Matter (%) Effect Plot', xlab='Soil Organic Matter (%)', ylab=expression(paste("Number of Adult ", italic("D. platura"))), cex=5)
+
+```
+
+```{r, fig.width=8,fig.height=4}
+
+model_effects <- effect("cover_crop", model)
+plot(model_effects, main='Cover Crop Effect Plot', xlab='Cover Crop', ylab=expression(paste("Number of Adult ", italic("D. platura"))), cex=5)
+
+```
+
+
+```{r, fig.width=16,fig.height=8}
+
+#Visualize significant variables
+
+above_temp <- adult_features %>% filter(ave_temp_f_1_week > 39)
+
+ggplot(above_temp, aes(x=ave_temp_f_1_week, y=total_scm)) + 
+    geom_point(color = 'white') + 
+  geom_smooth(method=lm , color="gold", se=TRUE) + theme(
+  panel.background = element_rect(fill = "black", color = "NA",
+                                size = 2, linetype = "solid"),
+  panel.grid.major = element_line(size = 0.5, linetype = 'solid',
+                                colour = "grey"), 
+  panel.grid.minor = element_line(size = 0.25, linetype = 'solid',
+                                colour = "grey"),
+  ) + 
+  theme(plot.background = element_rect(fill = "black", color='NA'), 
+        title = element_text(size = 45, colour = "white"), 
+        text = element_text(family = 'Avenir'), 
+        axis.text.x = element_text(color='white', size = 30),
+        axis.text.y = element_text(color='white', size = 30)) + 
+  ggtitle(expression(paste("Adult ", italic("D. platura"), " Abundance vs. Average Weekly Temperature"))) +
+  xlab("Average Weekly Temperature (°F)") + 
+  ylab(expression(paste("Number of Adult ", italic("D. platura"))))
+
+```
+
+```{r, fig.width=16,fig.height=8}
+
+#Visualize significant variables
+
+ggplot(adult_features, aes(x=rain_inches_1_week, y=total_scm)) + 
+    geom_point(color = 'white') + 
+  geom_smooth(method=lm , color="gold", se=TRUE) + theme(
+  panel.background = element_rect(fill = "black", color = "NA",
+                                size = 2, linetype = "solid"),
+  panel.grid.major = element_line(size = 0.5, linetype = 'solid',
+                                colour = "grey"), 
+  panel.grid.minor = element_line(size = 0.25, linetype = 'solid',
+                                colour = "grey"),
+  ) + 
+  theme(plot.background = element_rect(fill = "black", color='NA'), 
+        title = element_text(size = 24, colour = "white"), 
+        text = element_text(family = 'Avenir'), 
+        axis.text.x = element_text(color='white', size = 16),
+        axis.text.y = element_text(color='white', size = 16)) + 
+  ggtitle(expression(paste("Adult ", italic("D. platura"), " Abundance vs. Total Weekly Rainfall (Inches)"))) +
+  xlab("Total Weekly Rainfall (Inches)") + 
+  ylab(expression(paste("Number of Adult ", italic("D. platura"))))
+
+```
+
+
+```{r, fig.width=16,fig.height=8}
+
+#Visualize significant variables
+
+ggplot(adult_features, aes(x=corn_prop_5.year_500, y=total_scm)) + 
+    geom_point(color = 'white') + 
+  geom_smooth(method=lm , color="gold", se=TRUE) + theme(
+  panel.background = element_rect(fill = "black", color = "NA",
+                                size = 2, linetype = "solid"),
+  panel.grid.major = element_line(size = 0.5, linetype = 'solid',
+                                colour = "grey"), 
+  panel.grid.minor = element_line(size = 0.25, linetype = 'solid',
+                                colour = "grey"),
+  ) + 
+  theme(plot.background = element_rect(fill = "black", color='NA'), 
+        title = element_text(size = 24, colour = "white"), 
+        text = element_text(family = 'Avenir'), 
+        axis.text.x = element_text(color='white', size = 16),
+        axis.text.y = element_text(color='white', size = 16)) + 
+  ggtitle(expression(paste("Adult ", italic("D. platura"), " Abundance vs. Proportion Corn in the Landscape (%)"))) +
+  xlab("Proportion Corn in the Landscape (%)") + 
+  ylab(expression(paste("Number of Adult ", italic("D. platura"))))
+
+```
+
+
+```{r, fig.width=16,fig.height=8}
+
+#Visualize significant variables
+
+ggplot(adult_features, aes(x=organic_matter_percent, y=total_scm)) + 
+    geom_point(color = 'white') + 
+  geom_smooth(method=lm , color="gold", se=TRUE) + theme(
+  panel.background = element_rect(fill = "black", color = "NA",
+                                size = 2, linetype = "solid"),
+  panel.grid.major = element_line(size = 0.5, linetype = 'solid',
+                                colour = "grey"), 
+  panel.grid.minor = element_line(size = 0.25, linetype = 'solid',
+                                colour = "grey"),
+  ) + 
+  theme(plot.background = element_rect(fill = "black", color='NA'), 
+        title = element_text(size = 24, colour = "white"), 
+        text = element_text(family = 'Avenir'), 
+        axis.text.x = element_text(color='white', size = 16),
+        axis.text.y = element_text(color='white', size = 16)) + 
+  ggtitle(expression(paste("Adult ", italic("D. platura"), " Abundance vs. Soil Organic Matter (%)"))) +
+  xlab("Soil Organic Matter (%)") + 
+  ylab(expression(paste("Number of Adult ", italic("D. platura"))))
+
+```
+
+```{r, fig.width=16,fig.height=8}
+
+#Visualize significant variables
+
+adult_features_mod <- adult_features
+adult_features_mod$cover_crop[adult_features$cover_crop == 'Partial'] <- 'Yes'
+
+ggplot(adult_features_mod, aes(x=cover_crop, y=total_scm)) + 
+    geom_bar(stat = 'identity', fill='grey') + 
+  theme(panel.background = element_rect(fill = "black", color = "NA",
+                                size = 2, linetype = "solid"),
+  panel.grid.major = element_line(size = 0.5, linetype = 'solid',
+                                colour = "grey"), 
+  panel.grid.minor = element_line(size = 0.25, linetype = 'solid',
+                                colour = "grey"),
+  ) + 
+  theme(plot.background = element_rect(fill = "black", color='NA'), 
+        title = element_text(size = 24, colour = "white"), 
+        text = element_text(family = 'Avenir'), 
+        axis.text.x = element_text(color='white', size = 16),
+        axis.text.y = element_text(color='white', size = 16)) + 
+  ggtitle(expression(paste("Adult ", italic("D. platura"), " Abundance vs. Cover Crop"))) +
+  xlab("Cover Crop") + 
+  ylab(expression(paste("Number of Adult ", italic("D. platura"))))
+
+```
+
 
 ```{r}
 

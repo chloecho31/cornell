@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Placemark>
+	<name>DIP_CUR</name>
+	<Point>
+		<coordinates>-76.24405040000001,42.43290495,0</coordinates>
+	</Point>
+</Placemark>
+</kml>
