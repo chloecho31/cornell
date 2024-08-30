@@ -1,0 +1,61 @@
+obs_id,title,local_strategy,landscape,response
+Obs_1,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,simple,pos
+Obs_2,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,simple,pos
+Obs_3,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,simple,pos
+Obs_4,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,simple,pos
+Obs_5,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,simple,pos
+Obs_6,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,simple,pos
+Obs_7,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,simple,pos
+Obs_8,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,simple,pos
+Obs_9,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,simple,pos
+Obs_10,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,simple,pos
+Obs_11,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,simple,pos
+Obs_12,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,simple,pos
+Obs_13,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,simple,ns
+Obs_14,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,simple,ns
+Obs_15,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,simple,ns
+Obs_16,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,simple,ns
+Obs_17,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,simple,ns
+Obs_18,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,simple,ns
+Obs_19,"Size, age and surrounding semi-natural habitats modulate the effectiveness of flower-rich agri-environment schemes to promote pollinator visitation in crop fields",Floral,simple,ns
+Obs_20,"Size, age and surrounding semi-natural habitats modulate the effectiveness of flower-rich agri-environment schemes to promote pollinator visitation in crop fields",Floral,simple,ns
+Obs_21,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,simple,ns
+Obs_22,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,simple,ns
+Obs_23,Ant community potential for pest control in olive groves: Management and landscape effects,Intensity,simple,ns
+Obs_24,Low-intensity management benefits solitary bees in olive groves,Intensity,simple,ns
+Obs_25,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,simple,ns
+Obs_26,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,simple,neg
+Obs_27,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,simple,neg
+Obs_28,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,simple,neg
+Obs_29,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,simple,neg
+Obs_30,Mixed effects of organic farming and landscape complexity on farmland biodiversity and biological control potential across Europe,Intensity,simple,neg
+Obs_31,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,intermediate,pos
+Obs_32,Organic Farming: Biodiversity Impacts Can Depend on Dispersal Characteristics and Landscape Context,Intensity,intermediate,pos
+Obs_33,Does soil biota benefit from organic farming in complex vs. simple landscapes?,Intensity,intermediate,pos
+Obs_34,"Size, age and surrounding semi-natural habitats modulate the effectiveness of flower-rich agri-environment schemes to promote pollinator visitation in crop fields",Floral,intermediate,pos
+Obs_35,Ant community potential for pest control in olive groves: Management and landscape effects,Intensity,intermediate,pos
+Obs_36,Low-intensity management benefits solitary bees in olive groves,Intensity,intermediate,pos
+Obs_37,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,pos
+Obs_38,Annual flower strips support pollinators and potentially enhance red clover seed yield,Floral,intermediate,ns
+Obs_39,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,intermediate,neg
+Obs_40,Agricultural landscape composition affects the development and life expectancy of colonies of Bombus impatiens,Floral,intermediate,neg
+Obs_41,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,neg
+Obs_42,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,neg
+Obs_43,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,neg
+Obs_44,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,neg
+Obs_45,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,complex,pos
+Obs_46,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,complex,pos
+Obs_47,Organic Farming: Biodiversity Impacts Can Depend on Dispersal Characteristics and Landscape Context,Intensity,complex,pos
+Obs_48,Organic Farming: Biodiversity Impacts Can Depend on Dispersal Characteristics and Landscape Context,Intensity,complex,pos
+Obs_49,Agricultural landscape composition affects the development and life expectancy of colonies of Bombus impatiens,Floral,complex,pos
+Obs_50,Agricultural landscape composition affects the development and life expectancy of colonies of Bombus impatiens,Floral,complex,pos
+Obs_51,Annual flower strips support pollinators and potentially enhance red clover seed yield,Floral,complex,pos
+Obs_52,Annual flower strips support pollinators and potentially enhance red clover seed yield,Floral,complex,pos
+Obs_53,Mixed effects of organic farming and landscape complexity on farmland biodiversity and biological control potential across Europe,Intensity,complex,pos
+Obs_54,Does soil biota benefit from organic farming in complex vs. simple landscapes?,Intensity,complex,ns
+Obs_55,Ant community potential for pest control in olive groves: Management and landscape effects,Intensity,complex,ns
+Obs_56,Low-intensity management benefits solitary bees in olive groves,Intensity,complex,ns
+Obs_57,Mixed effects of organic farming and landscape complexity on farmland biodiversity and biological control potential across Europe,Intensity,complex,ns
+Obs_58,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,complex,neg
+Obs_59,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,complex,neg
+Obs_60,Does soil biota benefit from organic farming in complex vs. simple landscapes?,Intensity,complex,neg

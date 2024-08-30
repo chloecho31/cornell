@@ -184,5 +184,147 @@ summary(model)
 
 ```
 
+# Recategorized Interactions
+
+```{r}
+
+recat <- read.delim("lit_review_recat_for_analysis.csv", sep = ",")
+recat <- clean_names(recat)
+head(recat)
+
+```
+
+```{r}
+
+recat$response[recat$response == 'neg'] <- 'np'
+recat$response[recat$response == 'ns'] <- 'np'
+
+```
+
+```{r}
+
+recat <- recat %>% 
+  mutate(local_strategy = as.factor(local_strategy)) %>%
+  mutate(landscape = as.factor(landscape)) %>% 
+  mutate(response = as.factor(response)) %>%
+  mutate(obs_id = as.factor(obs_id))
+head(recat)
+
+```
+
+```{r}
+
+model <- bglmer(response ~ landscape*local_strategy + (1|title) + (1|obs_id), data = recat, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 12)))	
+summary(model)
+
+```
+
+# Recategorized Interactions - TT
+
+```{r}
+
+recat_tt <- read.delim("lit_review_recat_tt_for_analysis.csv", sep = ",")
+recat_tt <- clean_names(recat_tt)
+head(recat_tt)
+
+```
+
+```{r}
+
+recat_tt$response[recat_tt$response == 'neg'] <- 'np'
+recat_tt$response[recat_tt$response == 'ns'] <- 'np'
+
+```
+
+```{r}
+
+recat_tt <- recat_tt %>% 
+  mutate(local_strategy = as.factor(local_strategy)) %>%
+  mutate(landscape = as.factor(landscape)) %>% 
+  mutate(response = as.factor(response)) %>%
+  mutate(obs_id = as.factor(obs_id))
+head(recat_tt)
+
+```
+
+```{r}
+
+model_tt <- bglmer(response ~ landscape*local_strategy + (1|title) + (1|obs_id), data = recat_tt, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 8)))	
+summary(model_tt)
+
+```
+
+# Recategorized Interactions (Europe)
+
+```{r}
+
+recat_europe <- read.delim("lit_review_recat_europe_for_analysis.csv", sep = ",")
+recat_europe <- clean_names(recat_europe)
+head(recat_europe)
+
+```
+
+```{r}
+
+recat_europe$response[recat_europe$response == 'neg'] <- 'np'
+recat_europe$response[recat_europe$response == 'ns'] <- 'np'
+
+```
+
+```{r}
+
+recat_europe <- recat_europe %>% 
+  mutate(local_strategy = as.factor(local_strategy)) %>%
+  mutate(landscape = as.factor(landscape)) %>% 
+  mutate(response = as.factor(response)) %>%
+  mutate(obs_id = as.factor(obs_id))
+head(recat_europe)
+
+```
+
+```{r}
+
+model_europe <- bglmer(response ~ landscape*local_strategy + (1|title) + (1|obs_id), data = recat_europe, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 8)))	
+summary(model_europe)
+
+```
+
+# Recategorized Interactions (North America)
+
+```{r}
+
+recat_na <- read.delim("lit_review_recat_na_for_analysis.csv", sep = ",")
+recat_na <- clean_names(recat_na)
+head(recat_na)
+
+```
+
+```{r}
+
+recat_na$response[recat_na$response == 'neg'] <- 'np'
+recat_na$response[recat_na$response == 'ns'] <- 'np'
+
+```
+
+```{r}
+
+recat_na <- recat_na %>% 
+  mutate(local_strategy = as.factor(local_strategy)) %>%
+  mutate(landscape = as.factor(landscape)) %>% 
+  mutate(response = as.factor(response)) %>%
+  mutate(obs_id = as.factor(obs_id))
+head(recat_na)
+
+```
+
+```{r}
+
+model_na <- bglmer(response ~ landscape*local_strategy + (1|title) + (1|obs_id), data = recat_na, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 12)))	
+summary(model_na)
+
+```
+
+
+
 
 

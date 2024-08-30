@@ -1,4 +1,4 @@
-card_id,data_collector,site,collection_date,n_scm_i_m,n_scm_i_f,n_scm_o_m,n_scm_o_f,n_d_florilega_i,n_d_florilega_o,total_scm,landscape_type,farm,placement
+card_id,data_collector,site,collection_date,n_scm_i_m,n_scm_i_f,n_scm_o_m,n_scm_o_f,n_d_florilega_i,n_d_florilega_o,total_scm,habitat,farm,placement
 2001,Anna DiPaola,DIP_CUR,3/13/23,0,0,0,0,0,0,0,Field,CURC,Out
 2002,Anna DiPaola,DIP_CUR,3/13/23,0,0,0,0,0,0,0,Field,CURC,Out
 2003,Anna DiPaola,POV_DUN,3/13/23,0,0,0,0,0,0,0,Field,Dunlop,Out
