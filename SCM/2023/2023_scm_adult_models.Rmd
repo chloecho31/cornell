@@ -83,9 +83,9 @@ features
 
 adult_features <- adult_features %>%
   mutate(collection_date = as.Date(collection_date, '%Y-%m-%d')) %>%
-  mutate_at(c('record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) %>%
+  mutate_at(c('record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) 
   #dplyr::select(-c(n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm)) %>%
-  dplyr::select(c(total_scm, min_temp_f_1_week, ave_temp_f_1_week, max_temp_f_1_week, vpd_min_1_week, vpd_max_1_week, rain_inches_1_week, ave_temp_f_2_week, max_temp_f_2_week, vpd_max_2_week))
+  #dplyr::select(c(collection_date, total_scm, cover_crop, manure, min_temp_f_1_week, ave_temp_f_1_week, max_temp_f_1_week, vpd_min_1_week, vpd_max_1_week, rain_inches_1_week, ave_temp_f_2_week, max_temp_f_2_week, vpd_max_2_week))
 
 ```
 
@@ -131,35 +131,42 @@ plot(simulationOutput)
 
 ```
 
-```{r, fig.width=8,fig.height=4}
+```{r, fig.width=4,fig.height=4}
+  
+quartzFonts(avenir = c('Avenir Book', 'Avenir Black', 'Avenir Book Oblique', 'Avenir Black Oblique'))
 
 model_effects <- effect("ave_temp_f_1_week", model)
-plot(model_effects, main='Average Weekly Temperature (°F) Effect Plot', xlab='Average Weekly Temperature (°F)', ylab=expression(paste("Number of Adult ", italic("D. platura"))), cex=5) 
+
+
+par(bg = '#ffefb4', family = 'avenir')
+
+plot(model_effects, main='Average Weekly Temperature (°F) Effect Plot', xlab='Average Weekly Temperature (°F)', ylab=expression(paste("Number of Adult ", italic("D. platura")))) 
+
 
 ```
 
-```{r, fig.width=8,fig.height=4}
+```{r, fig.width=4,fig.height=4}
 
 model_effects <- effect("rain_inches_1_week", model)
 plot(model_effects, main='Total Weekly Rainfall Effect Plot', xlab='Total Weekly Rainfall (Inches)', ylab=expression(paste("Number of Adult ", italic("D. platura"))), cex=5)
 
 ```
 
-```{r, fig.width=8,fig.height=4}
+```{r, fig.width=4,fig.height=4}
 
 model_effects <- effect("corn_prop_5.year_500", model)
 plot(model_effects, main='Proportion of Corn in Landscape Effect Plot', xlab='Proportion Corn in the Landscape (%)', ylab=expression(paste("Number of Adult ", italic("D. platura"))), cex=5)
 
 ```
 
-```{r, fig.width=8,fig.height=4}
+```{r, fig.width=4,fig.height=4}
 
 model_effects <- effect("organic_matter_percent", model)
 plot(model_effects, main='Soil Organic Matter (%) Effect Plot', xlab='Soil Organic Matter (%)', ylab=expression(paste("Number of Adult ", italic("D. platura"))), cex=5)
 
 ```
 
-```{r, fig.width=8,fig.height=4}
+```{r, fig.width=4,fig.height=4}
 
 model_effects <- effect("cover_crop", model)
 plot(model_effects, main='Cover Crop Effect Plot', xlab='Cover Crop', ylab=expression(paste("Number of Adult ", italic("D. platura"))), cex=5)

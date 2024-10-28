@@ -16,6 +16,9 @@ library(ordinal)
 library(emmeans)
 library(blme)
 library(lme4)
+library(sjPlot)
+library(sjmisc)
+library(interactions)
 
 ```
 
@@ -288,6 +291,13 @@ model_europe <- bglmer(response ~ landscape*local_strategy + (1|title) + (1|obs_
 summary(model_europe)
 
 ```
+```{r}
+
+cat_plot(model_europe, pred = landscape, modx = local_strategy)
+
+```
+
+
 
 # Recategorized Interactions (North America)
 
