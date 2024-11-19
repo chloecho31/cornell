@@ -19,6 +19,7 @@ library(lme4)
 library(sjPlot)
 library(sjmisc)
 library(interactions)
+library(effects)
 
 ```
 
@@ -287,13 +288,23 @@ head(recat_europe)
 
 ```{r}
 
+aggregate(cbind(recat_europe$local_strategy, recat_europe$landscape), by=list(recat_europe$response), FUN=sum)
+
+recat_europe %>% 
+  group_by(local_strategy, landscape) %>% 
+  summarise_each(Frequency = count())
+
+```
+
+```{r}
+
 model_europe <- bglmer(response ~ landscape*local_strategy + (1|title) + (1|obs_id), data = recat_europe, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 8)))	
 summary(model_europe)
 
 ```
 ```{r}
 
-cat_plot(model_europe, pred = landscape, modx = local_strategy)
+cat_plot(model_europe, pred = local_strategy, modx = landscape)
 
 ```
 
@@ -334,7 +345,13 @@ summary(model_na)
 
 ```
 
+```{r}
 
+recat_europe %>% 
+  group_by(local_strategy, landscape, response) %>%
+  count()
+
+```
 
 
 
