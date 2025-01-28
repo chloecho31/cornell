@@ -1,0 +1,449 @@
+---
+title: "scm_overwintering_analysis"
+author: "Chloe Cho"
+date: '`r Sys.Date()`'
+output: html_document
+---
+
+Major questions we can answer with two-way interaction models: 
+
+- How do management practices impact fly movement between habitats? 
+- How does landscape impact fly movement between habitats? 
+- How does the time of year impact fly movement between habitats? 
+- How does habitat type impact fly movement between habitat edges and centers? 
+
+Importing necessary libraries.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(janitor)
+library(fitdistrplus)
+library(lme4)
+library(sjPlot)
+library(sjmisc)
+library(ggplot2)
+
+```
+
+Read data. 
+
+```{r}
+
+overwintering_23 <- read.delim("2023_overwintering.csv", sep = ",") %>% clean_names()
+overwintering_23
+
+```
+
+List out the names of overwintering sites. 
+
+```{r}
+
+overwintering_sites <- c("EVE_ORC_IN",
+    "EVE_ORC_OUT",
+    "EVE_FIE_IN",
+    "EVE_FIE_OUT",
+    "EVE_FOR_IN",
+    "EVE_FOR_OUT",
+    "KIR_FOR_IN",
+    "KIR_FOR_OUT",
+    "KIR_ORC_IN",
+    "KIR_ORC_OUT",
+    'KIR_FIE_IN',
+    'KIR_FIE_OUT',
+    'GRS_FIE_IN',
+    'GRS_FIE_OUT',
+    'GRS_ORC_OUT',
+    'GRS_ORC_IN',
+    'GRN_FIE_IN',
+    'GRN_FIE_OUT',
+    'GRN_ORC_OUT',
+    'GRN_ORC_IN',
+    'POV_DUN',
+    'DUN_FIE_IN',
+    'DUN_FOR_IN',
+    'DUN_FOR_OUT',
+    'IND_ORC_IN',
+    'IND_ORC_OUT',
+    'IND_ORC_IN_2',
+    'IND_ORC_OUT_2',
+    'OLE_FOR_OUT',
+    'OLE_FOR_IN',
+    'OLE_FIE_OUT',
+    'OLE_FIE_IN',
+    'DIP_CUR', 
+    'CUR_FIE_IN',
+    'DIP_FLE', 
+    'FLE_FIE_IN', 
+    'FLE_FOR_IN',
+    'FLE_FOR_OUT',
+    'DIP_PAT',
+    'PAT_FIE_IN')
+
+```
+
+
+Keep only rows containing overwintering data. Drop rows with no data.
+
+```{r}
+
+overwintering_23 <- overwintering_23[overwintering_23$site %in% overwintering_sites,]
+overwintering_23
+
+```
+
+Convert columns to correct data types. Filter out correct dates. 
+
+```{r}
+
+overwintering_23 <- overwintering_23 %>%
+  mutate_at(c('site'), as.factor) %>%
+  mutate(date = as.Date(date, '%m/%d/%y')) %>%
+  mutate_at(c('n_scm_i_m', 'n_scm_i_f', 'n_scm_o_m', 'n_scm_o_f', 'n_d_florilega_i', 'n_d_florilega_o'), as.numeric) %>%
+  dplyr::select(-c('card_id', 'data_collector')) %>%
+  filter(date > '2023-09-01')
+
+```
+
+Make a column for total SCM, total female SCM, and total male SCM. 
+
+```{r}
+
+overwintering_23$total_scm <- overwintering_23$n_scm_i_f + overwintering_23$n_scm_o_f + overwintering_23$n_scm_i_m + overwintering_23$n_scm_o_m
+overwintering_23$total_m <- overwintering_23$n_scm_i_m + overwintering_23$n_scm_o_m
+overwintering_23$total_f <- overwintering_23$n_scm_i_f + overwintering_23$n_scm_o_f
+
+overwintering_23
+
+```
+
+Create a new column with the farm name. 
+
+```{r}
+
+for (i in 1:nrow(overwintering_23)) {
+  site_value <- overwintering_23[i, 'site']
+  
+  if (grepl('KIR', site_value)) {
+    overwintering_23[i, 'farm'] <- "Kirby"
+  } else if (grepl('EVE', site_value)) {
+    overwintering_23[i, 'farm'] <- "Eve"
+  } else if (grepl('GRN', site_value)) {
+    overwintering_23[i, 'farm'] <- "Geneva_North"
+  } else if (grepl('GRS', site_value)) {
+    overwintering_23[i, 'farm'] <- "Geneva_South"
+  } else if (grepl('DUN', site_value)) {
+    overwintering_23[i, 'farm'] <- "Dunlop"
+  } else if (grepl('OLE', site_value)) {
+    overwintering_23[i, 'farm'] <- "Oles"
+  } else if (grepl('CUR', site_value)) {
+    overwintering_23[i, 'farm'] <- "CURC"
+  } else if (grepl('FLE', site_value)) {
+    overwintering_23[i, 'farm'] <- "Fleming"
+  } else if (grepl('PAT', site_value)) {
+    overwintering_23[i, 'farm'] <- "Patterson"
+  } else if (grepl('IND_ORC_IN_2', site_value)) {
+    overwintering_23[i, 'farm'] <- "Indian_Creek_2"
+  } else if (grepl('IND_ORC_OUT_2', site_value)) {
+    overwintering_23[i, 'farm'] <- "Indian_Creek_2"
+  } else if (grepl('IND_ORC_IN', site_value)) {
+    overwintering_23[i, 'farm'] <- "Indian_Creek_1"
+  } else if (grepl('IND_ORC_OUT', site_value)) {
+    overwintering_23[i, 'farm'] <- "Indian_Creek_1"
+  }
+}
+
+```
+
+Create a column with the habitat type. 
+
+```{r}
+
+for (i in 1:nrow(overwintering_23)) {
+  site_value <- overwintering_23[i, 'site']
+  
+  if (grepl('FIE', site_value)) {
+    overwintering_23[i, 'habitat'] <- "Field"
+  } else if (grepl('ORC', site_value)) {
+    overwintering_23[i, 'habitat'] <- "Orchard"
+  } else if (grepl('FOR', site_value)) {
+    overwintering_23[i, 'habitat'] <- "Forest"
+  }
+  else {
+    overwintering_23[i, 'habitat'] <- "Field"
+  }
+}
+
+```
+
+Create a column with the card location (in/out).
+
+```{r}
+
+for (i in 1:nrow(overwintering_23)) {
+  site_value <- overwintering_23[i, 'site']
+  
+  if (grepl('IN', site_value)) {
+    overwintering_23[i, 'location'] <- "In"
+  } else if (grepl('OUT', site_value)) {
+    overwintering_23[i, 'location'] <- "Out"
+  } 
+  else {
+    overwintering_23[i, 'location'] <- "Out"
+  }
+}
+
+```
+
+Read form data. 
+
+```{r}
+
+form_data <- read.delim("2023_farm_characteristics.csv", sep = ",") %>% clean_names()
+form_data
+
+```
+
+Select rows from form data with overwintering sites. 
+
+```{r}
+
+form_data <- form_data[form_data$field_id %in% overwintering_sites,]
+form_data
+
+```
+
+Data cleaning - pulling out relevant columns, correcting Y/N and Yes/No fields to match. 
+
+```{r}
+
+form_data <-form_data %>%
+  mutate_at(c('field_id', 'tillage', 'planting', 'fertilizer', 'insecticide', 'herbicide', 'manure', 'pruning', 'harvest', 'snow_frost'), as.factor) %>%
+  mutate(date_collected = as.Date(date_collected, '%m/%d/%y')) %>%
+  dplyr::select(c('date_collected', 'field_id', 'tillage', 'planting', 'fertilizer', 'insecticide', 'herbicide', 'manure', 'pruning', 'harvest', 'snow_frost')) %>%
+  filter(date_collected > '2023-09-01') %>%
+  mutate(pruning = case_when(pruning == 'Y' ~ 'Yes',
+                                pruning == 'N' ~ 'No', 
+                             pruning == 'Yes' ~ 'Yes',
+                                pruning == 'No' ~ 'No')) %>%
+  mutate(harvest = case_when(harvest == 'Y' ~ 'Yes',
+                                harvest == 'N' ~ 'No', 
+                             harvest == 'Yes' ~ 'Yes',
+                                harvest == 'No' ~ 'No')) %>%
+  mutate(snow_frost = case_when(snow_frost == 'Y' ~ 'Yes',
+                                snow_frost == 'N' ~ 'No',
+                                snow_frost == 'Yes' ~ 'Yes',
+                                snow_frost == 'No' ~ 'No',
+                                )) 
+
+```
+
+Merge form data and overwintering data into one table.
+
+```{r}
+
+overwintering_23 <- dplyr::left_join(overwintering_23, form_data, by=c('site'='field_id', 'date'='date_collected'))
+
+overwintering_23 <- distinct(overwintering_23, .keep_all=TRUE)
+
+```
+
+Read landscape data. 
+
+```{r}
+
+cdl500 <- read.delim("../Landscape/Data/scm_overwintering_cdl_500m.csv", sep = ",") %>% clean_names()
+cdl500
+
+```
+
+Create a new column with the farm name. 
+
+```{r}
+
+for (i in 1:nrow(cdl500)) {
+  site_value <- cdl500[i, 'name']
+  
+  if (grepl('KIR', site_value)) {
+    cdl500[i, 'farm'] <- "Kirby"
+  } else if (grepl('EVE', site_value)) {
+    cdl500[i, 'farm'] <- "Eve"
+  } else if (grepl('GRN', site_value)) {
+    cdl500[i, 'farm'] <- "Geneva_North"
+  } else if (grepl('GRS', site_value)) {
+    cdl500[i, 'farm'] <- "Geneva_South"
+  } else if (grepl('DUN', site_value)) {
+    cdl500[i, 'farm'] <- "Dunlop"
+  } else if (grepl('OLE', site_value)) {
+    cdl500[i, 'farm'] <- "Oles"
+  } else if (grepl('CUR', site_value)) {
+    cdl500[i, 'farm'] <- "CURC"
+  } else if (grepl('FLE', site_value)) {
+    cdl500[i, 'farm'] <- "Fleming"
+  } else if (grepl('PAT', site_value)) {
+    cdl500[i, 'farm'] <- "Patterson"
+  } else if (grepl('IND_ORC_IN_2', site_value)) {
+    cdl500[i, 'farm'] <- "Indian_Creek_2"
+  } else if (grepl('IND_ORC_OUT_2', site_value)) {
+    cdl500[i, 'farm'] <- "Indian_Creek_2"
+  } else if (grepl('IND_ORC_IN', site_value)) {
+    cdl500[i, 'farm'] <- "Indian_Creek_1"
+  } else if (grepl('IND_ORC_OUT', site_value)) {
+    cdl500[i, 'farm'] <- "Indian_Creek_1"
+  }
+}
+
+```
+
+Create a column with the habitat type. 
+
+```{r}
+
+for (i in 1:nrow(cdl500)) {
+  site_value <- cdl500[i, 'name']
+  
+  if (grepl('FIE', site_value)) {
+    cdl500[i, 'habitat'] <- "Field"
+  } else if (grepl('ORC', site_value)) {
+    cdl500[i, 'habitat'] <- "Orchard"
+  } else if (grepl('FOR', site_value)) {
+    cdl500[i, 'habitat'] <- "Forest"
+  }
+  else {
+    cdl500[i, 'habitat'] <- "Field"
+  }
+}
+
+```
+
+Merge together landscape and overwintering data frames. 
+
+```{r}
+
+overwintering_23 <- dplyr::left_join(overwintering_23, cdl500, by=c('farm'='farm', 'habitat'='habitat'))
+
+overwintering_23 
+
+```
+
+
+```{r}
+
+plot(fitdist(overwintering_23$total_scm,"nbinom"))
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ location * habitat + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+```{r}
+
+plot_model(model, type = "pred", terms = c("habitat", "location"))
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ scale(date) * habitat + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ planting * habitat + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ snow_frost * habitat + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+
+```{r}
+
+model <- glmer.nb(total_scm ~ harvest * habitat + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ tillage * habitat + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ manure * habitat + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+```{r}
+
+plot_model(model, type = "pred", terms = c("habitat", "manure"))
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ ag_prop * habitat + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ corn_prop * habitat + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+```{r}
+
+plot_model(model, type = "pred", terms = c("corn_prop", "habitat"))
+
+ggplot(overwintering_23, aes(corn_prop, total_scm, colour=habitat)) + 
+    geom_point() +
+    geom_smooth(method='lm')
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ nat_prop * habitat + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+```{r}
+
+ggplot(overwintering_23, aes(nat_prop, total_scm, colour=habitat)) + 
+    geom_point() +
+    geom_smooth(method='lm')
+
+```
+
+
