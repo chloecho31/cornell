@@ -1,0 +1,60 @@
+---
+title: "swd_models"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+library(fitdistrplus)
+library(lme4)
+library(Boruta)
+library(sjPlot)
+library(jtools)
+library(interactions)
+library(DHARMa)
+library(rsq)
+library(effects)
+
+```
+
+```{r}
+
+subset_2024 <- read.delim("Data/subset_2024.csv", sep = ",")
+subset_2024
+
+```
+
+```{r}
+
+subset_2024 <- subset_2024 %>%
+  mutate(collection_date = as.Date(collection_date, '%Y-%m-%d')) %>%
+  mutate_at(c('farm', 'name', 'host_plant'), as.factor) 
+
+```
+
+
+```{r}
+
+plot(fitdist(subset_2024$lj_sum,"nbinom"))
+
+```
+
+```{r}
+
+model <- glmer.nb(lj_sum ~ scale(forest_prop) + scale(ag_prop) + scale(collection_date) + (1 | farm), data = subset_2024)
+
+summary(model)
+
+```
+
+
+
+
+
