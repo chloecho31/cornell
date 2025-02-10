@@ -21,8 +21,10 @@ library(interactions)
 library(DHARMa)
 library(rsq)
 library(effects)
+library(pscl)
 
 ```
+Link with hurdle model - https://stats.oarc.ucla.edu/wp-content/uploads/2024/03/Zero_inf_2024_2.html#1 
 
 ```{r}
 
@@ -45,6 +47,23 @@ subset_2024 <- subset_2024 %>%
 plot(fitdist(subset_2024$lj_sum,"nbinom"))
 
 ```
+
+```{r}
+
+m.zeroinf.nb <- zeroinfl(lj_sum ~  scale(forest_prop) + scale(ag_prop) + scale(collection_date) + scale(swd_sum)| #count component
+                           scale(forest_prop) + scale(ag_prop) + scale(collection_date) + scale(swd_sum), # zero component 
+                           data = subset_2024, dist = "negbin")
+
+summary(m.zeroinf.nb)
+
+```
+
+```{r}
+
+
+
+```
+
 
 ```{r}
 

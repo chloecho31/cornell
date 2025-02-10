@@ -446,4 +446,40 @@ ggplot(overwintering_23, aes(nat_prop, total_scm, colour=habitat)) +
 
 ```
 
+```{r}
 
+model <- glmer.nb(total_scm ~ location * nat_prop + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+```{r}
+
+model <- glmer.nb(total_scm ~ location * ag_prop + (1|farm) + (1|habitat:farm), data = overwintering_23)
+
+summary(model)
+
+```
+
+
+
+```{r}
+
+overwintering_23_forest <- overwintering_23 %>%  filter (habitat == "Forest")
+  
+model <- glmer.nb(total_scm ~ location * nat_prop + (1|farm) + (1|habitat:farm), data = overwintering_23_forest)
+
+summary(model)
+
+```
+
+```{r}
+
+overwintering_23_orchard <- overwintering_23 %>%  filter (habitat == "Orchard")
+  
+model <- glmer.nb(total_scm ~ location * nat_prop + (1|farm) + (1|habitat:farm), data = overwintering_23_orchard)
+
+summary(model)
+
+```
