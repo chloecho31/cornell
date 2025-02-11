@@ -22,9 +22,13 @@ library(DHARMa)
 library(rsq)
 library(effects)
 library(pscl)
+library(glmmTMB)
 
 ```
+
 Link with hurdle model - https://stats.oarc.ucla.edu/wp-content/uploads/2024/03/Zero_inf_2024_2.html#1 
+
+Helpful vingette for glmmTMB - https://www.biorxiv.org/content/biorxiv/suppl/2017/05/01/132753.DC1/132753-2.pdf 
 
 ```{r}
 
@@ -37,7 +41,7 @@ subset_2024
 
 subset_2024 <- subset_2024 %>%
   mutate(collection_date = as.Date(collection_date, '%Y-%m-%d')) %>%
-  mutate_at(c('farm', 'name', 'host_plant'), as.factor) 
+  mutate_at(c('farm', 'name', 'host_plant', 'blueberry_family'), as.factor) 
 
 ```
 
@@ -50,19 +54,15 @@ plot(fitdist(subset_2024$lj_sum,"nbinom"))
 
 ```{r}
 
-m.zeroinf.nb <- zeroinfl(lj_sum ~  scale(forest_prop) + scale(ag_prop) + scale(collection_date) + scale(swd_sum)| #count component
-                           scale(forest_prop) + scale(ag_prop) + scale(collection_date) + scale(swd_sum), # zero component 
-                           data = subset_2024, dist = "negbin")
+zinbinom <- glmmTMB(lj_sum ~  scale(forest_prop) + scale(ag_prop) + scale(collection_date) + scale(swd_sum) + blueberry_family + (1|farm),
+                      data=subset_2024,
+                      ziformula= ~.,
+                      family=truncated_nbinom2)
 
-summary(m.zeroinf.nb)
-
-```
-
-```{r}
-
-
+summary(zinbinom)
 
 ```
+
 
 
 ```{r}
