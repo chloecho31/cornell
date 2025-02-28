@@ -23,6 +23,8 @@ library(rsq)
 library(effects)
 library(pscl)
 library(glmmTMB)
+library(emmeans)
+library(car)
 
 ```
 
@@ -54,26 +56,44 @@ plot(fitdist(subset_2024$lj_sum,"nbinom"))
 
 ```{r}
 
-zinbinom <- glmmTMB(lj_sum ~  scale(forest_prop) + scale(ag_prop) + scale(collection_date) + scale(swd_sum) + blueberry_family + (1|farm),
+zinbinom <- glmmTMB(lj_sum ~  forest_prop + collection_date + swd_sum + blueberry_family + (1|name),
                       data=subset_2024,
-                      ziformula= ~.,
-                      family=truncated_nbinom2)
+                      ziformula= ~forest_prop + collection_date + swd_sum + blueberry_family,
+                      family=nbinom2)
 
 summary(zinbinom)
 
 ```
 
-
-
 ```{r}
 
-model <- glmer.nb(lj_sum ~ scale(forest_prop) + scale(ag_prop) + scale(collection_date) + (1 | farm), data = subset_2024)
+zinbinom <- glmmTMB(lj_sum ~  swd_sum + (1|name),
+                      data=subset_2024,
+                      ziformula= ~swd_sum + (1|name),
+                      family=nbinom2)
 
-summary(model)
+summary(zinbinom)
 
 ```
 
+```{r}
 
+m1 <- glmmTMB(presence_lj ~ forest_prop + ag_prop + collection_date + swd_sum + blueberry_family + (1|name), family=binomial, data=subset_2024)
 
+summary(m1)
+
+```
+
+```{r}
+
+present <- subset_2024 %>% filter(presence_lj == 1)
+
+hist(present$lj_sum)
+  
+m2 <- glmmTMB(lj_sum ~ forest_prop + ag_prop + collection_date + swd_sum + blueberry_family + (1|name), family=nbinom2, data=present)
+
+summary(m2)
+
+```
 
 

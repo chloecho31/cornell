@@ -221,8 +221,9 @@ Data cleaning - pulling out relevant columns, correcting Y/N and Yes/No fields t
 
 form_data <-form_data %>%
   mutate_at(c('field_id', 'tillage', 'planting', 'fertilizer', 'insecticide', 'herbicide', 'manure', 'pruning', 'harvest', 'snow_frost'), as.factor) %>%
-  mutate(date_collected = as.Date(date_collected, '%m/%d/%y')) %>%
-  dplyr::select(c('date_collected', 'field_id', 'tillage', 'planting', 'fertilizer', 'insecticide', 'herbicide', 'manure', 'pruning', 'harvest', 'snow_frost')) %>%
+  mutate(date_collected = as.Date(date_collected, '%m/%d/%Y')) %>%
+  dplyr::select(c('date_collected', 'field_id', 'tillage', 'planting', 'fertilizer', 'insecticide', 'herbicide', 'manure', 'pruning', 'harvest', 'snow_frost', 'time_from_corn_harvest', 'time_from_manure_application')) %>%
+  mutate_at(c('time_from_corn_harvest', 'time_from_manure_application'), as.numeric) %>%
   filter(date_collected > '2023-09-01') %>%
   mutate(pruning = case_when(pruning == 'Y' ~ 'Yes',
                                 pruning == 'N' ~ 'No', 
