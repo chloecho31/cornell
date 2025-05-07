@@ -20,7 +20,7 @@ library(sjPlot)
 library(sjmisc)
 library(interactions)
 library(effects)
-
+library(DHARMa)
 ```
 
 # Read Data 
@@ -183,8 +183,15 @@ bglmer(response ~ landscape_cat*local_strategy + (1|title) + (1|obs_id),
 
 ```{r}
 
-model <- bglmer(response ~ landscape_cat*local_strategy + (1|title) + (1|obs_id), data = data_collapsed, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 12)))	
+model <- bglmer(response ~ landscape_cat*local_strategy - 1 + (1|title) + (1|obs_id), data = data_collapsed, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 12)))	
 summary(model)
+
+plot(allEffects(model))
+
+res <- simulateResiduals(model)
+plot(res)
+
+
 
 ```
 
@@ -218,7 +225,7 @@ head(recat)
 
 ```{r}
 
-model <- bglmer(response ~ landscape*local_strategy + (1|title) + (1|obs_id), data = recat, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 12)))	
+model <- bglmer(response ~ landscape*local_strategy - 1 + (1|title) + (1|obs_id), data = recat, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 12)))	
 summary(model)
 
 ```
@@ -298,7 +305,7 @@ recat_europe %>%
 
 ```{r}
 
-model_europe <- bglmer(response ~ landscape*local_strategy + (1|title) + (1|obs_id), data = recat_europe, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 8)))	
+model_europe <- bglmer(response ~ landscape*local_strategy - 1 + (1|title) + (1|obs_id), data = recat_europe, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 8)))	
 summary(model_europe)
 
 ```
@@ -340,7 +347,7 @@ head(recat_na)
 
 ```{r}
 
-model_na <- bglmer(response ~ landscape*local_strategy + (1|title) + (1|obs_id), data = recat_na, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 12)))	
+model_na <- bglmer(response ~ landscape*local_strategy - 1 + (1|title) + (1|obs_id), data = recat_na, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 12)))	
 summary(model_na)
 
 ```
