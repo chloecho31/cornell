@@ -1,0 +1,1587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>2025 Risk Assessment Sites.kml</name>
+	<Schema name="2025 Risk Assessment Site Planning - Site Names" id="S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+		<SimpleField type="string" name="Your_Name"><displayName>&lt;b&gt;Your Name&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_"><displayName>&lt;b&gt;Site ID (First 3 letters of your last name_First 3 letters of farm name - e.g., POV_DUN)&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_"><displayName>&lt;b&gt;Crop (e.g., field corn, soybean, sweet corn, snap bean)&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="Planting_date"><displayName>&lt;b&gt;Planting date&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="double" name="Lat"><displayName>&lt;b&gt;Lat&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="double" name="Long"><displayName>&lt;b&gt;Long&lt;/b&gt;</displayName>
+</SimpleField>
+	</Schema>
+	<Style id="hlightPointStyle">
+		<IconStyle>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>Your Name</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Your_Name]</td></tr>
+  <tr><td><b>Site ID (First 3 letters of your last name_First 3 letters of farm name - e.g., POV_DUN)</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_]</td></tr>
+  <tr><td><b>Crop (e.g., field corn, soybean, sweet corn, snap bean)</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_]</td></tr>
+  <tr><td><b>Planting date</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Planting_date]</td></tr>
+  <tr><td><b>Lat</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Lat]</td></tr>
+  <tr><td><b>Long</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Long]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+	</Style>
+	<Style id="normPointStyle">
+		<IconStyle>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>Your Name</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Your_Name]</td></tr>
+  <tr><td><b>Site ID (First 3 letters of your last name_First 3 letters of farm name - e.g., POV_DUN)</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_]</td></tr>
+  <tr><td><b>Crop (e.g., field corn, soybean, sweet corn, snap bean)</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_]</td></tr>
+  <tr><td><b>Planting date</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Planting_date]</td></tr>
+  <tr><td><b>Lat</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Lat]</td></tr>
+  <tr><td><b>Long</b></td><td>$[2025 Risk Assessment Site Planning - Site Names/Long]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+	</Style>
+	<StyleMap id="pointStyleMap">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#normPointStyle</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#hlightPointStyle</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder id="layer 0">
+		<name>2025 Risk Assessment Sites</name>
+		<Placemark>
+			<name>CER_DEL_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Paul Cerosaletti</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">CER_DEL_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/20/25</SimpleData>
+					<SimpleData name="Lat">42.2073</SimpleData>
+					<SimpleData name="Long">-74.968</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-74.968,42.20727799999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CER_DEL_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Paul Cerosaletti</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">CER_DEL_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/20/25</SimpleData>
+					<SimpleData name="Lat">42.1954</SimpleData>
+					<SimpleData name="Long">-74.9876</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-74.987639,42.19541699999998,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>CHO_GEN</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Hunter/Chloe</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">CHO_GEN</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">5/27/25</SimpleData>
+					<SimpleData name="Lat">42.8754</SimpleData>
+					<SimpleData name="Long">-77.0281</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-77.028139,42.875361,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DEG_DIE</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Janice Degni</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">DEG_DIE</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/4/25</SimpleData>
+					<SimpleData name="Lat">42.6062</SimpleData>
+					<SimpleData name="Long">-76.15</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.15003299999998,42.60621200000002,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DEG_FOU</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Janice Degni</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">DEG_FOU</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/3/25</SimpleData>
+					<SimpleData name="Lat">42.5872</SimpleData>
+					<SimpleData name="Long">-76.2765</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.27649499999998,42.58720900000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DEG_FRI_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Janice Degni</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">DEG_FRI_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/22/25</SimpleData>
+					<SimpleData name="Lat">42.1262</SimpleData>
+					<SimpleData name="Long">-76.4336</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.433639,42.12625000000002,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DEG_FRI_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Janice Degni</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">DEG_FRI_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">5/15/25</SimpleData>
+					<SimpleData name="Lat">42.1256</SimpleData>
+					<SimpleData name="Long">-76.4346</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.43458300000002,42.12555600000003,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DEG_LAF_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Janice Degni</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">DEG_LAF_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/4/25</SimpleData>
+					<SimpleData name="Lat">42.6514</SimpleData>
+					<SimpleData name="Long">-76.4738</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.473778,42.65141700000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DEG_LAF_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Janice Degni</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">DEG_LAF_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">5/28/25</SimpleData>
+					<SimpleData name="Lat">42.6789</SimpleData>
+					<SimpleData name="Long">-76.4626</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.462611,42.67894399999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DEG_PER_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Janice Degni</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">DEG_PER_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/20/25</SimpleData>
+					<SimpleData name="Lat">42.7274</SimpleData>
+					<SimpleData name="Long">-76.252</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.252028,42.72744399999998,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DEG_PER_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Janice Degni</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">DEG_PER_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">5/12/25</SimpleData>
+					<SimpleData name="Lat">42.6728</SimpleData>
+					<SimpleData name="Long">-76.2223</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.22233300000001,42.672806,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>DEG_VIL</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Janice Degni</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">DEG_VIL</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/12/25</SimpleData>
+					<SimpleData name="Lat">42.6954</SimpleData>
+					<SimpleData name="Long">-76.1717</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.171722,42.69536099999998,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>HUN_REE</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Hunter</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">HUN_REE</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">6/4/25</SimpleData>
+					<SimpleData name="Lat">43.8987</SimpleData>
+					<SimpleData name="Long">-76.0152</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.01524999999999,43.898667,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KUH_COL</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Michaela Kuhn</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">KUH_COL</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/5/25</SimpleData>
+					<SimpleData name="Lat">43.2865</SimpleData>
+					<SimpleData name="Long">-75.5186</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-75.51858300000001,43.286472,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LET_MAC</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Jodi Letham</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">LET_MAC</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/17/25</SimpleData>
+					<SimpleData name="Lat">42.8608</SimpleData>
+					<SimpleData name="Long">-78.2529</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-78.25291699999998,42.86075,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LET_STE_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Jodi Letham</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">LET_STE_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/8/25</SimpleData>
+					<SimpleData name="Lat">43.0255</SimpleData>
+					<SimpleData name="Long">-77.8821</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-77.882132,43.02546000000002,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LET_STE_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Jodi Letham</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">LET_STE_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/8/25</SimpleData>
+					<SimpleData name="Lat">43.0255</SimpleData>
+					<SimpleData name="Long">-77.8844</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-77.88443599999998,43.02548700000002,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LET_VER</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Jodi Letham</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">LET_VER</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/15/25</SimpleData>
+					<SimpleData name="Lat">43.2147</SimpleData>
+					<SimpleData name="Long">-78.5547</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-78.554722,43.21466700000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LET_WAT</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Jodi Letham</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">LET_WAT</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/12/25</SimpleData>
+					<SimpleData name="Lat">42.943</SimpleData>
+					<SimpleData name="Long">-77.706</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-77.70602799999999,42.94302799999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MIL_BAR_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Katelyn Miller</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">MIL_BAR_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">5/30/25</SimpleData>
+					<SimpleData name="Lat">42.05</SimpleData>
+					<SimpleData name="Long">-77.1375</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-77.137467,42.05000000000002,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MIL_BAR_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Katelyn Miller</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">MIL_BAR_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">6/19/25</SimpleData>
+					<SimpleData name="Lat">42.0519</SimpleData>
+					<SimpleData name="Long">-77.0617</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-77.061667,42.05194399999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MIL_COB</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Katelyn Miller</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">MIL_COB</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">5/8/25</SimpleData>
+					<SimpleData name="Lat">42.4614</SimpleData>
+					<SimpleData name="Long">-78.7122</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-78.712222,42.4613889,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MIL_CRO_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Katelyn Miller</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">MIL_CRO_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/4/25</SimpleData>
+					<SimpleData name="Lat">42.3617</SimpleData>
+					<SimpleData name="Long">-79.1719</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-79.17193999999999,42.36166660000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MIL_CRO_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Katelyn Miller</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">MIL_CRO_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/4/25</SimpleData>
+					<SimpleData name="Lat">42.3747</SimpleData>
+					<SimpleData name="Long">-79.1458</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-79.14579999999999,42.37469999999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MIL_TEL</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Katelyn Miller</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">MIL_TEL</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/11/25</SimpleData>
+					<SimpleData name="Lat">42.3294</SimpleData>
+					<SimpleData name="Long">-78.7161</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-78.71611099999998,42.32944499999998,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MIL_ZIT_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Katelyn Miller</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">MIL_ZIT_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">6/23/25</SimpleData>
+					<SimpleData name="Lat">42.6886</SimpleData>
+					<SimpleData name="Long">-78.8081</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-78.80805556,42.68861111,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MIL_ZIT_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Katelyn Miller</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">MIL_ZIT_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/3/25</SimpleData>
+					<SimpleData name="Lat">42.6797</SimpleData>
+					<SimpleData name="Long">-78.8072</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-78.807222,42.67972200000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MIL_ZIT_3</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Katelyn Miller</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">MIL_ZIT_3</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/23/25</SimpleData>
+					<SimpleData name="Lat">42.6886</SimpleData>
+					<SimpleData name="Long">-78.8081</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-78.80805556,42.68861111,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SMI_ARN_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Erik Smith</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">SMI_ARN_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/13/25</SimpleData>
+					<SimpleData name="Lat">42.983</SimpleData>
+					<SimpleData name="Long">-74.0357</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-74.035696,42.982978,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SMI_ARN_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Erik Smith</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">SMI_ARN_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">5/28/25</SimpleData>
+					<SimpleData name="Lat">42.9702</SimpleData>
+					<SimpleData name="Long">-74.0259</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-74.025944,42.97022199999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SMI_BUR</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Erik Smith</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">SMI_BUR</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/27/25</SimpleData>
+					<SimpleData name="Lat">43.2314</SimpleData>
+					<SimpleData name="Long">-75.0354</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-75.03544399999998,43.23144400000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SMI_COB</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Erik Smith</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">SMI_COB</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/14/25</SimpleData>
+					<SimpleData name="Lat">42.6638</SimpleData>
+					<SimpleData name="Long">-74.5153</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-74.515306,42.66380599999998,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SMI_CON_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Erik Smith</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">SMI_CON_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">6/25/25</SimpleData>
+					<SimpleData name="Lat">42.8264</SimpleData>
+					<SimpleData name="Long">-74.5775</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-74.5775,42.826389,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SMI_CON_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Erik Smith</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">SMI_CON_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/20/25</SimpleData>
+					<SimpleData name="Lat">42.8393</SimpleData>
+					<SimpleData name="Long">-74.6135</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-74.613545,42.839331,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SMI_DOU</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Erik Smith</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">SMI_DOU</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">5/13/25</SimpleData>
+					<SimpleData name="Lat">43.053</SimpleData>
+					<SimpleData name="Long">-74.8352</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-74.835235,43.05302399999998,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SMI_HOF_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Erik Smith</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">SMI_HOF_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/19/25</SimpleData>
+					<SimpleData name="Lat">42.3444</SimpleData>
+					<SimpleData name="Long">-75.7133</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-75.71333300000001,42.344444,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SMI_HOF_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Erik Smith</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">SMI_HOF_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">6/21/25</SimpleData>
+					<SimpleData name="Lat">42.751</SimpleData>
+					<SimpleData name="Long">-74.571</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-74.570972,42.75100000000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SMI_LAT</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Erik Smith</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">SMI_LAT</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/5/25</SimpleData>
+					<SimpleData name="Lat">42.7094</SimpleData>
+					<SimpleData name="Long">-75.5684</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-75.56841699999998,42.70936099999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SMI_MCC</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Erik Smith</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">SMI_MCC</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/3/25</SimpleData>
+					<SimpleData name="Lat">43.1153</SimpleData>
+					<SimpleData name="Long">-74.8422</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-74.84219400000001,43.11527799999998,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>STA_BLO</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Stanyard</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">STA_BLO</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/8/25</SimpleData>
+					<SimpleData name="Lat">42.8921</SimpleData>
+					<SimpleData name="Long">-77.5712</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-77.571167,42.89213899999997,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>STA_FRE</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Stanyard</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">STA_FRE</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">6/4/25</SimpleData>
+					<SimpleData name="Lat">42.8069</SimpleData>
+					<SimpleData name="Long">-76.8167</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.816667,42.80686099999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>STA_KRE</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Stanyard</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">STA_KRE</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/4/25</SimpleData>
+					<SimpleData name="Lat">43.0494</SimpleData>
+					<SimpleData name="Long">-77.5666</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-77.56655599999999,43.04938899999998,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>STA_MAC</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Stanyard</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">STA_MAC</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/17/25</SimpleData>
+					<SimpleData name="Lat">42.7642</SimpleData>
+					<SimpleData name="Long">-77.7358</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-77.73577799999998,42.76416699999997,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>STA_MAR</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Stanyard</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">STA_MAR</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">6/3/25</SimpleData>
+					<SimpleData name="Lat">42.7282</SimpleData>
+					<SimpleData name="Long">-77.0414</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-77.04136099999999,42.72822200000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>STA_REE_1</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Stanyard</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">STA_REE_1</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">5/28/25</SimpleData>
+					<SimpleData name="Lat">43.1297</SimpleData>
+					<SimpleData name="Long">-76.7792</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.779167,43.129694,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>STA_REE_2</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Stanyard</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">STA_REE_2</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Soybean</SimpleData>
+					<SimpleData name="Planting_date">5/28/25</SimpleData>
+					<SimpleData name="Lat">43.097</SimpleData>
+					<SimpleData name="Long">-76.7868</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.786833,43.09697200000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>STA_STA</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Stanyard</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">STA_STA</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/20/25</SimpleData>
+					<SimpleData name="Lat">43.1239</SimpleData>
+					<SimpleData name="Long">-78.2148</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-78.214778,43.12386099999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>STA_WIL</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Stanyard</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">STA_WIL</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/12/25</SimpleData>
+					<SimpleData name="Lat">43.0647</SimpleData>
+					<SimpleData name="Long">-76.8254</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-76.825444,43.06466699999998,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>STA_WOO</name>
+			<styleUrl>#pointStyleMap</styleUrl>
+			<Style id="inline">
+				<IconStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</IconStyle>
+				<LineStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</LineStyle>
+				<PolyStyle>
+					<color>ffffffff</color>
+					<colorMode>normal</colorMode>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="#S_2025_Risk_Assessment_Site_Planning___Site_Names_SSSSDD">
+					<SimpleData name="Your_Name">Mike Stanyard</SimpleData>
+					<SimpleData name="Site_ID__First_3_letters_of_your_last_name_First_3_letters_of_farm_name___e_g___POV_DUN_">STA_WOO</SimpleData>
+					<SimpleData name="Crop__e_g___field_corn__soybean__sweet_corn__snap_bean_">Field Corn</SimpleData>
+					<SimpleData name="Planting_date">5/15/25</SimpleData>
+					<SimpleData name="Lat">43.3127</SimpleData>
+					<SimpleData name="Long">-78.3658</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-78.36583299999999,43.312722,0</coordinates>
+			</Point>
+		</Placemark>
+		<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.6.10201"></atom:link>
+	</Folder>
+</Document>
+</kml>

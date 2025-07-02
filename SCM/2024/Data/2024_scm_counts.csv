@@ -183,18 +183,18 @@
 24_3050,Janice Degni,DEG_PER_2,uncertain,10/21/24,0,0,1,1,0,0,EK
 24_3068,Janice Degni,DEG_PER_2,uncertain,11/25/24,0,1,0,0,0,0,EAJ
 24_3069,Janice Degni,DEG_PER_2,uncertain,11/25/24,,,,,,,
+24_1160,Janice Degni,DEG_PER_STRIP,3/5/24,3/12/24,0,2,0,0,0,0,SN
+24_1164,Janice Degni,DEG_PER_STRIP,3/12/24,3/19/24,0,0,0,0,0,0,SN
+24_1168,Janice Degni,DEG_PER_STRIP,3/19/24,3/25/24,0,0,0,0,0,0,TW
 24_1370,Janice Degni,DEG_PER_STRIP,3/25/24,4/1/24,3,1,1,0,0,0,SN
+24_2069,Janice Degni,DEG_PER_STRIP,4/1/24,4/8/24,,,,,,,
+24_2070,Janice Degni,DEG_PER_STRIP,4/1/24,4/8/24,0,3,2,1,0,0,AM
 24_1540,Janice Degni ,DEG_PER_STRIP,,4/15/24,11,4,40,19,0,0,AM
 24_1541,Janice Degni ,DEG_PER_STRIP,,4/15/24,,,,,,,
 24_1548,Janice Degni ,DEG_PER_STRIP,4/15/24,4/22/24,23,14,50,24,0,3,EW
 24_1549,Janice Degni ,DEG_PER_STRIP,4/15/24,4/22/24,,,,,,,
 24_1556,Janice Degni ,DEG_PER_STRIP,4/22/24,4/29/24,54,13,41,20,0,0,EW
 24_1557,Janice Degni ,DEG_PER_STRIP,4/22/24,4/29/24,,,,,,,
-24_1160,Janice Degni,DEG_PER_STRIP,3/5/24,3/12/24,0,2,0,0,0,0,SN
-24_1164,Janice Degni,DEG_PER_STRIP,3/12/24,3/19/24,0,0,0,0,0,0,SN
-24_1168,Janice Degni,DEG_PER_STRIP,3/19/24,3/25/24,0,0,0,0,0,0,TW
-24_2069,Janice Degni,DEG_PER_STRIP,4/1/24,4/8/24,,,,,,,
-24_2070,Janice Degni,DEG_PER_STRIP,4/1/24,4/8/24,0,3,2,1,0,0,AM
 24_1942,Janice Degni,DEG_PER_STRIP,4/29/24,5/6/24,10,9,19,27,0,0,AM
 24_1943,Janice Degni,DEG_PER_STRIP,4/29/24,5/6/24,,,,,,,
 24_1159,Janice Degni,DEG_VIL,3/5/24,3/12/24,1,2,0,0,0,0,SN
@@ -790,8 +790,8 @@
 24_1719,Alexa Stratton,IND_ORC_OUT_2,4/22/24,4/29/24,18,5,10,13,0,1,AM
 24_1741,Alexa Stratton,IND_ORC_OUT_2,4/29/24,5/7/24,4,0,7,2,0,1,SN
 24_1821,Alexa Stratton,IND_ORC_OUT_2,5/7/24,5/13/24,32,6,21,3,0,0,SN
-24_1131,Katelyn Miller,KAT_HAB_3,3/4/24,3/11/23,,,,,,,
-24_1132,Katelyn Miller,KAT_HAB_3,3/4/24,3/11/23,0,0,0,0,0,0,SN
+24_1131,Katelyn Miller,KAT_HAB_3,3/4/24,3/11/24,,,,,,,
+24_1132,Katelyn Miller,KAT_HAB_3,3/4/24,3/11/24,0,0,0,0,0,0,SN
 24_1139,Katelyn Miller,KAT_HAB_3,3/11/23,3/19/24,,,,,,,
 24_1140,Katelyn Miller,KAT_HAB_3,3/11/23,3/19/24,1,0,0,1,0,0,SN
 24_1147,Katelyn Miller,KAT_HAB_3,3/19/24,3/25/24,,,,,,,
@@ -866,8 +866,8 @@
 24_2883,Katelyn Miller,KAT_HAB_3,11/12/24,11/18/24,,,,,,,
 24_2948,Katelyn Miller,KAT_HAB_3,11/18/24,11/25/24,1,1,1,3,0,0,EW
 24_2949,Katelyn Miller,KAT_HAB_3,11/18/24,11/25/24,,,,,,,
-24_1133,Katelyn Miller,KAT_HAB_4,3/4/24,3/11/23,,,,,,,
-24_1134,Katelyn Miller,KAT_HAB_4,3/4/24,3/11/23,2,1,0,1,0,0,SN
+24_1133,Katelyn Miller,KAT_HAB_4,3/4/24,3/11/24,,,,,,,
+24_1134,Katelyn Miller,KAT_HAB_4,3/4/24,3/11/24,2,1,0,1,0,0,SN
 24_1141,Katelyn Miller,KAT_HAB_4,3/11/23,3/19/24,,,,,,,
 24_1142,Katelyn Miller,KAT_HAB_4,3/11/23,3/19/24,8,2,4,1,0,0,SN
 24_1149,Katelyn Miller,KAT_HAB_4,3/19/24,3/25/24,,,,,,,
@@ -941,8 +941,8 @@
 24_2885,Katelyn Miller,KAT_HAB_4,11/12/24,11/18/24,,,,,,,
 24_2950,Katelyn Miller,KAT_HAB_4,11/18/24,11/25/24,0,1,1,2,0,0,EW
 24_2951,Katelyn Miller,KAT_HAB_4,11/18/24,11/25/24,,,,,,,
-24_1127,Katelyn Miller,KAT_JEF,3/4/24,3/11/23,,,,,,,
-24_1128,Katelyn Miller,KAT_JEF,3/4/24,3/11/23,3,0,0,1,0,0,SC
+24_1127,Katelyn Miller,KAT_JEF,3/4/24,3/11/24,,,,,,,
+24_1128,Katelyn Miller,KAT_JEF,3/4/24,3/11/24,3,0,0,1,0,0,SC
 24_1135,Katelyn Miller,KAT_JEF,3/11/23,3/19/24,,,,,,,
 24_1136,Katelyn Miller,KAT_JEF,3/11/23,3/19/24,0,1,0,0,0,0,SN
 24_1143,Katelyn Miller,KAT_JEF,3/19/24,3/25/24,,,,,,,
@@ -1017,8 +1017,8 @@
 24_2887,Katelyn Miller,KAT_JEF,11/12/24,11/18/24,,,,,,,
 24_2944,Katelyn Miller,KAT_JEF,11/18/24,11/25/24,6,0,1,1,0,0,EK
 24_2945,Katelyn Miller,KAT_JEF,11/18/24,11/25/24,,,,,,,
-24_1129,Katelyn Miller,KAT_JEF_2,3/4/24,3/11/23,,,,,,,
-24_1130,Katelyn Miller,KAT_JEF_2,3/4/24,3/11/23,2,2,0,0,0,0,SN
+24_1129,Katelyn Miller,KAT_JEF_2,3/4/24,3/11/24,,,,,,,
+24_1130,Katelyn Miller,KAT_JEF_2,3/4/24,3/11/24,2,2,0,0,0,0,SN
 24_1137,Katelyn Miller,KAT_JEF_2,3/11/23,3/19/24,,,,,,,
 24_1138,Katelyn Miller,KAT_JEF_2,3/11/23,3/19/24,0,1,0,0,0,0,SN
 24_1145,Katelyn Miller,KAT_JEF_2,3/19/24,3/25/24,,,,,,,
