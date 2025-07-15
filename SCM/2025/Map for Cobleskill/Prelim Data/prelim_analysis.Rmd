@@ -1,0 +1,73 @@
+---
+title: "prelim_analysis"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+library(fitdistrplus)
+library(lme4)
+library(DHARMa)
+library(lmerTest)
+
+```
+
+```{r setup, include=FALSE}
+
+stand <- read.delim("Data/stand_loss.csv", sep = ",")
+stand
+
+```
+
+```{r}
+
+stand <- stand %>%
+  mutate(Date = as.Date(Date, '%m/%d/%y')) %>%
+  mutate_at(c('Crop', 'Treatment'), as.factor) 
+
+```
+
+```{r}
+
+corn_stand <- stand %>% filter(Crop == 'Field corn')
+corn_stand
+
+soy_stand <- stand %>% filter(Crop == 'Soybean')
+soy_stand
+
+```
+
+```{r}
+
+plot(fitdist(corn_stand$Stand.count,"pois"))
+
+hist((corn_stand$Stand.count))
+hist((soy_stand$Stand.count))
+
+
+
+```
+
+```{r}
+
+m1 <- lmer(Stand.count ~ Treatment + Date + (1|Field.ID), data = soy_stand)
+summary(m1)
+
+```
+
+```{r}
+
+m2 <- lmer(Stand.count ~ Treatment + Date + (1|Field.ID), data = corn_stand)
+summary(m2)
+
+```
+
+
+
