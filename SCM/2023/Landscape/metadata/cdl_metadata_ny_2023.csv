@@ -1,0 +1,77 @@
+﻿cdl_number,cdl_classification
+1,Corn
+4,Sorghum
+5,Soybeans
+6,Sunflower
+12,Sweet Corn
+13,Pop or Orn Corn
+21,Barley
+23,Spring Wheat
+24,Winter Wheat
+25,Other Small Grains
+26,Dbl Crop WinWht/Soybeans
+27,Rye
+28,Oats
+29,Millet
+30,Speltz
+35,Mustard
+36,Alfalfa
+37,Other Hay/Non Alfalfa
+39,Buckwheat
+41,Sugarbeets
+42,Dry Beans
+43,Potatoes
+44,Other Crops
+47,Misc Vegs & Fruits
+49,Onions
+50,Cucumbers
+53,Peas
+54,Tomatoes
+56,Hops
+57,Herbs
+58,Clover/Wildflowers
+59,Sod/Grass Seed
+61,Fallow/Idle Cropland
+66,Cherries
+67,Peaches
+68,Apples
+69,Grapes
+70,Christmas Trees
+71,Other Tree Crops
+77,Pears
+92,Aquaculture
+111,Open Water
+121,Developed/Open Space
+122,Developed/Low Intensity
+123,Developed/Med Intensity
+124,Developed/High Intensity
+131,Barren
+141,Deciduous Forest
+142,Evergreen Forest
+143,Mixed Forest
+152,Shrubland
+176,Grassland/Pasture
+190,Woody Wetlands
+195,Herbaceous Wetlands
+205,Triticale
+206,Carrots
+208,Garlic
+214,Broccoli
+216,Peppers
+219,Greens
+220,Plums
+221,Strawberries
+222,Squash
+225,Dbl Crop WinWht/Corn
+227,Lettuce
+228,Dbl Crop Triticale/Corn
+229,Pumpkins
+236,Dbl Crop WinWht/Sorghum
+237,Dbl Crop Barley/Corn
+240,Dbl Crop Soybeans/Oats
+242,Blueberries
+243,Cabbage
+244,Cauliflower
+246,Radishes
+247,Turnips
+249,Gourds

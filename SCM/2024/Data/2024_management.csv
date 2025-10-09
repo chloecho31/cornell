@@ -1,0 +1,45 @@
+﻿Field ID,Previous Crop,Cover Crop,Manure,Tillage,Planting Date,Year
+DEG_DIE_HILL,Grain Corn,Yes,No,No,,2024
+DEG_FOU_WOOD,Silage Corn,Yes,Yes,No,5/21/24,2024
+DEG_PER_STRIP,Grain Corn,Yes,No,No,,2024
+DEG_VIL_2,Grain Corn,No,No,Yes,5/9/24,2024
+DIP_CUR,Silage Corn,No,Yes,Yes,5/8/24,2024
+DIP_FLE,Silage Corn,No,No,No,6/5/24,2024
+DIP_PAT,Silage Corn,Yes,Yes,No,5/28/24,2024
+GAB_ALL,Silage Corn,Yes,Yes,No,,2024
+GAB_HEN,Grain Corn,No,No,Yes,4/28/24,2024
+GAB_STE,Silage Corn,No,Yes,Yes,,2024
+HUN_PLE_9,Grain Corn,Yes,No,No,,2024
+KAT_HAB_3,Soybean,No,No,Yes,5/23/24,2024
+KAT_HAB_4,Silage Corn,Yes,Yes,Yes,6/4/24,2024
+KAT_JEF,Silage Corn,No,Yes,Yes,5/26/24,2024
+KAT_JEF_2,Silage Corn,No,Yes,Yes,5/24/24,2024
+KAT_MAH,Grain Corn,No,No,Yes,5/15/24,2024
+KAT_SAU,Silage Corn,No,No,Yes,6/3/24,2024
+KAT_SAU_3,Sorghum-Sudan,No,No,Yes,6/2/24,2024
+KAT_TEE,Silage Corn,No,Yes,No,5/7/24,2024
+KAT_TEE_3,Grain Corn,No,Yes,Yes,5/23/24,2024
+POV_DUN,Silage Corn,No,No,No,,2024
+SEA_HOO,Sweet Corn,Yes,Yes,Yes,5/11/24,2024
+SMI_CAN_2,Silage Corn,No,Yes,Yes,5/14/24,2024
+SMI_COB_3,Silage Corn,Yes,No,No,5/21/24,2024
+SMI_DOU_3,Soybean,No,Yes,Yes,,2024
+SMI_JOH,Silage Corn,No,Yes,Yes,,2024
+SMI_KEL_1,Sorghum-Sudan,Yes,Yes,Yes,,2024
+SMI_LAT,Silage Corn,Yes,Yes,Yes,5/3/24,2024
+SMI_LAT_2,Silage Corn,Yes,Yes,Yes,5/2/24,2024
+SMI_MCC_1,Soybean,No,No,No,,2024
+STA_AYR,Soybean,No,No,Yes,,2024
+STA_BRA,Ryegrass ,No,No,No,,2024
+STA_FRE,Grain Corn,No,No,No,,2024
+STA_HEM,Grain Corn,No,No,No,,2024
+STA_MAC,Soybean,Yes,No,No,,2024
+STA_NOB,Silage Corn,No,No,No,,2024
+STA_PAN,Grain Corn,Yes,No,Yes,5/20/24,2024
+STA_SWE,Grain Corn,No,No,Yes,,2024
+STA_THO,Grain Corn,No,No,No,,2024
+STA_WAT,Grain Corn,Yes,Yes,No,,2024
+WIS_COO,Silage Corn,No,Yes,No,,2024
+WIS_COO_2,Silage Corn,No,Yes,No,,2024
+WIS_KEN,"Field Corn, Tomato, Squash",Yes,No,Yes,,2024
+ZUE_REE,Wheat,Yes,No,Yes,,2024
