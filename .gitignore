@@ -8,3 +8,5 @@ Miniconda3.sh
 *.TIF
 *.TIF.ovr
 *.tif.ovr
+*.ai
+*.png
