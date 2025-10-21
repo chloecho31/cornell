@@ -1,5 +1,5 @@
 ---
-title: "2023_scm_wire_mesh_models"
+title: "2023_2024_scm_adult_models"
 author: "Chloe Cho"
 date: "`r Sys.Date()`"
 output: html_document
@@ -21,56 +21,62 @@ library(interactions)
 library(DHARMa)
 library(rsq)
 library(effects)
+library(readxl)
+library(MuMIn)
 
 set.seed(42)
 ```
 
 ```{r}
 
-adult_features <- read.delim("Data/2023_adult_features.csv", sep = ",")
+adult_features <- read.delim("all_features_2023_2024_scm_adults.csv", sep = ",")
 adult_features
 
 ```
 
 ```{r}
 
-landscape <- read.delim("Data/count_and_landscape.csv", sep = ",")
-landscape
-  
-```
-
-```{r}
-
-landscape <- landscape %>%
-  mutate_at(c('record_id'), as.factor) 
-landscape
-
-```
-
-```{r}
-
 adult_features <- adult_features %>%
-  mutate(collection_date = as.Date(collection_date, '%Y-%m-%d')) %>%
-  mutate_at(c('card_id', 'record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) %>%
-  dplyr::select(-c(X, card_id, n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm))
+  mutate(date_collected = as.Date(date_collected, '%Y-%m-%d')) %>%
+  mutate(planting_date = as.Date(planting_date, '%Y-%m-%d')) %>%
+  mutate_at(c('field_id', "previous_crop", "cover_crop", "manure", "tillage"), as.factor) %>% 
+  dplyr::select(-c('card_id', 'X', 'total_scm', 'scm_male', 'scm_female', 'florilega', 'season_total', 'male_total', 'female_total', 'weekly_prop', 
+            'weekly_prop_f', 'weekly_prop_m', 'season_prop'))
+adult_features
 
 ```
 
 ```{r}
 
-plot(fitdist(adult_features$total_scm,"nbinom"))
+adult_features_selected <- adult_features %>%
+  mutate(date_collected = as.Date(date_collected, '%Y-%m-%d')) %>%
+  mutate_at(c('field_id', "previous_crop", "cover_crop", "manure", "tillage"), as.factor) %>% 
+  dplyr::select(-c('prop_corn_previous_year_500m',
+       'prop_ag_previous_year_500m', 'prop_nat_previous_year_500m','prop_corn_current_year_500m',
+       'prop_ag_current_year_500m', 'prop_nat_current_year_500m'))
+adult_features_selected
+
+```
+
+```{r}
+
+plot(fitdist(adult_features$total_flies,"nbinom"))
 
 ```
 
 ```{r}
 # Boruta with all features 
 
-boruta <- Boruta(total_scm ~ ., data = na.exclude(adult_features), doTrace = 2, maxRuns = 500)
+boruta <- Boruta(total_flies ~ ., data = na.exclude(adult_features), doTrace = 2, maxRuns = 500)
 print(boruta)
 
-plot(boruta, las = 2, cex.axis = 0.7)
+png("boruta.png", width = 8, height = 6, units = "in", res = 300)
+plot(boruta, las = 2, cex.axis = 0.35)
 
 ```
+
+Dispersal (~1km/day before oviposition) - https://onlinelibrary.wiley.com/doi/10.1111/j.1570-7458.2012.01271.x
+https://www.researchgate.net/publication/230003215_Dispersal_of_cabbage_root_fly
 
 ```{r}
 
@@ -79,30 +85,20 @@ features
 
 ```
 
-```{r}
-
-adult_features <- adult_features %>%
-  mutate(collection_date = as.Date(collection_date, '%Y-%m-%d')) %>%
-  mutate_at(c('record_id', 'data_collector', "previous_crop", "cover_crop", "manure", "tillage", "ny_soils_0", "ny_soils_01", "muid","hsg", "hsgint"), as.factor) 
-  #dplyr::select(-c(n_scm_i_m, n_scm_i_f, n_scm_o_m, n_scm_o_f, n_d_florilega_i, n_d_florilega_o, total_f_scm, total_m_scm)) %>%
-  #dplyr::select(c(collection_date, total_scm, cover_crop, manure, min_temp_f_1_week, ave_temp_f_1_week, max_temp_f_1_week, vpd_min_1_week, vpd_max_1_week, rain_inches_1_week, ave_temp_f_2_week, max_temp_f_2_week, vpd_max_2_week))
-
-```
 
 ```{r}
+# Boruta with selected features 
 
-# Run Boruta with just landscape features 
-
-boruta <- Boruta(total_scm ~ ., data = na.exclude(landscape), doTrace = 2, maxRuns = 500)
+boruta <- Boruta(total_flies ~ ., data = na.exclude(adult_features_selected), doTrace = 2, maxRuns = 500)
 print(boruta)
 
-plot(boruta, las = 2, cex.axis = 0.7)
+plot(boruta, las = 2, cex.axis = 0.45)
 
 ```
 
 ```{r}
 
-features <- getSelectedAttributes(boruta, withTentative = F)
+features <- getSelectedAttributes(boruta, withTentative = T)
 features
 
 ```
@@ -110,26 +106,347 @@ features
 ```{r}
 
 adult_features <- adult_features %>%
-  mutate(collection_date = as.numeric(collection_date)) %>%
-  mutate(cover_crop = case_when(cover_crop == 'Partial' ~ 'Yes',
-                                cover_crop == 'Yes' ~ 'Yes', 
-                                cover_crop == 'No' ~ 'No'))
+    mutate(previous_crop = case_when(previous_crop == 'Silage Corn' ~ 'Corn',
+                           previous_crop == 'Grain Corn' ~ 'Corn',
+                           previous_crop == 'Soybean' ~ 'Soybean',
+                           TRUE ~ 'Other'))
+  
 
-model <- glmer.nb(total_scm ~ scale(collection_date) + cover_crop + manure + tillage + scale(ave_temp_f_1_week) + scale(rain_inches_1_week) + scale(vpd_min_1_week) + scale(corn_prop_5.year_500) + scale(soybean_prop_5.year_500) + scale(total_nat_prop_5.year_500) + scale(organic_matter_percent) + (1 | record_id), data = adult_features)
+```
 
-summary(model)
+
+```{r}
+
+model1 <- glmer.nb(total_flies ~ scale(date_collected) + cover_crop + previous_crop + scale(ppt_in) + scale(tmean_f) + scale(prop_corn_current_year_1000m) + scale(prop_ag_current_year_1000m) + scale(prop_nat_current_year_1000m) + scale(planting_date) + (1 | field_id), data = adult_features)
+
+summary(model1)
 
 ```
 
 ```{r}
 
-rsq.glmm(model,adj=FALSE)
+model2 <- glmer.nb(total_flies ~ scale(date_collected) + cover_crop + previous_crop + scale(tmean_f) + scale(prop_corn_current_year_1000m) + scale(prop_nat_current_year_1000m) + scale(planting_date) + (1 | field_id), data = adult_features)
 
-
-simulationOutput <- simulateResiduals(fittedModel = model, plot = F)
-plot(simulationOutput)
+summary(model2)
 
 ```
+
+Climate * landscape
+Management * landscape
+Climate * management
+
+```{r}
+
+model3 <- glmer.nb(total_flies ~ scale(date_collected) + 
+                     cover_crop + 
+                     previous_crop + 
+                     scale(tmean_f) + 
+                     scale(prop_corn_current_year_1000m) + 
+                     scale(prop_nat_current_year_1000m) + 
+                     scale(planting_date) + 
+                     scale(tmean_f) * scale(prop_corn_current_year_1000m) + 
+                     scale(tmean_f) * scale(prop_nat_current_year_1000m) + 
+                     cover_crop * scale(prop_corn_current_year_1000m) + 
+                     cover_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(prop_corn_current_year_1000m) + 
+                     previous_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(tmean_f) + 
+                     scale(tmean_f) * cover_crop + 
+                     (1 | field_id), data = adult_features)
+
+summary(model3)
+
+```
+
+```{r}
+
+options(na.action = "na.fail")
+model3_dredge <- dredge(model3)
+nrow(model3_dredge)
+model3_dredge[1,]
+
+best3 <- get.models(model3_dredge, delta==0)[[1]]
+summary(best3)
+
+```
+
+```{r}
+
+corn_effect <- predictorEffect("prop_corn_current_year_1000m", best3)
+plot(corn_effect)
+
+```
+
+```{r}
+
+adult_features$date_collected_numeric <- as.numeric(adult_features$date_collected)
+
+corn_effect <- predictorEffect("prop_corn_current_year_1000m", best3)
+plot(corn_effect)
+
+```
+Temperature does not interact with management. 
+
+```{r}
+
+model4 <- glmer.nb(total_flies ~ scale(date_collected) + cover_crop + previous_crop + scale(tmean_f) + scale(prop_corn_current_year_1000m) + scale(prop_nat_current_year_1000m) + scale(planting_date) + scale(tmean_f) * scale(prop_corn_current_year_1000m) + cover_crop * scale(prop_corn_current_year_1000m) + previous_crop * scale(prop_corn_current_year_1000m) + (1 | field_id), data = adult_features)
+
+summary(model4)
+
+```
+
+```{r}
+
+options(na.action = "na.fail")
+model4_dredge <- dredge(model4)
+nrow(model4_dredge)
+model4_dredge[1,]
+
+best4 <- get.models(model4_dredge, delta==0)[[1]]
+summary(best4)
+
+```
+
+
+```{r}
+
+options(na.action = "na.omit")
+model5 <- glmer.nb(total_flies ~ scale(date_collected_numeric) + 
+                     cover_crop + 
+                     previous_crop + 
+                     scale(tmean_f) + 
+                     scale(prop_corn_current_year_1000m) + 
+                     scale(prop_nat_current_year_1000m) + 
+                     scale(planting_date) + 
+                     scale(tmean_f) * scale(prop_corn_current_year_1000m) + 
+                     scale(tmean_f) * scale(prop_nat_current_year_1000m) + 
+                     cover_crop * scale(prop_corn_current_year_1000m) + 
+                     cover_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(prop_corn_current_year_1000m) + 
+                     previous_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(tmean_f) + 
+                     scale(tmean_f) * cover_crop + 
+                     (1 | field_id), data = adult_features)
+
+summary(model5)
+
+```
+
+```{r}
+
+options(na.action = "na.omit")
+model6 <- glmer.nb(total_flies ~ scale(date_collected_numeric) + 
+                     cover_crop + 
+                     previous_crop + 
+                     scale(tmean_f) + 
+                     scale(prop_corn_current_year_1000m) + 
+                     scale(prop_nat_current_year_1000m) + 
+                     scale(planting_date) + 
+                     scale(tmean_f) * scale(prop_corn_current_year_1000m) + 
+                     scale(tmean_f) * scale(prop_nat_current_year_1000m) + 
+                     cover_crop * scale(prop_corn_current_year_1000m) + 
+                     cover_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(prop_corn_current_year_1000m) + 
+                     previous_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(tmean_f) + 
+                     scale(tmean_f) * cover_crop + 
+                     (1 | field_id) + (1 | year), data = adult_features)
+
+summary(model6)
+
+```
+
+```{r}
+
+options(na.action = "na.omit")
+model7 <- glmer.nb(total_flies ~ scale(date_collected_numeric) + 
+                     cover_crop + 
+                     previous_crop + 
+                     scale(year) +
+                     scale(tmean_f) + 
+                     scale(prop_corn_current_year_1000m) + 
+                     scale(prop_nat_current_year_1000m) + 
+                     scale(planting_date) + 
+                     scale(tmean_f) * scale(prop_corn_current_year_1000m) + 
+                     scale(tmean_f) * scale(prop_nat_current_year_1000m) + 
+                     cover_crop * scale(prop_corn_current_year_1000m) + 
+                     cover_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(prop_corn_current_year_1000m) + 
+                     previous_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(tmean_f) + 
+                     scale(tmean_f) * cover_crop + 
+                     (1 | field_id), data = adult_features)
+
+summary(model7)
+
+```
+
+```{r}
+
+options(na.action = "na.fail")
+model5_dredge <- dredge(model5)
+nrow(model5_dredge)
+model5_dredge[1,]
+
+best5 <- get.models(model5_dredge, delta==0)[[1]]
+summary(best5)
+
+```
+
+```{r}
+
+options(na.action = "na.fail")
+model6_dredge <- dredge(model6)
+nrow(model6_dredge)
+model6_dredge[1,]
+
+best6 <- get.models(model6_dredge, delta==0)[[1]]
+summary(best6)
+
+```
+
+
+```{r}
+
+model8 <- glmer.nb(total_flies ~ scale(date_collected_numeric) + 
+                     cover_crop + 
+                     previous_crop + 
+                     scale(tmean_f) + 
+                     scale(prop_corn_current_year_1000m) + 
+                     scale(prop_nat_current_year_1000m) + 
+                     scale(planting_date) + 
+                     scale(tmean_f) * scale(prop_corn_current_year_1000m) + 
+                     scale(tmean_f) * scale(prop_nat_current_year_1000m) + 
+                     cover_crop * scale(prop_corn_current_year_1000m) + 
+                     cover_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(prop_corn_current_year_1000m) + 
+                     previous_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(tmean_f) + 
+                     scale(tmean_f) * cover_crop + 
+                     (1 | field_id), data = adult_features)
+
+summary(model8)
+
+```
+
+```{r}
+
+options(na.action = "na.fail")
+model8_dredge <- dredge(model8)
+nrow(model8_dredge)
+model8_dredge[1,]
+
+best8 <- get.models(model8_dredge, delta==0)[[1]]
+summary(best8)
+
+```
+
+```{r}
+
+quartzFonts(avenir = c("Avenir Book", "Avenir Black", "Avenir Book Oblique", "Avenir Black Oblique"))
+par(family = "avenir")
+
+corn_effect <- Effect("prop_corn_current_year_1000m", best8)
+plot(corn_effect)
+
+```
+
+```{r}
+
+nat_effect <- Effect("prop_nat_current_year_1000m", best8)
+plot(nat_effect)
+
+```
+
+```{r}
+
+temp_effect <- Effect("tmean_f", best8)
+plot(temp_effect)
+
+```
+
+```{r}
+
+date_effect <- Effect("date_collected_numeric", best8)
+
+
+plot(date_effect, axes=list(x=list(date_collected_numeric=list(lab="Date",
+                                                 ticks=list(at=levels2dates(date_effect, "date_collected_numeric", "1970-01-01"))),
+                                   rotate=45)), main="Date Effect")
+
+```
+
+```{r}
+
+prev_crop_effect <- Effect(c('previous_crop'), best8)
+plot(prev_crop_effect)
+
+```
+
+```{r}
+
+temp_cc_effect <- Effect(c("tmean_f", 'cover_crop'), best8)
+plot(temp_cc_effect)
+
+```
+
+```{r}
+
+temp_corn_effect <- Effect(c('prop_corn_current_year_1000m', "tmean_f"), best8)
+plot(temp_corn_effect)
+
+```
+
+```{r}
+
+temp_nat_effect <- Effect(c('prop_nat_current_year_1000m', "tmean_f"), best8)
+plot(temp_nat_effect)
+
+```
+
+```{r}
+
+PARTIAL_MODEL <- Effect('prop_nat_current_year_1000m', partial.residuals = TRUE, mod = best8);
+plot(PARTIAL_MODEL);
+
+```
+
+
+
+```{r}
+
+test_ag_model <- glmer.nb(total_flies ~ cover_crop + previous_crop + scale(date_collected_numeric) +  
+    scale(prop_ag_current_year_1000m) + scale(prop_nat_current_year_1000m) +  
+    scale(tmean_f) + (1 | field_id) + cover_crop:scale(tmean_f) +  
+    scale(prop_ag_current_year_1000m):scale(tmean_f) + scale(prop_nat_current_year_1000m):scale(tmean_f), data=adult_features)
+
+summary(test_ag_model)
+
+```
+
+```{r}
+
+adult_features_early <- adult_features %>% filter(week < 21)
+adult_features_early
+
+```
+
+```{r}
+
+boruta_early <- Boruta(total_flies ~ ., data = na.exclude(adult_features_early), doTrace = 2, maxRuns = 500)
+print(boruta_early)
+
+png("boruta.png", width = 8, height = 6, units = "in", res = 300)
+plot(boruta_early, las = 2, cex.axis = 0.35)
+
+
+
+```
+
+
+
+
+
 
 ```{r, fig.width=4,fig.height=4}
   
