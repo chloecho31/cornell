@@ -1,0 +1,58 @@
+---
+title: "global_soil_data"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(terra)
+library(sf)
+library(aqp)
+library(soilDB)
+```
+
+```{r}
+
+sites_23 <- read.delim("../2023/Data/2023_scm_sites.csv", sep = ",")
+sites_23
+
+```
+
+```{r}
+
+fetchSoilGrids(
+  sites_23,
+  loc.names = c("id", "lat", "lon"),
+  depth_intervals = c("0-5", "5-15", "15-30", "30-60", "60-100", "100-200"),
+  variables = c("bdod", "cec", "cfvo", "clay", "nitrogen", "phh2o", "sand", "silt",
+    "soc", "ocd", "wv0010", "wv0033", "wv1500"),
+  grid = FALSE,
+  filename = NULL,
+  overwrite = TRUE,
+  target_resolution = c(250, 250),
+  summary_type = c("Q0.05", "Q0.5", "Q0.95", "mean"),
+  endpoint = ifelse(!grid, "https://rest.isric.org/soilgrids/v2.0/properties/query",
+    "https://files.isric.org/soilgrids/latest/data/"),
+  verbose = FALSE,
+  progress = FALSE
+)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
