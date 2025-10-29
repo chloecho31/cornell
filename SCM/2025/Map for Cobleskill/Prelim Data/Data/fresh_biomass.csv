@@ -264,7 +264,7 @@ Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,1,V3/V4,15,107,,
 Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,2,V3/V4,15,96,,
 Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,3,V3/V4,15,103,,
 Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,4,V3/V4,15,93,,
-Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,5,V3/V4,15,,,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,5,V3/V4,15,103,,
 Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,6,V3/V4,15,58,,
 Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,7,V3/V4,15,69,,
 Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,8,V3/V4,15,128,,
@@ -485,3 +485,147 @@ Janice Degni,DEG_LAF_2,6/30/2025,V3/V4,Soybean,Fung,6,V2/V3,15,98,,
 Janice Degni,DEG_LAF_2,6/30/2025,V3/V4,Soybean,Fung,7,V2/V3,15,98,,
 Janice Degni,DEG_LAF_2,6/30/2025,V3/V4,Soybean,Fung,8,V2/V3,15,106,,
 Janice Degni,DEG_LAF_2,6/30/2025,V3/V4,Soybean,Fung,9,V2/V3,15,110,,
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Neonic,1,V3,15,166.7,Corrected for 42.3 g bag,209
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Neonic,2,V3,15,108.7,Corrected for 42.3 g bag,151
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Neonic,3,V3,15,118.7,Corrected for 42.3 g bag,161
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Neonic,4,V3,15,112.7,Corrected for 42.3 g bag,155
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Neonic,5,V3,15,106.7,Corrected for 42.3 g bag,149
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Neonic,6,V3,15,166.7,Corrected for 42.3 g bag,209
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Neonic,7,V3,15,119.7,Corrected for 42.3 g bag,162
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Neonic,8,V3,15,149.7,Corrected for 42.3 g bag,192
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Neonic,9,V3,15,179.7,Corrected for 42.3 g bag,222
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Fung,1,V3,15,94.7,Corrected for 42.3 g bag,137
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Fung,2,V3,7,50.7,Corrected for 42.3 g bag,93
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Fung,3,V3,10,51.7,Corrected for 42.3 g bag,94
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Fung,4,V3,15,164.7,Corrected for 42.3 g bag,207
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Fung,5,V3,15,189.7,Corrected for 42.3 g bag,232
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Fung,6,V3,15,180.7,Corrected for 42.3 g bag,223
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Fung,7,V3,15,92.7,Corrected for 42.3 g bag,135
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Fung,8,V3,15,103.7,Corrected for 42.3 g bag,146
+Katelyn Miller,MIL_ZIT_3,7/9/2025,V3/V4,Field corn,Fung,9,V3,15,59.7,Corrected for 42.3 g bag,102
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Neonic,1,V6/V7,15,452.8,Adjust for 43.6 g container,496.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Neonic,2,V6/V7,15,292.8,Adjust for 43.6 g container,336.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Neonic,3,V6/V7,15,392.8,Adjust for 43.6 g container,436.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Neonic,4,V6/V7,15,412.8,Adjust for 43.6 g container,456.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Neonic,5,V6/V7,15,292.8,Adjust for 43.6 g container,336.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Neonic,6,V6/V7,15,272.8,Adjust for 43.6 g container,316.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Neonic,7,V6/V7,15,472.8,Adjust for 43.6 g container,516.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Neonic,8,V6/V7,15,352.8,Adjust for 43.6 g container,396.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Neonic,9,V6/V7,15,212.8,Adjust for 43.6 g container,256.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Fung,1,V6/V7,15,532.8,Adjust for 43.6 g container,576.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Fung,2,V6/V7,15,432.8,Adjust for 43.6 g container,476.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Fung,3,V6/V7,15,392.8,Adjust for 43.6 g container,436.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Fung,4,V6/V7,15,332.8,Adjust for 43.6 g container,376.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Fung,5,V6/V7,15,352.8,Adjust for 43.6 g container,396.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Fung,6,V6/V7,15,192.8,Adjust for 43.6 g container,236.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Fung,7,V6/V7,15,392.8,Adjust for 43.6 g container,436.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Fung,8,V6/V7,15,332.8,Adjust for 43.6 g container,376.4
+Janice Degni,DEG_VIL_1,6/25/2025,V3/V4,Field corn,Fung,9,V6/V7,15,412.8,Adjust for 43.6 g container,456.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Neonic,1,V3/V6,15,144.8,Adjust for 43.6 g container,188.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Neonic,2,V3/V4,15,61.8,Adjust for 43.6 g container,105.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Neonic,3,V4/V5,15,91.8,Adjust for 43.6 g container,135.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Neonic,4,V4/V5,15,154.8,Adjust for 43.6 g container,198.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Neonic,5,V4/V5,15,149.8,Adjust for 43.6 g container,193.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Neonic,6,V5/V6,15,127.8,Adjust for 43.6 g container,171.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Neonic,7,V4/V5,15,1.8,Adjust for 43.6 g container,45.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Neonic,8,V3/V4,15,-6.2,Adjust for 43.6 g container,37.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Neonic,9,V4/V5,15,51.8,Adjust for 43.6 g container,95.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Fung,1,V4/V5,15,102.8,Adjust for 43.6 g container,146.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Fung,2,V4/V5,15,84.8,Adjust for 43.6 g container,128.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Fung,3,V4/V5,15,142.8,Adjust for 43.6 g container,186.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Fung,4,V4/V6,15,191.8,Adjust for 43.6 g container,235.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Fung,5,V4/V6,15,248.8,Adjust for 43.6 g container,292.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Fung,6,V4/V5,15,213.8,Adjust for 43.6 g container,257.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Fung,7,V5/V6,15,294.8,Adjust for 43.6 g container,338.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Fung,8,V4/V5,15,127.8,Adjust for 43.6 g container,171.4
+Janice Degni,DEG_PER_1,6/25/2025,V3/V4,Field corn,Fung,9,V4/V5,15,98.8,Adjust for 43.6 g container,142.4
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Neonic,1,V2/V4,15,40.4,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Neonic,2,V3/V4,15,74.3,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Neonic,3,V3/V4,15,97.7,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Neonic,4,V3/V4,15,68.1,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Neonic,5,V3/V4,15,60.4,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Neonic,6,V3/V4,15,69.4,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Neonic,7,V3/V4,15,59.2,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Neonic,8,V3/V4,15,70.5,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Neonic,9,V2/V4,15,65.7,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Fung,1,V3/V4,15,67.4,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Fung,2,V3/V4,15,56.3,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Fung,3,V3/V4,15,56.1,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Fung,4,V3/V4,15,60.9,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Fung,5,V3/V4,15,80.3,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Fung,6,V3/V4,15,59.3,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Fung,7,V3/V4,15,44.5,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Fung,8,V3/V4,15,31.9,,
+Janice Degni,DEG_PER_2,6/25/2025,V3/V4,Soybean,Fung,9,V3/V4,15,66.3,,
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Neonic,1,V3-V6,15,96.7,Corrected for 42.3 g bag,139
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Neonic,2,V3-V6,15,79.7,Corrected for 42.3 g bag,122
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Neonic,3,V3-V6,15,141.7,Corrected for 42.3 g bag,184
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Neonic,4,V3-V6,15,160.7,Corrected for 42.3 g bag,203
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Neonic,5,V3-V6,15,101.7,Corrected for 42.3 g bag,144
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Neonic,6,V3-V6,15,163.7,Corrected for 42.3 g bag,206
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Neonic,7,V3-V6,15,141.7,Corrected for 42.3 g bag,184
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Neonic,8,V3-V6,15,155.7,Corrected for 42.3 g bag,198
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Neonic,9,V3-V6,15,148.7,Corrected for 42.3 g bag,191
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Fung,1,V3-V6,15,139.7,Corrected for 42.3 g bag,182
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Fung,2,V3-V6,15,117.7,Corrected for 42.3 g bag,160
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Fung,3,V3-V6,15,155.7,Corrected for 42.3 g bag,198
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Fung,4,V3-V6,15,157.7,Corrected for 42.3 g bag,200
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Fung,5,V3-V6,15,123.7,Corrected for 42.3 g bag,166
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Fung,6,V3-V6,15,133.7,Corrected for 42.3 g bag,176
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Fung,7,V3-V6,15,63.7,Corrected for 42.3 g bag,106
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Fung,8,V3-V6,15,129.7,Corrected for 42.3 g bag,172
+Katelyn Miller,MIL_ZIT_1,7/17/2025,V3/V4,Soybean,Fung,9,V3-V6,15,83.7,Corrected for 42.3 g bag,126
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Neonic,1,V3,15,52,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Neonic,2,V3,15,61,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Neonic,3,V3,15,60,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Neonic,4,V3,15,63,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Neonic,5,V3,15,61,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Neonic,6,V3,15,58,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Neonic,7,V3,15,64,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Neonic,8,V3,15,64,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Neonic,9,V3,15,60,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Fung,1,V3,15,58,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Fung,2,V3,15,59,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Fung,3,V3,15,60,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Fung,4,V3,15,59,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Fung,5,V3,15,63,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Fung,6,V3,15,58,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Fung,7,V3,15,68,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Fung,8,V3,15,54,,
+Katelyn Miller,MIL_BAR_2,8/1/2025,V3/V4,Soybean,Fung,9,V3,15,63,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Neonic,1,V2,15,98.33,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Neonic,2,V2,15,137.79,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Neonic,3,V2,15,90.9,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Neonic,4,V2/V3,15,92.73,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Neonic,5,V2/V4,15,121.88,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Neonic,6,V2,15,134.2,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Neonic,7,V2,15,132.8,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Neonic,8,V2,15,115.65,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Neonic,9,V2,15,106.48,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Fung,1,V2,15,64.83,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Fung,2,V2,15,69.66,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Fung,3,V2,15,57.94,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Fung,4,V2,15,85.82,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Fung,5,V2,15,67.79,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Fung,6,V1/V2,15,45.21,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Fung,7,V2,15,62.37,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Fung,8,V2,15,69,,
+Marion Zuefle,ZUE_VOT,7/17/2025,V3/V4,Snap bean,Fung,9,V2,15,60.17,,
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Neonic,1,V2/V3,15,72.69,Corrected for 7.59 g bag,80.28
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Neonic,2,V2/V3,15,76.27,Corrected for 7.59 g bag,83.86
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Neonic,3,V2/V3,15,105.55,Corrected for 7.59 g bag,113.14
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Neonic,4,V2,15,63.93,Corrected for 7.59 g bag,71.52
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Neonic,5,V2/V3,15,64.79,Corrected for 7.59 g bag,72.38
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Neonic,6,V2/V3,15,87.48,Corrected for 7.59 g bag,95.07
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Neonic,7,V2/V3,15,31.88,Corrected for 7.59 g bag,39.47
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Neonic,8,V2/V3,15,52.62,Corrected for 7.59 g bag,60.21
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Neonic,9,V2/V3,15,72.51,Corrected for 7.59 g bag,80.1
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Fung,1,V2/V3,15,68.21,Corrected for 7.59 g bag,75.8
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Fung,2,V2/V3,15,76.23,Corrected for 7.59 g bag,83.82
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Fung,3,V2/V3,15,90.58,Corrected for 7.59 g bag,98.17
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Fung,4,V2/V3,15,92.21,Corrected for 7.59 g bag,99.8
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Fung,5,V2/V3,15,92.24,Corrected for 7.59 g bag,99.83
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Fung,6,V2/V3,15,131.41,Corrected for 7.59 g bag,139
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Fung,7,V2/V3,15,116.41,Corrected for 7.59 g bag,124
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Fung,8,V2/V3,15,125.6,Corrected for 7.59 g bag,133.19
+Marion Zuefle,ZUE_MYT,7/15/2025,V3/V4,Snap bean,Fung,9,V2/V3,15,119.32,Corrected for 7.59 g bag,126.91

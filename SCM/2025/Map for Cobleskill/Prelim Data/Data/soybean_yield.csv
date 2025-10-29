@@ -1,0 +1,7 @@
+Data Collector,Field ID,Date,Sampling period,Crop,Treatment,Yield (bu/acre)
+Katelyn Miller,MIL_COB,10/17/2025,Harvest,Soybean,Neonic,57.5
+Katelyn Miller,MIL_COB,10/17/2025,Harvest,Soybean,Fung,54.7
+Erik Smith,SMI_ARN_2,10/27/2025,Harvest,Soybean,Neonic,32.52
+Erik Smith,SMI_ARN_2,10/27/2025,Harvest,Soybean,Fung,33.81
+Janice Degni,DEG_LAF_2,10/15/2025,Harvest,Soybean,Neonic,49
+Janice Degni,DEG_LAF_2,10/15/2025,Harvest,Soybean,Fung,38
