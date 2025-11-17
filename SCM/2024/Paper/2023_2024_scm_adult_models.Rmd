@@ -23,6 +23,9 @@ library(rsq)
 library(effects)
 library(readxl)
 library(MuMIn)
+library(latticeExtra) 
+library(viridisLite)
+library(performance)
 
 set.seed(42)
 ```
@@ -40,9 +43,24 @@ adult_features <- adult_features %>%
   mutate(date_collected = as.Date(date_collected, '%Y-%m-%d')) %>%
   mutate(planting_date = as.Date(planting_date, '%Y-%m-%d')) %>%
   mutate_at(c('field_id', "previous_crop", "cover_crop", "manure", "tillage"), as.factor) %>% 
-  dplyr::select(-c('card_id', 'X', 'total_scm', 'scm_male', 'scm_female', 'florilega', 'season_total', 'male_total', 'female_total', 'weekly_prop', 
-            'weekly_prop_f', 'weekly_prop_m', 'season_prop'))
+  dplyr::select(-c('card_id', 'X', 'total_scm', 'scm_male', 'scm_female', 'florilega', 'season_total', 'male_total', 'female_total', 'weekly_prop', 'weekly_prop_f', 'weekly_prop_m', 'season_prop'))
+
+
+adult_features <- adult_features %>%
+    mutate(previous_crop = case_when(previous_crop == 'Silage Corn' ~ 'Corn',
+                           previous_crop == 'Grain Corn' ~ 'Corn',
+                           previous_crop == 'Soybean' ~ 'Soybean',
+                           TRUE ~ 'Other'))
+  
+
+adult_features <-adult_features %>% mutate_at('soil_texture', as.factor)
+adult_features <-adult_features %>% mutate_at('year', as.factor)
+adult_features <-adult_features %>% mutate_at('previous_crop', as.factor)
+adult_features$date_collected_numeric <- as.numeric(adult_features$date_collected)
+
+
 adult_features
+
 
 ```
 
@@ -56,6 +74,11 @@ adult_features_selected <- adult_features %>%
        'prop_ag_current_year_500m', 'prop_nat_current_year_500m'))
 adult_features_selected
 
+
+
+
+```
+
 ```
 
 ```{r}
@@ -68,6 +91,7 @@ plot(fitdist(adult_features$total_flies,"nbinom"))
 # Boruta with all features 
 
 boruta <- Boruta(total_flies ~ ., data = na.exclude(adult_features), doTrace = 2, maxRuns = 500)
+
 print(boruta)
 
 png("boruta.png", width = 8, height = 6, units = "in", res = 300)
@@ -103,16 +127,6 @@ features
 
 ```
 
-```{r}
-
-adult_features <- adult_features %>%
-    mutate(previous_crop = case_when(previous_crop == 'Silage Corn' ~ 'Corn',
-                           previous_crop == 'Grain Corn' ~ 'Corn',
-                           previous_crop == 'Soybean' ~ 'Soybean',
-                           TRUE ~ 'Other'))
-  
-
-```
 
 
 ```{r}
@@ -179,7 +193,6 @@ plot(corn_effect)
 
 ```{r}
 
-adult_features$date_collected_numeric <- as.numeric(adult_features$date_collected)
 
 corn_effect <- predictorEffect("prop_corn_current_year_1000m", best3)
 plot(corn_effect)
@@ -308,12 +321,20 @@ summary(best6)
 
 ```{r}
 
+
+```
+
+```{r}
+
+options(na.action = "na.omit")
+
 model8 <- glmer.nb(total_flies ~ scale(date_collected_numeric) + 
                      cover_crop + 
                      previous_crop + 
                      scale(tmean_f) + 
                      scale(prop_corn_current_year_1000m) + 
-                     scale(prop_nat_current_year_1000m) + 
+                     scale(prop_nat_current_year_1000m) +  
+                     scale(prop_semi_nat_current_year_1000m) + 
                      scale(planting_date) + 
                      scale(tmean_f) * scale(prop_corn_current_year_1000m) + 
                      scale(tmean_f) * scale(prop_nat_current_year_1000m) + 
@@ -323,13 +344,18 @@ model8 <- glmer.nb(total_flies ~ scale(date_collected_numeric) +
                      previous_crop * scale(prop_nat_current_year_1000m) + 
                      previous_crop * scale(tmean_f) + 
                      scale(tmean_f) * cover_crop + 
+                     soil_texture + ph + organic_matter +
                      (1 | field_id), data = adult_features)
 
 summary(model8)
 
+
 ```
 
 ```{r}
+
+adult_features$previous_crop <- ordered(adult_features$previous_crop, levels = c("Corn", "Soybean", "Other"))
+levels(adult_features$previous_crop)
 
 options(na.action = "na.fail")
 model8_dredge <- dredge(model8)
@@ -338,6 +364,16 @@ model8_dredge[1,]
 
 best8 <- get.models(model8_dredge, delta==0)[[1]]
 summary(best8)
+
+
+testDispersion(best8)
+simulationOutput <- simulateResiduals(fittedModel = best8, plot = T)
+residuals(simulationOutput)
+
+testDispersion(simulationOutput)
+
+r2_performance <- r2(best8)
+print(r2_performance)
 
 ```
 
@@ -353,15 +389,29 @@ plot(corn_effect)
 
 ```{r}
 
+ph_effect <- Effect("ph", best8)
+plot(ph_effect, lines=list(col='#287a8c'))
+
+```
+
+```{r}
+
+texture_effect <- Effect("soil_texture", best8)
+plot(texture_effect, lines=list(col='#287a8c'))
+
+```
+
+```{r}
+
 nat_effect <- Effect("prop_nat_current_year_1000m", best8)
-plot(nat_effect)
+plot(nat_effect, lines=list(col='#287a8c'))
 
 ```
 
 ```{r}
 
 temp_effect <- Effect("tmean_f", best8)
-plot(temp_effect)
+plot(temp_effect, lines=list(col='#287a8c'))
 
 ```
 
@@ -386,13 +436,31 @@ plot(prev_crop_effect)
 ```{r}
 
 temp_cc_effect <- Effect(c("tmean_f", 'cover_crop'), best8)
-plot(temp_cc_effect)
+plot(temp_cc_effect, lines=list(multiline=TRUE, col=c('#413d7b', '#287a8c')), confint=list(style='bands', alpha=.3))
 
 ```
 
 ```{r}
 
-temp_corn_effect <- Effect(c('prop_corn_current_year_1000m', "tmean_f"), best8)
+prev_corn_effect <- Effect(c("previous_crop", 'prop_corn_current_year_1000m'), best8)
+plot(prev_corn_effect, lines=list(multiline=TRUE, col=c('#413d7b', '#287a8c', '#7dba91')), confint=list(style='bands', alpha=.3))
+plot(prev_corn_effect, lines=list(multiline=TRUE, col=c('#413d7b', '#287a8c', '#7dba91')))
+
+
+```
+
+```{r}
+
+prev_nat_effect <- Effect(c("previous_crop", 'prop_nat_current_year_1000m'), best8)
+plot(prev_nat_effect, lines=list(multiline=TRUE, col=c('#413d7b', '#287a8c', '#7dba91')), confint=list(style='bands', alpha=.1))
+plot(prev_nat_effect, lines=list(multiline=TRUE, col=c('#413d7b', '#287a8c', '#7dba91')))
+
+
+```
+
+```{r}
+
+temp_corn_effect <- Effect(c('prop_corn_current_year_1000m', "tmean_f"), best8, xlevels=6)
 plot(temp_corn_effect)
 
 ```
@@ -404,12 +472,6 @@ plot(temp_nat_effect)
 
 ```
 
-```{r}
-
-PARTIAL_MODEL <- Effect('prop_nat_current_year_1000m', partial.residuals = TRUE, mod = best8);
-plot(PARTIAL_MODEL);
-
-```
 
 
 
@@ -432,5 +494,37 @@ plot(boruta_early, las = 2, cex.axis = 0.35)
 
 ```
 
+```{r}
+
+eff_df <- as.data.frame(temp_nat_effect)
+
+levelplot(fit ~ prop_nat_current_year_1000m * tmean_f, eff_df, 
+          panel = panel.levelplot.points, cex = 0
+    )  + 
+    layer_(panel.2dsmoother(..., n = 100))
+
+```
+
+```{r}
+
+eff_df <- as.data.frame(temp_corn_effect)
+
+levelplot(fit ~ prop_corn_current_year_1000m * tmean_f, eff_df, 
+          panel = panel.levelplot.points, cex = 0
+    )  + 
+    layer_(panel.2dsmoother(..., n = 100))
+
+```
+
+
+```{r}
+
+#coul <- viridis(100)
+levelplot(total_flies ~ prop_nat_current_year_1000m * tmean_f, adult_features, 
+          panel = panel.levelplot.points, cex = 0.5
+    )  + 
+    layer_(panel.2dsmoother(..., n = 100))
+
+```
 
 
