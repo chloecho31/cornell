@@ -1,0 +1,955 @@
+Data Collector,Field ID,Date,Sampling period,Crop,Treatment,Section number,Plant growth stage,Number of plants,Total weight (g),Notes,Untared weight (g)
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Neonic,1,V4,15,865.7,Corrected for 42.3 g bag,908
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Neonic,2,V4,15,578.7,Corrected for 42.3 g bag,621
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Neonic,3,V4,15,658.7,Corrected for 42.3 g bag,701
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Neonic,4,V4,15,818.7,Corrected for 42.3 g bag,861
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Neonic,5,V4,15,776.7,Corrected for 42.3 g bag,819
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Neonic,6,V4,15,629.7,Corrected for 42.3 g bag,672
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Neonic,7,V4,15,794.7,Corrected for 42.3 g bag,837
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Neonic,8,V4,15,779.7,Corrected for 42.3 g bag,822
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Neonic,9,V4,15,724.7,Corrected for 42.3 g bag,767
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Fung,1,V4,15,765.7,Corrected for 42.3 g bag,808
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Fung,2,V4,15,929.7,Corrected for 42.3 g bag,972
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Fung,3,V4,15,986.7,Corrected for 42.3 g bag,1029
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Fung,4,V4,15,667.7,Corrected for 42.3 g bag,710
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Fung,5,V4,15,585.7,Corrected for 42.3 g bag,628
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Fung,6,V4,15,776.7,Corrected for 42.3 g bag,819
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Fung,7,V4,15,867.7,Corrected for 42.3 g bag,910
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Fung,8,V4,15,807.7,Corrected for 42.3 g bag,850
+Paul Cerosaletti,CER_DEL_1,6/26/25,V3/V4,Field corn,Fung,9,V4,15,801.7,Corrected for 42.3 g bag,844
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Neonic,1,V4,15,394.7,Corrected for 42.3 g bag,437
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Neonic,2,V4,15,441.7,Corrected for 42.3 g bag,484
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Neonic,3,V4,15,291.7,Corrected for 42.3 g bag,334
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Neonic,4,V4,15,381.7,Corrected for 42.3 g bag,424
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Neonic,5,V4,15,346.7,Corrected for 42.3 g bag,389
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Neonic,6,V4,15,416.7,Corrected for 42.3 g bag,459
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Neonic,7,V4,15,301.7,Corrected for 42.3 g bag,344
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Neonic,8,V4,15,608.7,Corrected for 42.3 g bag,651
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Neonic,9,V4,15,441.7,Corrected for 42.3 g bag,484
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Fung,1,V4,15,416.7,Corrected for 42.3 g bag,459
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Fung,2,V4,15,445.7,Corrected for 42.3 g bag,488
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Fung,3,V4,15,595.7,Corrected for 42.3 g bag,638
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Fung,4,V4,15,559.7,Corrected for 42.3 g bag,602
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Fung,5,V4,15,585.7,Corrected for 42.3 g bag,628
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Fung,6,V4,15,601.7,Corrected for 42.3 g bag,644
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Fung,7,V4,15,586.7,Corrected for 42.3 g bag,629
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Fung,8,V4,15,512.7,Corrected for 42.3 g bag,555
+Paul Cerosaletti,CER_DEL_2,6/26/25,V3/V4,Field corn,Fung,9,V4,15,530.7,Corrected for 42.3 g bag,573
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Neonic,1,V3,15,79.7,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Neonic,2,V3,15,73.8,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Neonic,3,V3,15,73.4,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Neonic,4,V3,15,78.6,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Neonic,5,V3,15,97.7,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Neonic,6,V3,15,82.3,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Neonic,7,V3,15,91.3,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Neonic,8,V3,15,73.4,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Neonic,9,V3,15,89.7,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Fung,1,V3,15,80.2,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Fung,2,V3,15,88.7,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Fung,3,V3,15,79.2,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Fung,4,V3,15,102.7,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Fung,5,V3,15,112.5,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Fung,6,V3,15,110.5,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Fung,7,V3,15,92.8,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Fung,8,V3,15,91.2,,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/25,V3/V4,Soybean,Fung,9,V3,15,86.8,,
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Neonic,1,V6/V7,15,370,Adjust for 45 g,415
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Neonic,2,V6/V7,15,250,Adjust for 45 g,295
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Neonic,3,V6,15,210,Adjust for 45 g,255
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Neonic,4,V6,15,230,Adjust for 45 g,275
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Neonic,5,V6/V7,15,290,Adjust for 45 g,335
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Neonic,6,V5/V6,15,250,Adjust for 45 g,295
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Neonic,7,V6/V7,15,290,Adjust for 45 g,335
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Neonic,8,V6/V7,15,270,Adjust for 45 g,315
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Neonic,9,V6/V7,15,270,Adjust for 45 g,315
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Fung,1,V3/V4,15,30,Adjust for 45 g,75
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Fung,2,V3/V5,15,150,Adjust for 45 g,195
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Fung,3,V4/V6,15,330,Adjust for 45 g,375
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Fung,4,V5/V6,15,330,Adjust for 45 g,375
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Fung,5,V5/V7,15,350,Adjust for 45 g,395
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Fung,6,V4/V6,15,350,Adjust for 45 g,395
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Fung,7,V5/V5,15,230,Adjust for 45 g,275
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Fung,8,V4/V6,15,270,Adjust for 45 g,315
+Janice Degni,DEG_DIE,7/1/25,V3/V4,Field corn,Fung,9,V5/V6,15,390,Adjust for 45 g,435
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Neonic,1,V5/V6,15,270,Adjust by 45g,315
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Neonic,2,V5/V6,15,190,Adjust by 45g,235
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Neonic,3,V5/V6,15,230,Adjust by 45g,275
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Neonic,4,V8/V9,15,210,Adjust by 45g,255
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Neonic,5,V6/V7,15,190,Adjust by 45g,235
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Neonic,6,V5,15,90,Adjust by 45g,135
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Neonic,7,V5/V7,15,350,Adjust by 45g,395
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Neonic,8,V6/V7,15,330,Adjust by 45g,375
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Neonic,9,V6/V7,15,390,Adjust by 45g,435
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Fung,1,V5/V6,15,410,Adjust by 45g,455
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Fung,2,V5/V6,15,290,Adjust by 45g,335
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Fung,3,V5/V7,15,370,Adjust by 45g,415
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Fung,4,V5/V7,15,350,Adjust by 45g,395
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Fung,5,V5/V6,15,250,Adjust by 45g,295
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Fung,6,V3/V6,15,250,Adjust by 45g,295
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Fung,7,V5/V6,15,250,Adjust by 45g,295
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Fung,8,V6/V7,15,350,Adjust by 45g,395
+Janice Degni,DEG_FOU,7/1/25,V3/V4,Field corn,Fung,9,V6/V7,15,390,Adjust by 45g,435
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Neonic,1,V6/V7,15,450,Adjust for 45 g,495
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Neonic,2,V6/V8,15,510,Adjust for 45 g,555
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Neonic,3,V7/V8,15,490,Adjust for 45 g,535
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Neonic,4,V8/V9,15,690,Adjust for 45 g,735
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Neonic,5,V8/V9,15,1090,Adjust for 45 g,1135
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Neonic,6,V8/V9,15,1410,Adjust for 45 g,1455
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Neonic,7,V5/V7,15,1150,Adjust for 45 g,1195
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Neonic,8,V6/V7,15,610,Adjust for 45 g,655
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Neonic,9,V7/V8,15,850,Adjust for 45 g,895
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Fung,1,V6/V7,15,630,Adjust for 45 g,675
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Fung,2,V6/V7,15,650,Adjust for 45 g,695
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Fung,3,V6/V7,15,630,Adjust for 45 g,675
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Fung,4,V6/V7,15,730,Adjust for 45 g,775
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Fung,5,V6/V8,15,950,Adjust for 45 g,995
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Fung,6,V6/V7,15,790,Adjust for 45 g,835
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Fung,7,V6/V7,15,630,Adjust for 45 g,675
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Fung,8,V8/V9,15,930,Adjust for 45 g,975
+Janice Degni,DEG_FRI_1,6/28/25,V3/V4,Field corn,Fung,9,V7/V8,15,570,Adjust for 45 g,615
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Neonic,1,V3,15,82,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Neonic,2,V3,15,104,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Neonic,3,V2/V4,15,96,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Neonic,4,V3,15,129,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Neonic,5,V3,15,78,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Neonic,6,V3/V4,15,95,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Neonic,7,V3/V4,15,107,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Neonic,8,V3/V4,15,89,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Neonic,9,V3/V4,15,101,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Fung,1,V3/V4,15,67,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Fung,2,V3/V4,15,86,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Fung,3,V3/V4,15,91,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Fung,4,V5/V6,15,190,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Fung,5,V3/V5,15,137,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Fung,6,V3/V4,15,157,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Fung,7,V3/V4,15,103,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Fung,8,V3/V5,15,126,,
+Janice Degni,DEG_FRI_2,6/28/25,V3/V4,Soybean,Fung,9,V3/V5,15,113,,
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Neonic,1,V6/V7,15,450,Adjust for 45 g,495
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Neonic,2,V6/V8,15,510,Adjust for 45 g,555
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Neonic,3,V7/V8,15,490,Adjust for 45 g,535
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Neonic,4,V8/V9,15,690,Adjust for 45 g,735
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Neonic,5,V8/V9,15,100,Adjust for 45 g,145
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Neonic,6,V8/V9,15,78,Adjust for 45 g,123
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Neonic,7,V5/V7,15,134,Adjust for 45 g,179
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Neonic,8,V6/V7,15,610,Adjust for 45 g,655
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Neonic,9,V7/V8,15,850,Adjust for 45 g,895
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Fung,1,V2/V3,15,630,Adjust for 45 g,675
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Fung,2,V2/V3,15,650,Adjust for 45 g,695
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Fung,3,V2/V3,15,630,Adjust for 45 g,675
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Fung,4,V2/V3,15,730,Adjust for 45 g,775
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Fung,5,V2/V3,15,122,Adjust for 45 g,167
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Fung,6,V2/V3,15,790,Adjust for 45 g,835
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Fung,7,V2/V3,15,630,Adjust for 45 g,675
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Fung,8,V2/V3,15,122,Adjust for 45 g,167
+Janice Degni,DEG_LAF_1,6/28/25,V3/V4,Field corn,Fung,9,V2/V3,15,570,Adjust for 45 g,615
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Neonic,1,V2/V3,15,102,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Neonic,2,V2/V3,15,112,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Neonic,3,V2/V3,15,108,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Neonic,4,V2/V3,15,104,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Neonic,5,V2/V3,15,110,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Neonic,6,V2/V3,15,117,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Neonic,7,V2/V3,15,85,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Neonic,8,V2/V3,15,95,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Neonic,9,V2/V3,15,89,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Fung,1,V2/V3,15,104,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Fung,2,V2/V3,15,82,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Fung,3,V2/V3,15,101,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Fung,4,V2/V3,15,95,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Fung,5,V2/V3,15,105,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Fung,6,V2/V3,15,98,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Fung,7,V2/V3,15,98,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Fung,8,V2/V3,15,106,,
+Janice Degni,DEG_LAF_2,6/30/25,V3/V4,Soybean,Fung,9,V2/V3,15,110,,
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Neonic,1,V3/V6,15,144.8,Adjust for 43.6 g container,188.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Neonic,2,V3/V4,15,61.8,Adjust for 43.6 g container,105.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Neonic,3,V4/V5,15,91.8,Adjust for 43.6 g container,135.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Neonic,4,V4/V5,15,154.8,Adjust for 43.6 g container,198.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Neonic,5,V4/V5,15,149.8,Adjust for 43.6 g container,193.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Neonic,6,V5/V6,15,127.8,Adjust for 43.6 g container,171.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Neonic,7,V4/V5,15,1.8,Adjust for 43.6 g container,45.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Neonic,8,V3/V4,15,-6.2,Adjust for 43.6 g container,37.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Neonic,9,V4/V5,15,51.8,Adjust for 43.6 g container,95.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Fung,1,V4/V5,15,102.8,Adjust for 43.6 g container,146.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Fung,2,V4/V5,15,84.8,Adjust for 43.6 g container,128.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Fung,3,V4/V5,15,142.8,Adjust for 43.6 g container,186.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Fung,4,V4/V6,15,191.8,Adjust for 43.6 g container,235.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Fung,5,V4/V6,15,248.8,Adjust for 43.6 g container,292.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Fung,6,V4/V5,15,213.8,Adjust for 43.6 g container,257.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Fung,7,V5/V6,15,294.8,Adjust for 43.6 g container,338.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Fung,8,V4/V5,15,127.8,Adjust for 43.6 g container,171.4
+Janice Degni,DEG_PER_1,6/25/25,V3/V4,Field corn,Fung,9,V4/V5,15,98.8,Adjust for 43.6 g container,142.4
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Neonic,1,V2/V4,15,40.4,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Neonic,2,V3/V4,15,74.3,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Neonic,3,V3/V4,15,97.7,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Neonic,4,V3/V4,15,68.1,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Neonic,5,V3/V4,15,60.4,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Neonic,6,V3/V4,15,69.4,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Neonic,7,V3/V4,15,59.2,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Neonic,8,V3/V4,15,70.5,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Neonic,9,V2/V4,15,65.7,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Fung,1,V3/V4,15,67.4,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Fung,2,V3/V4,15,56.3,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Fung,3,V3/V4,15,56.1,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Fung,4,V3/V4,15,60.9,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Fung,5,V3/V4,15,80.3,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Fung,6,V3/V4,15,59.3,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Fung,7,V3/V4,15,44.5,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Fung,8,V3/V4,15,31.9,,
+Janice Degni,DEG_PER_2,6/25/25,V3/V4,Soybean,Fung,9,V3/V4,15,66.3,,
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Neonic,1,V6/V7,15,452.8,Adjust for 43.6 g container,496.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Neonic,2,V6/V7,15,292.8,Adjust for 43.6 g container,336.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Neonic,3,V6/V7,15,392.8,Adjust for 43.6 g container,436.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Neonic,4,V6/V7,15,412.8,Adjust for 43.6 g container,456.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Neonic,5,V6/V7,15,292.8,Adjust for 43.6 g container,336.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Neonic,6,V6/V7,15,272.8,Adjust for 43.6 g container,316.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Neonic,7,V6/V7,15,472.8,Adjust for 43.6 g container,516.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Neonic,8,V6/V7,15,352.8,Adjust for 43.6 g container,396.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Neonic,9,V6/V7,15,212.8,Adjust for 43.6 g container,256.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Fung,1,V6/V7,15,532.8,Adjust for 43.6 g container,576.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Fung,2,V6/V7,15,432.8,Adjust for 43.6 g container,476.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Fung,3,V6/V7,15,392.8,Adjust for 43.6 g container,436.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Fung,4,V6/V7,15,332.8,Adjust for 43.6 g container,376.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Fung,5,V6/V7,15,352.8,Adjust for 43.6 g container,396.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Fung,6,V6/V7,15,192.8,Adjust for 43.6 g container,236.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Fung,7,V6/V7,15,392.8,Adjust for 43.6 g container,436.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Fung,8,V6/V7,15,332.8,Adjust for 43.6 g container,376.4
+Janice Degni,DEG_VIL,6/25/25,V3/V4,Field corn,Fung,9,V6/V7,15,412.8,Adjust for 43.6 g container,456.4
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Neonic,1,V3,15,11.18,Adjust for 7.59g bag,18.77
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Neonic,2,V3,15,14.53,Adjust for 7.59g bag,22.12
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Neonic,3,V3,15,16.47,Adjust for 7.59g bag,24.06
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Neonic,4,V3,15,8.74,Adjust for 7.59g bag,16.33
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Neonic,5,V3,15,15.85,Adjust for 7.59g bag,23.44
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Neonic,6,V3,15,9.48,Adjust for 7.59g bag,17.07
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Neonic,7,V2/V3,15,11.53,Adjust for 7.59g bag,19.12
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Neonic,8,V1/V3,15,20.91,Adjust for 7.59g bag,28.5
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Neonic,9,V1/V2,15,10.87,Adjust for 7.59g bag,18.46
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Fung,1,V3,15,7.85,Adjust for 7.59g bag,15.44
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Fung,2,V3,15,7.92,Adjust for 7.59g bag,15.51
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Fung,3,V3,15,10.2,Adjust for 7.59g bag,17.79
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Fung,4,V3,15,6.18,Adjust for 7.59g bag,13.77
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Fung,5,V3,15,9.52,Adjust for 7.59g bag,17.11
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Fung,6,V3,15,9.12,Adjust for 7.59g bag,16.71
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Fung,7,V1/V2,15,7.28,Adjust for 7.59g bag,14.87
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Fung,8,V2/V3,15,7.68,Adjust for 7.59g bag,15.27
+Julie Kikkert,KIK_HAR,7/1/25,V3/V4,Sweet corn,Fung,9,V2/V3,15,7.64,Adjust for 7.59g bag,15.23
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Neonic,1,V4,15,85.07,"Adjust for 7.59g bag, cutworm",92.66
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Neonic,2,V4,15,91.11,"Adjust for 7.59g bag, cutworm, weak plants",98.7
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Neonic,3,V4,15,99.71,Adjust for 7.59g bag,107.3
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Neonic,4,V4,15,116.66,"Adjust for 7.59g bag, weak plant",124.25
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Neonic,5,V3/V4,15,81.41,"Adjust for 7.59g bag, weak plant, cutworm",89
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Neonic,6,V3/V4,15,104.41,Adjust for 7.59g bag,112
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Neonic,7,V3/V4,15,115.56,Adjust for 7.59g bag,123.15
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Neonic,8,V4,15,141.1,Adjust for 7.59g bag,148.69
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Neonic,9,V4,15,105.48,"Adjust for 7.59g bag, cutworm",113.07
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Fung,1,V4,15,76.97,Adjust for 7.59g bag,84.56
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Fung,2,V4,15,113.04,"Adjust for 7.59g bag, weak plant",120.63
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Fung,3,V4,15,106.14,"Adjust for 7.59g bag, cutworm",113.73
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Fung,4,V4,15,84.35,Adjust for 7.59g bag,91.94
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Fung,5,V4,15,96.31,"Adjust for 7.59g bag, cutworm",103.9
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Fung,6,V4,15,109.04,"Adjust for 7.59g bag, cutworm",116.63
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Fung,7,V4,15,67.06,"Adjust for 7.59g bag, cutworm",74.65
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Fung,8,V4,15,111.12,"Adjust for 7.59g bag, weaker plant",118.71
+Julie Kikkert,KIK_MBF,6/24/25,V3/V4,Sweet corn,Fung,9,V4,15,132.27,Adjust for 7.59g bag,139.86
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Neonic,1,V2,15,10.86,Adjust for 7.59g bag,18.45
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Neonic,2,V2,15,8.12,Adjust for 7.59g bag,15.71
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Neonic,3,V2,15,8.34,Adjust for 7.59g bag,15.93
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Neonic,4,V2/V3,15,7.41,Adjust for 7.59g bag,15
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Neonic,5,V2/V3,15,7.74,Adjust for 7.59g bag,15.33
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Neonic,6,V2/V3,15,9.41,Adjust for 7.59g bag,17
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Neonic,7,V2/V3,15,11.58,Adjust for 7.59g bag,19.17
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Neonic,8,V2,15,8.95,Adjust for 7.59g bag,16.54
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Neonic,9,V2,15,9.65,Adjust for 7.59g bag,17.24
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Fung,1,V3,15,31.79,Adjust for 7.59g bag,39.38
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Fung,2,V2/V3,15,28.26,Adjust for 7.59g bag,35.85
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Fung,3,V2/V3,15,30.57,Adjust for 7.59g bag,38.16
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Fung,4,V3,15,19.77,Adjust for 7.59g bag,27.36
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Fung,5,V3,15,43.89,Adjust for 7.59g bag,51.48
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Fung,6,V3,15,31.55,Adjust for 7.59g bag,39.14
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Fung,7,V2/V3,15,39.2,Adjust for 7.59g bag,46.79
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Fung,8,V3,15,46.41,Adjust for 7.59g bag,54
+Julie Kikkert,KIK_MYT,6/20/25,V3/V4,Sweet corn,Fung,9,V2/V3,15,35.96,Adjust for 7.59g bag,43.55
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Neonic,1,V2/V3,15,19.01,Adjust for 7.59g bag,26.6
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Neonic,2,V2/V3,15,31.51,Adjust for 7.59g bag,39.1
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Neonic,3,V2/V3,15,21.91,Adjust for 7.59g bag,29.5
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Neonic,4,V2/V3,15,18.11,Adjust for 7.59g bag,25.7
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Neonic,5,V2/V3,15,11.71,Adjust for 7.59g bag,19.3
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Neonic,6,V2/V3,15,10.8,Adjust for 7.59g bag,18.39
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Neonic,7,V3,15,18.8,Adjust for 7.59g bag,26.39
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Neonic,8,V3,15,18.81,Adjust for 7.59g bag,26.4
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Neonic,9,V3,15,19.71,Adjust for 7.59g bag,27.3
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Fung,1,V3,15,22.71,Adjust for 7.59g bag,30.3
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Fung,2,V3,15,22.17,Adjust for 7.59g bag,29.76
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Fung,3,V3,15,20.51,Adjust for 7.59g bag,28.1
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Fung,4,V2/V3,15,16.11,Adjust for 7.59g bag,23.7
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Fung,5,V2/V3,15,18.87,Adjust for 7.59g bag,26.46
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Fung,6,V2/V3,15,16.04,Adjust for 7.59g bag,23.63
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Fung,7,V2/V3,15,18.17,Adjust for 7.59g bag,25.76
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Fung,8,V2/V3,15,19.61,Adjust for 7.59g bag,27.2
+Julie Kikkert,KIK_SWE,7/3/25,V3/V4,Sweet corn,Fung,9,V3,15,14.21,Adjust for 7.59g bag,21.8
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Neonic,1,V4,15,70.9,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Neonic,2,V4,15,93.6,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Neonic,3,V5,15,102.1,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Neonic,4,V4,15,99.2,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Neonic,5,V4,15,82.2,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Neonic,6,V4,15,70.1,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Neonic,7,V4,15,65.2,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Neonic,8,V4,15,85,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Neonic,9,V4,15,62.4,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Fung,1,V4,15,76.5,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Fung,2,V3,15,45.4,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Fung,3,V4,15,51,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Fung,4,V4,15,65.2,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Fung,5,V3,15,79.4,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Fung,6,V4,15,51,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Fung,7,V4,15,76.5,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Fung,8,V4,15,70.9,,
+Natika Walters,KUH_COL,6/24/25,V3/V4,Field corn,Fung,9,V4,15,68,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Neonic,1,V3,15,58,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Neonic,2,V3,15,74,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Neonic,3,V3,15,54,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Neonic,4,V3,15,56,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Neonic,5,V3,15,60,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Neonic,6,V3,15,72,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Neonic,7,V3,15,62,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Neonic,8,V3,15,54,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Neonic,9,V3,15,48,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Fung,1,V3,15,58,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Fung,2,V3,15,82,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Fung,3,V3,15,52,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Fung,4,V3,15,50,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Fung,5,V3,15,78,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Fung,6,V3,15,66,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Fung,7,V3,15,72,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Fung,8,V3,15,80,,
+Jodi Letham,LET_MAC,7/2/25,V3/V4,Field corn,Fung,9,V3,15,66,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Neonic,1,V4,15,488,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Neonic,2,V4,15,348,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Neonic,3,V3/V4,15,115,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Neonic,4,V3/V4,15,148,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Neonic,5,V3/V4,15,322,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Neonic,6,V3/V4,15,304,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Neonic,7,V3/V4,15,66,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Neonic,8,V3/V4,15,348,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Neonic,9,V3/V4,15,328,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Fung,1,V3/V4,15,200,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Fung,2,V3/V4,15,189,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Fung,3,V3/V4,15,176,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Fung,4,V3/V4,15,234,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Fung,5,V3/V4,15,374,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Fung,6,V3/V4,15,316,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Fung,7,V3/V4,15,356,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Fung,8,V3/V4,15,324,,
+Jodi Letham,LET_STE,7/1/25,V3/V4,Field corn,Fung,9,V3/V4,15,228,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Neonic,1,V3,15,84,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Neonic,2,V3,15,68,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Neonic,3,V3,15,96,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Neonic,4,V3,15,110,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Neonic,5,V3,15,82,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Neonic,6,V3,15,74,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Neonic,7,V3,15,62,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Neonic,8,V3,15,82,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Neonic,9,V3,15,96,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Fung,1,V3,15,80,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Fung,2,V3,15,66,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Fung,3,V3,15,74,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Fung,4,V3,15,58,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Fung,5,V3,15,92,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Fung,6,V3,15,76,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Fung,7,V3,15,92,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Fung,8,V3,15,74,,
+Jodi Letham,LET_VER,6/13/25,V3/V4,Field corn,Fung,9,V3,15,64,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Neonic,1,V3/V4,15,30,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Neonic,2,V3/V4,15,112,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Neonic,3,V3/V4,15,156,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Neonic,4,V3/V4,15,146,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Neonic,5,V3/V4,15,204,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Neonic,6,V3/V4,15,64,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Neonic,7,V3/V4,15,44,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Neonic,8,V3/V4,15,112,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Neonic,9,V3/V4,15,162,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Fung,1,V3/V4,15,52,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Fung,2,V3/V4,15,48,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Fung,3,V3/V4,15,84,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Fung,4,V3/V4,15,102,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Fung,5,V3/V4,15,80,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Fung,6,V3/V4,15,46,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Fung,7,V3/V4,15,88,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Fung,8,V3/V4,15,60,,
+Jodi Letham,LET_WAT,7/2/25,V3/V4,Field corn,Fung,9,V3/V4,15,84,,
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Neonic,1,V4,15,97.7,Corrected for 42.3 g bag,140
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Neonic,2,V4,15,169.7,Corrected for 42.3 g bag,212
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Neonic,3,V4,15,94.7,Corrected for 42.3 g bag,137
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Neonic,4,V4,15,86.7,Corrected for 42.3 g bag,129
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Neonic,5,V4,15,112.7,Corrected for 42.3 g bag,155
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Neonic,6,V4,15,104.7,Corrected for 42.3 g bag,147
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Neonic,7,V4,15,95.7,Corrected for 42.3 g bag,138
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Neonic,8,V4,15,118.7,Corrected for 42.3 g bag,161
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Neonic,9,V4,15,105.7,Corrected for 42.3 g bag,148
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Fung,1,V4,15,95.7,Corrected for 42.3 g bag,138
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Fung,2,V4,15,76.7,Corrected for 42.3 g bag,119
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Fung,3,V4,15,53.7,Corrected for 42.3 g bag,96
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Fung,4,V4,15,103.7,Corrected for 42.3 g bag,146
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Fung,5,V4,15,116.7,Corrected for 42.3 g bag,159
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Fung,6,V4,15,113.7,Corrected for 42.3 g bag,156
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Fung,7,V4,15,72.7,Corrected for 42.3 g bag,115
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Fung,8,V4,15,104.7,Corrected for 42.3 g bag,147
+Katelyn Miller,MIL_BAR_1,7/1/25,V3/V4,Soybean,Fung,9,V4,15,128.7,Corrected for 42.3 g bag,171
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Neonic,1,V3,15,52,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Neonic,2,V3,15,61,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Neonic,3,V3,15,60,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Neonic,4,V3,15,63,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Neonic,5,V3,15,61,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Neonic,6,V3,15,58,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Neonic,7,V3,15,64,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Neonic,8,V3,15,64,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Neonic,9,V3,15,60,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Fung,1,V3,15,58,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Fung,2,V3,15,59,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Fung,3,V3,15,60,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Fung,4,V3,15,59,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Fung,5,V3,15,63,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Fung,6,V3,15,58,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Fung,7,V3,15,68,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Fung,8,V3,15,54,,
+Katelyn Miller,MIL_BAR_2,8/1/25,V3/V4,Soybean,Fung,9,V3,15,63,,
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Neonic,1,V3/V4,15,40.7,Corrected for 42.3 g bag,83
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Neonic,2,V3/V4,15,48.7,Corrected for 42.3 g bag,91
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Neonic,3,V3/V4,15,46.7,Corrected for 42.3 g bag,89
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Neonic,4,V3/V4,15,80.7,Corrected for 42.3 g bag,123
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Neonic,5,V3/V4,15,84.7,Corrected for 42.3 g bag,127
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Neonic,6,V3/V4,15,68.7,Corrected for 42.3 g bag,111
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Neonic,7,V3/V4,15,41.7,Corrected for 42.3 g bag,84
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Neonic,8,V3/V4,15,65.7,Corrected for 42.3 g bag,108
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Neonic,9,V3/V4,15,58.7,Corrected for 42.3 g bag,101
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Fung,1,V3/V4,15,59.7,Corrected for 42.3 g bag,102
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Fung,2,V3/V4,15,74.7,Corrected for 42.3 g bag,117
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Fung,3,V3/V4,15,57.7,Corrected for 42.3 g bag,100
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Fung,4,V3/V4,15,34.7,Corrected for 42.3 g bag,77
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Fung,5,V3/V4,15,41.7,Corrected for 42.3 g bag,84
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Fung,6,V3/V4,15,44.7,Corrected for 42.3 g bag,87
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Fung,7,V3/V4,15,31.7,Corrected for 42.3 g bag,74
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Fung,8,V3/V4,15,61.7,Corrected for 42.3 g bag,104
+Katelyn Miller,MIL_COB,6/20/25,V3/V4,Soybean,Fung,9,V3/V4,15,21.7,Corrected for 42.3 g bag,64
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Neonic,1,V4,15,191.7,Corrected for 42.3 g bag,234
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Neonic,2,V4,15,188.7,Corrected for 42.3 g bag,231
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Neonic,3,V4,15,191.7,Corrected for 42.3 g bag,234
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Neonic,4,V4,15,107.7,Corrected for 42.3 g bag,150
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Neonic,5,V4,15,204.7,Corrected for 42.3 g bag,247
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Neonic,6,V4,15,142.7,Corrected for 42.3 g bag,185
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Neonic,7,V4,15,191.7,Corrected for 42.3 g bag,234
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Neonic,8,V4,15,146.7,Corrected for 42.3 g bag,189
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Neonic,9,V4,15,154.7,Corrected for 42.3 g bag,197
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Fung,1,V4,15,192.7,Corrected for 42.3 g bag,235
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Fung,2,V4,15,389.7,Corrected for 42.3 g bag,432
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Fung,3,V4,15,184.7,Corrected for 42.3 g bag,227
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Fung,4,V4,15,162.7,Corrected for 42.3 g bag,205
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Fung,5,V4,15,436.7,Corrected for 42.3 g bag,479
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Fung,6,V4,15,358.7,Corrected for 42.3 g bag,401
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Fung,7,V4,15,190.7,Corrected for 42.3 g bag,233
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Fung,8,V4,15,275.7,Corrected for 42.3 g bag,318
+Katelyn Miller,MIL_CRO_1,6/27/25,V3/V4,Field corn,Fung,9,V4,15,239.7,Corrected for 42.3 g bag,282
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Neonic,1,V4,15,205.7,Corrected for 42.3 g bag,248
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Neonic,2,V4,15,256.7,Corrected for 42.3 g bag,299
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Neonic,3,V4,15,296.7,Corrected for 42.3 g bag,339
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Neonic,4,V4,15,123.7,Corrected for 42.3 g bag,166
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Neonic,5,V4,15,157.7,Corrected for 42.3 g bag,200
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Neonic,6,V4,15,180.7,Corrected for 42.3 g bag,223
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Neonic,7,V4,15,255.7,Corrected for 42.3 g bag,298
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Neonic,8,V4,15,456.7,Corrected for 42.3 g bag,499
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Neonic,9,V4,15,300.7,Corrected for 42.3 g bag,343
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Fung,1,V4,15,442.7,Corrected for 42.3 g bag,485
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Fung,2,V4,15,313.7,Corrected for 42.3 g bag,356
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Fung,3,V4,15,488.7,Corrected for 42.3 g bag,531
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Fung,4,V4,15,396.7,Corrected for 42.3 g bag,439
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Fung,5,V4,15,409.7,Corrected for 42.3 g bag,452
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Fung,6,V4,15,416.7,Corrected for 42.3 g bag,459
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Fung,7,V4,15,296.7,Corrected for 42.3 g bag,339
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Fung,8,V4,15,332.7,Corrected for 42.3 g bag,375
+Katelyn Miller,MIL_CRO_2,6/27/25,V3/V4,Field corn,Fung,9,V4,15,430.7,Corrected for 42.3 g bag,473
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Neonic,1,V5,15,585.7,Corrected for 42.3 g bag,628
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Neonic,2,V5,15,555.7,Corrected for 42.3 g bag,598
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Neonic,3,V5,15,527.7,Corrected for 42.3 g bag,570
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Neonic,4,V5,15,464.7,Corrected for 42.3 g bag,507
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Neonic,5,V5,15,404.7,Corrected for 42.3 g bag,447
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Neonic,6,V5,15,468.7,Corrected for 42.3 g bag,511
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Neonic,7,V5,15,442.7,Corrected for 42.3 g bag,485
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Neonic,8,V5,15,399.7,Corrected for 42.3 g bag,442
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Neonic,9,V5,15,542.7,Corrected for 42.3 g bag,585
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Fung,1,V5,15,536.7,Corrected for 42.3 g bag,579
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Fung,2,V5,15,490.7,Corrected for 42.3 g bag,533
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Fung,3,V5,15,541.7,Corrected for 42.3 g bag,584
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Fung,4,V5,15,477.7,Corrected for 42.3 g bag,520
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Fung,5,V5,15,503.7,Corrected for 42.3 g bag,546
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Fung,6,V5,15,395.7,Corrected for 42.3 g bag,438
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Fung,7,V5,15,597.7,Corrected for 42.3 g bag,640
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Fung,8,V5,15,478.7,Corrected for 42.3 g bag,521
+Katelyn Miller,MIL_TEL,7/2/25,V3/V4,Field corn,Fung,9,V5,15,522.7,Corrected for 42.3 g bag,565
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Neonic,1,V3-V6,15,96.7,Corrected for 42.3 g bag,139
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Neonic,2,V3-V6,15,79.7,Corrected for 42.3 g bag,122
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Neonic,3,V3-V6,15,141.7,Corrected for 42.3 g bag,184
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Neonic,4,V3-V6,15,160.7,Corrected for 42.3 g bag,203
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Neonic,5,V3-V6,15,101.7,Corrected for 42.3 g bag,144
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Neonic,6,V3-V6,15,163.7,Corrected for 42.3 g bag,206
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Neonic,7,V3-V6,15,141.7,Corrected for 42.3 g bag,184
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Neonic,8,V3-V6,15,155.7,Corrected for 42.3 g bag,198
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Neonic,9,V3-V6,15,148.7,Corrected for 42.3 g bag,191
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Fung,1,V3-V6,15,139.7,Corrected for 42.3 g bag,182
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Fung,2,V3-V6,15,117.7,Corrected for 42.3 g bag,160
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Fung,3,V3-V6,15,155.7,Corrected for 42.3 g bag,198
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Fung,4,V3-V6,15,157.7,Corrected for 42.3 g bag,200
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Fung,5,V3-V6,15,123.7,Corrected for 42.3 g bag,166
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Fung,6,V3-V6,15,133.7,Corrected for 42.3 g bag,176
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Fung,7,V3-V6,15,63.7,Corrected for 42.3 g bag,106
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Fung,8,V3-V6,15,129.7,Corrected for 42.3 g bag,172
+Katelyn Miller,MIL_ZIT_1,7/17/25,V3/V4,Soybean,Fung,9,V3-V6,15,83.7,Corrected for 42.3 g bag,126
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Neonic,1,V4,15,156.65,Corrected for 42.3 g bag,198.95
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Neonic,2,V4,15,117.39,Corrected for 42.3 g bag,159.69
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Neonic,3,V4,15,109.24,Corrected for 42.3 g bag,151.54
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Neonic,4,V4,15,165.7,Corrected for 42.3 g bag,208
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Neonic,5,V4,15,184.7,Corrected for 42.3 g bag,227
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Neonic,6,V4,15,194.7,Corrected for 42.3 g bag,237
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Neonic,7,V4,15,110.1,Corrected for 42.3 g bag,152.4
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Neonic,8,V4,15,166.08,Corrected for 42.3 g bag,208.38
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Neonic,9,V4,15,69.23,Corrected for 42.3 g bag,111.53
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Fung,1,V4,15,127.7,Corrected for 42.3 g bag,170
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Fung,2,V4,15,193.11,Corrected for 42.3 g bag,235.41
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Fung,3,V4,15,240.24,Corrected for 42.3 g bag,282.54
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Fung,4,V4,15,143.33,Corrected for 42.3 g bag,185.63
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Fung,5,V4,15,191.48,Corrected for 42.3 g bag,233.78
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Fung,6,V4,15,307.58,Corrected for 42.3 g bag,349.88
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Fung,7,V4,15,128.1,Corrected for 42.3 g bag,170.4
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Fung,8,V4,15,185.35,Corrected for 42.3 g bag,227.65
+Katelyn Miller,MIL_ZIT_2,6/25/25,V3/V4,Field corn,Fung,9,V4,15,234.13,Corrected for 42.3 g bag,276.43
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Neonic,1,V3,15,166.7,Corrected for 42.3 g bag,209
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Neonic,2,V3,15,108.7,Corrected for 42.3 g bag,151
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Neonic,3,V3,15,118.7,Corrected for 42.3 g bag,161
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Neonic,4,V3,15,112.7,Corrected for 42.3 g bag,155
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Neonic,5,V3,15,106.7,Corrected for 42.3 g bag,149
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Neonic,6,V3,15,166.7,Corrected for 42.3 g bag,209
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Neonic,7,V3,15,119.7,Corrected for 42.3 g bag,162
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Neonic,8,V3,15,149.7,Corrected for 42.3 g bag,192
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Neonic,9,V3,15,179.7,Corrected for 42.3 g bag,222
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Fung,1,V3,15,94.7,Corrected for 42.3 g bag,137
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Fung,2,V3,7,50.7,Corrected for 42.3 g bag,93
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Fung,3,V3,10,51.7,Corrected for 42.3 g bag,94
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Fung,4,V3,15,164.7,Corrected for 42.3 g bag,207
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Fung,5,V3,15,189.7,Corrected for 42.3 g bag,232
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Fung,6,V3,15,180.7,Corrected for 42.3 g bag,223
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Fung,7,V3,15,92.7,Corrected for 42.3 g bag,135
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Fung,8,V3,15,103.7,Corrected for 42.3 g bag,146
+Katelyn Miller,MIL_ZIT_3,7/9/25,V3/V4,Field corn,Fung,9,V3,15,59.7,Corrected for 42.3 g bag,102
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Neonic,1,V4,15,186.5,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Neonic,2,V4,15,163.4,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Neonic,3,V4,15,178.7,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Neonic,4,V4,15,141,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Neonic,5,V4,15,163.8,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Neonic,6,V4,15,169.2,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Neonic,7,V4,15,113.5,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Neonic,8,V4,15,135.5,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Neonic,9,V4,15,143,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Fung,1,V3/V5,15,219.8,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Fung,2,V3/V5,15,164.4,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Fung,3,V3/V5,15,193,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Fung,4,V3/V5,15,281,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Fung,5,V3/V5,15,227.2,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Fung,6,V3/V5,15,180,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Fung,7,V3/V5,15,229,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Fung,8,V3/V5,15,131.5,,
+Erik Smith,SMI_ARN_1,6/20/25,V3/V4,Field corn,Fung,9,V3/V5,15,227,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Neonic,1,V3,15,59.2,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Neonic,2,V3,15,35.3,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Neonic,3,V3,15,46.06,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Neonic,4,V3,15,53,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Neonic,5,V3,15,41.6,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Neonic,6,V3,15,49.7,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Neonic,7,V3,15,32.2,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Neonic,8,V3,15,31.5,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Neonic,9,V3,15,33,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Fung,1,V3,15,39.64,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Fung,2,V3,15,44.13,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Fung,3,V3,15,48.43,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Fung,4,V3,15,43,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Fung,5,V3,15,41.6,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Fung,6,V3,15,40,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Fung,7,V3,15,35,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Fung,8,V3,15,45.16,,
+Erik Smith,SMI_ARN_2,6/25/25,V3/V4,Soybean,Fung,9,V3,15,30,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Neonic,1,V3/V4,15,108,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Neonic,2,V3/V4,15,157.7,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Neonic,3,V3/V4,15,76.2,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Neonic,4,V3/V4,15,99.56,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Neonic,5,V3/V4,15,120,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Neonic,6,V3/V4,15,74,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Neonic,7,V3/V4,15,84.2,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Neonic,8,V3/V4,15,91,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Neonic,9,V3/V4,15,63,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Fung,1,V3/V4,15,140.1,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Fung,2,V3/V4,15,97,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Fung,3,V3/V4,15,157,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Fung,4,V3/V4,15,120,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Fung,5,V3/V4,15,89,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Fung,6,V3/V4,15,79.3,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Fung,7,V3/V4,15,122.7,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Fung,8,V3/V4,15,88.5,,
+Erik Smith,SMI_BUR,6/23/25,V3/V4,Field corn,Fung,9,V3/V4,15,75.8,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Neonic,1,V4/V5,15,357,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Neonic,2,V4/V5,15,264,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Neonic,3,V4/V5,15,245.7,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Neonic,4,V4/V5,15,399.3,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Neonic,5,V4/V5,15,276,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Neonic,6,V4/V5,15,324.5,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Neonic,7,V4/V5,15,268.6,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Neonic,8,V4/V5,15,343.8,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Neonic,9,V4/V5,15,272.2,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Fung,1,V4/V5,15,367.5,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Fung,2,V4/V5,15,316.1,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Fung,3,V4/V5,15,310.3,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Fung,4,V4/V5,15,290.4,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Fung,5,V4/V5,15,329.32,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Fung,6,V4/V5,15,369.5,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Fung,7,V4/V5,15,329.7,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Fung,8,V4/V5,15,385.4,,
+Erik Smith,SMI_COB,6/17/25,V3/V4,Field corn,Fung,9,V4/V5,15,323,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Neonic,1,V3,15,51,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Neonic,2,V3,15,23.5,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Neonic,3,V3,15,46.5,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Neonic,4,V3,15,43.2,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Neonic,5,V3,15,43.5,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Neonic,6,V3,15,43.2,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Neonic,7,V3,15,46.4,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Neonic,8,V3,15,23.6,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Neonic,9,V3,15,56,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Fung,1,V3,15,17,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Fung,2,V3,15,30,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Fung,3,V3,15,25,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Fung,4,V3,15,37,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Fung,5,V3,15,33,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Fung,6,V3,15,30,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Fung,7,V3,15,47.5,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Fung,8,V3,15,30,,
+Erik Smith,SMI_CON_1,7/22/25,V3/V4,Soybean,Fung,9,V3,15,45.8,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Neonic,1,V4/V5,15,597.5,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Neonic,2,V4/V5,15,467,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Neonic,3,V4/V5,15,554.6,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Neonic,4,V4/V5,15,232.6,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Neonic,5,V4/V5,15,222,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Neonic,6,V4/V5,15,137.5,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Neonic,7,V4/V5,15,170.8,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Neonic,8,V4/V5,15,210.3,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Neonic,9,V4/V5,15,251.9,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Fung,1,V5/V6,15,772,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Fung,2,V5/V6,15,461,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Fung,3,V5/V6,15,436.3,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Fung,4,V5/V6,15,577.6,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Fung,5,V5/V6,15,947.2,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Fung,6,V5/V6,15,772,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Fung,7,V5/V6,15,656,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Fung,8,V5/V6,15,820.2,,
+Erik Smith,SMI_CON_2,6/27/25,V3/V4,Field corn,Fung,9,V5/V6,15,1104.8,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Neonic,1,V3/V4,15,27,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Neonic,2,V3/V4,15,37.2,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Neonic,3,V3/V4,15,43.3,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Neonic,4,V3/V4,15,36,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Neonic,5,V3/V4,15,35.7,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Neonic,6,V3/V4,15,36.2,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Neonic,7,V3/V4,15,47,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Neonic,8,V3/V4,15,55.3,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Neonic,9,V3/V4,15,38.2,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Fung,1,V3,15,36.4,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Fung,2,V3,15,55.6,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Fung,3,V3,15,47.5,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Fung,4,V3,15,50.2,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Fung,5,V3,15,58.5,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Fung,6,V3,15,60.8,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Fung,7,V3,15,50.8,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Fung,8,V3,15,44.7,,
+Erik Smith,SMI_DOU,6/23/25,V3/V4,Soybean,Fung,9,V3,15,48.3,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Neonic,1,V4,15,249.9,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Neonic,2,V4,15,213.8,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Neonic,3,V4,15,140.1,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Neonic,4,V4,15,188.4,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Neonic,5,V4,15,144.1,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Neonic,6,V4,15,129.9,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Neonic,7,V4,15,210.1,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Neonic,8,V4,15,202,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Neonic,9,V4,15,127.4,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Fung,1,V4,15,127.5,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Fung,2,V4,15,82.5,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Fung,3,V4,15,68,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Fung,4,V4,15,168,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Fung,5,V4,15,129.3,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Fung,6,V4,15,93.8,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Fung,7,V4,15,176.9,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Fung,8,V4,15,137,,
+Erik Smith,SMI_HOF_1,7/9/25,V3/V4,Field corn,Fung,9,V4,15,117.8,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Neonic,1,V4,15,44.5,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Neonic,2,V4,15,54.2,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Neonic,3,V4,15,59.6,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Neonic,4,V4,15,60.7,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Neonic,5,V4,15,41.3,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Neonic,6,V4,15,48,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Neonic,7,V4,15,45.6,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Neonic,8,V4,15,34.4,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Neonic,9,V4,15,39.7,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Fung,1,V4,15,30.2,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Fung,2,V4,15,28.4,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Fung,3,V4,15,18.5,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Fung,4,V4,15,47.8,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Fung,5,V4,15,45.5,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Fung,6,V4,15,47.8,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Fung,7,V4,15,48.2,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Fung,8,V4,15,42.2,,
+Erik Smith,SMI_HOF_2,7/8/25,V3/V4,Soybean,Fung,9,V4,15,44.3,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Neonic,1,V3/V4,15,157.35,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Neonic,2,V3/V4,15,128.13,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Neonic,3,V3/V4,15,54.42,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Neonic,4,V3/V4,15,120,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Neonic,5,V3/V4,15,136.2,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Neonic,6,V3/V4,15,77,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Neonic,7,V3/V4,15,125.68,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Neonic,8,V3/V4,15,109.92,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Neonic,9,V3/V4,15,72.06,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Fung,1,V3/V4,15,66,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Fung,2,V3/V4,15,157.2,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Fung,3,V3/V4,15,95.5,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Fung,4,V3/V4,15,65.8,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Fung,5,V3/V4,15,112.3,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Fung,6,V3/V4,15,80.55,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Fung,7,V3/V4,15,95.61,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Fung,8,V3/V4,15,120.11,,
+Erik Smith,SMI_LAT,6/30/25,V3/V4,Field corn,Fung,9,V3/V4,15,86.4,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Neonic,1,V3,15,33,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Neonic,2,V3,15,45,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Neonic,3,V3,15,42.2,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Neonic,4,V3,15,32.7,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Neonic,5,V3,15,29,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Neonic,6,V3,15,51.7,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Neonic,7,V3,15,46.5,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Neonic,8,V3,15,47,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Neonic,9,V3,15,43,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Fung,1,V3,15,35.2,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Fung,2,V3,15,37.3,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Fung,3,V3,15,32,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Fung,4,V3,15,42,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Fung,5,V3,15,46,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Fung,6,V3,15,37,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Fung,7,V3,15,36.2,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Fung,8,V3,15,36,,
+Erik Smith,SMI_MCC,6/23/25,V3/V4,Field corn,Fung,9,V3,15,41.5,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Neonic,1,V3/V4,15,85,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Neonic,2,V3/V4,15,69,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Neonic,3,V3/V4,15,78,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Neonic,4,V3/V4,15,84,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Neonic,5,V3/V4,15,96,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Neonic,6,V3/V4,15,72,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Neonic,7,V3/V4,15,69,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Neonic,8,V3/V4,15,56,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Neonic,9,V3/V4,15,74,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Fung,1,V3/V4,15,93,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Fung,2,V3/V4,15,74,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Fung,3,V3/V4,15,57,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Fung,4,V3/V4,15,59,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Fung,5,V3/V4,15,85,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Fung,6,V3/V4,15,70,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Fung,7,V3/V4,15,97,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Fung,8,V3/V4,15,107,,
+Mike Stanyard,STA_BLO,6/27/25,V3/V4,Field corn,Fung,9,V3/V4,15,59,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Neonic,1,V2/V3,15,36,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Neonic,2,V2/V3,15,19,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Neonic,3,V2/V3,15,24,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Neonic,4,V2/V3,15,29,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Neonic,5,V2/V3,15,33,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Neonic,6,V2/V3,15,47,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Neonic,7,V2/V3,15,42,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Neonic,8,V2/V3,15,27,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Neonic,9,V2/V3,15,28,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Fung,1,V2/V3,15,36,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Fung,2,V2/V3,15,44,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Fung,3,V2/V3,15,77,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Fung,4,V2/V3,15,69,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Fung,5,V2/V3,15,54,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Fung,6,V2/V3,15,48,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Fung,7,V2/V3,15,26,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Fung,8,V2/V3,15,50,,
+Mike Stanyard,STA_FRE,6/30/25,V3/V4,Soybean,Fung,9,V2/V3,15,52,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Neonic,1,V4,15,175,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Neonic,2,V4,15,182,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Neonic,3,V4,15,177,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Neonic,4,V4,15,180,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Neonic,5,V4,15,205,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Neonic,6,V4,15,203,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Neonic,7,V4,15,278,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Neonic,8,V4,15,217,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Neonic,9,V4,15,224,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Fung,1,V4,15,126,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Fung,2,V4,15,173,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Fung,3,V4,15,282,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Fung,4,V4,15,265,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Fung,5,V4,15,187,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Fung,6,V4,15,98,Wet area,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Fung,7,V4,15,84,Wet area,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Fung,8,V4,15,235,,
+Mike Stanyard,STA_KRE,6/25/25,V3/V4,Field corn,Fung,9,V4,15,226,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Neonic,1,V3,15,63,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Neonic,2,V3,15,79,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Neonic,3,V3,15,53,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Neonic,4,V3,15,79,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Neonic,5,V3,15,71,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Neonic,6,V3,15,53,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Neonic,7,V3,15,46,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Neonic,8,V3,15,54,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Neonic,9,V4,15,109,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Fung,1,V3,15,49,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Fung,2,V3,15,39,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Fung,3,V3,15,34,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Fung,4,V3,15,48,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Fung,5,V3,15,75,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Fung,6,V3,15,64,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Fung,7,V3,15,47,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Fung,8,V3,15,54,,
+Mike Stanyard,STA_MAC,7/3/25,V3/V4,Field corn,Fung,9,V3,15,39,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Neonic,1,V4,15,324,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Neonic,2,V4,15,316,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Neonic,3,V4,15,227,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Neonic,4,V4,15,333,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Neonic,5,V4,15,390,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Neonic,6,V4,15,395,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Neonic,7,V4,15,243,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Neonic,8,V4,15,156,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Neonic,9,V4,15,160,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Fung,1,V4,15,218,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Fung,2,V4,15,170,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Fung,3,V4,15,213,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Fung,4,V4,15,312,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Fung,5,V4,15,342,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Fung,6,V4,15,339,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Fung,7,V4,15,342,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Fung,8,V4,15,368,,
+Mike Stanyard,STA_MAR,6/25/25,V3/V4,Field corn,Fung,9,V4,15,294,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Neonic,1,V3/V4,15,73,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Neonic,2,V3/V4,15,51,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Neonic,3,V3/V4,15,67,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Neonic,4,V3/V4,15,74,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Neonic,5,V3/V4,15,55,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Neonic,6,V3/V4,15,55,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Neonic,7,V3/V4,15,77,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Neonic,8,V3/V4,15,30,"Many V2s, wet area",
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Neonic,9,V3/V4,15,85,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Fung,1,V3/V4,15,55,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Fung,2,V3/V4,15,77,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Fung,3,V3/V4,15,57,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Fung,4,V3/V4,15,70,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Fung,5,V3/V4,15,69,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Fung,6,V3/V4,15,102,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Fung,7,V3/V4,15,60,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Fung,8,V3/V4,15,75,,
+Mike Stanyard,STA_REE_1,6/30/25,V3/V4,Soybean,Fung,9,V3/V4,15,88,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Neonic,1,V3/V4,15,67,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Neonic,2,V3/V4,15,71,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Neonic,3,V3/V4,15,74,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Neonic,4,V3/V4,15,52,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Neonic,5,V3/V4,15,67,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Neonic,6,V3/V4,15,65,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Neonic,7,V3/V4,15,83,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Neonic,8,V3/V4,15,67,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Neonic,9,V3/V4,15,73,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Fung,1,V3/V4,15,65,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Fung,2,V3/V4,15,45,Deer damaged,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Fung,3,V3/V4,15,44,Deer damaged,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Fung,4,V3/V4,15,73,Deer damaged,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Fung,5,V3/V4,15,64,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Fung,6,V3/V4,15,75,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Fung,7,V3/V4,15,73,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Fung,8,V3/V4,15,60,,
+Mike Stanyard,STA_REE_2,6/30/25,V3/V4,Soybean,Fung,9,V3/V4,15,83,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Neonic,1,V3,15,68,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Neonic,2,V3,15,96,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Neonic,3,V3,15,102,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Neonic,4,V3,15,108,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Neonic,5,V3,15,61,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Neonic,6,V3,15,97,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Neonic,7,V3,15,79,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Neonic,8,V3,15,90,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Neonic,9,V3,15,92,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Fung,1,V3,15,306,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Fung,2,V3,15,265,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Fung,3,V3,15,188,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Fung,4,V3,15,161,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Fung,5,V3,15,234,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Fung,6,V3,15,205,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Fung,7,V3,15,258,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Fung,8,V3,15,199,,
+Mike Stanyard,STA_STA,6/20/25,V3/V4,Field corn,Fung,9,V3,15,201,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Neonic,1,V4,15,139,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Neonic,2,V3/V4,15,92,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Neonic,3,V3/V4,15,72,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Neonic,4,V3/V4,15,68,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Neonic,5,V3/V4,15,118,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Neonic,6,V3/V4,15,86,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Neonic,7,V3/V4,15,65,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Neonic,8,V3/V4,15,43,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Neonic,9,V3/V4,15,45,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Fung,1,V3/V4,15,107,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Fung,2,V3/V4,15,96,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Fung,3,V3/V4,15,103,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Fung,4,V3/V4,15,93,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Fung,5,V3/V4,15,103,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Fung,6,V3/V4,15,58,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Fung,7,V3/V4,15,69,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Fung,8,V3/V4,15,128,,
+Mike Stanyard,STA_WIL,6/12/25,V3/V4,Field corn,Fung,9,V3/V4,15,107,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Neonic,1,V3,15,58,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Neonic,2,V3,15,68,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Neonic,3,V3,15,46,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Neonic,4,V3,15,40,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Neonic,5,V3,15,50,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Neonic,6,V3,15,45,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Neonic,7,V3,15,45,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Neonic,8,V3,15,46,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Neonic,9,V3,15,42,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Fung,1,V3,15,59,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Fung,2,V3,15,40,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Fung,3,V3,15,79,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Fung,4,V3,15,38,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Fung,5,V3,15,63,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Fung,6,V3,15,61,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Fung,7,V3,15,72,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Fung,8,V3,15,45,,
+Mike Stanyard,STA_WOO,6/13/25,V3/V4,Field corn,Fung,9,V3,15,77,,
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Neonic,1,V2/V3,15,72.69,Corrected for 7.59 g bag,80.28
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Neonic,2,V2/V3,15,76.27,Corrected for 7.59 g bag,83.86
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Neonic,3,V2/V3,15,105.55,Corrected for 7.59 g bag,113.14
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Neonic,4,V2,15,63.93,Corrected for 7.59 g bag,71.52
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Neonic,5,V2/V3,15,64.79,Corrected for 7.59 g bag,72.38
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Neonic,6,V2/V3,15,87.48,Corrected for 7.59 g bag,95.07
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Neonic,7,V2/V3,15,31.88,Corrected for 7.59 g bag,39.47
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Neonic,8,V2/V3,15,52.62,Corrected for 7.59 g bag,60.21
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Neonic,9,V2/V3,15,72.51,Corrected for 7.59 g bag,80.1
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Fung,1,V2/V3,15,68.21,Corrected for 7.59 g bag,75.8
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Fung,2,V2/V3,15,76.23,Corrected for 7.59 g bag,83.82
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Fung,3,V2/V3,15,90.58,Corrected for 7.59 g bag,98.17
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Fung,4,V2/V3,15,92.21,Corrected for 7.59 g bag,99.8
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Fung,5,V2/V3,15,92.24,Corrected for 7.59 g bag,99.83
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Fung,6,V2/V3,15,131.41,Corrected for 7.59 g bag,139
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Fung,7,V2/V3,15,116.41,Corrected for 7.59 g bag,124
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Fung,8,V2/V3,15,125.6,Corrected for 7.59 g bag,133.19
+Marion Zuefle,ZUE_MYT,7/15/25,V3/V4,Snap bean,Fung,9,V2/V3,15,119.32,Corrected for 7.59 g bag,126.91
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Neonic,1,V2,15,98.33,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Neonic,2,V2,15,137.79,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Neonic,3,V2,15,90.9,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Neonic,4,V2/V3,15,92.73,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Neonic,5,V2/V4,15,121.88,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Neonic,6,V2,15,134.2,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Neonic,7,V2,15,132.8,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Neonic,8,V2,15,115.65,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Neonic,9,V2,15,106.48,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Fung,1,V2,15,64.83,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Fung,2,V2,15,69.66,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Fung,3,V2,15,57.94,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Fung,4,V2,15,85.82,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Fung,5,V2,15,67.79,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Fung,6,V1/V2,15,45.21,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Fung,7,V2,15,62.37,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Fung,8,V2,15,69,,
+Marion Zuefle,ZUE_VOT,7/17/25,V3/V4,Snap bean,Fung,9,V2,15,60.17,,

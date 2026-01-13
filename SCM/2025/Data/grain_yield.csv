@@ -1,0 +1,23 @@
+Data Collector,Field ID,Date,Sampling period,Crop,Grain or Silage,Treatment,Yield (bu/acre)
+Mike Stanyard,STA_MAR,10/27/2025,Harvest,Field corn,Grain,Neonic,187.6695
+Mike Stanyard,STA_MAR,10/27/2025,Harvest,Field corn,Grain,Fung,190.9152
+Mike Stanyard,STA_WIL,10/24/2025,Harvest,Field corn,Grain,Neonic,178.26
+Mike Stanyard,STA_WIL,10/24/2025,Harvest,Field corn,Grain,Fung,229.92
+Katelyn Miller,MIL_ZIT_2,11/7/2025,Harvest,Field corn,Grain,Neonic,118.1
+Katelyn Miller,MIL_ZIT_2,11/7/2025,Harvest,Field corn,Grain,Fung,93.07
+Katelyn Miller,MIL_ZIT_3,11/25/2025,Harvest,Field corn,Grain,Neonic,124
+Katelyn Miller,MIL_ZIT_3,11/25/2025,Harvest,Field corn,Grain,Fung,134.8
+Janice Degni,DEG_FRI_1,11/4/2025,Harvest,Field corn,Grain,Neonic,87.07
+Janice Degni,DEG_FRI_1,11/4/2025,Harvest,Field corn,Grain,Fung,42.39
+Erik Smith,SMI_CON_2,12/15/2025,Harvest,Field corn,Grain,Neonic,113.37
+Erik Smith,SMI_CON_2,12/15/2025,Harvest,Field corn,Grain,Fung,115.32
+Erik Smith,SMI_BUR,11/20/2025,Harvest,Field corn,Grain,Neonic,124.92
+Erik Smith,SMI_BUR,11/20/2025,Harvest,Field corn,Grain,Fung,119.42
+Erik Smith,SMI_HOF_1,1/5/2025,Harvest,Field corn,Grain,Neonic,76
+Erik Smith,SMI_HOF_1,1/5/2025,Harvest,Field corn,Grain,Fung,85
+Mike Stanyard,STA_BLO,11/6/2025,Harvest,Field corn,Grain,Neonic,218.75
+Mike Stanyard,STA_BLO,11/6/2025,Harvest,Field corn,Grain,Fung,201.18
+Mike Stanyard,STA_KRE,11/20/2025,Harvest,Field corn,Grain,Neonic,155.1
+Mike Stanyard,STA_KRE,11/20/2025,Harvest,Field corn,Grain,Fung,159.1
+Mike Stanyard,STA_WOO,11/25/2025,Harvest,Field corn,Grain,Neonic,135.39
+Mike Stanyard,STA_WOO,11/25/2025,Harvest,Field corn,Grain,Fung,128.09
