@@ -1,0 +1,126 @@
+obs_id,title,local_strategy,landscape,response
+Obs_1,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,intermediate,pos
+Obs_2,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,intermediate,pos
+Obs_3,Diverse landscapes but not wildflower plantings increase marketable crop yield,Floral,intermediate,pos
+Obs_4,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,pos
+Obs_5,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,pos
+Obs_6,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,pos
+Obs_7,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,pos
+Obs_8,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,pos
+Obs_9,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,pos
+Obs_10,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,pos
+Obs_11,Small-scale traditional maize farming fosters greater arthropod diversity value than conventional maize farming,Intensity,intermediate,pos
+Obs_12,Small-scale traditional maize farming fosters greater arthropod diversity value than conventional maize farming,Intensity,intermediate,pos
+Obs_13,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,intermediate,pos
+Obs_14,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,intermediate,pos
+Obs_15,The taxon- and functional trait-dependent effects of field margin and landscape composition on predatory arthropods in wheat fields of the North China Plain,Structure,intermediate,pos
+Obs_16,Pest control experiments show benefits of complexity at landscape and local scales,Diversity,intermediate,ns
+Obs_17,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,intermediate,ns
+Obs_18,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,intermediate,ns
+Obs_19,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,intermediate,ns
+Obs_20,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,intermediate,ns
+Obs_21,"Size, age and surrounding semi-natural habitats modulate the effectiveness of flower-rich agri-environment schemes to promote pollinator visitation in crop fields",Floral,intermediate,ns
+Obs_22,"Size, age and surrounding semi-natural habitats modulate the effectiveness of flower-rich agri-environment schemes to promote pollinator visitation in crop fields",Floral,intermediate,ns
+Obs_23,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,intermediate,ns
+Obs_24,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,intermediate,ns
+Obs_25,Ant community potential for pest control in olive groves: Management and landscape effects,Intensity,intermediate,ns
+Obs_26,Low-intensity management benefits solitary bees in olive groves,Intensity,intermediate,ns
+Obs_27,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,ns
+Obs_28,Small-scale traditional maize farming fosters greater arthropod diversity value than conventional maize farming,Intensity,intermediate,ns
+Obs_29,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,intermediate,ns
+Obs_30,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,intermediate,ns
+Obs_31,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,intermediate,ns
+Obs_32,The taxon- and functional trait-dependent effects of field margin and landscape composition on predatory arthropods in wheat fields of the North China Plain,Structure,intermediate,ns
+Obs_33,Diverse landscapes but not wildflower plantings increase marketable crop yield,Floral,intermediate,neg
+Obs_34,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,neg
+Obs_35,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,intermediate,neg
+Obs_36,Small-scale traditional maize farming fosters greater arthropod diversity value than conventional maize farming,Intensity,intermediate,neg
+Obs_37,Mixed effects of organic farming and landscape complexity on farmland biodiversity and biological control potential across Europe,Intensity,intermediate,neg
+Obs_38,The taxon- and functional trait-dependent effects of field margin and landscape composition on predatory arthropods in wheat fields of the North China Plain,Structure,intermediate,neg
+Obs_39,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,complex,pos
+Obs_40,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,complex,pos
+Obs_41,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,complex,pos
+Obs_42,Pest control experiments show benefits of complexity at landscape and local scales,Diversity,complex,pos
+Obs_43,Organic Farming: Biodiversity Impacts Can Depend on Dispersal Characteristics and Landscape Context,Intensity,complex,pos
+Obs_44,Organic Farming: Biodiversity Impacts Can Depend on Dispersal Characteristics and Landscape Context,Intensity,complex,pos
+Obs_45,Organic Farming: Biodiversity Impacts Can Depend on Dispersal Characteristics and Landscape Context,Intensity,complex,pos
+Obs_46,Does soil biota benefit from organic farming in complex vs. simple landscapes?,Intensity,complex,pos
+Obs_47,Agricultural landscape composition affects the development and life expectancy of colonies of Bombus impatiens,Floral,complex,pos
+Obs_48,Agricultural landscape composition affects the development and life expectancy of colonies of Bombus impatiens,Floral,complex,pos
+Obs_49,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,pos
+Obs_50,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,pos
+Obs_51,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,pos
+Obs_52,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,pos
+Obs_53,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,pos
+Obs_54,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,pos
+Obs_55,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,complex,pos
+Obs_56,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,complex,pos
+Obs_57,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,complex,pos
+Obs_58,Experimental evidence that the effectiveness of conservation biological control depends on landscape complexity,Floral,complex,pos
+Obs_59,"Size, age and surrounding semi-natural habitats modulate the effectiveness of flower-rich agri-environment schemes to promote pollinator visitation in crop fields",Floral,complex,pos
+Obs_60,Ant community potential for pest control in olive groves: Management and landscape effects,Intensity,complex,pos
+Obs_61,Low-intensity management benefits solitary bees in olive groves,Intensity,complex,pos
+Obs_62,Diverse landscapes but not wildflower plantings increase marketable crop yield,Floral,complex,pos
+Obs_63,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,complex,pos
+Obs_64,Small-scale traditional maize farming fosters greater arthropod diversity value than conventional maize farming,Intensity,complex,pos
+Obs_65,Small-scale traditional maize farming fosters greater arthropod diversity value than conventional maize farming,Intensity,complex,pos
+Obs_66,Negative effects of pesticides on wild bee communities can be buffered by landscape context,Intensity,complex,pos
+Obs_67,Negative effects of pesticides on wild bee communities can be buffered by landscape context,Intensity,complex,pos
+Obs_68,Negative effects of pesticides on wild bee communities can be buffered by landscape context,Intensity,complex,pos
+Obs_69,Negative effects of pesticides on wild bee communities can be buffered by landscape context,Intensity,complex,pos
+Obs_70,Negative effects of pesticides on wild bee communities can be buffered by landscape context,Intensity,complex,pos
+Obs_71,Negative effects of pesticides on wild bee communities can be buffered by landscape context,Intensity,complex,pos
+Obs_72,Annual flower strips support pollinators and potentially enhance red clover seed yield,Floral,complex,pos
+Obs_73,Annual flower strips support pollinators and potentially enhance red clover seed yield,Floral,complex,pos
+Obs_74,Landscape-dependent effects of varietal mixtures on insect pest control and implications for farmer profits,Diversity,complex,pos
+Obs_75,Landscape-dependent effects of varietal mixtures on insect pest control and implications for farmer profits,Diversity,complex,pos
+Obs_76,Local and broadscale landscape structure differentially impact predation of two potato pests,Structure,complex,pos
+Obs_77,Local and broadscale landscape structure differentially impact predation of two potato pests,Structure,complex,pos
+Obs_78,Local and broadscale landscape structure differentially impact predation of two potato pests,Structure,complex,pos
+Obs_79,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,complex,pos
+Obs_80,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,complex,pos
+Obs_81,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,complex,pos
+Obs_82,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,complex,pos
+Obs_83,Mixed effects of organic farming and landscape complexity on farmland biodiversity and biological control potential across Europe,Intensity,complex,pos
+Obs_84,Pest control experiments show benefits of complexity at landscape and local scales,Diversity,complex,ns
+Obs_85,Does soil biota benefit from organic farming in complex vs. simple landscapes?,Intensity,complex,ns
+Obs_86,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,ns
+Obs_87,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,ns
+Obs_88,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,ns
+Obs_89,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,ns
+Obs_90,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,ns
+Obs_91,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,complex,ns
+Obs_92,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,complex,ns
+Obs_93,Benefits of wildflower areas as overwintering habitats for ground-dwelling arthropods depend on landscape structural complexity,Floral,complex,ns
+Obs_94,Experimental evidence that the effectiveness of conservation biological control depends on landscape complexity,Floral,complex,ns
+Obs_95,Ant community potential for pest control in olive groves: Management and landscape effects,Intensity,complex,ns
+Obs_96,Low-intensity management benefits solitary bees in olive groves,Intensity,complex,ns
+Obs_97,Diverse landscapes but not wildflower plantings increase marketable crop yield,Floral,complex,ns
+Obs_98,Diverse landscapes but not wildflower plantings increase marketable crop yield,Floral,complex,ns
+Obs_99,Annual flower strips support pollinators and potentially enhance red clover seed yield,Floral,complex,ns
+Obs_100,Landscape-dependent effects of varietal mixtures on insect pest control and implications for farmer profits,Diversity,complex,ns
+Obs_101,Landscape-dependent effects of varietal mixtures on insect pest control and implications for farmer profits,Diversity,complex,ns
+Obs_102,Landscape-dependent effects of varietal mixtures on insect pest control and implications for farmer profits,Diversity,complex,ns
+Obs_103,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,complex,ns
+Obs_104,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,complex,ns
+Obs_105,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,complex,ns
+Obs_106,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,complex,ns
+Obs_107,Landscape diversity and crop vigor outweigh influence of local diversification on biological control of a vineyard pest,Floral,complex,ns
+Obs_108,Mixed effects of organic farming and landscape complexity on farmland biodiversity and biological control potential across Europe,Intensity,complex,ns
+Obs_109,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,complex,neg
+Obs_110,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,complex,neg
+Obs_111,Benefits of increased cover crop diversity for predators and biological pest control depend on the landscape context,Diversity,complex,neg
+Obs_112,Does soil biota benefit from organic farming in complex vs. simple landscapes?,Intensity,complex,neg
+Obs_113,Agricultural landscape composition affects the development and life expectancy of colonies of Bombus impatiens,Floral,complex,neg
+Obs_114,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,neg
+Obs_115,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,neg
+Obs_116,Landscape context shifts the balance of costs and benefits from wildflower borders on multiple ecosystem services,Floral,complex,neg
+Obs_117,Experimental evidence that the effectiveness of conservation biological control depends on landscape complexity,Floral,complex,neg
+Obs_118,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,complex,neg
+Obs_119,Different components of landscape complexity are necessary to preserve multiple taxonomic groups in intensively-managed rice paddy landscapes,Intensity,complex,neg
+Obs_120,Diverse landscapes but not wildflower plantings increase marketable crop yield,Floral,complex,neg
+Obs_121,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,complex,neg
+Obs_122,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,complex,neg
+Obs_123,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,complex,neg
+Obs_124,"Agroecological farming, flowering phenology and the pollinator–herbivore–parasitoid nexus regulate non-crop plant reproduction",Floral,complex,neg
+Obs_125,Landscape-dependent effects of varietal mixtures on insect pest control and implications for farmer profits,Diversity,complex,neg
