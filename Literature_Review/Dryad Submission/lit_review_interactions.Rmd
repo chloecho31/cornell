@@ -97,9 +97,7 @@ model <- bglmer(
   fixef.prior = normal(cov = diag(100, 12))
 )
 summary(model)
-
-res <- simulateResiduals(model)
-plot(res)
+anova(model)
 
 ```
 
@@ -142,7 +140,9 @@ model <- bglmer(
   control = glmerControl(optimizer = "bobyqa"),
   fixef.prior = normal(cov = diag(100, 12))
 )
+
 summary(model)
+anova(model)
 
 ```
 
@@ -181,6 +181,8 @@ head(recat_europe)
 model_europe <- bglmer(response ~ landscape*local_strategy - 1 + (1|title) + (1|obs_id), data = recat_europe, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 8)))	
 summary(model_europe)
 
+anova(model_europe)
+
 ```
 
 ### Recategorized Interactions (North America)
@@ -217,6 +219,8 @@ head(recat_na)
 
 model_na <- bglmer(response ~ landscape*local_strategy - 1 + (1|title) + (1|obs_id), data = recat_na, family='binomial', control=glmerControl(optimizer="bobyqa"), fixef.prior = normal(cov = diag(100, 12)))	
 summary(model_na)
+
+anova(model_na)
 
 ```
 
