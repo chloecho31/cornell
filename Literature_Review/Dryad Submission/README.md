@@ -16,11 +16,8 @@ lit_review_data_and_code.zip file
 |  |- Interaction_Analyses/  
 |  |  |- lit_review_interactions.csv  
 |  |  |- lit_review_recat_europe_for_analysis.csv  
-|  |  |- lit_review_recat_europe_results.csv  
 |  |  |- lit_review_recat_for_analysis.csv  
 |  |  |- lit_review_recat_na_for_analysis.csv  
-|  |  |- lit_review_recat_na_results.csv  
-|  |  |- lit_review_recat_results.csv   
 
 # METHODOLOGICAL INFORMATION
 
@@ -37,7 +34,7 @@ lit_review_data_and_code.zip file
 Data extracted from papers included in the review.  
 
 * Number of variables: 16   
-* Number of cases/rows: 581   
+* Number of cases/rows: 651   
 * Variable List:   
   * Title,  
   * Author,   
@@ -59,7 +56,7 @@ Data extracted from papers included in the review.
 
 # DATA-SPECIFIC INFORMATION FOR: lit_review_landscape_percents.csv
 * Number of variables: 10
-* Number of cases/rows: 126
+* Number of cases/rows: 139
 * Variable List: 
   * Title,
   * Author, 
@@ -75,7 +72,7 @@ Data extracted from papers included in the review.
 
 # DATA-SPECIFIC INFORMATION FOR: lit_review_interactions.csv
 * Number of variables: 19
-* Number of cases/rows: 83
+* Number of cases/rows: 95
 * Variable List: 
   * Obs_ID, 
   * Title,
@@ -98,20 +95,9 @@ Data extracted from papers included in the review.
   * Complex: Positive, negative, or non-significant responses of above observations in complex landscapes  
 * Missing data codes: NA
 
-# DATA-SPECIFIC INFORMATION FOR: lit_review_recat_europe_results.csv, lit_review_recat_results.csv, lit_review_recat_na_results.csv
-* Number of variables: 12
-* Number of cases/rows: 29, 55, 18
-* Variable List: 
-  * Obs_ID, 
-  * Title,
-  * Local Strategy: Reduced management intensity, floral resources, crop diversity, or structural modifications,  
-  * Landscape: Simple, intermediate, or complex landscape,  
-  * Response: Positive, negative, or non-significant response  
-* Missing data codes: NA
-
 # DATA-SPECIFIC INFORMATION FOR: lit_review_recat_europe_for_analysis.csv, lit_review_recat_for_analysis.csv, lit_review_recat_na_for_analysis.csv
 * Number of variables: 5
-* Number of cases/rows: 60, 126, 54
+* Number of cases/rows: 60, 126, 57
 * Variable List: 
   * Title,
   * Author, 
@@ -129,7 +115,7 @@ Data extracted from papers included in the review.
 
 # CODE/SOFTWARE
 
-lit_review_analysis_general.ipynb: Contains code for Figures 1-3, Table 2, Supporting Information Figure S1.  
+lit_review_analysis_general.ipynb: Contains code for Figures 1-3, Supporting Information Figure S1.  
 
 lit_review_interactions.Rmd: Contains code for mixed-effects logistic regression models 1-4 (Table 3, Supporting Information Tables S2-5).  
 
