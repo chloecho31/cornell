@@ -1,0 +1,192 @@
+---
+title: "dung_beetle_landscape"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+library(fitdistrplus)
+library(lme4)
+library(DHARMa)
+library(rsq)
+library(effects)
+library(marginaleffects)
+library(glmmTMB)
+
+```
+
+
+```{r}
+
+dung_beetle <- read.delim("Data/diversity_landscape.csv", sep = ",")
+
+dung_beetle <- dung_beetle %>%
+  mutate(date = as.Date(date, format = "%m/%d/%Y")) %>%
+  mutate(farm = as.factor(farm))
+  
+dung_beetle$julian_date <- format(dung_beetle$date, "%j")
+
+dung_beetle <- dung_beetle %>%
+  mutate(julian_date = as.numeric(julian_date))
+
+dung_beetle$numeric_date <- as.numeric(dung_beetle$date) 
+
+dung_beetle
+
+```
+
+# Total abundance 
+
+```{r}
+
+plot(fitdist(dung_beetle$total_abundance,"nbinom"))
+
+```
+
+```{r}
+
+model1 <- glmer.nb(total_abundance ~ (scale(numeric_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle)
+
+summary(model1)
+
+```
+
+When there is more ag in the landscape, total abundance is lower in landscapes with higher woodland.
+
+```{r}
+
+woodland_ag_effect <- Effect(c('ag_prop', "woodland_prop"), model1)
+plot(woodland_ag_effect, lines=list(multiline=TRUE), confint=list(style='bands', alpha=.3))
+
+```
+
+# Richness
+
+```{r}
+
+plotdist(dung_beetle$q_0_richness, histo = TRUE, demp = TRUE)
+
+plot(fitdist(dung_beetle$q_0_richness,"nbinom"))
+
+```
+
+```{r}
+
+model2 <- glmer.nb(q_0_richness ~ (scale(numeric_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle)
+
+summary(model2)
+
+```
+
+# Shannon
+
+```{r}
+
+dung_beetle_q1 <- dung_beetle %>% drop_na(q_1_shannon)
+
+descdist(dung_beetle_q1$q_1_shannon, discrete = FALSE)
+plot(fitdist(dung_beetle_q1$q_1_shannon,"gamma"))
+
+```
+
+```{r}
+
+model3 <- glmer(q_1_shannon ~ (scale(numeric_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family = Gamma(link="log"))
+
+summary(model3)
+
+```
+
+# Simpson
+
+```{r}
+
+dung_beetle_q2 <- dung_beetle %>% drop_na(q_2_simpson)
+
+descdist(dung_beetle_q2$q_2_simpson, discrete = FALSE)
+plot(fitdist(dung_beetle_q1$q_1_shannon,"gamma"))
+
+```
+
+```{r}
+
+model4 <- glmer(q_2_simpson ~ (scale(numeric_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family = Gamma(link="log"))
+
+summary(model4)
+
+```
+
+# Native species abundance
+
+```{r}
+
+plot(fitdist(dung_beetle$native_species_abundance,"nbinom"))
+
+```
+
+```{r}
+
+model5 <- glmer.nb(native_species_abundance ~ (scale(numeric_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle)
+
+summary(model5)
+
+```
+
+# Native species richness
+
+```{r}
+
+plot(fitdist(dung_beetle$native_species_richness,"nbinom"))
+
+```
+
+```{r}
+
+model6 <- glmer.nb(native_species_richness ~ (scale(numeric_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle)
+
+summary(model6)
+
+```
+
+# Native species proportion
+
+
+```{r}
+
+dung_beetle_native_prop <- dung_beetle %>% drop_na(native_species_proportion)
+
+```
+
+
+```{r}
+
+model6 <- glmmTMB(native_species_proportion ~ (scale(numeric_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family=ordbeta)
+
+summary(model6)
+
+```
+
+
+
+
+
+
+
+
+
+
+
