@@ -2,7 +2,9 @@
 title: "dung_beetle_landscape"
 author: "Chloe Cho"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -19,16 +21,21 @@ library(rsq)
 library(effects)
 library(marginaleffects)
 library(glmmTMB)
+library(performance)
+library(insight)
 
 ```
 
+Read in data frame - landscape data pulled from USDA CDL at 1000m radius around each trapping point. Convert data types. 
+
+All landscape data is pulled from the USDA CDL. Agriculture includes all annual and perennial crops. Woodland includes all forested habitat + shrubland. Semi-natural habitat includes pastures and grasslands. 
 
 ```{r}
 
 dung_beetle <- read.delim("Data/diversity_landscape.csv", sep = ",")
 
 dung_beetle <- dung_beetle %>%
-  mutate(date = as.Date(date, format = "%m/%d/%Y")) %>%
+  mutate(date = as.Date(date, format = "%m/%d")) %>%
   mutate(farm = as.factor(farm))
   
 dung_beetle$julian_date <- format(dung_beetle$date, "%j")
@@ -36,15 +43,19 @@ dung_beetle$julian_date <- format(dung_beetle$date, "%j")
 dung_beetle <- dung_beetle %>%
   mutate(julian_date = as.numeric(julian_date))
 
-dung_beetle$numeric_date <- as.numeric(dung_beetle$date) 
-
-dung_beetle
+head(dung_beetle)
 
 ```
 
 # Total abundance 
 
+All models include year, Julian date, woodland proportion (forests, shrublands), agriculture proportion (all agriculture types), and semi-natural habitat proportion as fixed effects and farm as a random effect. 
+
+Depending on what you find interesting in this, we can play around with model selection and drop some variables.
+
 ```{r}
+
+# Check distributions. 
 
 plot(fitdist(dung_beetle$total_abundance,"nbinom"))
 
@@ -52,19 +63,14 @@ plot(fitdist(dung_beetle$total_abundance,"nbinom"))
 
 ```{r}
 
-model1 <- glmer.nb(total_abundance ~ (scale(numeric_date) + scale(woodland_prop) + 
+# Model total abundance vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+model1 <- glmer.nb(total_abundance ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
                      scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle)
 
 summary(model1)
 
-```
-
-When there is more ag in the landscape, total abundance is lower in landscapes with higher woodland.
-
-```{r}
-
-woodland_ag_effect <- Effect(c('ag_prop', "woodland_prop"), model1)
-plot(woodland_ag_effect, lines=list(multiline=TRUE), confint=list(style='bands', alpha=.3))
+# check_model(model1)
 
 ```
 
@@ -73,17 +79,20 @@ plot(woodland_ag_effect, lines=list(multiline=TRUE), confint=list(style='bands',
 ```{r}
 
 plotdist(dung_beetle$q_0_richness, histo = TRUE, demp = TRUE)
-
-plot(fitdist(dung_beetle$q_0_richness,"nbinom"))
+plot(fitdist(dung_beetle$q_0_richness,"pois"))
 
 ```
 
 ```{r}
 
-model2 <- glmer.nb(q_0_richness ~ (scale(numeric_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle)
+# Model richness vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+model2 <- glmer(q_0_richness ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family=poisson)
 
 summary(model2)
+
+# check_model(model2)
 
 ```
 
@@ -91,19 +100,27 @@ summary(model2)
 
 ```{r}
 
-dung_beetle_q1 <- dung_beetle %>% drop_na(q_1_shannon)
+# Look at log transformation.
 
-descdist(dung_beetle_q1$q_1_shannon, discrete = FALSE)
-plot(fitdist(dung_beetle_q1$q_1_shannon,"gamma"))
+dung_beetle_q1 <- dung_beetle %>% drop_na(q_1_shannon)
+dung_beetle_q1$shannon_log <- log(dung_beetle_q1$q_1_shannon)
+
+plot(fitdist(dung_beetle_q1$shannon_log,"norm"))
 
 ```
 
 ```{r}
 
-model3 <- glmer(q_1_shannon ~ (scale(numeric_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family = Gamma(link="log"))
+# Model Shannon index vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
 
+# Zero inflated model.
+
+model3 <- glmmTMB(shannon_log ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), ziformula=~1, data=dung_beetle_q1)
+  
 summary(model3)
+
+# check_model(model3)
 
 ```
 
@@ -111,19 +128,27 @@ summary(model3)
 
 ```{r}
 
-dung_beetle_q2 <- dung_beetle %>% drop_na(q_2_simpson)
+# Look at log transformation.
 
-descdist(dung_beetle_q2$q_2_simpson, discrete = FALSE)
-plot(fitdist(dung_beetle_q1$q_1_shannon,"gamma"))
+dung_beetle_q2 <- dung_beetle %>% drop_na(q_2_simpson)
+dung_beetle_q2$simpson_log <- log(dung_beetle_q2$q_2_simpson)
+
+plot(fitdist(dung_beetle_q2$simpson_log,"norm"))
 
 ```
 
 ```{r}
 
-model4 <- glmer(q_2_simpson ~ (scale(numeric_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family = Gamma(link="log"))
+# Model Simpson index vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+# Zero inflated model.
+
+model4 <- glmmTMB(simpson_log ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), ziformula=~1, data=dung_beetle_q2)
 
 summary(model4)
+
+# check_model(model4)
 
 ```
 
@@ -131,16 +156,20 @@ summary(model4)
 
 ```{r}
 
-plot(fitdist(dung_beetle$native_species_abundance,"nbinom"))
+plot(fitdist(dung_beetle$native_species_abundance,"pois"))
 
 ```
 
 ```{r}
 
-model5 <- glmer.nb(native_species_abundance ~ (scale(numeric_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle)
+# Model native species abundance vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+model5 <- glmer(native_species_abundance ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family = poisson)
 
 summary(model5)
+
+# check_model(model5)
 
 ```
 
@@ -148,16 +177,20 @@ summary(model5)
 
 ```{r}
 
-plot(fitdist(dung_beetle$native_species_richness,"nbinom"))
+plot(fitdist(dung_beetle$native_species_richness,"pois"))
 
 ```
 
 ```{r}
 
-model6 <- glmer.nb(native_species_richness ~ (scale(numeric_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle)
+# Model native species richness vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+model6 <- glmer(native_species_richness ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family = poisson)
 
 summary(model6)
+
+# check_model(model6)
 
 ```
 
@@ -166,27 +199,13 @@ summary(model6)
 
 ```{r}
 
-dung_beetle_native_prop <- dung_beetle %>% drop_na(native_species_proportion)
+# Model native species proportion vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
 
-```
-
-
-```{r}
-
-model6 <- glmmTMB(native_species_proportion ~ (scale(numeric_date) + scale(woodland_prop) + 
+model7 <- glmmTMB(native_species_proportion ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
                      scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family=ordbeta)
 
-summary(model6)
+summary(model7)
+
+# check_model(model7)
 
 ```
-
-
-
-
-
-
-
-
-
-
-
