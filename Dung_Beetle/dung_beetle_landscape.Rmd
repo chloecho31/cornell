@@ -23,6 +23,7 @@ library(marginaleffects)
 library(glmmTMB)
 library(performance)
 library(insight)
+library(MuMIn)
 
 ```
 
@@ -35,42 +36,113 @@ All landscape data is pulled from the USDA CDL. Agriculture includes all annual 
 dung_beetle <- read.delim("Data/diversity_landscape.csv", sep = ",")
 
 dung_beetle <- dung_beetle %>%
-  mutate(date = as.Date(date, format = "%m/%d")) %>%
-  mutate(farm = as.factor(farm))
-  
-dung_beetle$julian_date <- format(dung_beetle$date, "%j")
-
-dung_beetle <- dung_beetle %>%
-  mutate(julian_date = as.numeric(julian_date))
+  mutate(date = as.Date(date, format = "%Y-%m-%d")) %>%
+  mutate(farm = as.factor(farm)) %>%
+  mutate(season = as.factor(season))
 
 head(dung_beetle)
 
 ```
 
+Divide data by year. 
+
+```{r}
+
+dung_beetle_22 <- dung_beetle %>% filter(year == '2022')
+dung_beetle_24 <- dung_beetle %>% filter(year == '2024')
+
+```
+
 # Total abundance 
 
-All models include year, Julian date, woodland proportion (forests, shrublands), agriculture proportion (all agriculture types), and semi-natural habitat proportion as fixed effects and farm as a random effect. 
-
-Depending on what you find interesting in this, we can play around with model selection and drop some variables.
+All models include Julian date, woodland proportion (forests, shrublands), agriculture proportion (all agriculture types), and semi-natural habitat proportion as fixed effects and farm as a random effect. For each response variable, there is a model for each year. 
 
 ```{r}
 
 # Check distributions. 
-
-plot(fitdist(dung_beetle$total_abundance,"nbinom"))
+plot(fitdist(dung_beetle_22$total_abundance,"nbinom"))
+plot(fitdist(dung_beetle_24$total_abundance,"nbinom"))
 
 ```
+
+### 2022
 
 ```{r}
 
 # Model total abundance vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
 
-model1 <- glmer.nb(total_abundance ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle)
+model1a <- glmer.nb(total_abundance ~ (scale(julian_day) +
+                      scale(woodland_prop) +
+                      scale(ag_prop) +
+                      scale(semi_nat_prop))^2 +
+                      (1 | farm), 
+                    data = dung_beetle_22, 
+                    na.action='na.fail')
 
-summary(model1)
+# Full model - AIC 1474.4
+# Only Julian day and landscape interactions were significant, no landscape-landscape interactions.
 
-# check_model(model1)
+model1a_dredge <- dredge(model1a)
+summary(get.models(model1a_dredge, 1)[[1]])
+
+# Top model from dredge retained just Julian day, woodland prop, and their interaction. AIC - 1469.7
+
+# Model keeping the significant effects of the global model. 
+# Simplified model - AIC 1472.2
+
+model1a <- glmer.nb(total_abundance ~ scale(julian_day) + 
+                      scale(woodland_prop) + 
+                      scale(ag_prop) + 
+                      scale(semi_nat_prop) + 
+                      scale(julian_day)*scale(woodland_prop) + 
+                      scale(julian_day)*scale(ag_prop) + 
+                      scale(julian_day)*scale(semi_nat_prop) + 
+                      (1 | farm), 
+                    data = dung_beetle_22)
+
+summary(model1a)
+
+# check_model(model1a)
+
+```
+
+### 2024
+
+```{r}
+
+# Model total abundance vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+model1b <- glmer.nb(total_abundance ~ (scale(julian_day) +
+                      scale(woodland_prop) +
+                      scale(ag_prop) +
+                      scale(semi_nat_prop))^2 +
+                      (1 | farm), 
+                    data = dung_beetle_24, 
+                    na.action='na.fail')
+
+# Full model - AIC 1317.1
+# Significant interactions - Julian day * prop_ag, woodland_prop*ag_prop.
+
+model1b_dredge <- dredge(model1b)
+summary(get.models(model1b_dredge, 1)[[1]])
+
+# Top model from dredge retained ag prop, Julian day, semi-nat prop, woodland prop, and ag_prop interactions with all three. AIC - 1312.3.
+
+# Model keeping the significant effects of the global model. 
+# Simplified model - AIC 1319.9
+
+model1b <- glmer.nb(total_abundance ~ scale(julian_day) + 
+                      scale(woodland_prop) + 
+                      scale(ag_prop) + 
+                      scale(semi_nat_prop) + 
+                      scale(julian_day)*scale(ag_prop) + 
+                      scale(woodland_prop)*scale(ag_prop) +
+                      (1 | farm), 
+                    data = dung_beetle_24)
+
+summary(model1b)
+
+# check_model(model1b)
 
 ```
 
@@ -78,19 +150,42 @@ summary(model1)
 
 ```{r}
 
-plotdist(dung_beetle$q_0_richness, histo = TRUE, demp = TRUE)
-plot(fitdist(dung_beetle$q_0_richness,"pois"))
+plot(fitdist(dung_beetle_22$q_0_richness,"pois"))
+plot(fitdist(dung_beetle_24$q_0_richness,"pois"))
 
 ```
+
+### 2022 
 
 ```{r}
 
 # Model richness vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
 
-model2 <- glmer(q_0_richness ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family=poisson)
+model2a <- glmer(q_0_richness ~ (scale(julian_day) +
+                      scale(woodland_prop) +
+                      scale(ag_prop) +
+                      scale(semi_nat_prop))^2 +
+                      (1 | farm), 
+                    data = dung_beetle_22, family='poisson',
+                    na.action='na.fail')
 
-summary(model2)
+# Full model - AIC 725.4
+# No significant interactions. Only Julian day is significant.
+
+model2a_dredge <- dredge(model2a)
+summary(get.models(model2a_dredge, 1)[[1]])
+
+# Top model from dredge retained Julian day and semi-nat prop. AIC - 716.6.
+
+# Model keeping the significant effects of the global model. 
+# Simplified model - AIC 718.5
+
+model2a <- glmer(q_0_richness ~ scale(julian_day) +
+                      (1 | farm), 
+                    data = dung_beetle_22, family='poisson',
+                    na.action='na.fail')
+
+summary(model2a)
 
 # check_model(model2)
 
@@ -164,8 +259,8 @@ plot(fitdist(dung_beetle$native_species_abundance,"pois"))
 
 # Model native species abundance vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
 
-model5 <- glmer(native_species_abundance ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family = poisson)
+model5 <- glmer.nb(native_species_abundance ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
+                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle)
 
 summary(model5)
 

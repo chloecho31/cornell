@@ -56,7 +56,7 @@ Data extracted from papers included in the review.
 
 # DATA-SPECIFIC INFORMATION FOR: lit_review_landscape_percents.csv
 * Number of variables: 10
-* Number of cases/rows: 139
+* Number of cases/rows: 138
 * Variable List: 
   * Title,
   * Author, 
