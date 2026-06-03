@@ -69,7 +69,7 @@ plot(fitdist(dung_beetle_24$total_abundance,"nbinom"))
 
 ```{r}
 
-# Model total abundance vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+# Model total abundance vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
 
 model1a <- glmer.nb(total_abundance ~ (scale(julian_day) +
                       scale(woodland_prop) +
@@ -81,11 +81,6 @@ model1a <- glmer.nb(total_abundance ~ (scale(julian_day) +
 
 # Full model - AIC 1474.4
 # Only Julian day and landscape interactions were significant, no landscape-landscape interactions.
-
-model1a_dredge <- dredge(model1a)
-summary(get.models(model1a_dredge, 1)[[1]])
-
-# Top model from dredge retained just Julian day, woodland prop, and their interaction. AIC - 1469.7
 
 # Model keeping the significant effects of the global model. 
 # Simplified model - AIC 1472.2
@@ -122,11 +117,6 @@ model1b <- glmer.nb(total_abundance ~ (scale(julian_day) +
 
 # Full model - AIC 1317.1
 # Significant interactions - Julian day * prop_ag, woodland_prop*ag_prop.
-
-model1b_dredge <- dredge(model1b)
-summary(get.models(model1b_dredge, 1)[[1]])
-
-# Top model from dredge retained ag prop, Julian day, semi-nat prop, woodland prop, and ag_prop interactions with all three. AIC - 1312.3.
 
 # Model keeping the significant effects of the global model. 
 # Simplified model - AIC 1319.9
@@ -172,20 +162,52 @@ model2a <- glmer(q_0_richness ~ (scale(julian_day) +
 # Full model - AIC 725.4
 # No significant interactions. Only Julian day is significant.
 
-model2a_dredge <- dredge(model2a)
-summary(get.models(model2a_dredge, 1)[[1]])
-
-# Top model from dredge retained Julian day and semi-nat prop. AIC - 716.6.
-
 # Model keeping the significant effects of the global model. 
 # Simplified model - AIC 718.5
 
-model2a <- glmer(q_0_richness ~ scale(julian_day) +
+model2a <- glmer(q_0_richness ~ scale(julian_day) + 
+                      scale(woodland_prop) + 
+                      scale(ag_prop) + 
+                      scale(semi_nat_prop) +
                       (1 | farm), 
                     data = dung_beetle_22, family='poisson',
                     na.action='na.fail')
 
 summary(model2a)
+
+# check_model(model2)
+
+```
+
+### 2024 
+
+```{r}
+
+# Model richness vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+model2b <- glmer(q_0_richness ~ (scale(julian_day) +
+                      scale(woodland_prop) +
+                      scale(ag_prop) +
+                      scale(semi_nat_prop))^2 +
+                      (1 | farm), 
+                    data = dung_beetle_24, family='poisson',
+                    na.action='na.fail')
+
+# Full model - AIC 632.9
+# No significant interactions. Only Julian day is significant.
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 630.3
+
+model2b <- glmer(q_0_richness ~ scale(julian_day) + 
+                      scale(woodland_prop) + 
+                      scale(ag_prop) + 
+                      scale(semi_nat_prop) +
+                      (1 | farm), 
+                    data = dung_beetle_24, family='poisson',
+                    na.action='na.fail')
+
+summary(model2b)
 
 # check_model(model2)
 
@@ -200,20 +222,74 @@ summary(model2a)
 dung_beetle_q1 <- dung_beetle %>% drop_na(q_1_shannon)
 dung_beetle_q1$shannon_log <- log(dung_beetle_q1$q_1_shannon)
 
+dung_beetle_q1_22 <- dung_beetle_q1 %>% filter(year == '2022')
+dung_beetle_q1_24 <- dung_beetle_q1 %>% filter(year == '2024')
+
 plot(fitdist(dung_beetle_q1$shannon_log,"norm"))
 
 ```
 
+### 2022 
+
 ```{r}
 
-# Model Shannon index vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+# Model Shannon index vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
 
 # Zero inflated model.
 
-model3 <- glmmTMB(shannon_log ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), ziformula=~1, data=dung_beetle_q1)
+model3a <- glmmTMB(shannon_log ~ (scale(julian_day) + 
+                                   scale(woodland_prop) + 
+                                   scale(ag_prop) + 
+                                   scale(semi_nat_prop))^2 + 
+                    (1 | farm), ziformula=~1, data=dung_beetle_q1_22)
+
+# Full model - AIC 219.1
+# Significant interactions - Julian*woodland, Julian*semi-natural
+
+model3a <- glmmTMB(shannon_log ~ scale(julian_day) + 
+                                   scale(woodland_prop) + 
+                                   scale(ag_prop) + 
+                                   scale(semi_nat_prop) + 
+                     scale(julian_day)*scale(woodland_prop) + 
+                     scale(julian_day)*scale(semi_nat_prop) +
+                    (1 | farm), ziformula=~1, data=dung_beetle_q1_22)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 216.7
   
-summary(model3)
+summary(model3a)
+
+# check_model(model3)
+
+```
+
+### 2024
+
+```{r}
+
+# Model Shannon index vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+# Zero inflated model.
+
+model3b <- glmmTMB(shannon_log ~ (scale(julian_day) + 
+                                   scale(woodland_prop) + 
+                                   scale(ag_prop) + 
+                                   scale(semi_nat_prop))^2 + 
+                    (1 | farm), ziformula=~1, data=dung_beetle_q1_24)
+
+# Full model - AIC 215.0
+# No significant interactions 
+
+model3b <- glmmTMB(shannon_log ~ scale(julian_day) + 
+                                   scale(woodland_prop) + 
+                                   scale(ag_prop) + 
+                                   scale(semi_nat_prop) + 
+                    (1 | farm), ziformula=~1, data=dung_beetle_q1_24)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 210.1
+  
+summary(model3b)
 
 # check_model(model3)
 
@@ -228,25 +304,78 @@ summary(model3)
 dung_beetle_q2 <- dung_beetle %>% drop_na(q_2_simpson)
 dung_beetle_q2$simpson_log <- log(dung_beetle_q2$q_2_simpson)
 
+dung_beetle_q2_22 <- dung_beetle_q2 %>% filter(year == '2022')
+dung_beetle_q2_24 <- dung_beetle_q2 %>% filter(year == '2024')
+
 plot(fitdist(dung_beetle_q2$simpson_log,"norm"))
 
 ```
 
+### 2022
+
 ```{r}
 
-# Model Simpson index vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+# Model Simpson index vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
 
 # Zero inflated model.
 
-model4 <- glmmTMB(simpson_log ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), ziformula=~1, data=dung_beetle_q2)
+model4a <- glmmTMB(simpson_log ~ (scale(julian_day) + 
+                                    scale(woodland_prop) + 
+                                    scale(ag_prop) + 
+                                    scale(semi_nat_prop))^2 + 
+                     (1 | farm), ziformula=~1, data=dung_beetle_q2_22)
 
-summary(model4)
+# Full model - AIC 197.7
+# Significant interactions - Julian*woodland, Julian*semi-nat
+
+model4a <- glmmTMB(simpson_log ~ scale(julian_day) + 
+                                   scale(woodland_prop) + 
+                                   scale(ag_prop) + 
+                                   scale(semi_nat_prop) + 
+                     scale(julian_day)*scale(semi_nat_prop) +
+                     scale(julian_day)*scale(woodland_prop) +
+                    (1 | farm), ziformula=~1, data=dung_beetle_q2_22)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 195.2
+
+summary(model4a)
 
 # check_model(model4)
 
 ```
 
+### 2024
+
+```{r}
+
+# Model Simpson index vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+# Zero inflated model.
+
+model4b <- glmmTMB(simpson_log ~ (scale(julian_day) + 
+                                    scale(woodland_prop) + 
+                                    scale(ag_prop) + 
+                                    scale(semi_nat_prop))^2 + 
+                     (1 | farm), ziformula=~1, data=dung_beetle_q2_24)
+
+# Full model - AIC 192.0
+# No significant interactions 
+
+model4b <- glmmTMB(simpson_log ~ scale(julian_day) + 
+                                   scale(woodland_prop) + 
+                                   scale(ag_prop) + 
+                                   scale(semi_nat_prop) +
+                    (1 | farm), ziformula=~1, data=dung_beetle_q2_24)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 187.5
+
+summary(model4b)
+
+# check_model(model4)
+
+```
 # Native species abundance
 
 ```{r}
@@ -255,14 +384,65 @@ plot(fitdist(dung_beetle$native_species_abundance,"pois"))
 
 ```
 
+### 2022 
+
 ```{r}
 
-# Model native species abundance vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+# Model native species abundance vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
 
-model5 <- glmer.nb(native_species_abundance ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle)
+model5a <- glmer.nb(native_species_abundance ~ (scale(julian_day) + 
+                                                  scale(woodland_prop) + 
+                                                  scale(ag_prop) + 
+                                                  scale(semi_nat_prop))^2 + 
+                      (1 | farm), data = dung_beetle_22)
 
-summary(model5)
+# Full model - AIC 536.3
+# Significant interactions - Julian*woodland, Julian*semi-nat
+
+model5a <- glmer.nb(native_species_abundance ~ scale(julian_day) + 
+                                   scale(woodland_prop) + 
+                                   scale(ag_prop) + 
+                                   scale(semi_nat_prop) +
+                     scale(julian_day)*scale(semi_nat_prop) +
+                     scale(julian_day)*scale(woodland_prop) +
+                    (1 | farm), data=dung_beetle_22)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 530.4
+# When I tried to use season here as an interaction term with the landscape variables, the significant interactions were lost. 
+
+summary(model5a)
+
+# check_model(model5)
+
+```
+
+### 2024
+
+```{r}
+
+# Model native species abundance vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+model5b <- glmer.nb(native_species_abundance ~ (scale(julian_day) + 
+                                                  scale(woodland_prop) + 
+                                                  scale(ag_prop) + 
+                                                  scale(semi_nat_prop))^2 + 
+                      (1 | farm), data = dung_beetle_24)
+
+# Full model - AIC 695.8
+# Significant interactions - woodland*ag
+
+model5b <- glmer.nb(native_species_abundance ~ scale(julian_day) + 
+                                   scale(woodland_prop) + 
+                                   scale(ag_prop) + 
+                                   scale(semi_nat_prop) +
+                     scale(ag_prop)*scale(woodland_prop) +
+                    (1 | farm), data=dung_beetle_24)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 692.4
+
+summary(model5b)
 
 # check_model(model5)
 
@@ -276,14 +456,61 @@ plot(fitdist(dung_beetle$native_species_richness,"pois"))
 
 ```
 
+### 2022
+
 ```{r}
 
-# Model native species richness vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+# Model native species richness vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
 
-model6 <- glmer(native_species_richness ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family = poisson)
+model6a <- glmer(native_species_richness ~ (scale(julian_day) + 
+                                             scale(woodland_prop) + 
+                                             scale(ag_prop) + 
+                                             scale(semi_nat_prop))^2 + 
+                  (1 | farm), data = dung_beetle_22, family = poisson)
 
-summary(model6)
+# Full model - AIC 384.8
+# No significant interactions
+
+model6a <- glmer(native_species_richness ~ scale(julian_day) + 
+                                             scale(woodland_prop) + 
+                                             scale(ag_prop) + 
+                                             scale(semi_nat_prop) + 
+                  (1 | farm), data = dung_beetle_22, family = poisson)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 383.2
+
+summary(model6a)
+
+# check_model(model6)
+
+```
+
+### 2024
+
+```{r}
+
+# Model native species richness vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+model6b <- glmer(native_species_richness ~ (scale(julian_day) + 
+                                             scale(woodland_prop) + 
+                                             scale(ag_prop) + 
+                                             scale(semi_nat_prop))^2 + 
+                  (1 | farm), data = dung_beetle_24, family = poisson)
+
+# Full model - AIC 406.3
+# No significant interactions
+
+model6b <- glmer(native_species_richness ~ scale(julian_day) + 
+                                             scale(woodland_prop) + 
+                                             scale(ag_prop) + 
+                                             scale(semi_nat_prop) + 
+                  (1 | farm), data = dung_beetle_24, family = poisson)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 399.3
+
+summary(model6b)
 
 # check_model(model6)
 
@@ -291,16 +518,66 @@ summary(model6)
 
 # Native species proportion
 
+### 2022
 
 ```{r}
 
-# Model native species proportion vs. year, day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+# Model native species proportion vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
 
-model7 <- glmmTMB(native_species_proportion ~ (scale(year) + scale(julian_date) + scale(woodland_prop) + 
-                     scale(ag_prop) + scale(semi_nat_prop))^2 + (1 | farm), data = dung_beetle, family=ordbeta)
+model7a <- glmmTMB(native_species_proportion ~ (scale(julian_day) + 
+                                                  scale(woodland_prop) + 
+                                                  scale(ag_prop) + 
+                                                  scale(semi_nat_prop))^2 + 
+                     (1 | farm), data = dung_beetle_22, family=ordbeta)
 
-summary(model7)
+# Full model - AIC 207.6
+# No significant interactions
+
+model7a <- glmmTMB(native_species_proportion ~ scale(julian_day) + 
+                                                  scale(woodland_prop) + 
+                                                  scale(ag_prop) + 
+                                                  scale(semi_nat_prop) + 
+                     (1 | farm), data = dung_beetle_22, family=ordbeta)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 201.2
+
+summary(model7a)
 
 # check_model(model7)
 
 ```
+
+# 2024
+
+```{r}
+
+# Model native species proportion vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+model7b <- glmmTMB(native_species_proportion ~ (scale(julian_day) + 
+                                                  scale(woodland_prop) + 
+                                                  scale(ag_prop) + 
+                                                  scale(semi_nat_prop))^2 + 
+                     (1 | farm), data = dung_beetle_24, family=ordbeta)
+
+# Full model - AIC 68.6
+# No significant interactions
+
+model7b <- glmmTMB(native_species_proportion ~ scale(julian_day) + 
+                                                  scale(woodland_prop) + 
+                                                  scale(ag_prop) + 
+                                                  scale(semi_nat_prop) + 
+                     (1 | farm), data = dung_beetle_24, family=ordbeta)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 60.9
+
+summary(model7b)
+
+# check_model(model7)
+
+```
+
+
+
+

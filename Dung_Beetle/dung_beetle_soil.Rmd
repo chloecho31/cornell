@@ -1,0 +1,515 @@
+---
+title: "dung_beetle_soil"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+library(fitdistrplus)
+library(lme4)
+library(DHARMa)
+library(rsq)
+library(effects)
+library(marginaleffects)
+library(glmmTMB)
+library(performance)
+library(insight)
+library(MuMIn)
+
+```
+
+Read in data frame - soil data downloaded from https://casoilresource.lawr.ucdavis.edu/soil-properties/download.php and raster points extracted using QGIS. 
+
+```{r}
+
+dung_beetle <- read.delim("Data/diversity_landscape.csv", sep = ",")
+
+dung_beetle <- dung_beetle %>%
+  mutate(date = as.Date(date, format = "%Y-%m-%d")) %>%
+  mutate(farm = as.factor(farm)) %>%
+  mutate(season = as.factor(season)) %>%
+  mutate(drainage = as.factor(drainage)) %>%
+  mutate(soil_texture = as.factor(soil_texture))
+
+head(dung_beetle)
+
+```
+
+Divide data by year. 
+
+```{r}
+
+dung_beetle_22 <- dung_beetle %>% filter(year == '2022')
+dung_beetle_24 <- dung_beetle %>% filter(year == '2024')
+
+```
+
+# Total abundance 
+
+All models include day of year, soil texture and drainage class as fixed effects and farm as a random effect. For each response variable, there is a model for each year. 
+
+### 2022
+
+```{r}
+
+# Model total abundance vs. day of year, soil texture, and drainage class (and all two-way interactions). Farm as random variable. 
+
+model1a <- glmer.nb(total_abundance ~ (scale(julian_day) +
+                      soil_texture +
+                      drainage)^2 +
+                      (1 | farm), 
+                    data = dung_beetle_22, 
+                    na.action='na.fail')
+
+# Full model - AIC 1469.0
+# No significant interactions.
+
+# Model keeping the significant effects of the global model. 
+# Simplified model - AIC 1469.9
+
+model1a <- glmer.nb(total_abundance ~ scale(julian_day) +
+                      soil_texture +
+                      drainage +
+                      (1 | farm), 
+                    data = dung_beetle_22, 
+                    na.action='na.fail')
+
+summary(model1a)
+
+# check_model(model1a)
+
+```
+
+### 2024
+
+```{r}
+
+# Model total abundance vs. day of year, soil texture, and drainage class (and all two-way interactions). Farm as random variable. 
+
+model1b <- glmer.nb(total_abundance ~ (scale(julian_day) +
+                      soil_texture +
+                      drainage)^2 +
+                      (1 | farm), 
+                    data = dung_beetle_24, 
+                    na.action='na.fail')
+
+# Full model - AIC 1332.3
+# No significant interactions.
+
+# Model keeping the significant effects of the global model. 
+# Simplified model - AIC 1332.5
+
+model1b <- glmer.nb(total_abundance ~ scale(julian_day) +
+                      soil_texture +
+                      drainage +
+                      (1 | farm), 
+                    data = dung_beetle_24, 
+                    na.action='na.fail')
+
+summary(model1b)
+
+# check_model(model1a)
+
+```
+
+# Richness
+
+### 2022 
+
+```{r}
+
+# Model richness vs. day of year, soil texture, and drainage class (and all two-way interactions). Farm as random variable. 
+
+model2a <- glmer(q_0_richness ~ (scale(julian_day) +
+                      soil_texture +
+                      drainage)^2 +
+                      (1 | farm), 
+                    data = dung_beetle_22, family='poisson',
+                    na.action='na.fail')
+
+# Full model - AIC 722.8
+# No significant interactions. Only Julian day is significant.
+
+# Model keeping the significant effects of the global model. 
+# Simplified model - AIC 715.1
+
+model2a <- glmer(q_0_richness ~ scale(julian_day) + 
+                      soil_texture + 
+                      drainage +
+                      (1 | farm), 
+                    data = dung_beetle_22, family='poisson',
+                    na.action='na.fail')
+
+summary(model2a)
+
+# check_model(model2)
+
+```
+
+### 2024
+
+```{r}
+
+# Model richness vs. day of year, soil texture, and drainage class (and all two-way interactions). Farm as random variable. 
+
+model2b <- glmer(q_0_richness ~ (scale(julian_day) +
+                      soil_texture +
+                      drainage)^2 +
+                      (1 | farm), 
+                    data = dung_beetle_24, family='poisson',
+                    na.action='na.fail')
+
+# Full model - AIC 649.8
+# No significant interactions. Only Julian day is significant.
+
+# Model keeping the significant effects of the global model. 
+# Simplified model - AIC 643.7
+
+model2b <- glmer(q_0_richness ~ scale(julian_day) + 
+                      soil_texture + 
+                      drainage + 
+                      (1 | farm), 
+                    data = dung_beetle_24, family='poisson',
+                    na.action='na.fail')
+
+summary(model2b)
+
+# check_model(model2)
+
+```
+
+# Shannon
+
+```{r}
+
+# Look at log transformation.
+
+dung_beetle_q1 <- dung_beetle %>% drop_na(q_1_shannon)
+dung_beetle_q1$shannon_log <- log(dung_beetle_q1$q_1_shannon)
+
+dung_beetle_q1_22 <- dung_beetle_q1 %>% filter(year == '2022')
+dung_beetle_q1_24 <- dung_beetle_q1 %>% filter(year == '2024')
+
+```
+
+### 2022 
+
+```{r}
+
+# Model Shannon index vs. day of year, soil texture, and drainage class (and all two-way interactions). Farm as random variable. 
+
+# Zero inflated model.
+
+model3a <- glmmTMB(shannon_log ~ (scale(julian_day) + 
+                                   soil_texture + 
+                                   drainage)^2 + 
+                    (1 | farm), ziformula=~1, data=dung_beetle_q1_22)
+
+# Full model - AIC 225.6
+# No significant interactions.
+
+model3a <- glmmTMB(shannon_log ~ scale(julian_day) + 
+                                   soil_texture + 
+                                   drainage +
+                    (1 | farm), ziformula=~1, data=dung_beetle_q1_22)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 221.2
+  
+summary(model3a)
+
+# check_model(model3)
+
+```
+
+### 2024
+
+```{r}
+
+# Model Shannon index vs. day of year, soil texture, and drainage class (and all two-way interactions). Farm as random variable. 
+
+# Zero inflated model.
+
+model3b <- glmmTMB(shannon_log ~ (scale(julian_day) + 
+                                   soil_texture + 
+                                   drainage)^2 + 
+                    (1 | farm), ziformula=~1, data=dung_beetle_q1_24)
+
+# Full model - AIC 218.8
+# No significant interactions.
+
+model3b <- glmmTMB(shannon_log ~ scale(julian_day) + 
+                                   soil_texture + 
+                                   drainage +
+                    (1 | farm), ziformula=~1, data=dung_beetle_q1_24)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 221.2
+  
+summary(model3b)
+
+# check_model(model3)
+
+```
+
+# Simpson
+
+```{r}
+
+# Look at log transformation.
+
+dung_beetle_q2 <- dung_beetle %>% drop_na(q_2_simpson)
+dung_beetle_q2$simpson_log <- log(dung_beetle_q2$q_2_simpson)
+
+dung_beetle_q2_22 <- dung_beetle_q2 %>% filter(year == '2022')
+dung_beetle_q2_24 <- dung_beetle_q2 %>% filter(year == '2024')
+
+```
+
+### 2022
+
+```{r}
+
+# Model Simpson index vs. day of year, soil texture, and drainage class (and all two-way interactions). Farm as random variable. 
+
+# Zero inflated model.
+
+model4a <- glmmTMB(simpson_log ~ (scale(julian_day) + 
+                                    drainage + 
+                                    soil_texture)^2 + 
+                     (1 | farm), ziformula=~1, data=dung_beetle_q2_22)
+
+# Full model - AIC 195.8
+# No significant interactions.
+
+model4a <- glmmTMB(simpson_log ~ scale(julian_day) + 
+                                   drainage + 
+                                   soil_texture +
+                    (1 | farm), ziformula=~1, data=dung_beetle_q2_22)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 195.2
+
+summary(model4a)
+
+# check_model(model4)
+
+```
+
+### 2024
+
+```{r}
+
+# Model Simpson index vs. day of year, soil texture, and drainage class (and all two-way interactions). Farm as random variable. 
+
+# Zero inflated model.
+
+model4b <- glmmTMB(simpson_log ~ (scale(julian_day) + 
+                                    drainage + 
+                                    soil_texture)^2 + 
+                     (1 | farm), ziformula=~1, data=dung_beetle_q2_24)
+
+# Full model - AIC 190.4
+# No significant interactions.
+
+model4b <- glmmTMB(simpson_log ~ scale(julian_day) + 
+                                   drainage + 
+                                   soil_texture +
+                    (1 | farm), ziformula=~1, data=dung_beetle_q2_24)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 191.7
+
+summary(model4b)
+
+# check_model(model4)
+
+```
+
+# Native species abundance
+
+### 2022 
+
+```{r}
+
+# Model native species abundance vs. day of year, soil texture, and drainage class (and all two-way interactions). Farm as random variable. 
+
+model5a <- glmer.nb(native_species_abundance ~ (scale(julian_day) + 
+                                                  soil_texture + 
+                                                  drainage)^2 + 
+                      (1 | farm), data = dung_beetle_22)
+
+# Full model - AIC 536.8
+# Significant interactions - Julian*drainage5, soil_texture5*drainage4, soil_texture5*drainage8
+
+model5a <- glmer.nb(native_species_abundance ~ scale(julian_day) + 
+                                   soil_texture + 
+                                   drainage + 
+                     scale(julian_day)*soil_texture +
+                     soil_texture*drainage +
+                    (1 | farm), data=dung_beetle_22)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 539.1
+
+summary(model5a)
+
+# check_model(model5)
+
+```
+
+### 2024
+
+```{r}
+
+# Model native species abundance vs. day of year, soil texture, and drainage class (and all two-way interactions). Farm as random variable. 
+
+model5b <- glmer.nb(native_species_abundance ~ (scale(julian_day) + 
+                                                  soil_texture + 
+                                                  drainage)^2 + 
+                      (1 | farm), data = dung_beetle_24)
+
+# Full model - AIC 695.0
+# Significant interactions - soil_texture5*drainage5
+
+model5b <- glmer.nb(native_species_abundance ~ scale(julian_day) + 
+                                   soil_texture + 
+                                   drainage + 
+                     soil_texture*drainage +
+                    (1 | farm), data=dung_beetle_24)
+
+# Model keeping the significant interactions of the global model - helped with convergence too.
+# Simplified model - AIC 687.9
+
+summary(model5b)
+
+# check_model(model5)
+
+```
+
+# Native species richness
+
+### 2022
+
+```{r}
+
+# Model native species richness vs. day of year, soil texture, drainage class (and all two-way interactions). Farm as random variable. 
+
+model6a <- glmer(native_species_richness ~ (scale(julian_day) + 
+                                             soil_texture + 
+                                             drainage)^2 + 
+                  (1 | farm), data = dung_beetle_22, family = poisson)
+
+# Full model - AIC 382.7
+# Significant interactions - soil_texture5*drainage8, soil_texture5*drainage4
+
+model6a <- glmer(native_species_richness ~ scale(julian_day) + 
+                                             soil_texture + 
+                                             drainage + 
+                                             soil_texture*drainage + 
+                  (1 | farm), data = dung_beetle_22, family = poisson)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 379.9
+
+summary(model6a)
+
+# check_model(model6)
+
+```
+
+### 2024
+
+```{r}
+
+# Model native species richness vs. day of year, soil texture, drainage class (and all two-way interactions). Farm as random variable. 
+
+model6b <- glmer(native_species_richness ~ (scale(julian_day) + 
+                                             soil_texture + 
+                                             drainage)^2 + 
+                  (1 | farm), data = dung_beetle_24, family = poisson)
+
+# Full model - AIC 408.4
+# No significant interactions
+
+model6b <- glmer(native_species_richness ~ scale(julian_day) + 
+                                             soil_texture + 
+                                             drainage + 
+                  (1 | farm), data = dung_beetle_24, family = poisson)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 399.7
+
+summary(model6b)
+
+# check_model(model6)
+
+```
+
+# Native species proportion
+
+### 2022
+
+```{r}
+
+# Model native species proportion vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+model7a <- glmmTMB(native_species_proportion ~ (scale(julian_day) + 
+                                                  drainage + 
+                                                  soil_texture)^2 + 
+                     (1 | farm), data = dung_beetle_22, family=ordbeta)
+
+# Full model - AIC 190.8
+# Significant interactions - Julian day*drainage5, Julian day*soil_texture 5
+
+model7a <- glmmTMB(native_species_proportion ~ scale(julian_day) + 
+                                                  drainage + 
+                                                  soil_texture + 
+                                                  scale(julian_day)*drainage +
+                     scale(julian_day)*drainage + 
+                     (1 | farm), data = dung_beetle_22, family=ordbeta)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 203.1
+
+summary(model7a)
+
+# check_model(model7)
+
+```
+
+### 2024
+
+```{r}
+
+# Model native species proportion vs. day of year, prop woodland, prop ag, prop semi-natural (and all two-way interactions). Farm as random variable. 
+
+model7b <- glmmTMB(native_species_proportion ~ (scale(julian_day) + 
+                                                  drainage + 
+                                                  soil_texture)^2 + 
+                     (1 | farm), data = dung_beetle_24, family=ordbeta)
+
+# Full model - AIC 70.3
+# No significant interactions
+
+model7b <- glmmTMB(native_species_proportion ~ scale(julian_day) + 
+                                                  drainage + 
+                                                  soil_texture + 
+                     (1 | farm), data = dung_beetle_24, family=ordbeta)
+
+# Model keeping the significant interactions of the global model. 
+# Simplified model - AIC 71.4
+
+summary(model7b)
+
+# check_model(model7)
+
+```
+

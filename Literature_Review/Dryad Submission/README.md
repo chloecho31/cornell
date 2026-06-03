@@ -12,7 +12,8 @@ lit_review_data_and_code.zip file
 |- lit_review_interactions.Rmd  
 |- Data/  
 |  |- lit_review_data.csv  
-|  |- lit_review_landscape_percents.csv  
+|  |- lit_review_landscape_percents.csv   
+|  |- landscape_inverted.csv  
 |  |- Interaction_Analyses/  
 |  |  |- lit_review_interactions.csv  
 |  |  |- lit_review_recat_europe_for_analysis.csv  
@@ -70,6 +71,17 @@ Data extracted from papers included in the review.
   * Metric: Way of measuring landscape complexity
 * Missing data codes: NA
 
+# DATA-SPECIFIC INFORMATION FOR: lit_review_landscape_percents.csv
+* Number of variables: 5
+* Number of cases/rows: 138
+* Variable List: 
+  * Title,
+  * Author, 
+  * Year, 
+  * Metric: Way of measuring landscape complexity,
+  * Inverted: Yes/No if a measure of landscape simplification was converted to complexity
+* Missing data codes: NA
+
 # DATA-SPECIFIC INFORMATION FOR: lit_review_interactions.csv
 * Number of variables: 19
 * Number of cases/rows: 95
@@ -115,7 +127,7 @@ Data extracted from papers included in the review.
 
 # CODE/SOFTWARE
 
-lit_review_analysis_general.ipynb: Contains code for Figures 1-3, Supporting Information Figure S1.  
+lit_review_analysis_general.ipynb: Contains code for Figures 1-3, Supporting Information Figures S1 and S2.  
 
 lit_review_interactions.Rmd: Contains code for mixed-effects logistic regression models 1-4 (Table 3, Supporting Information Tables S2-5).  
 
