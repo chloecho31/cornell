@@ -7,20 +7,11 @@ output: html_document
 
 knitr::opts_chunk$set(echo = TRUE)
 
-library(tidyverse)
-library(dplyr)
-library(janitor)
-library(ordinal)
-library(emmeans)
-library(blme)
-library(lme4)
-library(sjPlot)
-library(sjmisc)
-library(interactions)
-library(effects)
-library(DHARMa)
-library(styler)
-library(lmerTest)
+library(tidyverse) # v.2.0.0
+library(dplyr) # v.1.1.4
+library(janitor) # v.2.2.1
+library(blme) # v.1.0.6
+library(lme4) # v.1.1.36
 
 ```
 
@@ -104,7 +95,7 @@ SSE <- sum(residuals(model)^2)
 SSE
 
 MSE <- SSE / df.residual(model)
-ms_residual
+MSE
 
 ```
 
@@ -248,5 +239,3 @@ MSE <- SSE / df.residual(model_na)
 MSE
 
 ```
-
-

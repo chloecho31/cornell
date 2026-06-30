@@ -2,7 +2,7 @@
 
 [Access this dataset on Dryad]  
 
-This lit_review_data_and_code.zip file contains all data and code associated with the paper submitted to Ecology Letters, Landscape-specific farm management for insect biodiversity and ecosystem services – A review.  
+This lit_review_data_and_code.zip file contains all data and code associated with the paper submitted to Ecology Letters, Effects of local management and landscape complexity on insects and ecosystem services in agroecosystems: A review of the intermediate landscape complexity hypothesis.  
 
 # DATA & FILE OVERVIEW
 
@@ -30,6 +30,24 @@ lit_review_data_and_code.zip file
 
 ### Instrument- or software-specific information needed to interpret the data: 
 * All analyses are done in Python (Version 3.11.5) and R, version 4.2.2 (R Core Team, 2022)  
+
+  Python libraries  
+
+  * pandas version v2.3.3  
+  * numpy version v1.26.4  
+  * seaborn version v0.13.2  
+  * skimpy version v0.0.11  
+  * matplotlib version v3.8.0  
+  * scipy version v1.11.2  
+  * statsmodels version v0.14.0  
+  
+  R libraries 
+  
+  * tidyverse v2.0.0  
+  * dplyr v.1.1.4  
+  * janitor v.2.2.1  
+  * blme v.1.0.6  
+  * lme4 v.1.1.36  
 
 # DATA-SPECIFIC INFORMATION FOR: lit_review_data.csv
 Data extracted from papers included in the review.  
