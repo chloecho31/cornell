@@ -23,7 +23,7 @@ lit_review_data_and_code.zip file
 # METHODOLOGICAL INFORMATION
 
 ### Description of methods used for collection/generation of data:  
-* Data extracted from papers listed in Supporting Information Table S1. 
+* Data extracted from papers listed in Supporting Information Table S1. Data were extracted by CYC. Half of the papers were double-checked for accuracy.
 
 ### Methods for processing the data: 
 * All data analysis was done using the code in lit_review_analysis_general.ipynb and lit_review_interactions.Rmd.  
@@ -33,12 +33,12 @@ lit_review_data_and_code.zip file
 
   Python libraries  
 
-  * pandas version v2.3.3  
-  * numpy version v1.26.4  
+  * pandas version v1.5.3  
+  * numpy version v1.24.3  
   * seaborn version v0.13.2  
-  * skimpy version v0.0.11  
-  * matplotlib version v3.8.0  
-  * scipy version v1.11.2  
+  * skimpy version v0.0.21  
+  * matplotlib version v3.7.1  
+  * scipy version v1.10.1  
   * statsmodels version v0.14.0  
   
   R libraries 
