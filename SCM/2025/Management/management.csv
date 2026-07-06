@@ -1,0 +1,34 @@
+Field ID,Crop Planted previous season,Cover Crop,Manure,Tillage
+CHO_GEN,Vegetable,No,No,Yes
+DEG_DIE,Soybean,Yes,Yes,Yes
+DEG_LAF_2,Field corn,No,No,Yes
+DEG_PER_1,Field corn,No,Yes,Yes
+DEG_PER_2,Field corn,Yes,No,Yes
+DEG_VIL,Field corn,Yes,No,Yes
+KIK_HAR,Sweet corn,Yes,No,Yes
+KIK_MBF,Vegetable,No,Yes,Yes
+KIK_MYT,Potatoes,Yes,No,Yes
+KIK_SWE,Vegetable,Yes,Yes,Yes
+KUH_COL,Sod,No,Yes,Yes
+MIL_BAR_1,Soybean,No,No,Yes
+MIL_BAR_2,Hay,No,No,No
+MIL_COB,Field corn,No,No,Yes
+MIL_CRO_1,Sod,No,Yes,No
+MIL_CRO_2,Field corn,Yes,Yes,Yes
+MIL_TEL,Field corn,No,Yes,Yes
+MIL_ZIT_1,Field corn,No,Yes,Yes
+MIL_ZIT_2,Soybean,Yes,No,Yes
+MIL_ZIT_3,Field corn,No,Yes,Yes
+STA_BLO,Soybean,No,No,Yes
+STA_FRE,Soybean,No,No,No
+STA_KRE,Soybean,No,No,Yes
+STA_MAC,Sod,Yes,No,Yes
+STA_MAR,"Hay, alfalfa",Yes,,Yes
+STA_REE_1,Field corn,No,No,Yes
+STA_REE_2,Field corn,No,No,Yes
+STA_STA,Soybean,Yes,No,Yes
+STA_WIL,Soybean,No,No,Yes
+STA_WOO,,No,No,Yes
+ZUE_MYT,,,,
+ZUE_VOT_F,Field corn,No,No,Yes
+ZUE_VOT_N,Field corn,Yes,Yes,Yes
