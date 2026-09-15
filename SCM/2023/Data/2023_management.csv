@@ -1,57 +1,57 @@
-﻿Field ID,Previous Crop,Cover Crop,Manure,Tillage,Planting Date,Year
-DEG_DIE_HILL,,No,No,Yes,,2023
-DEG_DIE_SWC,Sweet Corn,No,No,Yes,,2023
-DEG_FOU_WOOD,Silage Corn,Yes,No,Yes,5/18/23,2023
-DEG_PER_STRIP,Silage Corn,Yes,No,No,5/10/23,2023
-DEG_VIL,Grain Corn,Yes,,Yes,5/15/23,2023
-DEG_YOU_BOCES,,No,Yes,Yes,,2023
-DEG_YOU_JONES,Silage Corn,No,Yes,Yes,,2023
-DEG_YOU_OSHEA,Silage Corn,No,,,,2023
-DIP_CUR,Silage Corn,Yes,No,No,5/19/23,2023
-DIP_FLE,Silage Corn,Yes,No,No,5/23/23,2023
-DIP_PAT,Silage Corn,Yes,Yes,,5/11/23,2023
-GAB_ALL,Silage Corn,No,Yes,Yes,5/9/23,2023
-GAB_STE,Silage Corn,No,Yes,Yes,5/23/23,2023
-KAT_BAR,Soybean,No,No,Yes,5/22/23,2023
-KAT_HAB,Soybean,No,No,Yes,,2023
-KAT_HAB_2,Silage Corn,Yes,Yes,Yes,5/29/23,2023
-KAT_JEF,Silage Corn,No,Yes,Yes,5/29/23,2023
-KAT_JEF_2,Silage Corn,No,Yes,Yes,5/22/23,2023
-KAT_SAU,Silage Corn,Yes,Yes,Yes,,2023
-KAT_SAU_2,Silage Corn,Yes,Yes,Yes,6/8/23,2023
-KAT_TEE,Silage Corn,No,Yes,Yes,5/13/23,2023
-KAT_TEE_2,Silage Corn,No,Yes,Yes,5/11/23,2023
-LET_NOB,Silage Corn,Yes,Yes,Yes,,2023
-LET_TAB,Silage Corn,Yes,Yes,No,5/7/23,2023
-MIL_CHA,Silage Corn,No,Yes,Yes,,2023
-MIL_HUM,,,,,,2023
-MIL_MCC,Soybean,No,Yes,No,,2023
-MIL_YOD,Soybean,Yes,Yes,No,,2023
-ONE_ADO,Silage Corn,No,Yes,No,,2023
-ONE_STA,Silage Corn,No,Yes,Yes,,2023
-ONE_TER,Silage Corn,No,Yes,Yes,,2023
-POV_DUN,Silage Corn,No,No,No,5/19/23,2023
-SEA_HOO,Mixed Veg,Yes,Yes,Yes,5/15/23,2023
-SMI_CAN,Silage Corn,No,Yes,Yes,,2023
-SMI_COB,Silage Corn,Yes,No,No,5/13/23,2023
-SMI_CRO,Grain Corn,No,No,Yes,5/9/23,2023
-SMI_DOU,Soybean,No,Yes,Yes,5/10/23,2023
-SMI_DUR,Silage Corn,Yes,Yes,No,,2023
-SMI_HOF,Silage Corn,Yes,No,Yes,5/18/23,2023
-SMI_HOL,Grain Corn,No,No,Yes,5/24/23,2023
-SMI_JOH,Wheat,No,Yes,Yes,5/13/23,2023
-SMI_JOH_2,Wheat,Yes,No,Yes,,2023
-SMI_KEL,Silage Corn,Yes,Yes,Yes,,2023
-SMI_LAT,Silage Corn,Yes,Yes,Yes,5/17/23,2023
-SMI_MCC,Soybean,No,No,No,5/15/23,2023
-STA_COL,Silage Corn,Yes,Yes,No,5/30/23,2023
-STA_HEM,Silage Corn,Yes,Yes,Yes,5/15/23,2023
-STA_HEM_2,Grain Corn,Yes,Yes,Yes,5/15/23,2023
-STA_SWE,Silage Corn,Yes,Yes,Yes,,2023
-STA_WIL,Silage Corn,Yes,No,Yes,5/30/23,2023
-WIS_COO,Silage Corn Strip Cropped With Alfalfa,No,Yes,No,,2023
-WIS_COO_2,Silage Corn,No,No,No,,2023
-WIS_HIG,NA,Yes,No,Yes,,2023
-WIS_KEN,Grain Corn,Yes,No,Yes,,2023
-WIS_MEG,Sweet Corn,No,No,Yes,,2023
-ZUE_REE,Pumpkins,No,No,Yes,4/19/23,2023
+﻿Field ID,Previous Crop,Cover Crop,Manure,Tillage,Year
+DEG_DIE_HILL,,No,No,Yes,2023
+DEG_DIE_SWC,Sweet Corn,No,No,Yes,2023
+DEG_FOU_WOOD,Silage Corn,Yes,No,Yes,2023
+DEG_PER_STRIP,Silage Corn,Yes,No,No,2023
+DEG_VIL,Grain Corn,Yes,,Yes,2023
+DEG_YOU_BOCES,,No,Yes,Yes,2023
+DEG_YOU_JONES,Silage Corn,No,Yes,Yes,2023
+DEG_YOU_OSHEA,Silage Corn,No,,,2023
+DIP_CUR,Silage Corn,Yes,No,No,2023
+DIP_FLE,Silage Corn,Yes,No,No,2023
+DIP_PAT,Silage Corn,Yes,Yes,,2023
+GAB_ALL,Silage Corn,No,Yes,Yes,2023
+GAB_STE,Silage Corn,No,Yes,Yes,2023
+KAT_BAR,Soybean,No,No,Yes,2023
+KAT_HAB,Soybean,No,No,Yes,2023
+KAT_HAB_2,Silage Corn,Yes,Yes,Yes,2023
+KAT_JEF,Silage Corn,No,Yes,Yes,2023
+KAT_JEF_2,Silage Corn,No,Yes,Yes,2023
+KAT_SAU,Silage Corn,Yes,Yes,Yes,2023
+KAT_SAU_2,Silage Corn,Yes,Yes,Yes,2023
+KAT_TEE,Silage Corn,No,Yes,Yes,2023
+KAT_TEE_2,Silage Corn,No,Yes,Yes,2023
+LET_NOB,Silage Corn,Yes,Yes,Yes,2023
+LET_TAB,Silage Corn,Yes,Yes,No,2023
+MIL_CHA,Silage Corn,No,Yes,Yes,2023
+MIL_HUM,,,,,2023
+MIL_MCC,Soybean,No,Yes,No,2023
+MIL_YOD,Soybean,Yes,Yes,No,2023
+ONE_ADO,Silage Corn,No,Yes,No,2023
+ONE_STA,Silage Corn,No,Yes,Yes,2023
+ONE_TER,Silage Corn,No,Yes,Yes,2023
+POV_DUN,Silage Corn,No,No,No,2023
+SEA_HOO,Mixed Veg,Yes,Yes,Yes,2023
+SMI_CAN,Silage Corn,No,Yes,Yes,2023
+SMI_COB,Silage Corn,Yes,No,No,2023
+SMI_CRO,Grain Corn,No,No,Yes,2023
+SMI_DOU,Soybean,No,Yes,Yes,2023
+SMI_DUR,Silage Corn,Yes,Yes,No,2023
+SMI_HOF,Silage Corn,Yes,No,Yes,2023
+SMI_HOL,Grain Corn,No,No,Yes,2023
+SMI_JOH,Wheat,No,Yes,Yes,2023
+SMI_JOH_2,Wheat,Yes,No,Yes,2023
+SMI_KEL,Silage Corn,Yes,Yes,Yes,2023
+SMI_LAT,Silage Corn,Yes,Yes,Yes,2023
+SMI_MCC,Soybean,No,No,No,2023
+STA_COL,Silage Corn,Yes,Yes,No,2023
+STA_HEM,Silage Corn,Yes,Yes,Yes,2023
+STA_HEM_2,Grain Corn,Yes,Yes,Yes,2023
+STA_SWE,Silage Corn,Yes,Yes,Yes,2023
+STA_WIL,Silage Corn,Yes,No,Yes,2023
+WIS_COO,Silage Corn Strip Cropped With Alfalfa,No,Yes,No,2023
+WIS_COO_2,Silage Corn,No,No,No,2023
+WIS_HIG,NA,Yes,No,Yes,2023
+WIS_KEN,Grain Corn,Yes,No,Yes,2023
+WIS_MEG,Sweet Corn,No,No,Yes,2023
+ZUE_REE,Pumpkins,No,No,Yes,2023

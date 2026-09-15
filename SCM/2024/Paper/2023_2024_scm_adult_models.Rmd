@@ -97,7 +97,13 @@ print(boruta)
 png("boruta.png", width = 8, height = 6, units = "in", res = 300)
 plot(boruta, las = 2, cex.axis = 0.35)
 
+results <- attStats(boruta)
+ordered_features <- results[order(-results$medianImp), ]
+ordered_features
+
 ```
+
+
 
 Dispersal (~1km/day before oviposition) - https://onlinelibrary.wiley.com/doi/10.1111/j.1570-7458.2012.01271.x
 https://www.researchgate.net/publication/230003215_Dispersal_of_cabbage_root_fly
@@ -364,6 +370,59 @@ model8_dredge[1,]
 
 best8 <- get.models(model8_dredge, delta==0)[[1]]
 summary(best8)
+
+
+testDispersion(best8)
+simulationOutput <- simulateResiduals(fittedModel = best8, plot = T)
+residuals(simulationOutput)
+
+testDispersion(simulationOutput)
+
+r2_performance <- r2(best8)
+print(r2_performance)
+
+```
+
+```{r}
+
+options(na.action = "na.omit")
+
+model9 <- glmer.nb(total_flies ~ scale(date_collected_numeric) + 
+                     cover_crop + 
+                     previous_crop + 
+                     scale(tmean_f) + 
+                     scale(prop_corn_current_year_1000m) + 
+                     scale(prop_nat_current_year_1000m) +  
+                     scale(prop_semi_nat_current_year_1000m) + 
+                     scale(planting_date) + 
+                     scale(tmean_f) * scale(prop_corn_current_year_1000m) + 
+                     scale(tmean_f) * scale(prop_nat_current_year_1000m) + 
+                     cover_crop * scale(prop_corn_current_year_1000m) + 
+                     cover_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(prop_corn_current_year_1000m) + 
+                     previous_crop * scale(prop_nat_current_year_1000m) + 
+                     previous_crop * scale(tmean_f) + 
+                     scale(tmean_f) * cover_crop + 
+                     soil_texture + scale(ph) + scale(organic_matter) +
+                     (1 | field_id), data = adult_features)
+
+summary(model9)
+
+
+```
+
+```{r}
+
+adult_features$previous_crop <- ordered(adult_features$previous_crop, levels = c("Corn", "Soybean", "Other"))
+levels(adult_features$previous_crop)
+
+options(na.action = "na.fail")
+model9_dredge <- dredge(model9)
+nrow(model9_dredge)
+model9_dredge[1,]
+
+best9 <- get.models(model9_dredge, delta==0)[[1]]
+summary(best9)
 
 
 testDispersion(best8)
