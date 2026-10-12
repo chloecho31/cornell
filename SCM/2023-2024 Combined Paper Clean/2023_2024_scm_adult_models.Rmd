@@ -1,0 +1,471 @@
+---
+title: "2023_2024_scm_adult_models"
+author: "Chloe Cho"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+library(fitdistrplus)
+library(lme4)
+library(Boruta)
+library(sjPlot)
+library(jtools)
+library(interactions)
+library(DHARMa)
+library(rsq)
+library(effects)
+library(readxl)
+library(MuMIn)
+library(latticeExtra) 
+library(viridisLite)
+library(performance)
+library(car)
+library(pdp)
+library(marginaleffects)
+library(mgcv)
+library(sgeostat)
+library(parallel)
+
+
+set.seed(42)
+```
+
+```{r}
+
+adult_features <- read.delim("all_features_2023_2024_scm_adults.csv", sep = ",")
+adult_features
+
+```
+
+```{r}
+
+adult_features <- adult_features %>%
+  mutate(date_collected = as.Date(date_collected, '%Y-%m-%d')) %>%
+  mutate_at(c('field_id', "previous_crop", "cover_crop", "manure", "tillage"), as.factor) %>% 
+  dplyr::select(-c('X', 'total_scm', 'scm_male', 'scm_female', 'florilega', 'n_scm_m_1',
+                   'n_scm_f_1', 'n_scm_m_2', 'n_scm_f_2', 'n_d_florilega_1', 'n_d_florilega_2'))
+
+
+adult_features <- adult_features %>%
+    mutate(previous_crop = case_when(previous_crop == 'Silage Corn' ~ 'Corn',
+                           previous_crop == 'Grain Corn' ~ 'Corn',
+                           previous_crop == 'Soybean' ~ 'Soybean',
+                           TRUE ~ 'Other'))
+  
+
+adult_features <-adult_features %>% mutate_at('soil_texture', as.factor)
+adult_features <-adult_features %>% mutate_at('year', as.factor)
+adult_features <-adult_features %>% mutate_at('previous_crop', as.factor)
+
+#adult_features$date_collected_numeric <- as.numeric(adult_features$date_collected)
+#adult_features$planting_date_numeric <- as.numeric(adult_features$planting_date)
+
+adult_features_rf <- adult_features %>% dplyr::select(-c('year', 'field_id'))
+
+adult_features
+
+
+```
+
+```{r}
+
+plot(fitdist(adult_features$total_flies,"nbinom"))
+
+```
+
+```{r}
+# Boruta with all features 
+
+boruta <- Boruta(total_flies ~ ., data = na.exclude(adult_features_rf), doTrace = 2, maxRuns = 500)
+
+print(boruta)
+
+png("boruta.png", width = 8, height = 6, units = "in", res = 300)
+plot(boruta, las = 2, cex.axis = 0.35)
+
+results <- attStats(boruta)
+ordered_features <- results[order(-results$medianImp), ]
+ordered_features
+
+TentativeRoughFix(boruta, averageOver = Inf)
+
+
+```
+
+
+
+```{r}
+
+
+# Rerun model on 10/2 after random forest importance changed :( - but with mean temp instead of max
+
+options(na.action = "na.omit")
+
+dredge_data <- adult_features 
+
+
+model_10_2.1 <- glmer.nb(total_flies ~ (scale(week) + 
+                                      scale(tmean_f) + 
+                                      scale(prop_ag_current_year_1000m) + 
+                                      scale(prop_nat_current_year_1000m) + 
+                                      scale(ph) + 
+                                        tillage +
+                                        cover_crop)^2 + 
+                                      (1 | field_id), 
+                                      data = dredge_data)
+
+summary(model_10_2.1)
+
+vif_values <- vif(model_10_2.1)
+vif_values
+
+
+```
+
+
+```{r}
+
+
+# UPDATED MODEL AS OF 10/12/2026
+
+options(na.action = "na.fail")
+
+
+global_formula <- total_flies ~ (scale(week) + 
+                                      scale(tmean_f) + 
+                                      scale(prop_ag_current_year_1000m) + 
+                                      scale(prop_nat_current_year_1000m) + 
+                                      scale(ph) + 
+                                        tillage +
+                                        cover_crop)^2 + 
+                                      (1 | field_id)
+
+best_theta <- getME(model_10_2.1, "glmer.nb.theta")
+fast_control <- glmerControl(optimizer = "bobyqa", 
+                             optCtrl = list(maxfun = 100000))
+
+fast_model_10_2.1 <- glmer(global_formula, 
+                     data = dredge_data, 
+                     family = negative.binomial(theta = best_theta),
+                     control = fast_control)
+
+num_cores <- detectCores() - 1
+clus <- makeCluster(num_cores)
+
+clusterEvalQ(clus, {
+  library(lme4)
+  library(MuMIn)
+})
+clusterExport(clus, varlist = c("dredge_data", "fast_model_10_2.1", "fast_control", "best_theta"))
+
+
+model_10_2.1_dredge <- dredge(fast_model_10_2.1, cluster = clus, trace = TRUE, rank = "AICc",  m.max = 10, fixed = ~ scale(week) + scale(tmean_f))
+stopCluster(clus)
+
+# model_10_2.1_dredge <- dredge(model_10_2.1, trace = TRUE, rank = "AICc")
+nrow(model_10_2.1_dredge)
+model_10_2.1_dredge[1,]
+
+best_10_2.1 <- get.models(model_10_2.1_dredge, delta==0)[[1]]
+summary(best_10_2.1)
+
+
+vif_values <- vif(best_10_2.1)
+vif_values
+
+```
+
+
+```{r}
+
+
+# WITH YEAR
+
+options(na.action = "na.omit")
+
+dredge_data <- adult_features 
+
+
+model_10_2.1_year <- glmer.nb(total_flies ~ (scale(week) + 
+                                      scale(tmean_f) + 
+                                      scale(prop_ag_current_year_1000m) + 
+                                      scale(prop_nat_current_year_1000m) + 
+                                      scale(ph) + 
+                                        tillage + 
+                                        year)^2 + 
+                                      (1 | field_id), 
+                                      data = dredge_data)
+
+summary(model_10_2.1_year)
+
+vif_values <- vif(model_10_2.1_year)
+vif_values
+
+
+```
+
+
+```{r}
+
+
+# UPDATED MODEL AS OF 10/12/2026 WITH YEAR 
+
+options(na.action = "na.fail")
+
+
+global_formula_year <- total_flies ~ (scale(week) + 
+                                      scale(tmean_f) + 
+                                      scale(prop_ag_current_year_1000m) + 
+                                      scale(prop_nat_current_year_1000m) + 
+                                      scale(ph) + 
+                                        tillage +
+                                        year)^2 + 
+                                      (1 | field_id)
+
+best_theta <- getME(model_10_2.1_year, "glmer.nb.theta")
+fast_control <- glmerControl(optimizer = "bobyqa", 
+                             optCtrl = list(maxfun = 100000))
+
+fast_model_10_2.1_year<- glmer(global_formula_year, 
+                     data = dredge_data, 
+                     family = negative.binomial(theta = best_theta),
+                     control = fast_control)
+
+num_cores <- detectCores() - 1
+clus <- makeCluster(num_cores)
+
+clusterEvalQ(clus, {
+  library(lme4)
+  library(MuMIn)
+})
+clusterExport(clus, varlist = c("dredge_data", "fast_model_10_2.1", "fast_control", "best_theta"))
+
+
+model_10_2.1_year_dredge <- dredge(fast_model_10_2.1_year, cluster = clus, trace = TRUE, rank = "AICc",  m.max = 10, fixed = ~ scale(week) + scale(tmean_f))
+stopCluster(clus)
+
+# model_10_2.1_dredge <- dredge(model_10_2.1, trace = TRUE, rank = "AICc")
+nrow(model_10_2.1_year_dredge)
+model_10_2.1_year_dredge[1,]
+
+best_10_2.1_year <- get.models(model_10_2.1_year_dredge, delta==0)[[1]]
+summary(best_10_2.1_year)
+
+
+vif_values <- vif(best_10_2.1_year)
+vif_values
+
+```
+
+
+Dispersal (~1km/day before oviposition) - https://onlinelibrary.wiley.com/doi/10.1111/j.1570-7458.2012.01271.x
+https://www.researchgate.net/publication/230003215_Dispersal_of_cabbage_root_fly
+
+```{r}
+
+features <- getSelectedAttributes(boruta, withTentative = F)
+features
+
+```
+
+- Week
+- Mean temp
+- Dewpoint (removed due to correlation with mean temp)
+- Prop corn, current year, 1000m
+- VPD max
+- Prop nat, previous year, 1000m
+- pH
+
+```{r}
+
+options(na.action = "na.omit")
+
+model_clean <- glmer.nb(total_flies ~ (scale(date_collected_numeric) + 
+                                      scale(tmean_f) + 
+                                      scale(vpdmax_hPa) + 
+                                      scale(prop_corn_current_year_1000m) + 
+                                      scale(prop_nat_previous_year_1000m) + 
+                                      scale(ph))^2 + 
+                                      (1 | field_id), 
+                                      data = adult_features)
+
+summary(model_clean)
+
+vif_values <- vif(model_clean)
+vif_values
+
+```
+
+```{r}
+
+options(na.action = "na.fail")
+model_clean_dredge <- dredge(model_clean, trace = TRUE, rank = "AICc")
+nrow(model_clean_dredge)
+model_clean_dredge[1,]
+
+best_clean <- get.models(model_clean_dredge, delta==0)[[1]]
+summary(best_clean)
+
+
+vif_values <- vif(best_clean)
+vif_values
+
+```
+
+```{r}
+
+options(na.action = "na.omit")
+
+model_week <- glmer.nb(total_flies ~ (scale(week) + 
+                                      scale(tmean_f) + 
+                                      scale(prop_corn_current_year_1000m) + 
+                                      scale(prop_nat_previous_year_1000m) + 
+                                      scale(ph))^2 + 
+                                      (1 | field_id) + 
+                                      (1 | year), 
+                                      data = adult_features)
+
+summary(model_week)
+
+```
+
+
+```{r}
+
+
+options(na.action = "na.fail")
+model_week_dredge <- dredge(model_week, trace = TRUE, rank = "AICc")
+nrow(model_week_dredge)
+model_week_dredge[1,]
+
+best_week <- get.models(model_week_dredge, delta==0)[[1]]
+summary(best_week)
+
+vif_values <- vif(best_week)
+vif_values
+
+```
+
+```{r}
+
+options(na.action = "na.omit")
+
+model_clean_2 <- glmer.nb(total_flies ~ (scale(date_collected_numeric) + 
+                                      scale(tmean_f) +
+                                      scale(prop_corn_current_year_1000m) + 
+                                      scale(prop_nat_previous_year_1000m) + 
+                                      scale(ph))^2 + 
+                                      (1 | field_id), 
+                                      data = adult_features)
+
+summary(model_clean_2)
+
+vif_values <- vif(model_clean_2)
+vif_values
+
+```
+
+```{r}
+
+options(na.action = "na.fail")
+model_clean_dredge_2 <- dredge(model_clean_2, trace = TRUE, rank = "AICc")
+nrow(model_clean_dredge_2)
+model_clean_dredge_2[1,]
+
+best_clean_2 <- get.models(model_clean_dredge_2, delta==0)[[1]]
+summary(best_clean_2)
+
+vif_values <- vif(best_clean_2)
+vif_values
+
+```
+
+```{r}
+
+r2_performance <- r2(best_10_2.1)
+print(r2_performance)
+
+r2_performance <- r2(best_week)
+print(r2_performance)
+
+```
+
+```{r}
+
+quartzFonts(avenir = c("Avenir Book", "Avenir Black", "Avenir Book Oblique", "Avenir Black Oblique"))
+par(family = "avenir")
+
+```
+
+
+
+```{r}
+
+ag_temp_effect <- Effect(c("prop_ag_current_year_1000m", "tmean_f"), best_10_2.1_year)
+plot(ag_temp_effect, lines=list(col='#287a8c'), multiline = TRUE)
+
+
+week_temp_effect <- Effect(c("week", "tmean_f"), best_10_2.1_year)
+plot(week_temp_effect, lines=list(col='#287a8c'), multiline = TRUE)
+
+
+
+```
+
+
+```{r}
+
+ag_temp_effect <- Effect(c("prop_ag_current_year_1000m", "tmean_f"), best_10_2.1_year, xlevels = list(week = c(20, 40, 60, 80)))
+
+adult_features$temp_group <- cut(adult_features$tmean_f, 
+                    breaks = c(20, 40, 60, 80), 
+                    include.lowest = TRUE)
+
+ggplot(adult_features, aes(x = prop_ag_current_year_1000m, y = total_flies, color = temp_group)) +
+  geom_point(alpha = 0.5) +                                # Raw data points
+  geom_smooth(method = "glm.nb", se = FALSE, size = 1, color='black') +     # Interaction slopes
+  facet_wrap(adult_features$temp_group) +
+  facet_grid(cols=vars(adult_features$temp_group)) +
+  theme_bw()
+
+
+```
+
+```{r}
+
+week_temp_effect <- Effect(c("week", "tmean_f"), best_10_2.1_year, xlevels = list(week = c(10, 20, 30, 40, 51)))
+
+adult_features$week_group <- cut(adult_features$week, 
+                    breaks = c(10, 20, 30, 40, 51), 
+                    include.lowest = TRUE)
+
+ggplot(adult_features, aes(x = tmean_f, y = total_flies, color = week_group)) +
+  geom_point(alpha = 0.5) +                                # Raw data points
+  geom_smooth(method = "glm.nb", se = FALSE, size = 1, color='black') +     # Interaction slopes
+  facet_wrap(adult_features$week_group) +
+  facet_grid(cols=vars(adult_features$week_group)) +
+  theme_bw()
+
+
+```
+
+```{r}
+
+week_temp_effect <- Effect(c("tmean_f", "year"), best_10_2.1_year, xlevels = list(week = c(20, 40, 60, 80)))
+
+ggplot(adult_features, aes(x = year, y = total_flies, color = temp_group)) +
+  #geom_point(alpha = 0.5) +                                # Raw data points
+  geom_boxplot() +
+  facet_wrap(adult_features$temp_group) +
+  facet_grid(cols=vars(adult_features$temp_group)) +
+  theme_bw()
+
+
+```

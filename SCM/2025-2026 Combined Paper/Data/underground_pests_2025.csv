@@ -1,0 +1,793 @@
+Data Collector,Field ID,Date,Sampling period,Crop,Treatment,Section number,Seeds present,Dead seeds,White grubs,Wireworm,Seedcorn maggot,Other damage,Notes
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Neonic,1,10,2,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Neonic,2,10,0,No,No,Yes,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Neonic,3,10,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Neonic,4,6,2,No,No,Yes,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Neonic,5,10,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Neonic,6,8,1,No,No,Yes,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Neonic,7,5,4,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Neonic,8,10,1,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Neonic,9,10,3,No,No,Yes,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Fung,1,7,2,No,No,Yes,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Fung,2,3,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Fung,3,9,3,No,No,Yes,Fungal,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Fung,4,10,4,No,No,Yes,Mites,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Fung,5,9,0,No,No,Yes,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Fung,6,10,2,No,No,Yes,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Fung,7,6,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Fung,8,6,2,No,No,No,Mites,
+Chloe Yi-Luo Cho,CHO_GEN,6/9/2025,VE/V1,Soybean,Fung,9,7,1,No,No,Yes,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Neonic,1,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Neonic,2,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Neonic,3,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Neonic,4,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Neonic,5,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Neonic,6,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Neonic,7,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Neonic,8,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Neonic,9,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Fung,1,0,0,No,No,No,Cutworm,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Fung,2,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Fung,3,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Fung,4,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Fung,5,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Fung,6,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Fung,7,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Fung,8,0,0,No,No,No,No,
+Chloe Yi-Luo Cho,CHO_GEN,6/27/2025,V3/V4,Soybean,Fung,9,0,0,No,No,No,No,
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Neonic,1,0,0,No,No,No,Bird,Heavily rocky area with immense bird pressure
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Neonic,2,0,0,No,No,No,Bird,Heavily rocky area with immense bird pressure
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Neonic,3,0,0,No,No,No,Bird,Heavily rocky area with immense bird pressure
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Neonic,4,0,0,No,No,No,Bird,Heavily rocky area with immense bird pressure
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Neonic,5,0,0,No,No,No,Bird,Heavily rocky area with immense bird pressure
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Neonic,6,0,0,No,No,No,Bird,Heavily rocky area with immense bird pressure
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Neonic,7,0,0,No,No,No,Bird,Heavily rocky area with immense bird pressure
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Neonic,8,0,0,No,No,No,Bird,Heavily rocky area with immense bird pressure
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Neonic,9,0,0,No,No,No,Bird,Heavily rocky area with immense bird pressure
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Fung,1,0,0,No,No,No,Bird,
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Fung,2,2,0,No,No,No,No,
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Fung,3,0,0,No,No,No,No,
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Fung,4,0,0,No,No,No,No,
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Fung,5,0,0,No,No,No,No,
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Fung,6,0,0,No,No,No,No,
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Fung,7,0,0,No,No,No,Bird,
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Fung,8,0,0,No,No,No,No,
+Natika Walters,KUH_COL,6/18/2025,VE/V1,Field corn,Fung,9,0,0,No,Yes,No,Bird,
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Neonic,1,0,0,No,No,No,No,
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Neonic,2,0,0,No,No,No,No,
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Neonic,3,0,0,No,No,No,No,
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Neonic,4,0,0,No,No,No,Bird,
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Neonic,5,0,0,No,No,No,Bird,
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Neonic,6,0,0,No,No,No,Bird,
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Neonic,7,0,0,No,No,No,No,
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Neonic,8,0,0,No,No,No,Bird,
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Neonic,9,0,0,No,No,No,Bird,
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Fung,1,0,0,No,No,No,No,"6/22 - Storm and high winds, underwater"
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Fung,2,0,0,No,No,No,Bird,"6/22 - Storm and high winds, underwater"
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Fung,3,0,0,No,No,No,Bird,"6/22 - Storm and high winds, underwater"
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Fung,4,0,0,No,No,No,No,"6/22 - Storm and high winds, underwater"
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Fung,5,0,0,No,No,No,No,"6/22 - Storm and high winds, underwater"
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Fung,6,0,0,No,No,No,No,"6/22 - Storm and high winds, underwater"
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Fung,7,0,0,No,No,No,No,"6/22 - Storm and high winds, underwater"
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Fung,8,0,0,No,No,No,No,"6/22 - Storm and high winds, underwater"
+Natika Walters,KUH_COL,6/24/2025,V3/V4,Field corn,Fung,9,0,0,No,No,No,No,"6/22 - Storm and high winds, underwater"
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Neonic,1,0,0,No,No,No,No,
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Neonic,2,0,0,No,No,No,No,
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Neonic,3,0,0,No,No,No,No,
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Neonic,4,0,0,No,No,No,No,
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Neonic,5,0,0,No,No,No,No,
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Neonic,6,0,0,No,No,No,No,
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Neonic,7,0,0,No,No,No,No,
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Neonic,8,0,0,No,No,No,No,
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Neonic,9,0,0,No,No,No,No,
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Fung,1,0,0,No,No,No,No,No stand loss
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Fung,2,0,0,Yes,No,No,No,Seeds missing
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Fung,3,0,0,No,No,No,No,No stand loss
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Fung,4,9,1,No,No,No,No,
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Fung,5,0,0,No,No,Yes,No,4 foot skip - planter or pest?
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Fung,6,0,0,No,No,No,No,No stand loss
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Fung,7,0,0,No,No,No,No,No stand loss
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Fung,8,0,0,No,No,No,No,No stand loss
+Katelyn Miller,MIL_COB,5/23/2025,VE/V1,Soybean,Fung,9,0,0,No,No,No,No,No stand loss
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Neonic,1,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Neonic,2,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Neonic,3,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Neonic,4,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Neonic,5,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Neonic,6,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Neonic,7,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Neonic,8,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Neonic,9,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Fung,1,0,0,No,No,No,No,"No skips greater than 6 inches, no seeds present when dug up "
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Fung,2,0,0,No,No,No,No,"No skips greater than 6 inches, no seeds present when dug up "
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Fung,3,0,0,No,No,No,No,"No skips greater than 6 inches, no seeds present when dug up "
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Fung,4,0,0,No,No,No,No,"No skips greater than 6 inches, no seeds present when dug up "
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Fung,5,0,0,No,No,No,No,"No skips greater than 6 inches, no seeds present when dug up "
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Fung,6,0,0,No,No,No,No,"No skips greater than 6 inches, no seeds present when dug up "
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Fung,7,0,0,No,No,No,No,"No skips greater than 6 inches, no seeds present when dug up "
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Fung,8,0,0,No,No,No,No,"No skips greater than 6 inches, no seeds present when dug up "
+Katelyn Miller,MIL_COB,6/20/2025,V3/V4,Soybean,Fung,9,0,0,No,No,No,No,"No skips greater than 6 inches, no seeds present when dug up "
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Neonic,1,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Neonic,2,3,1,No,No,No,No,"Very compacted, no visible signs of pests"
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Neonic,3,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Neonic,4,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Neonic,5,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Neonic,6,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Neonic,7,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Neonic,8,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Neonic,9,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Fung,1,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Fung,2,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Fung,3,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Fung,4,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Fung,5,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Fung,6,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Fung,7,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Fung,8,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/17/2025,VE/V1,Field corn,Fung,9,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Neonic,1,1,0,No,No,No,Some rot,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Neonic,2,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Neonic,3,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Neonic,4,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Neonic,5,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Neonic,6,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Neonic,7,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Neonic,8,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Neonic,9,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Fung,1,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Fung,2,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Fung,3,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Fung,4,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Fung,5,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Fung,6,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Fung,7,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Fung,8,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_1,6/27/2025,V3/V4,Field corn,Fung,9,0,0,No,No,No,No,No gaps present
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Neonic,1,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Neonic,2,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Neonic,3,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Neonic,4,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Neonic,5,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Neonic,6,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Neonic,7,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Neonic,8,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Neonic,9,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Fung,1,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Fung,2,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Fung,3,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Fung,4,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Fung,5,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Fung,6,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Fung,7,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Fung,8,0,0,No,No,No,Cutworm,
+Katelyn Miller,MIL_CRO_2,6/17/2025,VE/V1,Field corn,Fung,9,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Neonic,1,1,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Neonic,2,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Neonic,3,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Neonic,4,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Neonic,5,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Neonic,6,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Neonic,7,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Neonic,8,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Neonic,9,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Fung,1,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Fung,2,0,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Fung,3,1,0,No,No,No,No,
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Fung,4,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Fung,5,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Fung,6,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Fung,7,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Fung,8,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_CRO_2,6/27/2025,V3/V4,Field corn,Fung,9,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Neonic,1,0,0,No,No,No,No,Planter issue and rocks
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Neonic,2,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Neonic,3,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Neonic,4,4,3,No,No,No,No,Compaction and rocks
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Neonic,5,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Neonic,6,1,0,No,No,No,No,Compaction and rocks
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Neonic,7,1,1,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Neonic,8,0,0,No,No,No,No,Planter issue in rut
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Neonic,9,1,1,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Fung,1,0,0,No,No,No,No,Planter issue?
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Fung,2,1,0,No,No,No,No,Rocks preventing emergence
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Fung,3,3,1,No,No,No,No,Limited seeds planted
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Fung,4,0,0,No,No,No,No,Seed gap due to rocks
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Fung,5,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Fung,6,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Fung,7,0,0,No,No,No,No,Rocks
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Fung,8,0,0,No,No,No,No,Rocks
+Katelyn Miller,MIL_BAR_1,6/13/2025,VE/V1,Soybean,Fung,9,3,1,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Neonic,1,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Neonic,2,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Neonic,3,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Neonic,4,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Neonic,5,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Neonic,6,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Neonic,7,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Neonic,8,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Neonic,9,0,0,No,No,No,No,
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Fung,1,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Fung,2,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Fung,3,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Fung,4,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Fung,5,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Fung,6,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Fung,7,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Fung,8,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_BAR_1,7/1/2025,V3/V4,Soybean,Fung,9,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Neonic,1,0,0,No,No,No,No,
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Neonic,2,2,1,No,No,No,No,
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Neonic,3,1,1,No,No,No,No,
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Neonic,4,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Neonic,5,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Neonic,6,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Neonic,7,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Neonic,8,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Neonic,9,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Fung,1,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Fung,2,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Fung,3,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Fung,4,2,0,No,No,No,No,
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Fung,5,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Fung,6,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Fung,7,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Fung,8,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,6/25/2025,VE/V1,Field corn,Fung,9,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Neonic,1,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Neonic,2,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Neonic,3,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Neonic,4,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Neonic,5,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Neonic,6,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Neonic,7,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Neonic,8,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Neonic,9,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Fung,1,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Fung,2,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Fung,3,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Fung,4,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Fung,5,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Fung,6,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Fung,7,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Fung,8,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_TEL,7/2/2025,V3/V4,Field corn,Fung,9,0,0,No,No,No,No,No skips
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Neonic,1,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Neonic,2,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Neonic,3,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Neonic,4,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Neonic,5,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Neonic,6,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Neonic,7,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Neonic,8,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Neonic,9,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Fung,1,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Fung,2,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Fung,3,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Fung,4,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Fung,5,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Fung,6,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Fung,7,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Fung,8,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/16/2025,VE/V1,Field corn,Fung,9,0,0,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Neonic,1,0,1,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Neonic,2,0,1,No,No,No,No,
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Neonic,3,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Neonic,4,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Neonic,5,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Neonic,6,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Neonic,7,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Neonic,8,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Neonic,9,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Fung,1,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Fung,2,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Fung,3,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Fung,4,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Fung,5,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Fung,6,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Fung,7,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Fung,8,0,0,No,No,No,No,No gaps
+Katelyn Miller,MIL_ZIT_2,6/25/2025,V3/V4,Field corn,Fung,9,0,0,No,No,No,No,No gaps
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Neonic,1,124,10,No,Yes,No,No,Lots of corn stalk residue
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Neonic,2,105,10,No,Yes,No,No,Lots of corn stalk residue
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Neonic,3,129,10,No,No,No,No,Lots of corn stalk residue
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Neonic,4,103,10,Yes,Yes,No,No,Lots of corn stalk residue
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Neonic,5,104,10,No,No,No,Some feeding injury,Lots of corn stalk residue
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Neonic,6,96,10,No,No,No,Some feeding injury,Lots of corn stalk residue
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Neonic,7,118,10,No,No,No,No,Lots of corn stalk residue
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Neonic,8,130,10,Yes,No,No,No,Lots of corn stalk residue
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Neonic,9,115,10,Yes,No,No,Millipedes,Lots of corn stalk residue
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Fung,1,116,10,Yes,No,No,Seed feeding,
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Fung,2,126,10,Yes,No,No,No,
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Fung,3,103,10,No,Yes,No,No,
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Fung,4,125,10,Yes,No,No,No,
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Fung,5,108,10,Yes,No,No,No,
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Fung,6,100,10,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Fung,7,118,10,Yes,No,No,No,
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Fung,8,126,5,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/16/2025,VE/V1,Soybean,Fung,9,132,7,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Neonic,1,100,1,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Neonic,2,111,1,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Neonic,3,95,1,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Neonic,4,80,0,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Neonic,5,113,0,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Neonic,6,113,0,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Neonic,7,124,0,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Neonic,8,118,1,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Neonic,9,122,0,No,No,No,No,
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Fung,1,115,0,No,No,No,No,No seeds found in gaps
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Fung,2,130,0,No,No,No,No,No seeds found in gaps
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Fung,3,115,0,No,No,No,No,No seeds found in gaps
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Fung,4,104,0,No,No,No,No,No seeds found in gaps
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Fung,5,99,0,No,No,No,No,No seeds found in gaps
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Fung,6,98,0,No,No,No,No,No seeds found in gaps
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Fung,7,102,0,No,No,No,No,No seeds found in gaps
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Fung,8,120,0,No,No,No,No,No seeds found in gaps
+Mike Stanyard,STA_REE_2,6/30/2025,V3/V4,Soybean,Fung,9,126,0,No,No,No,No,No seeds found in gaps
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Neonic,1,108,10,No,No,No,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Neonic,2,124,10,No,No,No,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Neonic,3,118,10,No,No,No,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Neonic,4,105,8,No,No,No,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Neonic,5,101,9,No,No,No,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Neonic,6,103,10,No,No,Yes,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Neonic,7,101,10,No,No,No,Millipede,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Neonic,8,117,10,No,No,No,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Neonic,9,96,10,No,No,Yes,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Fung,1,115,4,No,No,Yes,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Fung,2,112,10,No,No,Yes,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Fung,3,114,10,No,No,No,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Fung,4,91,10,No,No,Yes,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Fung,5,105,10,No,No,Yes,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Fung,6,84,10,No,No,Yes,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Fung,7,130,10,No,No,Yes,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Fung,8,116,10,No,No,No,No,
+Mike Stanyard,STA_REE_1,6/12/2025,VE/V1,Soybean,Fung,9,115,10,No,No,No,No,
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Neonic,1,118,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Neonic,2,70,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Neonic,3,111,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Neonic,4,101,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Neonic,5,92,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Neonic,6,92,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Neonic,7,85,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Neonic,8,105,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Neonic,9,95,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Fung,1,107,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Fung,2,123,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Fung,3,119,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Fung,4,89,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Fung,5,91,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Fung,6,103,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Fung,7,149,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Fung,8,150,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_REE_1,6/30/2025,V3/V4,Soybean,Fung,9,107,0,No,No,No,No,Could not find seeds when digging
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Neonic,1,105,10,No,No,No,Rotten wet area,
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Neonic,2,122,10,No,No,No,No,
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Neonic,3,120,10,No,No,No,No,
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Neonic,4,111,10,No,No,No,No,
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Neonic,5,94,10,No,No,No,No,
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Neonic,6,111,10,No,No,No,No,
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Neonic,7,120,10,No,Yes,No,No,
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Neonic,8,114,10,No,No,No,No,
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Neonic,9,121,10,No,Yes,No,No,
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Fung,1,92,9,No,No,No,No,Severe compaction
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Fung,2,71,3,No,No,No,No,Severe compaction
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Fung,3,111,1,No,No,No,No,Severe compaction
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Fung,4,131,3,No,No,No,No,Severe compaction
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Fung,5,135,7,No,No,No,No,Severe compaction
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Fung,6,126,10,No,Yes,No,No,Severe compaction
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Fung,7,115,10,No,No,No,No,Severe compaction
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Fung,8,115,8,No,No,No,No,Severe compaction
+Mike Stanyard,STA_FRE,6/18/2025,VE/V1,Soybean,Fung,9,119,0,No,No,No,No,Severe compaction
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Neonic,1,89,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Neonic,2,94,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Neonic,3,83,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Neonic,4,116,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Neonic,5,111,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Neonic,6,131,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Neonic,7,118,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Neonic,8,108,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Neonic,9,119,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Fung,1,89,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Fung,2,125,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Fung,3,125,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Fung,4,142,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Fung,5,105,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Fung,6,122,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Fung,7,107,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Fung,8,124,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_FRE,6/30/2025,V3/V4,Soybean,Fung,9,114,NA,NA,NA,NA,NA,Ground was too hard to dig up seeds
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Neonic,1,28,2,No,No,Yes,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Neonic,2,27,1,No,No,No,Cutworm,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Neonic,3,27,2,No,No,Yes,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Neonic,4,30,0,No,No,No,Cutworm,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Neonic,5,23,4,No,No,Yes,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Neonic,6,25,0,No,No,No,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Neonic,7,25,2,No,No,No,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Neonic,8,30,0,No,No,No,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Neonic,9,27,2,No,No,Yes,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Fung,1,30,1,No,No,No,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Fung,2,27,1,Yes,No,No,Cutworm,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Fung,3,22,6,No,No,No,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Fung,4,27,1,No,No,Yes,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Fung,5,28,0,Yes,No,No,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Fung,6,26,3,No,No,Yes,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Fung,7,28,2,No,No,Yes,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Fung,8,28,0,No,No,No,No,
+Mike Stanyard,STA_WOO,6/2/2025,VE/V1,Field corn,Fung,9,NA,NA,NA,NA,NA,NA,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Neonic,1,19,8,No,No,No,Rot,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Neonic,2,28,1,No,No,No,Rot,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Neonic,3,24,4,No,No,No,"Rot, clipped",
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Neonic,4,22,6,No,No,No,"Rot, clipped",
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Neonic,5,25,4,No,No,No,Rot,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Neonic,6,27,3,No,No,No,"Rot, clipped",
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Neonic,7,23,4,No,No,No,"Rot, clipped",
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Neonic,8,25,2,No,No,No,Rot,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Neonic,9,22,6,No,No,No,"Rot, clipped",
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Fung,1,27,1,No,No,No,No,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Fung,2,27,1,No,No,No,No,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Fung,3,28,0,No,No,No,No,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Fung,4,27,1,No,No,No,Leafed out underground,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Fung,5,28,1,No,No,No,Stuck in residue,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Fung,6,31,0,No,No,No,No,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Fung,7,26,2,No,No,No,Hollowed out seeds,
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Fung,8,24,4,No,No,No,"Rot, clipped",
+Mike Stanyard,STA_WOO,6/13/2025,V3/V4,Field corn,Fung,9,26,3,No,No,No,Stuck in residue,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Neonic,1,27,6,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Neonic,2,32,2,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Neonic,3,32,3,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Neonic,4,28,4,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Neonic,5,35,1,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Neonic,6,30,3,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Neonic,7,30,2,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Neonic,8,32,3,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Neonic,9,33,1,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Fung,1,31,3,No,No,No,No,Leaf out underground
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Fung,2,29,4,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Fung,3,34,0,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Fung,4,29,4,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Fung,5,32,2,Yes,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Fung,6,28,4,No,No,No,No,
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Fung,7,32,3,No,No,No,No,Hard seed
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Fung,8,33,2,No,No,No,No,Hard seed
+Mike Stanyard,STA_MAC,6/27/2025,VE/V1,Field corn,Fung,9,32,3,No,No,No,No,Hard seed
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Neonic,1,30,3,No,No,No,No,
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Neonic,2,37,0,No,No,No,No,
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Neonic,3,32,4,No,No,No,No,
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Neonic,4,35,0,No,No,No,No,
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Neonic,5,28,5,No,No,No,No,
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Neonic,6,26,7,No,No,No,No,
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Neonic,7,30,2,No,No,No,No,
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Neonic,8,32,3,No,No,No,No,
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Neonic,9,35,0,No,No,No,No,
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Fung,1,26,8,No,No,No,No,"Some not germinated, others leafed out underground"
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Fung,2,31,3,No,No,No,No,"Some not germinated, others leafed out underground"
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Fung,3,31,1,No,No,No,No,"Some not germinated, others leafed out underground"
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Fung,4,33,0,No,No,No,No,"Some not germinated, others leafed out underground"
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Fung,5,34,1,No,No,No,No,"Some not germinated, others leafed out underground"
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Fung,6,30,5,No,No,No,No,"Some not germinated, others leafed out underground"
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Fung,7,34,1,No,No,No,No,"Some not germinated, others leafed out underground"
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Fung,8,30,3,No,No,No,No,"Some not germinated, others leafed out underground"
+Mike Stanyard,STA_MAC,7/3/2025,V3/V4,Field corn,Fung,9,30,3,No,No,No,No,"Some not germinated, others leafed out underground"
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Neonic,1,34,1,No,No,No,No,Unfurled underground
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Neonic,2,32,1,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Neonic,3,34,0,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Neonic,4,32,0,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Neonic,5,34,0,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Neonic,6,33,1,No,No,No,No,"Dead seed, no insects"
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Neonic,7,29,2,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Neonic,8,33,2,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Neonic,9,31,4,No,No,No,Clipped,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Fung,1,33,1,No,No,No,Clipped,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Fung,2,33,1,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Fung,3,31,1,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Fung,4,33,2,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Fung,5,33,0,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Fung,6,32,1,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Fung,7,32,1,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Fung,8,34,1,No,No,No,No,
+Mike Stanyard,STA_BLO,6/23/2025,VE/V1,Field corn,Fung,9,34,0,No,No,No,No,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Neonic,1,34,1,No,No,No,Rot,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Neonic,2,33,0,No,No,No,No,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Neonic,3,32,2,No,No,No,Rot,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Neonic,4,32,1,No,No,No,Clipped,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Neonic,5,34,0,No,No,No,No,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Neonic,6,29,4,No,No,No,Rot and clipped,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Neonic,7,29,2,No,No,No,"Clipped, unfurled underground",
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Neonic,8,33,0,No,No,No,No,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Neonic,9,35,0,No,No,No,No,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Fung,1,33,2,No,No,No,No,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Fung,2,32,1,No,No,No,No,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Fung,3,33,1,No,No,No,No,Seed on top
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Fung,4,33,1,No,No,No,Unfurled underground,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Fung,5,29,3,No,No,No,Rot,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Fung,6,31,2,No,No,No,Rot,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Fung,7,29,1,No,Yes,No,Clipped,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Fung,8,31,1,No,No,No,Rot,
+Mike Stanyard,STA_BLO,6/27/2025,V3/V4,Field corn,Fung,9,29,3,No,No,No,Rot and unfurled underground,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Neonic,1,31,2,No,No,Yes,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Neonic,2,26,7,No,No,Yes,"Slug, millipedes",
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Neonic,3,30,4,No,No,Yes,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Neonic,4,35,1,No,No,Yes,Millipede,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Neonic,5,34,1,No,No,No,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Neonic,6,31,2,No,No,No,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Neonic,7,32,1,No,No,Yes,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Neonic,8,34,1,No,No,No,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Neonic,9,30,3,No,No,Yes,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Fung,1,30,4,No,No,Yes,Slugs,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Fung,2,31,3,No,No,Yes,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Fung,3,32,3,No,No,Yes,Millipedes,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Fung,4,32,3,No,No,Yes,Rocks,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Fung,5,33,0,No,No,No,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Fung,6,37,0,No,No,No,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Fung,7,37,3,No,No,No,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Fung,8,33,0,No,No,No,No,
+Mike Stanyard,STA_WIL,5/30/2025,VE/V1,Field corn,Fung,9,31,4,No,No,Yes,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Neonic,1,35,0,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Neonic,2,26,2,No,No,No,Clipped,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Neonic,3,24,5,No,No,No,Rot,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Neonic,4,30,1,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Neonic,5,28,3,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Neonic,6,31,1,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Neonic,7,27,4,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Neonic,8,24,4,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Neonic,9,28,6,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,1,31,2,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,2,30,4,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,3,32,0,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,4,32,2,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,5,30,4,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,6,27,2,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,7,30,2,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,8,26,1,No,No,No,No,
+Mike Stanyard,STA_WIL,6/12/2025,V3/V4,Field corn,Fung,9,34,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Neonic,1,35,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Neonic,2,42,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Neonic,3,38,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Neonic,4,35,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Neonic,5,39,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Neonic,6,39,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Neonic,7,37,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Neonic,8,37,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Neonic,9,38,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Fung,1,41,1,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Fung,2,42,1,No,No,No,No,Seed unfurled underground
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Fung,3,41,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Fung,4,37,1,No,No,No,No,Seed unfurled underground
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Fung,5,39,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Fung,6,39,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Fung,7,35,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Fung,8,39,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/18/2025,VE/V1,Field corn,Fung,9,38,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Neonic,1,38,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Neonic,2,39,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Neonic,3,38,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Neonic,4,35,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Neonic,5,38,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Neonic,6,32,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Neonic,7,38,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Neonic,8,38,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Neonic,9,35,2,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Fung,1,39,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Fung,2,39,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Fung,3,39,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Fung,4,35,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Fung,5,32,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Fung,6,39,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Fung,7,40,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Fung,8,40,0,No,No,No,No,
+Mike Stanyard,STA_MAR,6/25/2025,V3/V4,Field corn,Fung,9,39,1,No,No,No,Millipede,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Neonic,1,21,9,No,No,Yes,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Neonic,2,14,15,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Neonic,3,20,7,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Neonic,4,20,12,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Neonic,5,11,15,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Neonic,6,20,9,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Neonic,7,17,10,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Neonic,8,17,16,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Neonic,9,19,14,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Fung,1,23,6,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Fung,2,26,5,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Fung,3,27,6,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Fung,4,24,7,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Fung,5,17,11,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Fung,6,26,5,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Fung,7,17,8,No,No,No,No,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Fung,8,26,4,No,No,No,Black cutworm clipped,
+Mike Stanyard,STA_STA,6/10/2025,VE/V1,Field corn,Fung,9,28,2,No,No,No,No,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Neonic,1,13,4,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Neonic,2,20,2,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Neonic,3,20,0,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Neonic,4,19,4,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Neonic,5,13,7,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Neonic,6,20,3,No,No,No,No,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Neonic,7,20,5,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Neonic,8,16,12,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Neonic,9,19,8,No,No,No,No,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Fung,1,25,6,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Fung,2,25,3,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Fung,3,25,1,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Fung,4,19,5,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Fung,5,22,5,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Fung,6,29,3,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Fung,7,25,1,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Fung,8,22,2,No,No,No,Clipped,
+Mike Stanyard,STA_STA,6/20/2025,V3/V4,Field corn,Fung,9,27,1,No,No,No,Clipped,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Neonic,1,32,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Neonic,2,30,1,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Neonic,3,32,1,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Neonic,4,30,1,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Neonic,5,27,1,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Neonic,6,30,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Neonic,7,33,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Neonic,8,32,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Neonic,9,32,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Fung,1,32,1,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Fung,2,33,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Fung,3,29,3,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Fung,4,35,6,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Fung,5,32,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Fung,6,33,1,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Fung,7,31,3,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Fung,8,28,5,No,No,No,No,
+Mike Stanyard,STA_KRE,6/16/2025,VE/V1,Field corn,Fung,9,32,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Neonic,1,31,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Neonic,2,33,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Neonic,3,30,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Neonic,4,33,1,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Neonic,5,32,1,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Neonic,6,33,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Neonic,7,32,1,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Neonic,8,34,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Neonic,9,33,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Fung,1,32,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Fung,2,31,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Fung,3,34,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Fung,4,34,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Fung,5,32,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Fung,6,33,1,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Fung,7,33,1,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Fung,8,32,0,No,No,No,No,
+Mike Stanyard,STA_KRE,6/25/2025,V3/V4,Field corn,Fung,9,32,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Neonic,1,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Neonic,2,1,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Neonic,3,1,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Neonic,4,1,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Neonic,5,2,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Neonic,6,2,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Neonic,7,5,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Neonic,8,12,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Neonic,9,5,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Fung,1,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Fung,2,1,0,No,No,No,Millipede,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Fung,3,3,0,No,No,No,Millipede,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Fung,4,1,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Fung,5,1,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Fung,6,1,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Fung,7,1,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Fung,8,2,0,No,No,No,Clipped,
+Julie Kikkert,KIK_SWE,6/27/2025,VE/V1,Sweet corn,Fung,9,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Neonic,1,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Neonic,2,1,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Neonic,3,1,1,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Neonic,4,1,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Neonic,5,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Neonic,6,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Neonic,7,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Neonic,8,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Neonic,9,1,1,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Fung,1,2,0,No,No,No,Cutworm,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Fung,2,1,0,No,No,No,Cutworm,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Fung,3,1,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Fung,4,1,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Fung,5,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Fung,6,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Fung,7,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Fung,8,0,0,No,No,No,No,
+Julie Kikkert,KIK_SWE,7/3/2025,V3/V4,Sweet corn,Fung,9,0,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Neonic,1,13,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Neonic,2,14,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Neonic,3,18,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Neonic,4,18,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Neonic,5,12,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Neonic,6,11,1,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Neonic,7,12,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Neonic,8,10,2,No,No,Yes,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Neonic,9,13,1,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Fung,1,8,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Fung,2,14,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Fung,3,9,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Fung,4,4,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Fung,5,8,1,No,No,No,Some feeding damage,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Fung,6,6,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Fung,7,4,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Fung,8,7,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,6/26/2025,VE/V1,Sweet corn,Fung,9,3,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Neonic,1,3,1,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Neonic,2,10,1,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Neonic,3,7,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Neonic,4,10,1,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Neonic,5,6,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Neonic,6,10,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Neonic,7,10,0,No,No,No,Clipped,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Neonic,8,7,1,No,Yes,No,Clipped,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Neonic,9,10,0,No,No,No,Clipped,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Fung,1,3,1,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Fung,2,2,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Fung,3,0,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Fung,4,5,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Fung,5,4,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Fung,6,10,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Fung,7,2,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Fung,8,3,0,No,No,No,No,
+Julie Kikkert,KIK_HAR,7/1/2025,V3/V4,Sweet corn,Fung,9,5,0,No,No,No,Clipped,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Neonic,1,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Neonic,2,1,0,No,No,No,Cutworm,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Neonic,3,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Neonic,4,2,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Neonic,5,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Neonic,6,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Neonic,7,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Neonic,8,1,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Neonic,9,1,1,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Fung,1,1,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Fung,2,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Fung,3,1,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Fung,4,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Fung,5,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Fung,6,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Fung,7,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Fung,8,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/17/2025,VE/V1,Sweet corn ,Fung,9,1,1,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Neonic,1,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Neonic,2,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Neonic,3,1,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Neonic,4,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Neonic,5,1,1,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Neonic,6,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Neonic,7,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Neonic,8,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Neonic,9,1,1,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Fung,1,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Fung,2,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Fung,3,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Fung,4,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Fung,5,1,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Fung,6,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Fung,7,1,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Fung,8,0,0,No,No,No,No,
+Julie Kikkert,KIK_MYT,6/20/2025,V3/V4,Sweet corn,Fung,9,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Neonic,1,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Neonic,2,1,1,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Neonic,3,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Neonic,4,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Neonic,5,1,0,No,No,No,Cutworm,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Neonic,6,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Neonic,7,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Neonic,8,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Neonic,9,1,0,No,No,No,Cutworm,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Fung,1,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Fung,2,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Fung,3,2,1,No,No,No,Cutworm,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Fung,4,1,1,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Fung,5,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Fung,6,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Fung,7,2,0,No,No,No,Cutworm,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Fung,8,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/17/2025,VE/V1,Sweet corn,Fung,9,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Neonic,1,1,1,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Neonic,2,2,0,No,No,No,Clipped,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Neonic,3,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Neonic,4,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Neonic,5,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Neonic,6,3,0,No,No,No,Clipped,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Neonic,7,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Neonic,8,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Neonic,9,3,3,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Fung,1,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Fung,2,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Fung,3,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Fung,4,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Fung,5,1,1,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Fung,6,0,0,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Fung,7,3,3,No,No,No,No,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Fung,8,2,0,No,No,No,Clipped,
+Julie Kikkert,KIK_MBF,6/24/2025,V3/V4,Sweet corn,Fung,9,2,2,No,No,No,No,
