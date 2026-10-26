@@ -1,0 +1,37 @@
+﻿Data Collector,State,Field ID,Date,Sampling period,Crop,Treatment,Yield (bu/acre)
+Chloe Cho,New York,CHO_GEN,10/27/25,Harvest,Soybean,Neonic,47.71
+Chloe Cho,New York,CHO_GEN,10/27/25,Harvest,Soybean,Fung,49.64
+Janice Degni,New York,DEG_FRI_2,11/4/25,Harvest,Soybean,Neonic,10.7
+Janice Degni,New York,DEG_FRI_2,11/4/25,Harvest,Soybean,Fung,15.19
+Janice Degni,New York,DEG_LAF_2,10/15/25,Harvest,Soybean,Neonic,50.99
+Janice Degni,New York,DEG_LAF_2,10/15/25,Harvest,Soybean,Fung,42.18
+Janice Degni,New York,DEG_PER_2,10/9/25,Harvest,Soybean,Neonic,64.18
+Janice Degni,New York,DEG_PER_2,10/9/25,Harvest,Soybean,Fung,58.59
+Mike Hunter,New York,HUN_REE,10/29/25,Harvest,Soybean,Neonic,70.58
+Mike Hunter,New York,HUN_REE,10/29/25,Harvest,Soybean,Fung,67.59
+Katelyn Miller,New York,MIL_BAR_1,12/22/25,Harvest,Soybean,Neonic,32.83
+Katelyn Miller,New York,MIL_BAR_1,12/22/25,Harvest,Soybean,Fung,33.31
+Katelyn Miller,New York,MIL_COB,10/17/25,Harvest,Soybean,Neonic,57.5
+Katelyn Miller,New York,MIL_COB,10/17/25,Harvest,Soybean,Fung,54.7
+Katelyn Miller,New York,MIL_ZIT_1,11/4/25,Harvest,Soybean,Neonic,41.59
+Katelyn Miller,New York,MIL_ZIT_1,11/4/25,Harvest,Soybean,Fung,36.13
+Erik Smith,New York,SMI_ARN_2,10/27/25,Harvest,Soybean,Neonic,32.52
+Erik Smith,New York,SMI_ARN_2,10/27/25,Harvest,Soybean,Fung,33.81
+Erik Smith,New York,SMI_CON_1,11/3/25,Harvest,Soybean,Neonic,14.07
+Erik Smith,New York,SMI_CON_1,11/3/25,Harvest,Soybean,Fung,8.06
+Erik Smith,New York,SMI_DOU,10/6/25,Harvest,Soybean,Neonic,61.39
+Erik Smith,New York,SMI_DOU,10/6/25,Harvest,Soybean,Fung,57.67
+Erik Smith,New York,SMI_HOF_2,11/8/25,Harvest,Soybean,Neonic,44.94
+Erik Smith,New York,SMI_HOF_2,11/8/25,Harvest,Soybean,Fung,38.9
+Mike Stanyard,New York,STA_FRE,10/6/25,Harvest,Soybean,Neonic,35.7
+Mike Stanyard,New York,STA_FRE,10/6/25,Harvest,Soybean,Fung,40.26
+Mike Stanyard,New York,STA_REE_1,9/30/25,Harvest,Soybean,Neonic,65.17
+Mike Stanyard,New York,STA_REE_1,9/30/25,Harvest,Soybean,Fung,65.75
+Mike Stanyard,New York,STA_REE_2,9/30/25,Harvest,Soybean,Neonic,48.43
+Mike Stanyard,New York,STA_REE_2,9/30/25,Harvest,Soybean,Fung,57.79
+DAB,Vermont,MAC_S,10/9/25,Harvest,Soybean,Fung,47
+DAB,Vermont,MAC_S,10/9/25,Harvest,Soybean,Neonic,53
+DAB,Vermont,COD_S,10/10/25,Harvest,Soybean,Fung,46.6
+DAB,Vermont,COD_S,10/10/25,Harvest,Soybean,Neonic,38.7
+DAB,Vermont,FOS_S,10/29/25,Harvest,Soybean,Fung,5.5
+DAB,Vermont,FOS_S,10/29/25,Harvest,Soybean,Neonic,9.1

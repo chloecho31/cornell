@@ -67,7 +67,7 @@ adult_features <-adult_features %>% mutate_at('previous_crop', as.factor)
 #adult_features$date_collected_numeric <- as.numeric(adult_features$date_collected)
 #adult_features$planting_date_numeric <- as.numeric(adult_features$planting_date)
 
-adult_features_rf <- adult_features %>% dplyr::select(-c('year', 'field_id'))
+adult_features_rf <- adult_features %>% dplyr::select(-c('field_id'))
 
 adult_features
 
@@ -83,6 +83,7 @@ plot(fitdist(adult_features$total_flies,"nbinom"))
 ```{r}
 # Boruta with all features 
 
+set.seed(321)
 boruta <- Boruta(total_flies ~ ., data = na.exclude(adult_features_rf), doTrace = 2, maxRuns = 500)
 
 print(boruta)
@@ -216,6 +217,7 @@ vif_values
 
 
 # UPDATED MODEL AS OF 10/12/2026 WITH YEAR 
+# THIS IS THE ONE WRITTEN ABOUT IN THE PAPER 10/13/2026
 
 options(na.action = "na.fail")
 
@@ -258,9 +260,12 @@ model_10_2.1_year_dredge[1,]
 best_10_2.1_year <- get.models(model_10_2.1_year_dredge, delta==0)[[1]]
 summary(best_10_2.1_year)
 
+library(broom.mixed)
+tidy(best_10_2.1_year, effects = "fixed", conf.int = TRUE)
 
-vif_values <- vif(best_10_2.1_year)
-vif_values
+tab_model(best_10_2.1_year, show.est = TRUE, show.ci=FALSE, show.se = TRUE, show.stat = TRUE, string.se = "Standard error", string.stat = "Z-value", string.p = "p-value", digits = 3)
+
+vif(best_10_2.1_year)
 
 ```
 
@@ -272,50 +277,6 @@ https://www.researchgate.net/publication/230003215_Dispersal_of_cabbage_root_fly
 
 features <- getSelectedAttributes(boruta, withTentative = F)
 features
-
-```
-
-- Week
-- Mean temp
-- Dewpoint (removed due to correlation with mean temp)
-- Prop corn, current year, 1000m
-- VPD max
-- Prop nat, previous year, 1000m
-- pH
-
-```{r}
-
-options(na.action = "na.omit")
-
-model_clean <- glmer.nb(total_flies ~ (scale(date_collected_numeric) + 
-                                      scale(tmean_f) + 
-                                      scale(vpdmax_hPa) + 
-                                      scale(prop_corn_current_year_1000m) + 
-                                      scale(prop_nat_previous_year_1000m) + 
-                                      scale(ph))^2 + 
-                                      (1 | field_id), 
-                                      data = adult_features)
-
-summary(model_clean)
-
-vif_values <- vif(model_clean)
-vif_values
-
-```
-
-```{r}
-
-options(na.action = "na.fail")
-model_clean_dredge <- dredge(model_clean, trace = TRUE, rank = "AICc")
-nrow(model_clean_dredge)
-model_clean_dredge[1,]
-
-best_clean <- get.models(model_clean_dredge, delta==0)[[1]]
-summary(best_clean)
-
-
-vif_values <- vif(best_clean)
-vif_values
 
 ```
 
@@ -353,46 +314,10 @@ vif_values
 
 ```
 
-```{r}
-
-options(na.action = "na.omit")
-
-model_clean_2 <- glmer.nb(total_flies ~ (scale(date_collected_numeric) + 
-                                      scale(tmean_f) +
-                                      scale(prop_corn_current_year_1000m) + 
-                                      scale(prop_nat_previous_year_1000m) + 
-                                      scale(ph))^2 + 
-                                      (1 | field_id), 
-                                      data = adult_features)
-
-summary(model_clean_2)
-
-vif_values <- vif(model_clean_2)
-vif_values
-
-```
 
 ```{r}
 
-options(na.action = "na.fail")
-model_clean_dredge_2 <- dredge(model_clean_2, trace = TRUE, rank = "AICc")
-nrow(model_clean_dredge_2)
-model_clean_dredge_2[1,]
-
-best_clean_2 <- get.models(model_clean_dredge_2, delta==0)[[1]]
-summary(best_clean_2)
-
-vif_values <- vif(best_clean_2)
-vif_values
-
-```
-
-```{r}
-
-r2_performance <- r2(best_10_2.1)
-print(r2_performance)
-
-r2_performance <- r2(best_week)
+r2_performance <- r2(best_10_2.1_year)
 print(r2_performance)
 
 ```
@@ -428,9 +353,9 @@ adult_features$temp_group <- cut(adult_features$tmean_f,
                     breaks = c(20, 40, 60, 80), 
                     include.lowest = TRUE)
 
-ggplot(adult_features, aes(x = prop_ag_current_year_1000m, y = total_flies, color = temp_group)) +
+ggplot(adult_features, aes(x = prop_ag_current_year_1000m, y = total_flies)) +
   geom_point(alpha = 0.5) +                                # Raw data points
-  geom_smooth(method = "glm.nb", se = FALSE, size = 1, color='black') +     # Interaction slopes
+  geom_smooth(method = "glm.nb", se = FALSE, size = 1, color='gold') +     # Interaction slopes
   facet_wrap(adult_features$temp_group) +
   facet_grid(cols=vars(adult_features$temp_group)) +
   theme_bw()
@@ -446,9 +371,9 @@ adult_features$week_group <- cut(adult_features$week,
                     breaks = c(10, 20, 30, 40, 51), 
                     include.lowest = TRUE)
 
-ggplot(adult_features, aes(x = tmean_f, y = total_flies, color = week_group)) +
+ggplot(adult_features, aes(x = tmean_f, y = total_flies)) +
   geom_point(alpha = 0.5) +                                # Raw data points
-  geom_smooth(method = "glm.nb", se = FALSE, size = 1, color='black') +     # Interaction slopes
+  geom_smooth(method = "glm.nb", se = FALSE, size = 1, color='cyan') +     # Interaction slopes
   facet_wrap(adult_features$week_group) +
   facet_grid(cols=vars(adult_features$week_group)) +
   theme_bw()
@@ -458,14 +383,19 @@ ggplot(adult_features, aes(x = tmean_f, y = total_flies, color = week_group)) +
 
 ```{r}
 
+library(ggsignif)
+
 week_temp_effect <- Effect(c("tmean_f", "year"), best_10_2.1_year, xlevels = list(week = c(20, 40, 60, 80)))
 
-ggplot(adult_features, aes(x = year, y = total_flies, color = temp_group)) +
+ggplot(adult_features, aes(x = year, y = total_flies)) +
   #geom_point(alpha = 0.5) +                                # Raw data points
   geom_boxplot() +
-  facet_wrap(adult_features$temp_group) +
+    geom_signif(comparisons = list(c("2023", "2024")), 
+              map_signif_level=TRUE) +
+    facet_wrap(adult_features$temp_group) +
   facet_grid(cols=vars(adult_features$temp_group)) +
-  theme_bw()
+  theme_bw() + 
+  ylim(0, 750)
 
 
 ```

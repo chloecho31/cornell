@@ -1,0 +1,51 @@
+﻿Data Collector,State,Field ID,Date,Sampling period,Crop,Grain or Silage,Treatment,Yield (bu/acre)
+Paul Cerosaletti,New York,CER_DEL_1,12/8/25,Harvest,Field corn,Grain,Neonic,186.41
+Paul Cerosaletti,New York,CER_DEL_1,12/8/25,Harvest,Field corn,Grain,Fung,182.19
+Paul Cerosaletti,New York,CER_DEL_2,12/8/25,Harvest,Field corn,Grain,Neonic,188.93
+Paul Cerosaletti,New York,CER_DEL_2,12/8/25,Harvest,Field corn,Grain,Fung,200.62
+Janice Degni,New York,DEG_FRI_1,11/4/25,Harvest,Field corn,Grain,Neonic,87.07
+Janice Degni,New York,DEG_FRI_1,11/4/25,Harvest,Field corn,Grain,Fung,42.39
+Janice Degni,New York,DEG_LAF_1,11/25/25,Harvest,Field corn,Grain,Fung,183
+Janice Degni,New York,DEG_LAF_1,11/25/25,Harvest,Field corn,Grain,Neonic,180
+DAB,Vermont,FAR_C,10/14/25,Harvest,Field corn,Grain,Fung,227.81
+DAB,Vermont,FAR_C,10/14/25,Harvest,Field corn,Grain,Neonic,202.09
+Mike Hunter (CC),New York,HUN_EDE_2,,Harvest,Field corn,Grain,Neonic,207.4
+Mike Hunter (CC),New York,HUN_EDE_2,,Harvest,Field corn,Grain,Fung,218
+Mike Hunter (CC),New York,HUN_HIL,,Harvest,Field corn,Grain,Neonic,190.2
+Mike Hunter (CC),New York,HUN_HIL,,Harvest,Field corn,Grain,Fung,188.3
+Mike Hunter (CC),New York,HUN_HUR,,Harvest,Field corn,Grain,Neonic,187.7
+Mike Hunter (CC),New York,HUN_HUR,,Harvest,Field corn,Grain,Fung,194.4
+Mike Hunter (CC),New York,HUN_MRO,,Harvest,Field corn,Grain,Neonic,123.9
+Mike Hunter (CC),New York,HUN_MRO,,Harvest,Field corn,Grain,Fung,128
+Mike Hunter (CC),New York,HUN_TER,,Harvest,Field corn,Grain,Neonic,191.84
+Mike Hunter (CC),New York,HUN_TER,,Harvest,Field corn,Grain,Fung,210.45
+Mike Hunter (CC),New York,HUN_TOR,,Harvest,Field corn,Grain,Neonic,184
+Mike Hunter (CC),New York,HUN_TOR,,Harvest,Field corn,Grain,Fung,180.4
+Katelyn Miller,New York,MIL_TEL,12/27/25,Harvest,Field corn,Grain,Neonic,192.9
+Katelyn Miller,New York,MIL_TEL,12/27/25,Harvest,Field corn,Grain,Fung,186.93
+Katelyn Miller,New York,MIL_ZIT_2,11/7/25,Harvest,Field corn,Grain,Neonic,118.1
+Katelyn Miller,New York,MIL_ZIT_2,11/7/25,Harvest,Field corn,Grain,Fung,93.07
+Katelyn Miller,New York,MIL_ZIT_3,11/25/25,Harvest,Field corn,Grain,Neonic,124
+Katelyn Miller,New York,MIL_ZIT_3,11/25/25,Harvest,Field corn,Grain,Fung,134.8
+Erik Smith,New York,SMI_ARN_1,12/15/25,Harvest,Field corn,Grain,Neonic,135.37
+Erik Smith,New York,SMI_ARN_1,12/15/25,Harvest,Field corn,Grain,Fung,173.83
+Erik Smith,New York,SMI_BUR,11/20/25,Harvest,Field corn,Grain,Neonic,124.92
+Erik Smith,New York,SMI_BUR,11/20/25,Harvest,Field corn,Grain,Fung,119.42
+Erik Smith,New York,SMI_CON_2,12/15/25,Harvest,Field corn,Grain,Neonic,113.37
+Erik Smith,New York,SMI_CON_2,12/15/25,Harvest,Field corn,Grain,Fung,115.32
+Erik Smith,New York,SMI_HOF_1,1/5/25,Harvest,Field corn,Grain,Neonic,76
+Erik Smith,New York,SMI_HOF_1,1/5/25,Harvest,Field corn,Grain,Fung,85
+Mike Stanyard,New York,STA_BLO,11/6/25,Harvest,Field corn,Grain,Neonic,218.75
+Mike Stanyard,New York,STA_BLO,11/6/25,Harvest,Field corn,Grain,Fung,201.18
+Mike Stanyard,New York,STA_KRE,11/14/25,Harvest,Field corn,Grain,Neonic,231
+Mike Stanyard,New York,STA_KRE,11/14/25,Harvest,Field corn,Grain,Fung,212
+Mike Stanyard,New York,STA_MAR,10/27/25,Harvest,Field corn,Grain,Neonic,187.6695
+Mike Stanyard,New York,STA_MAR,10/27/25,Harvest,Field corn,Grain,Fung,190.9152
+Mike Stanyard,New York,STA_STA,11/20/25,Harvest,Field corn,Grain,Neonic,155.1
+Mike Stanyard,New York,STA_STA,11/20/25,Harvest,Field corn,Grain,Fung,159.1
+Mike Stanyard,New York,STA_WIL,10/24/25,Harvest,Field corn,Grain,Neonic,178.26
+Mike Stanyard,New York,STA_WIL,10/24/25,Harvest,Field corn,Grain,Fung,229.92
+Mike Stanyard,New York,STA_WOO,11/25/25,Harvest,Field corn,Grain,Neonic,135.39
+Mike Stanyard,New York,STA_WOO,11/25/25,Harvest,Field corn,Grain,Fung,128.09
+Erik Smith,New York,SMI_MCC,12/16/25,Harvest,Field corn,Grain,Neonic,168.76
+Erik Smith,New York,SMI_MCC,12/16/25,Harvest,Field corn,Grain,Fung,173.42
