@@ -1,0 +1,56 @@
+﻿Field ID,Previous Crop,Manure,Tillage,Cover Crop
+CER_DEL_1,Soybean,Yes,No,No
+CER_DEL_2,Soybean,Yes,No,Yes
+CHO_GEN,Sweet corn; Snap bean,No,Yes,No
+DEG_DIE,Soybean,Yes,Yes,Yes
+DEG_FOU,,,,
+DEG_FRI_1,,,,
+DEG_FRI_2,,,,
+DEG_LAF_1,,,,
+DEG_LAF_2,Field corn,No,Yes,No
+DEG_PER_1,Field corn,Yes,Yes,No
+DEG_PER_2,Field corn,No,Yes,Yes
+DEG_VIL,Field corn,No,Yes,Yes
+HUN_REE,Oats,Yes,Yes,No
+KIK_HAR,Sweet corn,No,Yes,Yes
+KIK_MBF,Green peas; Snap bean,Yes,Yes,No
+KIK_MYT,Potatoes,No,Yes,Yes
+KIK_SWE,Snap bean,Yes,Yes,Yes
+KUH_COL,Sod,Yes,Yes,No
+LET_MAC,Alfalfa,Yes,Yes,Yes
+LET_STE_1,Field corn,Yes,Yes,Yes
+LET_STE_2,Field corn,Yes,Yes,Yes
+LET_VER,Alfalfa,Yes,Yes,No
+LET_WAT,Alfalfa,No,No,Yes
+MIL_BAR_1,Soybean,No,Yes,No
+MIL_BAR_2,Hay,No,No,No
+MIL_COB,Field corn,No,Yes,No
+MIL_CRO_1,Sod,Yes,No,No
+MIL_CRO_2,Field corn,Yes,Yes,Yes
+MIL_TEL,Field corn,Yes,Yes,No
+MIL_ZIT_1,Field corn,Yes,Yes,No
+MIL_ZIT_2,Soybean,No,Yes,Yes
+MIL_ZIT_3,Field corn,Yes,Yes,No
+SMI_ARN_1,,,,
+SMI_ARN_2,,,,
+SMI_BUR,Field corn,No,No,No
+SMI_COB,Alfalfa,Yes,No,No
+SMI_CON_1,,,,
+SMI_CON_2,Hay,No,No,Yes
+SMI_DOU,Field corn,Yes,Yes,No
+SMI_HOF_1,Soybean,No,No,Yes
+SMI_HOF_2,Field corn,Yes,Yes,No
+SMI_LAT,,Yes,Yes,No
+SMI_MCC,Soybean,No,No,No
+STA_BLO,Soybean,No,Yes,No
+STA_FRE,Soybean,No,No,No
+STA_KRE,Soybean,No,Yes,No
+STA_MAC,Sod,No,Yes,Yes
+STA_MAR,Hay,Yes,Yes,Yes
+STA_REE_1,Field corn,No,Yes,No
+STA_REE_2,Field corn,No,Yes,No
+STA_STA,Soybean,No,Yes,Yes
+STA_WIL,Soybean,No,Yes,No
+STA_WOO,Field corn,No,Yes,No
+ZUE_MYT,Onions,No,Yes,Yes
+ZUE_VOT,Field corn,No,Yes,Yes
